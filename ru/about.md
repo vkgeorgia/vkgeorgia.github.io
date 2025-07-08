@@ -26,7 +26,8 @@
 
 ## Контакты
 
-- vkgeorgia@icloud.com  
+- vkgeorgia@icloud.com
+- [Консалтинг](https://vkconsulting.crd.co/)
 - [LinkedIn](https://www.linkedin.com/in/valeriikorobeinikov)
 
 <hr>
