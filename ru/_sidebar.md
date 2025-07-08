@@ -9,5 +9,7 @@
   * [Госсектор](/ru/projects/gov.md)
   * [Образование и тренинги](/ru/projects/education.md)
   * [IT-архитектура и консалтинг](/ru/projects/consulting.md)
+<br>
+<br>
 
 * [:gb: English Version](/en/)
