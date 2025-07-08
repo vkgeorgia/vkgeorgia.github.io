@@ -1,5 +1,7 @@
 * [Home](/en/)
 * [About Me](/en/about.md)
+* [Downloads](/en/downloads.md)
+
 
 * Projects
   * [Transport](/en/projects/transport.md)

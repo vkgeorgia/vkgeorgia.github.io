@@ -1,5 +1,7 @@
 * [Главная](/ru/)
 * [Обо мне](/ru/about.md)
+* [Загрузки](/ru/downloads.md)
+
 
 * Проекты
   * [Транспорт](/ru/projects/transport.md)
