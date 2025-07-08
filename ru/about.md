@@ -26,7 +26,7 @@
 
 ## Контакты
 
-- 📧 vkgeorgia@icloud.com  
+- vkgeorgia@icloud.com  
 - [LinkedIn](https://www.linkedin.com/in/valeriikorobeinikov)
 
 <hr>
