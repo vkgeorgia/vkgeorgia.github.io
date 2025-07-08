@@ -1,6 +1,6 @@
 # About Me
 
-![Valerii Korobeinikov](../images/valerii.png)
+![Valerii Korobeinikov](../images/108.jpg)
 
 I am an Enterprise Architect, Business Analyst, and Strategic Consultant based in Batumi, Georgia.
 
