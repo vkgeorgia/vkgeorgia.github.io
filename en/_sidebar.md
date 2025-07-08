@@ -9,6 +9,7 @@
   * [Government](/en/projects/gov.md)
   * [Education & Training](/en/projects/education.md)
   * [IT Architecture & Consulting](/en/projects/consulting.md)
+
 <br>
 <br>
 
