@@ -6,9 +6,12 @@ I am an Enterprise Architect, Business Analyst, and Strategic Consultant based i
 
 ## Certifications
 
-- TOGAF® 10 Certified
-- AWS Certified Solutions Architect
-- Google Cloud Digital Leader
+-	TOGAF 10 Enterprise Architect, 2024
+-	Google Cloud Digital Leader, 2022
+-	AWS Certified Solution Architect, 2018
+-	IIBA Academic Diploma, 2018
+-	HSE MBA Degree, 2018
+-	English IELTS – 7.0 (C1), 2024
 
 ## Areas of Expertise
 
