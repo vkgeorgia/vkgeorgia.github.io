@@ -27,5 +27,12 @@ I have taught courses on Enterprise Architecture and Project Management at MIIT 
 ## Contact
 
 - 📧 vkgeorgia@icloud.com  
-- 📞 +995 598 807 092  
 - [LinkedIn](https://www.linkedin.com/in/valeriikorobeinikov)
+
+<hr>
+
+<p align="center" style="font-size: 14px;">
+  This site contains detailed technical documentation of my projects.<br>
+  For a business overview, visit my consulting page:<br>
+  <a href="https://vkconsulting.crd.co/" target="_blank">vkconsulting.crd.co</a>
+</p>

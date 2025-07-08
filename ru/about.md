@@ -27,5 +27,4 @@
 ## Контакты
 
 - 📧 vkgeorgia@icloud.com  
-- 📞 +995 598 807 092  
 - [LinkedIn](https://www.linkedin.com/in/valeriikorobeinikov)
