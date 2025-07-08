@@ -10,4 +10,6 @@
   * [Education & Training](/en/projects/education.md)
   * [IT Architecture & Consulting](/en/projects/consulting.md)
 
+
+
 * [:ru: Русская версия](/ru/)
