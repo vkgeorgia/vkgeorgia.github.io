@@ -1,18 +1,21 @@
-* [Home](/en/)
-* [About Me](/en/about.md)
-* [Downloads](/en/downloads.md)
+- Home: /en/
+- About: /en/about
+- Downloads: /en/downloads
+
+- Projects by Industry:
+  - Transport: /en/projects/transport
+  - Telecom: /en/projects/telecom
+  - Oil & Gas: /en/projects/oilgas
+  - Public Sector: /en/projects/gov
+  - Education: /en/projects/education
+
+- Projects by Role:
+  - 🏗 Enterprise Architect: /en/roles/enterprise-architect
+  - 🧩 Domain Architect: /en/roles/domain-architect
+  - 📊 Business Analyst: /en/roles/business-analyst
+  - 🧭 Project Manager: /en/roles/project-manager
 
 
-* Projects
-  * [Transport](/en/projects/transport.md)
-  * [Telecom](/en/projects/telecom.md)
-  * [Oil & Gas](/en/projects/oilgas.md)
-  * [Healthcare](/en/projects/healthcare.md)
-  * [Government](/en/projects/gov.md)
-  * [Education & Training](/en/projects/education.md)
-  * [IT Architecture & Consulting](/en/projects/consulting.md)
-
-<br>
 <br>
 
 * [:ru: Русская версия](/ru/)
