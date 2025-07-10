@@ -16,3 +16,7 @@
   - [Solution Architect](/en/roles/solution-architect)
   - [Business Analyst](/en/roles/business-analyst)
   - [Project Manager](/en/roles/project-manager)
+
+<br>
+
+- 🇷🇺 [Russian Version](/ru/)
