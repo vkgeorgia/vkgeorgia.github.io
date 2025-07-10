@@ -1,17 +1,17 @@
 nav:
-  - Home: /en/
-  - About: /en/about
-  - Downloads: /en/downloads
+  - Home: en/index.md
+  - About: en/about.md
+  - Downloads: en/downloads.md
   - Projects by Industry:
-      - Transport: /en/projects/transport
-      - Telecom: /en/projects/telecom
-      - Oil & Gas: /en/projects/oilgas
-      - Public Sector: /en/projects/gov
-      - Education & Training: /en/projects/education
-      - Healthcare: /en/projects/healthcare
-      - IT Architecture & Consulting: /en/projects/it
+      - Transport: en/projects/transport.md
+      - Telecom: en/projects/telecom.md
+      - Oil & Gas: en/projects/oilgas.md
+      - Public Sector: en/projects/gov.md
+      - Education & Training: en/projects/education.md
+      - Healthcare: en/projects/healthcare.md
+      - IT Architecture & Consulting: en/projects/it.md
   - Projects by Role:
-      - Enterprise Architect: /en/roles/enterprise-architect
-      - Solution Architect: /en/roles/solution-architect
-      - Business Analyst: /en/roles/business-analyst
-      - Project Manager: /en/roles/project-manager
+      - Enterprise Architect: en/roles/enterprise-architect.md
+      - Solution Architect: en/roles/solution-architect.md
+      - Business Analyst: en/roles/business-analyst.md
+      - Project Manager: en/roles/project-manager.md
