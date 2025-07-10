@@ -1,4 +1,4 @@
-- Home: /en/
+- [Home:] (/en/)
 - About: /en/about
 - Downloads: /en/downloads
 
