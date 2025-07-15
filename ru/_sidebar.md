@@ -1,20 +1,22 @@
-- Главная: /ru/
-- Обо мне: /ru/about
-- Загрузки: /ru/downloads
+- [Главная](/ru/)
+- [Обо мне](/ru/about)
+- [Загрузки](/ru/downloads)
 
-- Проекты по отраслям:
-  - Транспорт: /ru/projects/transport
-  - Телеком: /ru/projects/telecom
-  - Нефтегаз: /ru/projects/oilgas
-  - Госcектор: /ru/projects/gov
-  - Образование: /ru/projects/education
+- **Проекты по отраслям**
+  - [Транспорт](/ru/projects/transport)
+  - [Телеком](/ru/projects/telecom)
+  - [Нефтегаз](/ru/projects/oilgas)
+  - [Госсектор](/ru/projects/gov)
+  - [Образование и тренинги](/ru/projects/education)
+  - [Здравоохранение](/ru/projects/healthcare)
+  - [IT-архитектура и консалтинг](/ru/projects/it)
 
-- Проекты по ролям:
-  - 🏗 Архитектор предприятия: /ru/roles/enterprise-architect
-  - 🧩 Архитектор домена: /ru/roles/domain-architect
-  - 📊 Бизнес-аналитик: /ru/roles/business-analyst
-  - 🧭 Руководитель проекта: /ru/roles/project-manager
+- **Проекты по ролям**
+  - [Архитектор предприятия](/ru/roles/enterprise-architect)
+  - [Архитектор решений](/ru/roles/solution-architect)
+  - [Бизнес-аналитик](/ru/roles/business-analyst)
+  - [Руководитель проектов](/ru/roles/project-manager)
 
 <br>
 
-* [:gb: English Version](/en/)
+- 🇬🇧 [English Version](/en/)
