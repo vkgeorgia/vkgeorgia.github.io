@@ -1,14 +1,9 @@
----
----
----
-
 ## Experience in Payment & Card Processing Systems
 
 **Name: Valerii Korobeinikov**
 
 **Role: Project Manager / Business Analyst / Solution Architect**
 
----
 
 ### Core Competencies Overview
 
@@ -46,8 +41,6 @@ I am a seasoned professional with deep expertise in the development, implementat
 
 **Technologies:** Web, Java, PHP, Oracle DB
 
----
-
 ### Why My Experience Matters
 
 My background is directly centered on the **development and optimization of mission-critical payment and processing systems**. I possess a proven ability to:
@@ -58,5 +51,3 @@ My background is directly centered on the **development and optimization of miss
 * **Achieve significant operational improvements** (e.g., reduced processing times, decreased fraud losses) and **proactively manage client expectations** through clear project roadmaps.
 * **Boost client satisfaction** and drive business growth through strategic technological initiatives, expertly resolving conflicts by actively listening to and addressing client needs.
 * **Work with large datasets and extensive customer bases** (over 70,000 corporate entities, scaling to 5 million individual users), laying the groundwork for system scalability and future functional enhancements.
-
----
