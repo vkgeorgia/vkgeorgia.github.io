@@ -13,13 +13,13 @@
 
 - **Projects by Role**
   - [Enterprise Architect](/en/roles/enterprise-architect)
-  - [Solution Architect](/en/roles/solution-architect)
+  - [Domain Architect](/en/roles/domain-architect)
   - [Business Analyst](/en/roles/business-analyst)
   - [Project Manager](/en/roles/project-manager)
 
 - **Projects by Domain**
-  - [Payments/Processing](/en/domains/card-processing)
+  - [Payments and Processing](/en/domains/card-processing)
 
 <br>
 
-- 🇷🇺 [Russian Version](/ru/)
+- [Russian Version](/ru/)

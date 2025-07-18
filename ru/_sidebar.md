@@ -13,10 +13,9 @@
 
 - **Проекты по ролям**
   - [Архитектор предприятия](/ru/roles/enterprise-architect)
-  - [Архитектор решений](/ru/roles/solution-architect)
   - [Бизнес-аналитик](/ru/roles/business-analyst)
   - [Руководитель проектов](/ru/roles/project-manager)
 
 <br>
 
-- 🇬🇧 [English Version](/en/)
+- [English Version](/en/)
