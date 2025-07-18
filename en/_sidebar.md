@@ -18,7 +18,7 @@
   - [Project Manager](/en/roles/project-manager)
 
 - **Projects by Domain**
-  - [Payments (card processing, cashless fuel retail, loyalty programs)](/en/domains/card-processing)
+  - [Payments/Processing](/en/domains/card-processing)
 
 <br>
 
