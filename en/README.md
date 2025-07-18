@@ -1,7 +1,5 @@
 # Welcome
 
-# Welcome
-
 This is the technical site of **Valerii Korobeinikov**, Enterprise Architect and Strategic Consultant.
 
 Here I publish:
