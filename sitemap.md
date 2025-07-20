@@ -11,4 +11,4 @@ valerii-site/
 │   ├── projects.md
 │   └── _sidebar.md
 ├── /images/
-│   └── valerii.png
+│   └── 108.jpg
