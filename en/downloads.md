@@ -4,9 +4,9 @@ Here you can download short materials about my projects and professional profile
 
 <ul>
   <li> <a href="./downloads/resume.pdf" target="_blank">Resume (pdf)</a> — my up-to-date CV in English.</li>
-  <li><a href="./downloads/1.pdf" target="_blank">Project 1</a> — Financial Monitoring.</li>
-  <li><a href="./downloads/2.pdf" target="_blank">Project 2</a> — 1С: Accounting + Trade & Warehouse.</li>
-  <li><a href="./downloads/3.pdf" target="_blank">Project 3</a> — 1С: Payroll & HR.</li>
+  <li> <a href="./downloads/1.pdf" target="_blank">Project 1</a> — Financial Monitoring.</li>
+  <li> <a href="./downloads/2.pdf" target="_blank">Project 2</a> — 1С: Accounting + Trade & Warehouse.</li>
+  <li> <a href="./downloads/3.pdf" target="_blank">Project 3</a> — 1С: Payroll & HR.</li>
   <li><a href="./downloads/4.pdf" target="_blank">Project 4</a> — ERP Implementation (Microsoft Dynamics AX).</li>
   <li><a href="./downloads/5.pdf" target="_blank">Project 5</a> — B2B Fuel Payment System.</li>
   <li><a href="./downloads/6.pdf" target="_blank">Project 6</a> — Loyalty Program for Fuel Retail.</li>
