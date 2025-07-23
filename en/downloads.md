@@ -11,7 +11,7 @@ Here you can download short materials about my projects and professional profile
   <li><a href="./downloads/5.pdf" target="_blank">Project 5</a> — B2B Fuel Payment System.</li>
   <li><a href="./downloads/6.pdf" target="_blank">Project 6</a> — Loyalty Program for Fuel Retail.</li>
   <li><a href="./downloads/7.pdf" target="_blank">Project 7</a> — Medical Information System (MIAS).</li>
-  <li><a href="./downloads/8.pdf" target="_blank">Project 8</a> — Система Управления АЗС (СУ АЗС).</li>
+  <li><a href="./downloads/8.pdf" target="_blank">Project 8</a> — Fuel Retail Management System.</li>
   <li><a href="./downloads/9.pdf" target="_blank">Project 9</a> — Fleet Management.</li>
   <li><a href="./downloads/10.pdf" target="_blank">Project 10</a> — IoT + BigData for X5 Retail Group.</li>
   <li><a href="./downloads/11.pdf" target="_blank">Project 11</a> — Omnichannel Communications.</li>
@@ -22,7 +22,7 @@ Here you can download short materials about my projects and professional profile
   <li><a href="./downloads/16.pdf" target="_blank">Project 16</a> — Project 'Storage'.</li>
   <li><a href="./downloads/17.pdf" target="_blank">Project 17</a> — Enterprise Architecture.</li>
   <li><a href="./downloads/18.pdf" target="_blank">Project 18</a> — Data Lab.</li>
-  <li><a href="./downloads/19.pdf" target="_blank">Project 19</a> — Audit ЕКХД.</li>
+  <li><a href="./downloads/19.pdf" target="_blank">Project 19</a> — DWH Audit (EKHD).</li>
   <li><a href="./downloads/20.pdf" target="_blank">Project 20</a> — B2B Mailing Automation.</li>
   <li><a href="./downloads/21.pdf" target="_blank">Project 21</a> — Informing clients about the debt on their account (SPDZ).</li>
   <li><a href="./downloads/22.pdf" target="_blank">Project 22</a> — O2O Interaction.</li>
@@ -33,7 +33,7 @@ Here you can download short materials about my projects and professional profile
   <li><a href="./downloads/27.pdf" target="_blank">Project 27</a> — Product Portfolio Harmonization and Product Development Process Reengineering.</li>
   <li><a href="./downloads/28.pdf" target="_blank">Project 28</a> — Enterprise IT Strategy Development and Alignment.</li>
   <li><a href="./downloads/29.pdf" target="_blank">Project 29</a> — Comprehensive Reorganization of DI IT Department and Implementation of Modern Practices.</li>
-  <li><a href="./downloads/30.pdf" target="_blank">Project 30</a> — HRMS.</li>
+  <li><a href="./downloads/30.pdf" target="_blank">Project 30</a> — Human Resource Management System (HRMS).</li>
   <li><a href="./downloads/31.pdf" target="_blank">Project 31</a> — Single Profile Concept.</li>
   <li><a href="./downloads/32.pdf" target="_blank">Project 32</a> — Central Permission Engine (CPE).</li>
   <li><a href="./downloads/33.pdf" target="_blank">Project 33</a> — Profile Storage (DMPL).</li>
