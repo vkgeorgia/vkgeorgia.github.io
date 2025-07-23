@@ -1,9 +1,4 @@
-## Experience in Payment & Card Processing Systems
-
-**Name: Valerii Korobeinikov**
-
 **Role: Project Manager / Business Analyst / Solution Architect**
-
 
 ### Core Competencies Overview
 
