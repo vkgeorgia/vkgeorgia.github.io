@@ -1,0 +1,12 @@
+title: "Valerii Korobeinikov"
+description: "Enterprise Architect and IT Consultant"
+url: "https://vkgeorgia.github.io"
+baseurl: ""
+lang: en
+languages:
+  - en
+  - ru
+
+plugins:
+  - jekyll-feed
+  - jekyll-mermaid
