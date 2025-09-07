@@ -6,8 +6,6 @@ lang: en
 permalink: /roles/business-analyst/
 ---
 
-# Valerii Korobeinikov – Business Analysis Experience
-
 ## Professional Summary
 
 I have over 15 years of experience in IT and digital transformation, with more than 10 years focused on **business analysis**. My expertise lies at the intersection of business needs and technical execution, specialising in **requirements engineering, stakeholder alignment, capability mapping, and translating business goals into actionable specifications**. I have worked both as an individual contributor and in leadership roles, driving initiatives in **telecom, aviation, oil & gas, and retail**.

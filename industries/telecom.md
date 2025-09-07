@@ -6,8 +6,6 @@ lang: en
 permalink: /industries/telecom/
 ---
 
-# Telecommunications Industry Experience
-
 ## Rostelecom.SkyLink
 
 **Period:** 2007–2010  
