@@ -30,4 +30,5 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - docsify-backup/
+  - _site/
 
