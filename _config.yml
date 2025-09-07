@@ -29,5 +29,5 @@ exclude:
   - vendor/ruby/
   - docsify-backup/
   - _site/
-  - .sources/
+  - sources/
 
