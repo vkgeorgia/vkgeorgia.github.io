@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta name="author" content="{{ site.author | default: 'Valerii Korobeinikov' }}">
+  <meta name="author" content="{{ site.author.name | default: 'Valerii Korobeinikov' }}">
   
   <!-- CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
