@@ -10,6 +10,37 @@ permalink:/projects/transport/
 
 ---
 
+## DME-25 – Enterprise Strategy Development and Risk Management
+
+**Client:** Moscow Domodedovo Airport (DME)  
+**Industry:** Transport, Aviation  
+**Period:** November 2019 – February 2021  
+**Role:** Enterprise Architect, Chief Architect  
+**Project Code:** DME-25
+
+### Project Goal  
+Develop annual enterprise strategy and conduct comprehensive risk assessment to increase the airport's resilience to potential threats.
+
+### Context  
+In 2019, I joined the Strategic Group at Domodedovo Airport as Chief Architect. The enterprise annually develops a strategy to define its development directions and faces the need to assess and manage potential risks in the dynamic aviation industry.
+
+### Key Responsibilities  
+- **Strategic Planning:** Participated in annual enterprise strategy development process, focusing on market situation, technologies, information management, and IT
+- **Risk Assessment:** Conducted comprehensive risk assessment, identifying potential threats to airport operations and development
+- **Response Planning:** Developed detailed response plans for identified risks
+- **Trend Analysis:** Conducted trend analysis in aviation industry and related fields
+- **Forecasting:** Analyzed and forecasted impact of trends on future airport operations
+- **Analytical Reports:** Collected data, conducted research, and prepared analytical reports on current topics
+
+### Results  
+- **Strategic Contribution:** Made significant contribution to formation of annual enterprise strategy
+- **Risk Resilience:** Increased airport's resilience to potential threats through comprehensive risk assessment
+- **Informed Decision-Making:** Provided management with valuable information for informed strategic decisions
+- **Strategic Direction:** Defined strategic directions and described strategic initiatives for next period
+- **Market Intelligence:** Ensured consideration of key aspects of market situation, technological development, and effective IT management
+
+---
+
 ## DME: Product Portfolio Optimization
 
 **Client:** Moscow Domodedovo Airport (DME)  
@@ -19,7 +50,7 @@ permalink:/projects/transport/
 **Company:** Independent Consultant
 
 ### Project Goal  
-Analyze and optimize the airport’s commercial product portfolio.
+Analyze and optimize the airport's commercial product portfolio.
 
 ### Context  
 DME operates as a private international airport and manages various business units including retail, parking, and cargo. A large number of products and services required prioritization and performance evaluation.
