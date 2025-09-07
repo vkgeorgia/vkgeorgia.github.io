@@ -3,7 +3,7 @@ layout: page
 title: "About Me"
 description: "About Me"
 lang: en
-permalink:/about/
+permalink: /about/
 ---
 
 # About Me
