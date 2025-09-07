@@ -3,7 +3,7 @@ layout: page
 title: "Transport Projects"
 description: "Transport Projects"
 lang: en
-permalink:/projects/transport/
+permalink: /projects/transport/
 ---
 
 # Transport Projects
@@ -124,3 +124,4 @@ CAR5 aimed to enter the fast-growing urban mobility market in Russia, offering f
 - Delivered a validated product-market fit concept  
 - Supported early-stage go-to-market activities  
 - Consulted on platform scalability and data architecture  
+

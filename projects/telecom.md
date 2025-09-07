@@ -3,7 +3,7 @@ layout: page
 title: "Telecommunications Projects"
 description: "Telecommunications Projects"
 lang: en
-permalink:/projects/telecom/
+permalink: /projects/telecom/
 ---
 
 # Telecommunications Projects
@@ -150,3 +150,4 @@ The company used fragmented systems with no integration. Data duplication, manua
 - PMI methodology  
 - Waterfall delivery  
 - Technologies: IIS, HP Service Desk, 1C, MS Dynamics AX  
+

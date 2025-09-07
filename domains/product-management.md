@@ -3,7 +3,7 @@ layout: page
 title: "Untitled"
 description: "Untitled"
 lang: en
-permalink:/domains/product-management/
+permalink: /domains/product-management/
 ---
 
 
@@ -110,3 +110,4 @@ My approach includes:
 ---
 
 Do you want me to make any adjustments or highlight specific aspects in more detail?
+

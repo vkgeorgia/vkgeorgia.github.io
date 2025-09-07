@@ -60,3 +60,4 @@ I have taught courses on Enterprise Architecture and Project Management at MIIT 
   For a business overview, visit my consulting page:<br>
   <a href="https://vkconsulting.crd.co/" target="_blank">vkconsulting.crd.co</a>
 </p>
+

@@ -58,3 +58,4 @@ permalink: /industries/aviation/
 ### Industry Impact
 
 The work at Domodedovo Airport demonstrated how enterprise architecture and strategic planning can drive significant operational improvements in the aviation industry, particularly during challenging times like the COVID-19 pandemic. The focus on product portfolio optimization and IT strategy alignment resulted in measurable business value and improved operational efficiency.
+

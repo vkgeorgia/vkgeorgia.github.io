@@ -3,7 +3,7 @@ layout: page
 title: "Valerii Korobeinikov – Business Analysis Experience"
 description: "Valerii Korobeinikov – Business Analysis Experience"
 lang: en
-permalink:/roles/sources/Valerii-Korobeinikov-Business-Analyst/
+permalink: /roles/sources/Valerii-Korobeinikov-Business-Analyst/
 ---
 
 # Valerii Korobeinikov – Business Analysis Experience
@@ -49,3 +49,4 @@ Throughout my career, I have frequently performed business analysis tasks, both 
 * **Airport Product Portfolio:** Developed a requirement management system and analysis framework that supported decision-making for over 300 airport products.
 * **Telecom Transformation:** Conducted capability-based analysis of PIM/SIM and marketplace tools, leading to structured vendor evaluation and solution planning.
 * **Medical Information System:** As part of a project for Olympic athlete screening, analysed medical and administrative requirements, helping to ensure data integrity and compliance.
+

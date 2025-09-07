@@ -100,3 +100,4 @@ permalink: /industries/telecom/
 ### Industry Impact
 
 The telecommunications experience spans from traditional ERP implementations to modern digital transformation initiatives. The work demonstrates evolution from basic system integration to advanced analytics and data management platforms, supporting the industry's transition to digital services and data-driven operations.
+

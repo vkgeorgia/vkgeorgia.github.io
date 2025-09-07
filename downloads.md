@@ -3,7 +3,7 @@ layout: page
 title: "📥 Downloads"
 description: "📥 Downloads"
 lang: en
-permalink:/downloads/
+permalink: /downloads/
 ---
 
 # 📥 Downloads
@@ -56,3 +56,4 @@ Here you can download short materials about my projects and professional profile
   <li><a href="/downloads/42.pdf" target="_blank">Project 42</a> — Agentic AI POC.</li>
   <li><a href="/downloads/43.pdf" target="_blank">Project 43</a> — EA Management.</li>
 </ul>
+

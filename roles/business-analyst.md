@@ -3,7 +3,7 @@ layout: page
 title: "Valerii Korobeinikov – Business Analysis Experience"
 description: "Valerii Korobeinikov – Business Analysis Experience"
 lang: en
-permalink:/roles/business-analyst/
+permalink: /roles/business-analyst/
 ---
 
 # Valerii Korobeinikov – Business Analysis Experience
@@ -77,3 +77,4 @@ I have over 15 years of experience in IT and digital transformation, with more t
 * Strong stakeholder management: adept at navigating conflicting interests and facilitating productive dialogue.
 * Experienced in **Agile and Waterfall** delivery models.
 * Advocates for **structured documentation, peer reviews, and clear communication** in multi-department environments.
+
