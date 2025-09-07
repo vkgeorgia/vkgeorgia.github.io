@@ -16,11 +16,9 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 
-# Plugins
+# Plugins (only GitHub Pages supported plugins)
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
 
 # Exclude from processing
 exclude:
@@ -36,9 +34,3 @@ exclude:
 # Include
 include:
   - _pages
-
-# Collections
-collections:
-  pages:
-    output: true
-    permalink: /:path/
