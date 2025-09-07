@@ -6,8 +6,6 @@ lang: en
 permalink: /industries/retail/
 ---
 
-# Retail Industry Experience
-
 This page details my experience and projects within the Retail sector.
 
 ## Key Projects

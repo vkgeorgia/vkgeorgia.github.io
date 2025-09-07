@@ -6,8 +6,6 @@ lang: en
 permalink: /industries/aviation/
 ---
 
-# Aviation Industry Experience
-
 ## Domodedovo Airport (DME)
 
 **Period:** 2019–2021  

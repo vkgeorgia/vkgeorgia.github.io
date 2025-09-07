@@ -6,8 +6,6 @@ lang: en
 permalink: /roles/project-manager/
 ---
 
-# Valerii Korobeinikov — Project Management Experience
-
 ## Moscow Domodedovo Airport
 
 **Role:** Project Manager (Organisational Change)  

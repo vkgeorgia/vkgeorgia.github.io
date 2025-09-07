@@ -6,8 +6,6 @@ lang: en
 permalink: /industries/oilgas/
 ---
 
-# Oil & Gas Industry Experience
-
 This page details my experience and projects within the Oil & Gas sector.
 
 ## Key Projects

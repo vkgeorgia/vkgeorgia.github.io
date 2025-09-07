@@ -6,8 +6,6 @@ lang: en
 permalink: /industries/healthcare/
 ---
 
-# Healthcare Industry Experience
-
 This page details my experience and projects within the Healthcare sector.
 
 ## Key Projects
