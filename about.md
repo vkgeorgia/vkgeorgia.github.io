@@ -6,8 +6,6 @@ lang: en
 permalink: /about/
 ---
 
-# About Me
-
 <img src="/images/108.jpg" alt="Valerii" width="300">
 
 Valerii Korobeinikov is a highly accomplished **Enterprise Architect and Business Analyst** with **over 20 years of experience** in Software and IT Consulting. He is renowned for his primary focus on achieving **Business and IT Strategy Alignment** through expert application of Enterprise Architecture and Business Analysis principles. Valerii excels at helping organizations **structure change, solve complex business challenges, and align business goals, capabilities, and IT initiatives to drive transformation**, delivering solutions with clarity, structure, and measurable impact.
