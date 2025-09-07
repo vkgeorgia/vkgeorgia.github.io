@@ -3,9 +3,6 @@ description: "Enterprise Architect and IT Consultant"
 url: "https://vkgeorgia.github.io"
 baseurl: ""
 lang: en
-languages:
-  - en
-  - ru
 
 author:
   name: "Valerii Korobeinikov"
