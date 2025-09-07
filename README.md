@@ -3,7 +3,7 @@ layout: page
 title: "Welcome"
 description: "Technical site of Valerii Korobeinikov, Enterprise Architect and Strategic Consultant"
 lang: en
-permalink:/
+permalink: /
 ---
 
 # Welcome
