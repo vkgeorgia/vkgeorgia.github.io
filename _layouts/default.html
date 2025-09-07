@@ -25,9 +25,15 @@
       </nav>
     </header>
 
-    <main class="site-content">
-      {{ content }}
-    </main>
+    <div class="main-wrapper">
+      <aside class="sidebar">
+        {% include navigation.html %}
+      </aside>
+      
+      <main class="site-content">
+        {{ content }}
+      </main>
+    </div>
 
     <footer class="site-footer">
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
