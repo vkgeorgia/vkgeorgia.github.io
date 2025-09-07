@@ -3,6 +3,7 @@ layout: page
 title: "Untitled"
 description: "Untitled"
 lang: en
-permalink:/projects/healthcare/
+permalink: /projects/healthcare/
 ---
+
 

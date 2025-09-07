@@ -53,3 +53,4 @@ permalink: /roles/project-manager/
 * Implemented integrated ERP (MS Dynamics AX) and 1C systems (Finance, HR, Logistics, Payroll).
 * Designed cross-system integration, including billing and HelpDesk (HP Service Desk).
 * Managed up to 300 users across various business functions.
+

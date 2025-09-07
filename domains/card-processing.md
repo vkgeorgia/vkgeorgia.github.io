@@ -3,7 +3,7 @@ layout: page
 title: "Untitled"
 description: "Untitled"
 lang: en
-permalink:/domains/card-processing/
+permalink: /domains/card-processing/
 ---
 
 **Role: Project Manager / Business Analyst / Solution Architect**
@@ -54,3 +54,4 @@ My background is directly centered on the **development and optimization of miss
 * **Achieve significant operational improvements** (e.g., reduced processing times, decreased fraud losses) and **proactively manage client expectations** through clear project roadmaps.
 * **Boost client satisfaction** and drive business growth through strategic technological initiatives, expertly resolving conflicts by actively listening to and addressing client needs.
 * **Work with large datasets and extensive customer bases** (over 70,000 corporate entities, scaling to 5 million individual users), laying the groundwork for system scalability and future functional enhancements.
+

@@ -3,6 +3,7 @@ layout: page
 title: "Untitled"
 description: "Untitled"
 lang: en
-permalink:/domains/c&b-hr/
+permalink: /domains/c&b-hr/
 ---
+
 

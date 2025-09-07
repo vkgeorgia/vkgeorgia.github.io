@@ -3,6 +3,7 @@ layout: page
 title: "Untitled"
 description: "Untitled"
 lang: en
-permalink:/roles/domain-architect/
+permalink: /roles/domain-architect/
 ---
+
 

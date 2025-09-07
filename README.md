@@ -28,3 +28,4 @@ You can browse my work using the sidebar.
   For a business overview, visit my consulting page:<br>
   <a href="https://vkconsulting.crd.co/" target="_blank">vkconsulting.crd.co</a>
 </p>
+

@@ -3,7 +3,7 @@ layout: page
 title: "Projects"
 description: "Projects"
 lang: en
-permalink:/projects/
+permalink: /projects/
 ---
 
 # Projects
@@ -38,3 +38,4 @@ Reviewed enterprise architecture and advised on system stabilization.
   For a business overview, visit my consulting page:<br>
   <a href="https://vkconsulting.crd.co/" target="_blank">vkconsulting.crd.co</a>
 </p>
+
