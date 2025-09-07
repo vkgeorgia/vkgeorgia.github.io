@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Untitled"
-description: "Untitled"
+title: "Product Management Domain Experience"
+description: "Valerii Korobeinikov's Product Management experience and expertise"
 lang: en
 permalink: /domains/product-management/
 ---
