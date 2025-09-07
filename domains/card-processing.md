@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Untitled"
-description: "Untitled"
+title: "Payments and Processing Domain Experience"
+description: "Valerii Korobeinikov's Payment Systems and Card Processing experience and expertise"
 lang: en
 permalink: /domains/card-processing/
 ---
