@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Обо мне"
+description: "Обо мне"
+lang: ru
+permalink: /ru/about/
+---
+
 # Обо мне
 
 <img src="/images/108.jpg" alt="Valerii" width="300">

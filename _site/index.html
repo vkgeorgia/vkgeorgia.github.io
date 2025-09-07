@@ -1,52 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Valerii Korobeinikov</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Valerii Korobeinikov — Enterprise Architect and IT Consultant" />
-  <meta name="author" content="Valerii Korobeinikov" />
-
-  <!-- Dark Theme -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css" />
-
-  <!-- Redirect to English version if root is opened -->
-  <script>
-    if (location.hash === '' || location.hash === '#/' || location.hash === '#') {
-      location.replace('/#/en/');
-    }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valerii Korobeinikov - Valerii Korobeinikov</title>
+  <meta name="description" content="Enterprise Architect and IT Consultant">
+  <meta name="author" content="{"name" => "Valerii Korobeinikov", "email" => ""}">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" title="Valerii Korobeinikov" href="/feed.xml">
 </head>
 <body>
-  <div id="app">Загрузка...</div>
+  <div class="container">
+    <header class="site-header">
+      <h1 class="site-title">
+        <a href="/">Valerii Korobeinikov</a>
+      </h1>
+      <nav class="site-nav">
+        <a href="/en/">English</a>
+        <a href="/ru/">Русский</a>
+      </nav>
+    </header>
 
-  <script>
-    window.$docsify = {
-      name: 'Valerii Korobeinikov',
-      repo: '',
-      loadSidebar: true,
-      subMaxLevel: 2,
-      themeColor: '#42b983',
-      mergeNavbar: true,
-      alias: {
-        '/ru/.*/_sidebar.md': '/ru/_sidebar.md',
-        '/en/.*/_sidebar.md': '/en/_sidebar.md'
-      },
-      mermaidConfig: {
-        theme: 'dark'
-      }
-    };
-  </script>
+    <main class="site-content">
+      <div class="home">
+  <h1>Welcome</h1>
+  
+  <p>This is the technical site of <strong>Valerii Korobeinikov</strong>, Enterprise Architect and Strategic Consultant.</p>
+  
+  <p>Here I publish:</p>
+  <ul>
+    <li>detailed project documentation,</li>
+    <li>architecture diagrams,</li>
+    <li>capability models,</li>
+    <li>notes on enterprise transformation and product management.</li>
+  </ul>
+  
+  <p>If you're looking for a business-oriented overview of my consulting services, visit:<br>
+  👉 <a href="https://vkconsulting.crd.co/" target="_blank">vkconsulting.crd.co</a></p>
+  
+  <h2>Navigation</h2>
+  <ul>
+    <li><a href="/en/">English Version</a></li>
+    <li><a href="/ru/">Русская версия</a></li>
+  </ul>
+  
+  <hr>
+  
+  <p style="text-align: center; font-size: 14px;">
+    This site contains detailed technical documentation of my projects.<br>
+    For a business overview, visit my consulting page:<br>
+    <a href="https://vkconsulting.crd.co/" target="_blank">vkconsulting.crd.co</a>
+  </p>
+</div>
 
-  <!-- Docsify Core -->
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    </main>
 
-  <!-- Mermaid support -->
-  <script src="//unpkg.com/mermaid/dist/mermaid.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/mermaid.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
+    <footer class="site-footer">
+      <p>&copy; 2025 Valerii Korobeinikov. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>

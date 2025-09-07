@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Проекты"
+description: "Проекты"
+lang: ru
+permalink: /ru/projects/
+---
+
 
 # Проекты
 

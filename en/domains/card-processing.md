@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Untitled"
+description: "Untitled"
+lang: en
+permalink: /en/domains/card-processing/
+---
+
 **Role: Project Manager / Business Analyst / Solution Architect**
 
 ### Core Competencies Overview

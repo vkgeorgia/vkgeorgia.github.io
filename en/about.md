@@ -1,3 +1,11 @@
+---
+layout: page
+title: "About Me"
+description: "About Me"
+lang: en
+permalink: /en/about/
+---
+
 # About Me
 
 <img src="/images/108.jpg" alt="Valerii" width="300">

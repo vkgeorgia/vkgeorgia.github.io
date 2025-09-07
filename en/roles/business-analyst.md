@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Valerii Korobeinikov – Business Analysis Experience"
+description: "Valerii Korobeinikov – Business Analysis Experience"
+lang: en
+permalink: /en/roles/business-analyst/
+---
+
 # Valerii Korobeinikov – Business Analysis Experience
 
 Throughout my career, I have frequently performed business analysis tasks, both formally and informally, across various projects and industries. My analytical skills and domain knowledge have enabled me to successfully bridge the gap between business stakeholders and technical teams. Below are key responsibilities and achievements I have delivered in the business analyst role:

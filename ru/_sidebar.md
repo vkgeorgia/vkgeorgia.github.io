@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Untitled"
+description: "Untitled"
+lang: ru
+permalink: /ru/_sidebar/
+---
+
 - [Главная](/ru/)
 - [Обо мне](/ru/about)
 - [Загрузки](/ru/downloads)

@@ -7,6 +7,38 @@ languages:
   - en
   - ru
 
+author:
+  name: "Valerii Korobeinikov"
+  email: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
 plugins:
   - jekyll-feed
-  - jekyll-mermaid
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - docsify-backup/
+
+# Include
+include:
+  - _pages
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:path/
