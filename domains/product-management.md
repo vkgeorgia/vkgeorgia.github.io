@@ -106,8 +106,3 @@ My approach includes:
 * **Project & Team Leadership:** Effective leadership of cross-functional teams (up to 22 people), including developers, analysts, and external vendors, to achieve objectives on time and within budget. Proficient in Scrum and other agile methodologies.
 * **Process Optimization & Risk Mitigation:** Focus on creating solutions that automate operations, reduce manual labor, minimize errors, decrease fraud, and mitigate other risks.
 * **Innovation Implementation:** Active utilization of advanced technologies, including cloud solutions (AWS), IoT, blockchain, and artificial intelligence, to create competitive advantages and transform businesses.
-
----
-
-Do you want me to make any adjustments or highlight specific aspects in more detail?
-
