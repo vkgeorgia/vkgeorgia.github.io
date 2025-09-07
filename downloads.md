@@ -6,8 +6,6 @@ lang: en
 permalink: /downloads/
 ---
 
-# 📥 Downloads
-
 Here you can download short materials about my projects and professional profile:
 
 <ul>

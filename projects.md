@@ -6,8 +6,6 @@ lang: en
 permalink: /projects/
 ---
 
-# Projects
-
 ## Domodedovo Airport (DME)
 
 **Role:** Product Portfolio Lead  
