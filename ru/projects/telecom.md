@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Проекты в сфере телекоммуникаций"
+description: "Проекты в сфере телекоммуникаций"
+lang: ru
+permalink: /ru/projects/telecom/
+---
+
 # Проекты в сфере телекоммуникаций
 
 ---

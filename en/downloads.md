@@ -1,3 +1,11 @@
+---
+layout: page
+title: "📥 Downloads"
+description: "📥 Downloads"
+lang: en
+permalink: /en/downloads/
+---
+
 # 📥 Downloads
 
 Here you can download short materials about my projects and professional profile:

@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Projects"
+description: "Projects"
+lang: en
+permalink: /en/projects/
+---
+
 # Projects
 
 ## Domodedovo Airport (DME)

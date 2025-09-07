@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Telecommunications Projects"
+description: "Telecommunications Projects"
+lang: en
+permalink: /en/projects/telecom/
+---
+
 # Telecommunications Projects
 
 ---

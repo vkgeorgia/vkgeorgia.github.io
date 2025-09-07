@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Welcome"
+description: "Technical site of Valerii Korobeinikov, Enterprise Architect and Strategic Consultant"
+lang: en
+permalink: /en/
+---
+
 # Welcome
 
 This is the technical site of **Valerii Korobeinikov**, Enterprise Architect and Strategic Consultant.

@@ -1,3 +1,11 @@
+---
+layout: page
+title: "Проекты в сфере транспорта"
+description: "Проекты в сфере транспорта"
+lang: ru
+permalink: /ru/projects/transport/
+---
+
 # Проекты в сфере транспорта
 
 ## Аэропорт Домодедово (DME)
