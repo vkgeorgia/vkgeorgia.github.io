@@ -8,7 +8,9 @@ permalink:/roles/business-analyst/
 
 # Valerii Korobeinikov – Business Analysis Experience
 
-Throughout my career, I have frequently performed business analysis tasks, both formally and informally, across various projects and industries. My analytical skills and domain knowledge have enabled me to successfully bridge the gap between business stakeholders and technical teams. Below are key responsibilities and achievements I have delivered in the business analyst role:
+## Professional Summary
+
+I have over 15 years of experience in IT and digital transformation, with more than 10 years focused on **business analysis**. My expertise lies at the intersection of business needs and technical execution, specialising in **requirements engineering, stakeholder alignment, capability mapping, and translating business goals into actionable specifications**. I have worked both as an individual contributor and in leadership roles, driving initiatives in **telecom, aviation, oil & gas, and retail**.
 
 ## Requirements Engineering
 
@@ -43,9 +45,35 @@ Throughout my career, I have frequently performed business analysis tasks, both 
 * Participated in enterprise IT strategy development by gathering stakeholder input, evaluating alternatives, and documenting vision and objectives.
 * Provided input for strategic roadmaps and transformation programs.
 
-## Notable Achievements
+## Project Highlights
 
-* **Retail Loyalty Project:** Identified causes of retail downtime by tracing data and process inconsistencies across multiple systems, directly supporting risk mitigation and operational continuity.
-* **Airport Product Portfolio:** Developed a requirement management system and analysis framework that supported decision-making for over 300 airport products.
-* **Telecom Transformation:** Conducted capability-based analysis of PIM/SIM and marketplace tools, leading to structured vendor evaluation and solution planning.
-* **Medical Information System:** As part of a project for Olympic athlete screening, analysed medical and administrative requirements, helping to ensure data integrity and compliance.
+### EPM-HRMS Integration
+* **Role:** Lead Business Analyst
+* Led design of a **Unified Employee Profile** consolidating data across HR, Finance, and IT.
+* Conducted 20+ structured interviews with stakeholders, resulting in **4 strategic projects launched**.
+* Managed a small team of analysts and implemented peer review processes.
+
+### SAP SuccessFactors & LMS Implementation (Domodedovo Airport)
+* Collected and formalised HR and IT requirements for SAP SuccessFactors under a Waterfall model.
+* Led full requirements lifecycle for an LMS, delivering functional specs and supporting implementation.
+
+### Retail Loyalty Project
+* Investigated retail system downtime by tracing data and process inconsistencies across multiple systems.
+* Delivered actionable insights, supporting operational continuity and risk mitigation.
+
+### Airport Product Portfolio Management
+* Designed a **requirement management system** and analysis framework to manage over 300 products, enabling faster decision-making.
+
+### Telecom Digital Transformation
+* Conducted capability-based analysis of PIM/SIM and marketplace tools.
+* Delivered structured vendor evaluation, improving decision quality.
+
+### Medical Information System for Olympic Athletes
+* Analysed medical and administrative workflows, ensuring **data integrity** and regulatory compliance.
+
+## Strengths
+
+* Skilled at bridging business stakeholders and technical teams.
+* Strong stakeholder management: adept at navigating conflicting interests and facilitating productive dialogue.
+* Experienced in **Agile and Waterfall** delivery models.
+* Advocates for **structured documentation, peer reviews, and clear communication** in multi-department environments.
