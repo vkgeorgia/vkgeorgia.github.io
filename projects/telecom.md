@@ -81,6 +81,43 @@ BTC initiated its digital transformation and needed a full view of its IT system
 
 ---
 
+## SKY-BARS – Financial Monitoring System
+
+**Client:** Rostelecom.SkyLink  
+**Industry:** Telecommunications  
+**Period:** August 2008 – August 2010  
+**Role:** Business Analyst, Project Manager  
+**Project Code:** SKY-BARS
+
+### Project Goal  
+Develop and implement an automated internal financial control system to improve budgeting and financial monitoring processes.
+
+### Context  
+Rostelecom.SkyLink needed to improve its financial processes. The existing internal financial control, budgeting, and monitoring processes were inefficient, highly time-consuming (budget preparation cycle took up to 6 months), and lacked transparency, hindering agile and accurate financial management.
+
+### Key Responsibilities  
+- **Process Analysis:** Conducted detailed analysis of current budgeting, financial control, and monitoring processes
+- **Requirements Gathering:** Collaborated with stakeholders from financial and management departments
+- **System Design:** Developed architecture and functional requirements for the automated system
+- **Project Management:** Organized and led the development team, ensuring adherence to timelines and quality
+- **Implementation:** Oversaw the entire development and implementation lifecycle
+- **Training:** Organized system testing and trained end-users
+
+### Technologies Used  
+- **Backend:** Microsoft C#
+- **Database:** MS SQL Server
+- **Analytics:** MS SQL Analysis Services
+- **Reporting:** MS SQL Reporting Services
+
+### Results  
+- **Automated Financial Control System:** Successfully implemented SKY-BARS system providing effective control over financial operations
+- **Dramatic Time Reduction:** Budget preparation cycle reduced from **6 months to 2 months** (3-fold improvement)
+- **Enhanced Transparency:** New processes provided greater transparency of financial data
+- **Improved Management:** Company gained tools for more accurate and timely control over expenditures and revenues
+- **Overall Efficiency:** Optimized resource utilization and fostered greater discipline in financial activities
+
+---
+
 ## Sky Link / Rostelecom: Internal Process Automation
 
 **Client:** Sky Link (subsidiary of Rostelecom)  
