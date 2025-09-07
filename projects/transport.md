@@ -6,11 +6,7 @@ lang: en
 permalink: /projects/transport/
 ---
 
-# Transport Projects
-
----
-
-## DME-25 – Enterprise Strategy Development and Risk Management
+## DME-25
 
 **Client:** Moscow Domodedovo Airport (DME)  
 **Industry:** Transport, Aviation  
@@ -41,7 +37,7 @@ In 2019, I joined the Strategic Group at Domodedovo Airport as Chief Architect. 
 
 ---
 
-## DME: Product Portfolio Optimization
+## DME-26
 
 **Client:** Moscow Domodedovo Airport (DME)  
 **Industry:** Transport, Aviation  
@@ -73,7 +69,7 @@ DME operates as a private international airport and manages various business uni
 
 ---
 
-## DME: IT Strategy Development
+## DME-27
 
 **Client:** Moscow Domodedovo Airport (DME)  
 **Industry:** Transport, Aviation  
@@ -100,7 +96,7 @@ DME required a strategic roadmap for digitalization and system modernization acr
 
 ---
 
-## CAR5: Carsharing Startup
+## CAR5
 
 **Client:** CAR5 (mobility startup)  
 **Industry:** Urban Mobility / Carsharing  

@@ -6,11 +6,7 @@ lang: en
 permalink: /projects/telecom/
 ---
 
-# Telecommunications Projects
-
----
-
-## BTCL-ARCO (2): Product Domain Transformation
+## BTCL-ARCO-2
 
 **Client:** BTC (national telecom operator)  
 **Industry:** Telecommunications, Digital Services  
@@ -47,7 +43,7 @@ BTC is transforming into a digital ecosystem. The product domain was unstructure
 
 ---
 
-## BTCL-ARCO (1): IT Landscape Assessment
+## BTCL-ARCO-1
 
 **Client:** BTC  
 **Industry:** Telecommunications  
@@ -81,7 +77,7 @@ BTC initiated its digital transformation and needed a full view of its IT system
 
 ---
 
-## SKY-BARS – Financial Monitoring System
+## SKY-BARS
 
 **Client:** Rostelecom.SkyLink  
 **Industry:** Telecommunications  
@@ -118,7 +114,7 @@ Rostelecom.SkyLink needed to improve its financial processes. The existing inter
 
 ---
 
-## Sky Link / Rostelecom: Internal Process Automation
+## SKY-PROC
 
 **Client:** Sky Link (subsidiary of Rostelecom)  
 **Industry:** Telecommunications  
