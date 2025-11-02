@@ -16,9 +16,16 @@
 <body>
   <div class="container">
     <header class="site-header">
-      <h1 class="site-title">
-        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      </h1>
+      <div class="header-wrapper">
+        <h1 class="site-title">
+          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </h1>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <div class="main-wrapper">
@@ -35,5 +42,35 @@
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
     </footer>
   </div>
+  
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      
+      if (menuToggle && sidebar) {
+        menuToggle.addEventListener('click', function() {
+          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', !isExpanded);
+          sidebar.classList.toggle('is-open');
+          menuToggle.classList.toggle('is-active');
+        });
+        
+        // Close menu when clicking outside or on a navigation link
+        document.addEventListener('click', function(event) {
+          const isNavLink = event.target.closest('.sidebar a');
+          const isInsideSidebar = sidebar.contains(event.target);
+          const isToggleButton = menuToggle.contains(event.target);
+          
+          if (isNavLink || (!isInsideSidebar && !isToggleButton)) {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            sidebar.classList.remove('is-open');
+            menuToggle.classList.remove('is-active');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
