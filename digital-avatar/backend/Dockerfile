@@ -16,6 +16,7 @@ COPY app/ ./app/
 
 # Create knowledge base directory
 RUN mkdir -p ./knowledge_base
+COPY knowledge_base/ ./knowledge_base/
 
 # Copy static files (frontend) - copied from parent dir before build
 COPY static/ ./frontend/
