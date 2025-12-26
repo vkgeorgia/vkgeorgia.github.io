@@ -1,7 +1,123 @@
 ---
 layout: page
-title: "transport"
-description: "transport"
+title: "Transport Projects"
+description: "Transport Projects"
 lang: en
+permalink: /projects/transport/
 ---
+
+## DME-25
+
+**Client:** Moscow Domodedovo Airport (DME)  
+**Industry:** Transport, Aviation  
+**Period:** November 2019 – February 2021  
+**Role:** Enterprise Architect, Chief Architect  
+**Project Code:** DME-25
+
+### Project Goal  
+Develop annual enterprise strategy and conduct comprehensive risk assessment to increase the airport's resilience to potential threats.
+
+### Context  
+In 2019, I joined the Strategic Group at Domodedovo Airport as Chief Architect. The enterprise annually develops a strategy to define its development directions and faces the need to assess and manage potential risks in the dynamic aviation industry.
+
+### Key Responsibilities  
+- **Strategic Planning:** Participated in annual enterprise strategy development process, focusing on market situation, technologies, information management, and IT
+- **Risk Assessment:** Conducted comprehensive risk assessment, identifying potential threats to airport operations and development
+- **Response Planning:** Developed detailed response plans for identified risks
+- **Trend Analysis:** Conducted trend analysis in aviation industry and related fields
+- **Forecasting:** Analyzed and forecasted impact of trends on future airport operations
+- **Analytical Reports:** Collected data, conducted research, and prepared analytical reports on current topics
+
+### Results  
+- **Strategic Contribution:** Made significant contribution to formation of annual enterprise strategy
+- **Risk Resilience:** Increased airport's resilience to potential threats through comprehensive risk assessment
+- **Informed Decision-Making:** Provided management with valuable information for informed strategic decisions
+- **Strategic Direction:** Defined strategic directions and described strategic initiatives for next period
+- **Market Intelligence:** Ensured consideration of key aspects of market situation, technological development, and effective IT management
+
+---
+
+## DME-26
+
+**Client:** Moscow Domodedovo Airport (DME)  
+**Industry:** Transport, Aviation  
+**Period:** November 2019 – February 2021  
+**Role:** Project Manager, Strategic Consultant  
+**Company:** Independent Consultant
+
+### Project Goal  
+Analyze and optimize the airport's commercial product portfolio.
+
+### Context  
+DME operates as a private international airport and manages various business units including retail, parking, and cargo. A large number of products and services required prioritization and performance evaluation.
+
+### Responsibilities  
+- Conducted analysis of product profitability  
+- Designed a product line evaluation model  
+- Developed KPIs and monitoring system  
+- Facilitated strategic sessions with stakeholders  
+
+### Results  
+- Created a scoring model for product evaluation  
+- Designed and implemented a product monitoring dashboard  
+- Supported strategic decisions on product investments and divestments  
+
+### Tools and Approaches  
+- Product analysis methodology  
+- Excel models, visualization tools  
+- Strategic facilitation  
+
+---
+
+## DME-27
+
+**Client:** Moscow Domodedovo Airport (DME)  
+**Industry:** Transport, Aviation  
+**Period:** February 2021 – August 2021  
+**Role:** IT Strategy Consultant  
+**Company:** Independent Consultant
+
+### Project Goal  
+Develop a long-term IT strategy aligned with business priorities.
+
+### Context  
+DME required a strategic roadmap for digitalization and system modernization across operational and customer-facing services.
+
+### Responsibilities  
+- Interviewed key stakeholders  
+- Assessed current IT landscape  
+- Developed future-state architecture vision  
+- Proposed key transformation initiatives  
+
+### Results  
+- Delivered a strategic IT development roadmap  
+- Prioritized IT projects based on business impact  
+- Defined architecture domains and governance approach  
+
+---
+
+## CAR5
+
+**Client:** CAR5 (mobility startup)  
+**Industry:** Urban Mobility / Carsharing  
+**Period:** 2017 – 2018  
+**Role:** Strategic Advisor  
+**Company:** Independent Consultant
+
+### Project Goal  
+Support launch and development of a new carsharing platform.
+
+### Context  
+CAR5 aimed to enter the fast-growing urban mobility market in Russia, offering flexible short-term rentals through mobile apps.
+
+### Responsibilities  
+- Shaped product and service concept  
+- Designed business model and monetization strategy  
+- Defined MVP features and technology stack  
+- Prepared investor materials and presentations  
+
+### Results  
+- Delivered a validated product-market fit concept  
+- Supported early-stage go-to-market activities  
+- Consulted on platform scalability and data architecture  
 
