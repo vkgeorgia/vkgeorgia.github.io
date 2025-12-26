@@ -1,0 +1,275 @@
+import os
+import logging
+import re
+import random
+import io
+from pathlib import Path
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaIoBaseDownload
+
+try:
+    import google.generativeai as genai
+except ImportError:
+    genai = None
+
+try:
+    import pdfplumber
+except ImportError:
+    pdfplumber = None
+
+try:
+    from docx import Document
+except ImportError:
+    Document = None
+
+logger = logging.getLogger(__name__)
+
+class RAGService:
+    def __init__(self):
+        self.knowledge_base = []
+        self.model = None
+        
+        # Google Drive Setup
+        self.drive_service = None
+        self.drive_folder_id = os.getenv("GOOGLE_DRIVE_FOLDER_ID")
+        self._init_drive_service()
+        
+        # Gemini Setup (Old SDK)
+        api_key = os.getenv("GEMINI_API_KEY")
+        if api_key and genai:
+            try:
+                genai.configure(api_key=api_key)
+                self.model = genai.GenerativeModel('gemini-2.5-flash')
+                logger.info(f"Gemini API configured successfully with gemini-2.5-flash")
+            except Exception as e:
+                logger.error(f"Failed to configure Gemini: {e}")
+                self.model = None
+        else:
+            logger.warning("GEMINI_API_KEY not found or google.generativeai not installed.")
+            self.model = None
+        
+        # Load knowledge base
+        self.load_knowledge_base()
+    
+    def _init_drive_service(self):
+        """Initialize Google Drive API service."""
+        try:
+            credentials_path = Path(__file__).resolve().parent.parent.parent.parent / "google_credentials.json"
+            if not credentials_path.exists():
+                logger.warning("google_credentials.json not found. Drive integration disabled.")
+                return
+            
+            SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
+            credentials = service_account.Credentials.from_service_account_file(
+                str(credentials_path), scopes=SCOPES)
+            self.drive_service = build('drive', 'v3', credentials=credentials)
+            logger.info("Google Drive API initialized successfully")
+        except Exception as e:
+            logger.error(f"Failed to initialize Drive API: {e}")
+            self.drive_service = None
+    
+    def load_knowledge_base(self):
+        """Load documents from Google Drive or local fallback."""
+        logger.info("Loading knowledge base...")
+        
+        # Try Google Drive first
+        if self.drive_service and self.drive_folder_id:
+            try:
+                self._load_from_drive()
+                if self.knowledge_base:
+                    total_chars = sum(len(doc) for doc in self.knowledge_base)
+                    logger.info(f"Loaded {len(self.knowledge_base)} documents from Google Drive. Total characters: {total_chars}")
+                    return
+            except Exception as e:
+                logger.error(f"Failed to load from Drive: {e}. Falling back to local.")
+        
+        # Fallback to local
+        self._load_from_local()
+        total_chars = sum(len(doc) for doc in self.knowledge_base)
+        logger.info(f"Loaded {len(self.knowledge_base)} documents from local. Total characters: {total_chars}")
+    
+    def _load_from_drive(self):
+        """Load files from Google Drive folder."""
+        query = f"'{self.drive_folder_id}' in parents and trashed=false"
+        results = self.drive_service.files().list(
+            q=query,
+            fields="files(id, name, mimeType)",
+            pageSize=100
+        ).execute()
+        
+        files = results.get('files', [])
+        logger.info(f"Found {len(files)} files in Drive folder")
+        
+        for file in files:
+            try:
+                content = self._download_and_parse_drive_file(file)
+                if content:
+                    self.knowledge_base.append(content)
+            except Exception as e:
+                logger.error(f"Failed to process {file['name']}: {e}")
+    
+    def _download_and_parse_drive_file(self, file):
+        """Download and parse a single Drive file."""
+        file_id = file['id']
+        file_name = file['name']
+        mime_type = file['mimeType']
+        
+        # Handle Google Docs specially
+        if mime_type == 'application/vnd.google-apps.document':
+            request = self.drive_service.files().export_media(fileId=file_id, mimeType='text/plain')
+            text_buffer = io.BytesIO()
+            downloader = MediaIoBaseDownload(text_buffer, request)
+            done = False
+            while not done:
+                status, done = downloader.next_chunk()
+            text_buffer.seek(0)
+            return text_buffer.read().decode('utf-8', errors='ignore')
+        
+        # Download regular files
+        request = self.drive_service.files().get_media(fileId=file_id)
+        file_buffer = io.BytesIO()
+        downloader = MediaIoBaseDownload(file_buffer, request)
+        
+        done = False
+        while not done:
+            status, done = downloader.next_chunk()
+        
+        file_buffer.seek(0)
+        
+        # Parse based on type
+        if mime_type == 'text/plain' or file_name.endswith('.txt'):
+            return file_buffer.read().decode('utf-8', errors='ignore')
+        elif mime_type == 'application/pdf' or file_name.endswith('.pdf'):
+            return self._parse_pdf_buffer(file_buffer)
+        elif mime_type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' or file_name.endswith('.docx'):
+            return self._parse_docx_buffer(file_buffer)
+        elif mime_type.startswith('application/vnd.google-apps'):
+            logger.warning(f"Unsupported Google Apps file type: {mime_type} for {file_name}")
+            return None
+        else:
+            logger.warning(f"Unsupported file type: {mime_type} for {file_name}")
+            return None
+    
+    def _parse_pdf_buffer(self, buffer):
+        """Parse PDF from buffer."""
+        if not pdfplumber:
+            logger.warning("pdfplumber not installed, skipping PDF")
+            return None
+        text = ""
+        with pdfplumber.open(buffer) as pdf:
+            for page in pdf.pages:
+                text += page.extract_text() or ""
+        return text
+    
+    def _parse_docx_buffer(self, buffer):
+        """Parse DOCX from buffer."""
+        if not Document:
+            logger.warning("python-docx not installed, skipping DOCX")
+            return None
+        doc = Document(buffer)
+        return "\n".join([para.text for para in doc.paragraphs])
+    
+    def _load_from_local(self):
+        """Fallback: Load from local knowledge_base directory."""
+        kb_dir = Path(__file__).resolve().parent.parent.parent / "knowledge_base"
+        if not kb_dir.exists():
+            logger.warning(f"Knowledge base directory not found: {kb_dir}")
+            return
+        
+        # Read .txt files
+        for txt_file in kb_dir.rglob("*.txt"):
+            try:
+                with open(txt_file, "r", encoding="utf-8") as f:
+                    self.knowledge_base.append(f.read())
+            except Exception as e:
+                logger.error(f"Error reading {txt_file}: {e}")
+        
+        # Read .pdf files
+        if pdfplumber:
+            for pdf_file in kb_dir.rglob("*.pdf"):
+                try:
+                    with pdfplumber.open(pdf_file) as pdf:
+                        text = ""
+                        for page in pdf.pages:
+                            text += page.extract_text() or ""
+                        self.knowledge_base.append(text)
+                except Exception as e:
+                    logger.error(f"Error reading {pdf_file}: {e}")
+        
+        # Read .docx files
+        if Document:
+            for docx_file in kb_dir.rglob("*.docx"):
+                try:
+                    doc = Document(docx_file)
+                    text = "\n".join([para.text for para in doc.paragraphs])
+                    self.knowledge_base.append(text)
+                except Exception as e:
+                    logger.error(f"Error reading {docx_file}: {e}")
+    
+    async def generate_response(self, query: str) -> str:
+        """Generate a response using Gemini or fallback."""
+        try:
+            if not self.model:
+                return self._keyword_search_fallback(query)
+            
+            if not self.knowledge_base:
+                return "Knowledge base is empty. Please add documents to the knowledge_base folder or configure Google Drive."
+            
+            # Prepare context
+            context = "\n\n".join(self.knowledge_base[:3])  # Use first 3 docs to avoid token limits
+            
+            system_prompt = f"""You are Valerii Korobeinikov, an Enterprise Architect and Business Strategist. You are responding directly to inquiries about your professional experience, services, and expertise.
+
+Knowledge Base (Your Professional Information):
+{context}
+
+Response Guidelines:
+- ALWAYS respond in the SAME LANGUAGE as the user's question (English, Russian, etc.)
+- Speak in FIRST PERSON ("I have experience...", "My expertise includes...", "I offer...")
+- Maintain a PROFESSIONAL, BUSINESS-APPROPRIATE tone
+- When listing multiple items, use bullet points for clarity
+- Focus responses on: your experience, projects, education, and consulting services
+- If asked about unrelated topics, politely redirect: "While that's interesting, let me tell you about my relevant experience in [related area]..."
+- For meeting requests: Provide the Google Calendar booking link immediately: https://calendar.google.com/calendar/appointments/schedules/AcZssZ2PioFnJ3dh08i7cYqS_uD3GwzYlij9bbsbKcUsip29ahYGegYuj6YRFwB6BbERkOJ0kiF0lEbi - then ask if they have any other questions.
+- Keep responses SHORT after providing the booking link - just thank them and ask if they have other questions.
+- Base ALL answers ONLY on the provided knowledge base
+- If information is not in the knowledge base, say: "I don't have that specific information in my profile, but I'd be happy to discuss this during a call."
+
+Remember: You ARE Valerii. Respond as yourself, professionally and confidently."""
+
+            # Use old SDK
+            response = await self.model.generate_content_async(
+                f"{system_prompt}\n\nUser: {query}\nAssistant:"
+            )
+            
+            return response.text
+            
+        except Exception as e:
+            logger.error(f"Error generating response: {e}", exc_info=True)
+            return self._keyword_search_fallback(query)
+    
+    def _keyword_search_fallback(self, query: str) -> str:
+        """Simple keyword-based search when API is unavailable."""
+        if not self.knowledge_base:
+            return "[Offline Mode] No knowledge base available."
+        
+        query_lower = query.lower()
+        keywords = re.findall(r'\w+', query_lower)
+        
+        best_match = None
+        best_score = 0
+        
+        for doc in self.knowledge_base:
+            doc_lower = doc.lower()
+            score = sum(1 for kw in keywords if kw in doc_lower)
+            if score > best_score:
+                best_score = score
+                best_match = doc
+        
+        if best_match and best_score > 0:
+            # Return first 500 chars
+            snippet = best_match[:500]
+            return f"[Offline Backup] {snippet}..."
+        else:
+            return "[Offline Mode] I couldn't find relevant information in the knowledge base."

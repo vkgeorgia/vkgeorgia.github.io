@@ -7,3 +7,12 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Digital Avatar - credentials and sensitive files
+digital-avatar/.env
+digital-avatar/google_credentials.json
+
+# Digital Avatar - Python cache
+digital-avatar/backend/__pycache__/
+digital-avatar/backend/app/__pycache__/
+digital-avatar/backend/app/services/__pycache__/
