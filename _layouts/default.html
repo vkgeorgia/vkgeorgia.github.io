@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <meta name="author" content="{{ site.author.name | default: 'Valerii Korobeinikov' }}">
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  
+
   <!-- Feed -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
+
 <body>
   <div class="container">
     <header class="site-header">
@@ -32,7 +34,7 @@
       <aside class="sidebar">
         {% include navigation.html %}
       </aside>
-      
+
       <main class="site-content">
         {{ content }}
       </main>
@@ -42,27 +44,27 @@
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
     </footer>
   </div>
-  
+
   <script>
     // Mobile menu toggle
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const menuToggle = document.querySelector('.menu-toggle');
       const sidebar = document.querySelector('.sidebar');
-      
+
       if (menuToggle && sidebar) {
-        menuToggle.addEventListener('click', function() {
+        menuToggle.addEventListener('click', function () {
           const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
           menuToggle.setAttribute('aria-expanded', !isExpanded);
           sidebar.classList.toggle('is-open');
           menuToggle.classList.toggle('is-active');
         });
-        
+
         // Close menu when clicking outside or on a navigation link
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
           const isNavLink = event.target.closest('.sidebar a');
           const isInsideSidebar = sidebar.contains(event.target);
           const isToggleButton = menuToggle.contains(event.target);
-          
+
           if (isNavLink || (!isInsideSidebar && !isToggleButton)) {
             menuToggle.setAttribute('aria-expanded', 'false');
             sidebar.classList.remove('is-open');
@@ -72,5 +74,9 @@
       }
     });
   </script>
+
+  <!-- AI Avatar Widget -->
+  <script src="https://ai-avatar-103512681014.us-central1.run.app/static/widget.js"></script>
 </body>
+
 </html>
