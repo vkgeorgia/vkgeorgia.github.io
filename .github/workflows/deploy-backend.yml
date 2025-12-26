@@ -1,0 +1,47 @@
+name: Deploy backend to Cloud Run
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "digital-avatar/backend/**"
+      - "knowledge-base/**"
+      - ".github/workflows/deploy-backend.yml"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sync knowledge base into backend
+        run: |
+          rm -rf digital-avatar/backend/knowledge_base
+          mkdir -p digital-avatar/backend/knowledge_base
+          cp -a knowledge-base/. digital-avatar/backend/knowledge_base/
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up gcloud
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Build container image
+        run: |
+          gcloud builds submit \
+            --tag "gcr.io/${{ secrets.GCP_PROJECT_ID }}/ai-avatar" \
+            digital-avatar/backend
+
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy ai-avatar \
+            --image "gcr.io/${{ secrets.GCP_PROJECT_ID }}/ai-avatar:latest" \
+            --region us-central1 \
+            --allow-unauthenticated \
+            --set-env-vars "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}"
