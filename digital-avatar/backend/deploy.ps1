@@ -40,6 +40,17 @@ gcloud config set project $projectId
 # Deploy
 Write-Host "Deploying to Cloud Run..." -ForegroundColor Cyan
 
+# Sync knowledge base into backend/knowledge_base for deployment
+$kbSource = Join-Path $PSScriptRoot "..\\knowledge-base"
+$kbDest = Join-Path $PSScriptRoot "knowledge_base"
+if (Test-Path $kbSource) {
+    New-Item -ItemType Directory -Force -Path $kbDest | Out-Null
+    Copy-Item -Path (Join-Path $kbSource "*") -Destination $kbDest -Recurse -Force
+    Write-Host "Knowledge base synced to backend/knowledge_base" -ForegroundColor Green
+} else {
+    Write-Host "Warning: knowledge-base folder not found; local KB won't be bundled." -ForegroundColor Yellow
+}
+
 gcloud run deploy ai-avatar `
     --source . `
     --platform managed `

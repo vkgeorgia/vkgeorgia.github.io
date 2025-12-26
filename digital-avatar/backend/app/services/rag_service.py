@@ -171,52 +171,66 @@ class RAGService:
         return "\n".join([para.text for para in doc.paragraphs])
     
     def _load_from_local(self):
-        """Fallback: Load from local knowledge-base directory."""
-        # Path to knowledge-base in valerii-site root
-        kb_dir = Path(__file__).resolve().parent.parent.parent.parent.parent / "knowledge-base"
-        if not kb_dir.exists():
-            logger.warning(f"Knowledge base directory not found: {kb_dir}")
-            return
-        
-        # Read .md and .txt files (excluding sources/ directories)
-        for pattern in ["*.md", "*.txt"]:
-            for file in kb_dir.rglob(pattern):
-                # Skip files in sources/ directories
-                if 'sources' in file.parts:
-                    continue
-                try:
-                    with open(file, "r", encoding="utf-8") as f:
-                        self.knowledge_base.append(f.read())
-                except Exception as e:
-                    logger.error(f"Error reading {file}: {e}")
-        
-        # Read .pdf files (excluding sources/ directories)
-        if pdfplumber:
-            for pdf_file in kb_dir.rglob("*.pdf"):
-                # Skip files in sources/ directories
-                if 'sources' in pdf_file.parts:
-                    continue
-                try:
-                    with pdfplumber.open(pdf_file) as pdf:
-                        text = ""
-                        for page in pdf.pages:
-                            text += page.extract_text() or ""
+        """Fallback: Load from local knowledge base directories."""
+        candidate_dirs = []
+        env_dir = os.getenv("KNOWLEDGE_BASE_DIR")
+        if env_dir:
+            candidate_dirs.append(Path(env_dir))
+
+        # /app/knowledge_base when running in container
+        candidate_dirs.append(Path(__file__).resolve().parent.parent.parent / "knowledge_base")
+        # valerii-site repo root knowledge-base
+        candidate_dirs.append(Path(__file__).resolve().parent.parent.parent.parent.parent / "knowledge-base")
+
+        def load_from_dir(kb_dir: Path):
+            # Read .md and .txt files (excluding sources/ directories)
+            for pattern in ["*.md", "*.txt"]:
+                for file in kb_dir.rglob(pattern):
+                    if "sources" in file.parts:
+                        continue
+                    try:
+                        with open(file, "r", encoding="utf-8") as f:
+                            self.knowledge_base.append(f.read())
+                    except Exception as e:
+                        logger.error(f"Error reading {file}: {e}")
+
+            # Read .pdf files (excluding sources/ directories)
+            if pdfplumber:
+                for pdf_file in kb_dir.rglob("*.pdf"):
+                    if "sources" in pdf_file.parts:
+                        continue
+                    try:
+                        with pdfplumber.open(pdf_file) as pdf:
+                            text = ""
+                            for page in pdf.pages:
+                                text += page.extract_text() or ""
+                            self.knowledge_base.append(text)
+                    except Exception as e:
+                        logger.error(f"Error reading {pdf_file}: {e}")
+
+            # Read .docx files (excluding sources/ directories)
+            if Document:
+                for docx_file in kb_dir.rglob("*.docx"):
+                    if "sources" in docx_file.parts:
+                        continue
+                    try:
+                        doc = Document(docx_file)
+                        text = "\n".join([para.text for para in doc.paragraphs])
                         self.knowledge_base.append(text)
-                except Exception as e:
-                    logger.error(f"Error reading {pdf_file}: {e}")
-        
-        # Read .docx files (excluding sources/ directories)
-        if Document:
-            for docx_file in kb_dir.rglob("*.docx"):
-                # Skip files in sources/ directories
-                if 'sources' in docx_file.parts:
-                    continue
-                try:
-                    doc = Document(docx_file)
-                    text = "\n".join([para.text for para in doc.paragraphs])
-                    self.knowledge_base.append(text)
-                except Exception as e:
-                    logger.error(f"Error reading {docx_file}: {e}")
+                    except Exception as e:
+                        logger.error(f"Error reading {docx_file}: {e}")
+
+        seen = set()
+        for kb_dir in candidate_dirs:
+            kb_dir = kb_dir.expanduser()
+            kb_dir_key = str(kb_dir)
+            if kb_dir_key in seen:
+                continue
+            seen.add(kb_dir_key)
+            if not kb_dir.exists():
+                logger.warning(f"Knowledge base directory not found: {kb_dir}")
+                continue
+            load_from_dir(kb_dir)
     
     async def generate_response(self, query: str) -> str:
         """Generate a response using Gemini or fallback."""
