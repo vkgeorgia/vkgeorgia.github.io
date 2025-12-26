@@ -171,23 +171,31 @@ class RAGService:
         return "\n".join([para.text for para in doc.paragraphs])
     
     def _load_from_local(self):
-        """Fallback: Load from local knowledge_base directory."""
-        kb_dir = Path(__file__).resolve().parent.parent.parent / "knowledge_base"
+        """Fallback: Load from local knowledge-base directory."""
+        # Path to knowledge-base in valerii-site root
+        kb_dir = Path(__file__).resolve().parent.parent.parent.parent.parent / "knowledge-base"
         if not kb_dir.exists():
             logger.warning(f"Knowledge base directory not found: {kb_dir}")
             return
         
-        # Read .txt files
-        for txt_file in kb_dir.rglob("*.txt"):
-            try:
-                with open(txt_file, "r", encoding="utf-8") as f:
-                    self.knowledge_base.append(f.read())
-            except Exception as e:
-                logger.error(f"Error reading {txt_file}: {e}")
+        # Read .md and .txt files (excluding sources/ directories)
+        for pattern in ["*.md", "*.txt"]:
+            for file in kb_dir.rglob(pattern):
+                # Skip files in sources/ directories
+                if 'sources' in file.parts:
+                    continue
+                try:
+                    with open(file, "r", encoding="utf-8") as f:
+                        self.knowledge_base.append(f.read())
+                except Exception as e:
+                    logger.error(f"Error reading {file}: {e}")
         
-        # Read .pdf files
+        # Read .pdf files (excluding sources/ directories)
         if pdfplumber:
             for pdf_file in kb_dir.rglob("*.pdf"):
+                # Skip files in sources/ directories
+                if 'sources' in pdf_file.parts:
+                    continue
                 try:
                     with pdfplumber.open(pdf_file) as pdf:
                         text = ""
@@ -197,9 +205,12 @@ class RAGService:
                 except Exception as e:
                     logger.error(f"Error reading {pdf_file}: {e}")
         
-        # Read .docx files
+        # Read .docx files (excluding sources/ directories)
         if Document:
             for docx_file in kb_dir.rglob("*.docx"):
+                # Skip files in sources/ directories
+                if 'sources' in docx_file.parts:
+                    continue
                 try:
                     doc = Document(docx_file)
                     text = "\n".join([para.text for para in doc.paragraphs])

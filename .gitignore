@@ -8,6 +8,10 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
+# Knowledge base - exclude sources directories (raw documents for manual processing)
+knowledge-base/*/sources/
+knowledge-base/*/*/sources/
+
 # Digital Avatar - credentials and sensitive files
 digital-avatar/.env
 digital-avatar/google_credentials.json
