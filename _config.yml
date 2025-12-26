@@ -18,6 +18,10 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# Include digital-avatar frontend files
+include:
+  - digital-avatar/frontend
+
 # Exclude from processing
 exclude:
   - Gemfile
@@ -27,9 +31,12 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - docsify-backup/
   - _site/
   - sources/
   - knowledge-base/*/sources/
-  - digital-avatar/
+  - digital-avatar/backend
+  - digital-avatar/docs
+  - digital-avatar/.env
+  - digital-avatar/google_credentials.json
+  - digital-avatar/README.md
 
