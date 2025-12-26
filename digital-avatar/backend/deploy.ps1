@@ -44,9 +44,6 @@ if ($projectId) {
     Write-Host "No project ID provided; using gcloud default project." -ForegroundColor Yellow
 }
 
-# Deploy
-Write-Host "Deploying to Cloud Run..." -ForegroundColor Cyan
-
 # Sync knowledge base into backend/knowledge_base for deployment
 $kbSource = Join-Path $PSScriptRoot "..\\..\\knowledge-base"
 $kbDest = Join-Path $PSScriptRoot "knowledge_base"
@@ -58,12 +55,33 @@ if (Test-Path $kbSource) {
     Write-Host "Warning: knowledge-base folder not found; local KB won't be bundled." -ForegroundColor Yellow
 }
 
+# Resolve project ID if not provided
+if (-not $projectId) {
+    $projectId = (gcloud config get-value project).Trim()
+    if (-not $projectId) {
+        Write-Host "Error: project ID not set in gcloud config." -ForegroundColor Red
+        exit 1
+    }
+    Write-Host "Using project from gcloud config: $projectId" -ForegroundColor Cyan
+}
+
+# Build and deploy
+Write-Host "Building container image..." -ForegroundColor Cyan
+gcloud builds submit --tag "gcr.io/$projectId/ai-avatar"
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "Build failed. Aborting deploy." -ForegroundColor Red
+    exit 1
+}
+
+Write-Host "Deploying to Cloud Run..." -ForegroundColor Cyan
+
 gcloud run deploy ai-avatar `
-    --source . `
+    --image "gcr.io/$projectId/ai-avatar:latest" `
     --platform managed `
     --region us-central1 `
     --allow-unauthenticated `
-    --set-env-vars "GEMINI_API_KEY=$GEMINI_API_KEY,GOOGLE_DRIVE_FOLDER_ID=$GOOGLE_DRIVE_FOLDER_ID"
+    --set-env-vars "GEMINI_API_KEY=$GEMINI_API_KEY"
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "`nDeployment successful!" -ForegroundColor Green
