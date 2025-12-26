@@ -29,11 +29,8 @@ class RAGService:
     def __init__(self):
         self.knowledge_base = []
         self.model = None
-        
-        # Google Drive Setup
         self.drive_service = None
-        self.drive_folder_id = os.getenv("GOOGLE_DRIVE_FOLDER_ID")
-        self._init_drive_service()
+        self.drive_folder_id = None
         
         # Gemini Setup (Old SDK)
         api_key = os.getenv("GEMINI_API_KEY")
@@ -70,21 +67,9 @@ class RAGService:
             self.drive_service = None
     
     def load_knowledge_base(self):
-        """Load documents from Google Drive or local fallback."""
+        """Load documents from local knowledge base directories."""
         logger.info("Loading knowledge base...")
-        
-        # Try Google Drive first
-        if self.drive_service and self.drive_folder_id:
-            try:
-                self._load_from_drive()
-                if self.knowledge_base:
-                    total_chars = sum(len(doc) for doc in self.knowledge_base)
-                    logger.info(f"Loaded {len(self.knowledge_base)} documents from Google Drive. Total characters: {total_chars}")
-                    return
-            except Exception as e:
-                logger.error(f"Failed to load from Drive: {e}. Falling back to local.")
-        
-        # Fallback to local
+
         self._load_from_local()
         total_chars = sum(len(doc) for doc in self.knowledge_base)
         logger.info(f"Loaded {len(self.knowledge_base)} documents from local. Total characters: {total_chars}")

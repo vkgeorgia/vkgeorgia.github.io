@@ -27,21 +27,28 @@ Get-Content "../.env" | ForEach-Object {
 
 # Prompt for project ID if not set
 if (-not $env:GCP_PROJECT_ID) {
-    $projectId = Read-Host "Enter your Google Cloud Project ID"
+    try {
+        $projectId = Read-Host "Enter your Google Cloud Project ID"
+    } catch {
+        $projectId = ""
+    }
 } else {
     $projectId = $env:GCP_PROJECT_ID
 }
 
-Write-Host "Using project: $projectId" -ForegroundColor Cyan
-
-# Set project
-gcloud config set project $projectId
+if ($projectId) {
+    Write-Host "Using project: $projectId" -ForegroundColor Cyan
+    # Set project
+    gcloud config set project $projectId
+} else {
+    Write-Host "No project ID provided; using gcloud default project." -ForegroundColor Yellow
+}
 
 # Deploy
 Write-Host "Deploying to Cloud Run..." -ForegroundColor Cyan
 
 # Sync knowledge base into backend/knowledge_base for deployment
-$kbSource = Join-Path $PSScriptRoot "..\\knowledge-base"
+$kbSource = Join-Path $PSScriptRoot "..\\..\\knowledge-base"
 $kbDest = Join-Path $PSScriptRoot "knowledge_base"
 if (Test-Path $kbSource) {
     New-Item -ItemType Directory -Force -Path $kbDest | Out-Null
