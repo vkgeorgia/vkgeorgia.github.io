@@ -30,4 +30,6 @@ exclude:
   - docsify-backup/
   - _site/
   - sources/
+  - knowledge-base/*/sources/
+  - digital-avatar/
 

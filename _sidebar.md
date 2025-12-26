@@ -6,29 +6,28 @@ lang: en
 permalink:/_sidebar/
 ---
 
-- [Home](/en/)
-- [About](/en/about)
-- [Downloads](/en/downloads)
+- [Home](/)
+- [About](/about)
+- [Downloads](/downloads)
 
 - **Projects by Industry**
-  - [Transport](/en/projects/transport)
-  - [Telecom](/en/projects/telecom)
-  - [Oil & Gas](/en/projects/oilgas)
-  - [Public Sector](/en/projects/gov)
-  - [Education & Training](/en/projects/education)
-  - [Healthcare](/en/projects/healthcare)
-  - [IT Architecture & Consulting](/en/projects/it)
+  - [Transport](/knowledge-base/projects/transport)
+  - [Telecom](/knowledge-base/projects/telecom)
+  - [Oil & Gas](/knowledge-base/projects/oilgas)
+  - [Education & Training](/knowledge-base/projects/education)
+  - [Healthcare](/knowledge-base/projects/healthcare)
+  - [IT Architecture & Consulting](/knowledge-base/projects/consulting)
 
 - **Projects by Role**
-  - [Enterprise Architect](/en/roles/enterprise-architect)
-  - [Domain Architect](/en/roles/domain-architect)
-  - [Business Analyst](/en/roles/business-analyst)
-  - [Project Manager](/en/roles/project-manager)
+  - [Enterprise Architect](/knowledge-base/roles/enterprise-architect)
+  - [Domain Architect](/knowledge-base/roles/domain-architect)
+  - [Business Analyst](/knowledge-base/roles/business-analyst)
+  - [Project Manager](/knowledge-base/roles/project-manager)
 
 - **Projects by Domain**
-  - [Payments and Processing](/en/domains/card-processing)
+  - [Payments and Processing](/knowledge-base/domains/card-processing)
+  - [ERP](/knowledge-base/domains/erp)
+  - [SCM](/knowledge-base/domains/scm)
 
 <br>
-
-- [Russian Version](/ru/)
 

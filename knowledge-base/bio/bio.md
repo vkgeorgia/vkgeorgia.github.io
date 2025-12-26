@@ -1,0 +1,19 @@
+### Valerii Korobeinikov — Enterprise Architect & Business Analyst
+
+Valerii Korobeinikov is a highly accomplished **Enterprise Architect and Business Analyst** with **over 20 years of experience** in Software and IT Consulting. He is renowned for his primary focus on achieving **Business and IT Strategy Alignment** through expert application of Enterprise Architecture and Business Analysis principles. Valerii excels at helping organizations **structure change, solve complex business challenges, and align business goals, capabilities, and IT initiatives to drive transformation**, delivering solutions with clarity, structure, and measurable impact.
+
+His expertise spans **strategic planning, capability-based planning, and enterprise transformation**. He possesses a deep understanding of enterprise architecture frameworks, including **TOGAF 10 Certified Enterprise Architect**, alongside certifications as an **AWS Certified Solution Architect** and **Google Cloud Digital Leader**. His professional journey has seen him in diverse roles such as Enterprise Architect, Business Architect, Solution Architect, Lead Business Analyst, and IT Strategy Consultant.
+
+Valerii has a proven track record of **delivering transformational change** for both large enterprises and mid-size companies across a wide array of **vertical industries**, including Telecom, Retail, Oil & Gas, Transportation (Aviation), Public Sector, Healthcare, and Manufacturing. His notable client list includes Domodedovo Airport, Gazprom Neft, BTC, ADNOC, FMBA, Skylink, and Wincor Nixdorf.
+
+Key achievements highlight his impact:
+*   At **Domodedovo Airport**, he spearheaded crisis management for the IT department during COVID-19, reorienting services to external clients and opening new revenue streams. He also harmonized the airport's product portfolio, reducing it from 4600 to 1200 products without compromising profitability, and **reduced Time-to-Market (TTM) by three times**. He also developed a cohesive IT strategy and led the reorganization of the IT department, implementing TOGAF-based change management and Agile methodologies.
+*   At **EPAM Systems**, he led architectural and analytical efforts to transform a telecom provider into a digital services platform, automated Lead-to-Cash and Access Management processes in manufacturing, and designed scalable integration and data services.
+*   He implemented a **Loyalty Program** for private customers at Gazprom Neft and the **Fleet Management IT system** for CAR5, where he also migrated IT infrastructure to AWS, **reducing costs by 10 times**.
+
+Valerii's core services include **Enterprise Architecture** (translating business strategy into IT initiatives, assessing landscapes, developing roadmaps), **Business Analysis** (analyzing processes, documenting workflows, gathering requirements, gap analysis), **Capability & Change Planning** (mapping capabilities, aligning with strategic goals, building transformation roadmaps), and **Process & Service Modeling** (designing operational models, supporting automation and scaling).
+
+Beyond his consulting work, Valerii is a **university-level instructor and author of courses** on management, enterprise architecture, business analysis, and rhetoric. He actively engages in mentoring, guiding colleagues through career transitions and supporting new mentors in Enterprise Architecture, sharing his passion for order, architecture, innovation, and the understanding that architecture extends to how an organization thinks, changes, and interacts with the world.
+
+Based in Georgia, Valerii is available for international projects and primarily focuses on serving European clients. Colleagues praise his reliability, strategic insight, and ability to **distill complex information, elevate discussions to a strategic level, and act as a key bridge between business and technology**.
+
