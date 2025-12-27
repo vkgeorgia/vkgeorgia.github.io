@@ -53,5 +53,6 @@ Here you can download short materials about my projects and professional profile
   <li><a href="/downloads/41.pdf" target="_blank">Project 41</a> — Oil & Gas Company.</li>
   <li><a href="/downloads/42.pdf" target="_blank">Project 42</a> — Agentic AI POC.</li>
   <li><a href="/downloads/43.pdf" target="_blank">Project 43</a> — EA Management.</li>
+  <li><a href="/downloads/44.pdf" target="_blank">Project 44</a> — HR-BOT - AI-Driven Assistant for HR Service Automation.</li>
 </ul>
 
