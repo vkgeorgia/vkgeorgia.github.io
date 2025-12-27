@@ -33,12 +33,15 @@ jobs:
       - name: Set up gcloud
         uses: google-github-actions/setup-gcloud@v2
 
-      - name: Build container image
+      - name: Configure Docker for GCR
         run: |
-          gcloud builds submit \
-            --project "${{ secrets.GCP_PROJECT_ID }}" \
-            --tag "gcr.io/${{ secrets.GCP_PROJECT_ID }}/ai-avatar" \
-            digital-avatar/backend
+          gcloud auth configure-docker --quiet
+
+      - name: Build and push container image
+        run: |
+          cd digital-avatar/backend
+          docker build -t "gcr.io/${{ secrets.GCP_PROJECT_ID }}/ai-avatar:latest" .
+          docker push "gcr.io/${{ secrets.GCP_PROJECT_ID }}/ai-avatar:latest"
 
       - name: Deploy to Cloud Run
         run: |
