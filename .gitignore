@@ -1,3 +1,6 @@
+# Archived sources (for manual transfer)
+sources_archive.zip
+
 /en/domains/sources/
 /en/roles/sources/
 /en/projects/sources/
@@ -7,6 +10,9 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Exclude knowledge-base from published site (used only for backend and page generation)
+_site/knowledge-base/
 
 # Knowledge base - exclude sources directories (raw documents for manual processing)
 knowledge-base/*/sources/
