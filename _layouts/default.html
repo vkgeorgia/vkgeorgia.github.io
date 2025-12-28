@@ -22,23 +22,23 @@
         <h1 class="site-title">
           <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
         </h1>
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+        <nav class="top-navigation">
+          <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/about' | relative_url }}">About</a></li>
+            <li><a href="{{ '/downloads' | relative_url }}">Downloads</a></li>
+            <li><a href="{{ '/services' | relative_url }}">Services</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          ☰
         </button>
       </div>
     </header>
 
-    <div class="main-wrapper">
-      <aside class="sidebar">
-        {% include navigation.html %}
-      </aside>
-
-      <main class="site-content">
-        {{ content }}
-      </main>
-    </div>
+    <main class="site-content">
+      {{ content }}
+    </main>
 
     <footer class="site-footer">
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
@@ -48,27 +48,33 @@
   <script>
     // Mobile menu toggle
     document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const sidebar = document.querySelector('.sidebar');
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      const topNav = document.querySelector('.top-navigation');
 
-      if (menuToggle && sidebar) {
+      if (menuToggle && topNav) {
         menuToggle.addEventListener('click', function () {
           const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
           menuToggle.setAttribute('aria-expanded', !isExpanded);
-          sidebar.classList.toggle('is-open');
-          menuToggle.classList.toggle('is-active');
+          topNav.classList.toggle('is-open');
         });
 
-        // Close menu when clicking outside or on a navigation link
+        // Close menu when clicking on a navigation link
+        const navLinks = topNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function () {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            topNav.classList.remove('is-open');
+          });
+        });
+
+        // Close menu when clicking outside
         document.addEventListener('click', function (event) {
-          const isNavLink = event.target.closest('.sidebar a');
-          const isInsideSidebar = sidebar.contains(event.target);
+          const isInsideNav = topNav.contains(event.target);
           const isToggleButton = menuToggle.contains(event.target);
 
-          if (isNavLink || (!isInsideSidebar && !isToggleButton)) {
+          if (!isInsideNav && !isToggleButton && topNav.classList.contains('is-open')) {
             menuToggle.setAttribute('aria-expanded', 'false');
-            sidebar.classList.remove('is-open');
-            menuToggle.classList.remove('is-active');
+            topNav.classList.remove('is-open');
           }
         });
       }
