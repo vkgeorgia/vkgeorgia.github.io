@@ -259,6 +259,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 ---
 
 <p align="center" style="font-size: 14px;">
-  For a business overview, visit my consulting page:<br>
-  <a href="https://vkconsulting.crd.co/" target="_blank">vkconsulting.crd.co</a>
+  📧 <a href="mailto:vkgeorgia@icloud.com">vkgeorgia@icloud.com</a> | 
+  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> | 
+  📅 <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
 </p>
