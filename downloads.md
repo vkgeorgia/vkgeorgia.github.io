@@ -5,8 +5,11 @@ description: "Project portfolio and professional materials - 44 completed projec
 lang: en
 permalink: /downloads/
 ---
+Browse my project portfolio organized by industry, role, and functional domain. Each project includes detailed documentation with architecture diagrams, capability models, and implementation outcomes.
 
-## Professional Profile
+---
+
+## 📄 Professional Profile
 
 <ul>
   <li><a href="/downloads/resume.pdf" target="_blank"><strong>Resume (PDF)</strong></a> — My up-to-date CV in English</li>
