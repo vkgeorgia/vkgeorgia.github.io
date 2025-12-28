@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About Me"
-description: "About Me"
+description: "A little about me and my experience"
 lang: en
 permalink: /about/
 ---
