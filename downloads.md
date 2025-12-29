@@ -21,7 +21,7 @@ Browse my project portfolio organized by industry, role, and functional domain. 
 
 Browse my **44 completed projects** organized by industry, role, or functional domain. Click on any category to expand and view projects.
 
-#<h2 id="industry">🏭 By Industry</h2>
+<h2 id="industry">🏭 By Industry</h2>
 
 <details>
 <summary><strong>Retail (10 projects)</strong></summary>
@@ -105,7 +105,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 
 ---
 
-#<h2 id="role">👔 By Role</h2>
+<h2 id="role">👔 By Role</h2>
 
 <details>
 <summary><strong>Enterprise Architect (15 projects)</strong></summary>
@@ -177,7 +177,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 
 ---
 
-#<h2 id="domain">🎯 By Functional Domain</h2>
+<h2 id="domain">🎯 By Functional Domain</h2>
 
 <details>
 <summary><strong>Data Analytics & Big Data (12 projects)</strong></summary>
