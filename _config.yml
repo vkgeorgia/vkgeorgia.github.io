@@ -4,9 +4,24 @@ url: "https://vkgeorgia.github.io"
 baseurl: ""
 lang: en
 
+# Minimal Mistakes Theme
+remote_theme: mmistakes/minimal-mistakes@4.24.0
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Author
 author:
   name: "Valerii Korobeinikov"
-  email: ""
+  avatar: "/images/108.jpg"
+  bio: "Enterprise Architect & Business Analyst with 20+ years of experience"
+  location: "Georgia"
+  email: "vkgeorgia@icloud.com"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/valeriikorobeinikov/"
+    - label: "Schedule Meeting"
+      icon: "fas fa-fw fa-calendar"
+      url: "https://calendar.app.google/YwmXZytfSQ2qWX4Z7"
 
 # Build settings
 markdown: kramdown
@@ -17,6 +32,8 @@ permalink: pretty
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-remote-theme
+  - jekyll-include-cache
 
 # Include digital-avatar frontend files
 include:
@@ -40,3 +57,23 @@ exclude:
   - digital-avatar/google_credentials.json
   - digital-avatar/README.md
 
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true

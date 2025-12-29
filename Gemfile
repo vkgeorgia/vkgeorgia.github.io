@@ -8,4 +8,6 @@ group :jekyll_plugins do
   gem "faraday-retry"
   gem "jekyll-feed"
   gem "jekyll-mermaid"
+  gem "jekyll-remote-theme"
+  gem "jekyll-include-cache"
 end
