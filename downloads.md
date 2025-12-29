@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: "📥 Downloads"
 description: "Project portfolio and professional materials - 44 completed projects across Retail, Oil & Gas, Telecom, Healthcare, and IT Consulting"
 lang: en

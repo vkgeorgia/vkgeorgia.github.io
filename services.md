@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: "Services"
 description: "Professional consulting and architecture services"
 lang: en

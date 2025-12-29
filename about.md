@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: "About Me"
 description: "A little about me and my experience"
 lang: en
