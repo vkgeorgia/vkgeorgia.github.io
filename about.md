@@ -8,11 +8,11 @@ permalink: /about/
 
 <img src="/images/108.jpg" alt="Valerii" class="profile-photo" style="max-width: 50%; height: auto; display: block; margin: 0 auto 2rem;">
 
-## 👤 Who I Am
+## Who I Am
 
 I am an enterprise architect and business analyst with a strong technical foundation and strategic vision. I help organisations make more intelligent decisions by aligning business goals with technology through clear architecture, structured analysis, and practical roadmaps. With a strong technical background and business mindset, I simplify complexity, bring clarity to strategic initiatives, and enable confident action in digital transformation.
 
-## 💼 Professional Background
+## Professional Background
 
 I am a highly accomplished **Enterprise Architect and Business Analyst** with **over 20 years of experience** in Software and IT Consulting. I am renowned for my primary focus on achieving **Business and IT Strategy Alignment** through expert application of Enterprise Architecture and Business Analysis principles. I excel at helping organizations **structure change, solve complex business challenges, and align business goals, capabilities, and IT initiatives to drive transformation**, delivering solutions with clarity, structure, and measurable impact.
 
@@ -20,7 +20,7 @@ My expertise spans **strategic planning, capability-based planning, and enterpri
 
 I have a proven track record of **delivering transformational change** for both large enterprises and mid-size companies across a wide array of **vertical industries**, including Telecom, Retail, Oil & Gas, Transportation (Aviation), Public Sector, Healthcare, and Manufacturing. My notable client list includes Domodedovo Airport, Gazprom Neft, BTC, ADNOC, FMBA, Skylink, and Wincor Nixdorf.
 
-## 🏆 Key Achievements
+## Key Achievements
 
 - **At Domodedovo Airport**: I spearheaded crisis management for the IT department during COVID-19, reorienting services to external clients and opening new revenue streams. I also harmonized the airport's product portfolio, reducing it from 4600 to 1200 products without compromising profitability, and **reduced Time-to-Market (TTM) by three times**. I also developed a cohesive IT strategy and led the reorganization of the IT department, implementing TOGAF-based change management and Agile methodologies.
 
