@@ -37,7 +37,7 @@
                     
                     <div id="ai-widget-messages" class="ai-widget-messages">
                         <div class="ai-widget-message ai-widget-message-bot">
-                            Hello! I'm Valerii Korobeinikov's AI assistant. I'm here to tell you about his professional experience, the consulting services he provides, and help you schedule a meeting if needed. How can I assist you today?
+                            Hello! I'm Valerii's AI assistant. I can tell you about his professional experience, consulting services, and help schedule a meeting. How can I assist you?
                         </div>
                     </div>
                     
