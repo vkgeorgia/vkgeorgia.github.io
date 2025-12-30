@@ -18,6 +18,8 @@ minima:
       user_url: "https://www.linkedin.com/in/valeriikorobeinikov/"
     - platform: github
       user_url: "https://github.com/vkgeorgia"
+    - platform: google
+      user_url: "https://calendar.app.google/YwmXZytfSQ2qWX4Z7"
 
 # Header pages - only show these in navigation
 header_pages:
