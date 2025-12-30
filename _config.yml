@@ -20,6 +20,12 @@ minima:
     - platform: github
       user_url: "https://github.com/vkgeorgia"
 
+# Header pages - only show these in navigation
+header_pages:
+  - about.md
+  - services.md
+  - downloads.md
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
@@ -51,4 +57,8 @@ exclude:
   - digital-avatar/.env
   - digital-avatar/google_credentials.json
   - digital-avatar/README.md
-
+  - projects/
+  - domains/
+  - industries/
+  - roles/
+  - downloads/
