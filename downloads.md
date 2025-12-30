@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "📥 Downloads"
+title: "Downloads"
 description: "Project portfolio and professional materials - 44 completed projects across Retail, Oil & Gas, Telecom, Healthcare, and IT Consulting"
 lang: en
 permalink: /downloads/
