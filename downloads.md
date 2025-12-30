@@ -11,9 +11,7 @@ Browse my project portfolio organized by industry, role, and functional domain. 
 
 ## Professional Profile
 
-<ul>
-  <li><a href="/downloads/resume.pdf" target="_blank"><strong>Resume (PDF)</strong></a> — My up-to-date CV in English</li>
-</ul>
+<a href="/downloads/resume.pdf" target="_blank"><strong>Resume (PDF)</strong></a> — My up-to-date CV in English
 
 ---
 
