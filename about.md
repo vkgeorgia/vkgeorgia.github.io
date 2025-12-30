@@ -28,7 +28,7 @@ I have a proven track record of **delivering transformational change** for both 
 
 - **At Gazprom Neft**: I implemented a **Loyalty Program** for private customers and the **Fleet Management IT system** for CAR5, where I also migrated IT infrastructure to AWS, **reducing costs by 10 times**.
 
-## 🎓 Certifications
+## Certifications
 
 -	TOGAF 10 Enterprise Architect, 2024
 -	Google Cloud Digital Leader, 2022
@@ -37,7 +37,7 @@ I have a proven track record of **delivering transformational change** for both 
 -	HSE MBA Degree, 2018
 -	English IELTS – 7.0 (C1), 2024
 
-## 🎯 Areas of Expertise
+## Areas of Expertise
 
 - Strategic Planning and Execution
 - Enterprise Architecture (TOGAF, ArchiMate)
