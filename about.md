@@ -6,7 +6,7 @@ lang: en
 permalink: /about/
 ---
 
-<img src="/images/108.jpg" alt="Valerii" class="profile-photo">
+<img src="/images/108.jpg" alt="Valerii" class="profile-photo" style="max-width: 50%; height: auto; display: block; margin: 0 auto 2rem;">
 
 ## 👤 Who I Am
 
