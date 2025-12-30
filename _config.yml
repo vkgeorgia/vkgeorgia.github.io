@@ -4,9 +4,21 @@ url: "https://vkgeorgia.github.io"
 baseurl: ""
 lang: en
 
+# Theme
+theme: minima
+
+# Author
 author:
   name: "Valerii Korobeinikov"
-  email: ""
+  email: "vkgeorgia@icloud.com"
+
+# Minima settings
+minima:
+  social_links:
+    - platform: linkedin
+      user_url: "https://www.linkedin.com/in/valeriikorobeinikov/"
+    - platform: github
+      user_url: "https://github.com/vkgeorgia"
 
 # Build settings
 markdown: kramdown
