@@ -258,11 +258,3 @@ Browse my **44 completed projects** organized by industry, role, or functional d
   <li><a href="/downloads/44.pdf" target="_blank"><strong>Project 44:</strong> HR-BOT - AI-Driven Assistant</a></li>
 </ul>
 </details>
-
----
-
-<p align="center" style="font-size: 14px;">
-  📧 <a href="mailto:vkgeorgia@icloud.com">vkgeorgia@icloud.com</a> | 
-  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> | 
-  📅 <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
-</p>
