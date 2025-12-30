@@ -47,16 +47,6 @@ I have a proven track record of **delivering transformational change** for both 
 - Business Process Optimization
 - System and Requirements Analysis
 
-## 👨‍🏫 Teaching and Mentoring
+## Teaching and Mentoring
 
 I have taught courses on Enterprise Architecture and Project Management at MIIT (Moscow State University of Railway Engineering), trained over 60 product managers at Domodedovo Airport, and mentored professionals transitioning into IT roles.
-
-
----
-
-<p align="center" style="font-size: 14px;">
-  📧 <a href="mailto:vkgeorgia@icloud.com">vkgeorgia@icloud.com</a> | 
-  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> | 
-  📅 <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
-</p>
-
