@@ -7,10 +7,9 @@ lang: en
 # Theme
 theme: minima
 
-# Author
-author:
-  name: "Valerii Korobeinikov"
-  email: "vkgeorgia@icloud.com"
+# Author (Minima format)
+author: Valerii Korobeinikov
+email: vkgeorgia@icloud.com
 
 # Minima settings
 minima:
