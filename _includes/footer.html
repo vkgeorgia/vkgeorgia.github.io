@@ -2,42 +2,16 @@
     <data class="u-url" href="{{ " /" | relative_url }}"></data>
 
     <div class="wrapper">
-        <div class="footer-col-wrapper">
-            <div class="footer-col">
-                <ul class="contact-list">
-                    <li class="p-name">{{ site.author }} - {{ site.description }}</li>
-                    <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <ul class="social-media-list">
-                    <li>
-                        <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">
-                            <svg class="svg-icon grey">
-                                <use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use>
-                            </svg>
-                            <span class="username">LinkedIn</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/vkgeorgia" target="_blank">
-                            <svg class="svg-icon grey">
-                                <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
-                            </svg>
-                            <span class="username">GitHub</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">
-                            <svg class="svg-icon grey" viewBox="0 0 16 16">
-                                <path
-                                    d="M14 2h-1V1a1 1 0 0 0-2 0v1H5V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM2 14V6h12v8H2z" />
-                            </svg>
-                            <span class="username">Schedule a Meeting</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div class="footer-col-wrapper" style="text-align: center;">
+            <p style="margin-bottom: 0.5rem;">
+                {{ site.author }} - {{ site.description }} |
+                <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+            </p>
+            <p style="margin-top: 0;">
+                <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/vkgeorgia" target="_blank">GitHub</a> |
+                <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
+            </p>
         </div>
     </div>
 </footer>
