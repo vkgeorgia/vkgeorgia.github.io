@@ -43,11 +43,3 @@ I conduct thorough business analysis to understand current state, identify gaps,
 ### Product Strategy & Management
 
 I help organizations develop product strategies, harmonize portfolios, and implement effective product management practices. My experience includes reducing product portfolios by 75% while maintaining profitability and reducing time-to-market by 3x.
-
----
-
-<p align="center" style="font-size: 14px;">
-  📧 <a href="mailto:vkgeorgia@icloud.com">vkgeorgia@icloud.com</a> | 
-  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> | 
-  📅 <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
-</p>
