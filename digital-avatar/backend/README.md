@@ -13,6 +13,25 @@ This directory contains scripts for deploying the AI Avatar backend to Google Cl
 
 ## Usage
 
+### PowerShell (Windows - Recommended)
+
+```powershell
+cd digital-avatar\backend
+.\deploy.ps1
+```
+
+Or with parameters:
+```powershell
+.\deploy.ps1 -ProjectId "your-project-id" -ApiKey "your-api-key" -Region "us-central1"
+```
+
+### Command Prompt (Windows)
+
+```cmd
+cd digital-avatar\backend
+.\deploy.bat
+```
+
 ### Linux/Mac
 
 ```bash
