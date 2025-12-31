@@ -59,9 +59,15 @@ if ($confirm -ne 'y' -and $confirm -ne 'Y') {
 Write-Host ""
 Write-Host "Setting GCP project..." -ForegroundColor $InfoColor
 $timer = [System.Diagnostics.Stopwatch]::StartNew()
-gcloud config set project $ProjectId 2>&1 | Out-Null
-$timer.Stop()
-Write-Host "[OK] Project set ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
+try {
+    $output = gcloud config set project $ProjectId 2>&1
+    Write-Host "  $output" -ForegroundColor DarkGray
+    $timer.Stop()
+    Write-Host "[OK] Project set ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
+} catch {
+    Write-Host "Error setting project: $_" -ForegroundColor $ErrorColor
+    exit 1
+}
 
 # Navigate to script directory
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -100,8 +106,13 @@ Write-Host "[OK] Docker image built ($($timer.Elapsed.TotalSeconds.ToString('0.0
 # Step 3: Configure Docker for GCR
 Write-Host ""
 Write-Host "Step 3/5: Configuring Docker authentication..." -ForegroundColor $InfoColor
-gcloud auth configure-docker gcr.io --quiet
-Write-Host "[OK] Docker configured" -ForegroundColor $SuccessColor
+$timer = [System.Diagnostics.Stopwatch]::StartNew()
+$output = gcloud auth configure-docker gcr.io --quiet 2>&1
+if ($output) {
+    Write-Host "  $output" -ForegroundColor DarkGray
+}
+$timer.Stop()
+Write-Host "[OK] Docker configured ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
 
 # Step 4: Push to Google Container Registry
 Write-Host ""
