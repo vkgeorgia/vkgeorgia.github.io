@@ -58,7 +58,10 @@ if ($confirm -ne 'y' -and $confirm -ne 'Y') {
 # Set GCP project
 Write-Host ""
 Write-Host "Setting GCP project..." -ForegroundColor $InfoColor
-gcloud config set project $ProjectId
+$timer = [System.Diagnostics.Stopwatch]::StartNew()
+gcloud config set project $ProjectId 2>&1 | Out-Null
+$timer.Stop()
+Write-Host "[OK] Project set ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
 
 # Navigate to script directory
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -67,23 +70,32 @@ Set-Location $ScriptDir
 # Step 1: Sync knowledge base
 Write-Host ""
 Write-Host "Step 1/5: Syncing knowledge base..." -ForegroundColor $InfoColor
+$timer = [System.Diagnostics.Stopwatch]::StartNew()
 if (Test-Path "knowledge_base") {
     Remove-Item -Recurse -Force "knowledge_base"
 }
 New-Item -ItemType Directory -Path "knowledge_base" | Out-Null
 Copy-Item -Recurse -Path "..\..\knowledge-base\*" -Destination "knowledge_base\"
-Write-Host "[OK] Knowledge base synced" -ForegroundColor $SuccessColor
+$fileCount = (Get-ChildItem -Recurse "knowledge_base" -File).Count
+$timer.Stop()
+Write-Host "[OK] Knowledge base synced - $fileCount files ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
 
 # Step 2: Build Docker image
 Write-Host ""
-Write-Host "Step 2/5: Building Docker image..." -ForegroundColor $InfoColor
+Write-Host "Step 2/5: Building Docker image (this may take 2-3 minutes)..." -ForegroundColor $InfoColor
+$timer = [System.Diagnostics.Stopwatch]::StartNew()
 $ImageName = "gcr.io/$ProjectId/ai-avatar:latest"
-docker build -t $ImageName .
+docker build -t $ImageName . 2>&1 | ForEach-Object {
+    if ($_ -match "Step \d+/\d+") {
+        Write-Host "  $_" -ForegroundColor DarkGray
+    }
+}
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Error: Docker build failed" -ForegroundColor $ErrorColor
     exit 1
 }
-Write-Host "[OK] Docker image built" -ForegroundColor $SuccessColor
+$timer.Stop()
+Write-Host "[OK] Docker image built ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
 
 # Step 3: Configure Docker for GCR
 Write-Host ""
@@ -93,27 +105,33 @@ Write-Host "[OK] Docker configured" -ForegroundColor $SuccessColor
 
 # Step 4: Push to Google Container Registry
 Write-Host ""
-Write-Host "Step 4/5: Pushing image to GCR..." -ForegroundColor $InfoColor
-docker push $ImageName
+Write-Host "Step 4/5: Pushing image to GCR (this may take 2-5 minutes)..." -ForegroundColor $InfoColor
+$timer = [System.Diagnostics.Stopwatch]::StartNew()
+docker push $ImageName 2>&1 | ForEach-Object {
+    if ($_ -match "Pushed|Pushing|Waiting") {
+        Write-Host "  $_" -ForegroundColor DarkGray
+    }
+}
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Error: Docker push failed" -ForegroundColor $ErrorColor
     exit 1
 }
-Write-Host "[OK] Image pushed to GCR" -ForegroundColor $SuccessColor
+$timer.Stop()
+Write-Host "[OK] Image pushed to GCR ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
 
 # Step 5: Deploy to Cloud Run
 Write-Host ""
 Write-Host "Step 5/5: Deploying to Cloud Run..." -ForegroundColor $InfoColor
 gcloud run deploy ai-avatar `
-  --image $ImageName `
-  --platform managed `
-  --region $Region `
-  --allow-unauthenticated `
-  --set-env-vars GEMINI_API_KEY=$ApiKey `
-  --memory 512Mi `
-  --cpu 1 `
-  --max-instances 10 `
-  --timeout 300
+    --image $ImageName `
+    --platform managed `
+    --region $Region `
+    --allow-unauthenticated `
+    --set-env-vars GEMINI_API_KEY=$ApiKey `
+    --memory 512Mi `
+    --cpu 1 `
+    --max-instances 10 `
+    --timeout 300
 
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Error: Cloud Run deployment failed" -ForegroundColor $ErrorColor
