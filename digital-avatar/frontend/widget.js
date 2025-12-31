@@ -80,22 +80,6 @@
             });
         }
 
-        // Add message to chat
-        function addMessage(message, sender) {
-            const div = document.createElement('div');
-            div.classList.add('ai-widget-message', `ai-widget-message-${sender}`);
-
-            // Convert URLs to clickable links for bot messages
-            if (sender === 'bot') {
-                div.innerHTML = parseMarkdown(linkify(message));
-            } else {
-                div.textContent = message;
-            }
-
-            messagesArea.appendChild(div);
-            messagesArea.scrollTop = messagesArea.scrollHeight;
-        }
-
         // Toggle chat
         toggle.addEventListener('click', () => {
             isOpen = !isOpen;
@@ -153,9 +137,13 @@
         }
 
         function parseMarkdown(text) {
+            // First, convert plain URLs to clickable links
+            text = text.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: #4a9eff; text-decoration: underline;">$1</a>');
+
+            // Then apply markdown formatting
             return text
                 .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank">$1</a>')
+                .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" style="color: #4a9eff; text-decoration: underline;">$1</a>')
                 .replace(/^[\*\-] (.+)$/gm, '<li>$1</li>')
                 .replace(/(<li>.*<\/li>\s*)+/gs, '<ul>$&</ul>')
                 .replace(/\n/g, '<br>');
