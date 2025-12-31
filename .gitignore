@@ -26,3 +26,6 @@ digital-avatar/google_credentials.json
 digital-avatar/backend/__pycache__/
 digital-avatar/backend/app/__pycache__/
 digital-avatar/backend/app/services/__pycache__/
+
+# Digital Avatar - Backend knowledge base (auto-generated from knowledge-base/)
+digital-avatar/backend/knowledge_base/
