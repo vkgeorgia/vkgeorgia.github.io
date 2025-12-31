@@ -71,6 +71,31 @@
         let socket;
         let isOpen = false;
 
+        // Helper function to convert URLs to clickable links
+        function linkify(text) {
+            // Regular expression to match URLs
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            return text.replace(urlRegex, function (url) {
+                return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: #4a9eff; text-decoration: underline;">${url}</a>`;
+            });
+        }
+
+        // Add message to chat
+        function addMessage(message, sender) {
+            const div = document.createElement('div');
+            div.classList.add('ai-widget-message', `ai-widget-message-${sender}`);
+
+            // Convert URLs to clickable links for bot messages
+            if (sender === 'bot') {
+                div.innerHTML = parseMarkdown(linkify(message));
+            } else {
+                div.textContent = message;
+            }
+
+            messagesArea.appendChild(div);
+            messagesArea.scrollTop = messagesArea.scrollHeight;
+        }
+
         // Toggle chat
         toggle.addEventListener('click', () => {
             isOpen = !isOpen;
