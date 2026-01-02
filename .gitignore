@@ -29,3 +29,6 @@ digital-avatar/backend/app/services/__pycache__/
 
 # Digital Avatar - Backend knowledge base (auto-generated from knowledge-base/)
 digital-avatar/backend/knowledge_base/
+
+# LinkedIn video materials (working folder, not for publication)
+linkedin-video/
