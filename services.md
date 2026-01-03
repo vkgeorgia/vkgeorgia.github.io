@@ -1,7 +1,8 @@
 ---
 layout: page
-title: "Services"
-description: "Professional consulting and architecture services"
+title: "Enterprise Architecture & IT Consulting Services"
+description: "Professional enterprise architecture consulting, IT strategy development, digital transformation, business analysis, and product management services. TOGAF and ArchiMate expertise for business-technology alignment."
+keywords: "Enterprise Architecture services, IT consulting, TOGAF consulting, Digital Transformation services, Business Analysis, Product Strategy, IT Strategy development"
 lang: en
 permalink: /services/
 ---

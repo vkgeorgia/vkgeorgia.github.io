@@ -1,7 +1,8 @@
 ---
 layout: page
-title: "Downloads"
-description: "Project portfolio and professional materials - 44 completed projects across Retail, Oil & Gas, Telecom, Healthcare, and IT Consulting"
+title: "Project Portfolio & Downloads - Enterprise Architecture Projects"
+description: "Browse 44+ enterprise architecture projects across Retail, Finance, Healthcare, Telecom, and Oil & Gas industries. Download detailed project documentation, architecture diagrams, and case studies with TOGAF and ArchiMate frameworks."
+keywords: "Enterprise Architecture projects, TOGAF projects, ArchiMate diagrams, Business Transformation case studies, IT Strategy projects, Digital Transformation portfolio"
 lang: en
 permalink: /downloads/
 ---

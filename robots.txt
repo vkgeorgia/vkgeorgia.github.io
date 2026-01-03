@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vkgeorgia.github.io/sitemap.xml
+
+# Disallow backend and private areas
+Disallow: /digital-avatar/backend/
+Disallow: /.git/
+Disallow: /_site/
+
+# Allow all other content
+Allow: /about/
+Allow: /services/
+Allow: /downloads/
