@@ -25,6 +25,7 @@ minima:
 header_pages:
   - about.md
   - services.md
+  - articles.md
   - downloads.md
 
 # Build settings
