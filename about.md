@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "About Valerii Korobeinikov - Enterprise Architect"
+title: "About Me"
+seo_title: "About Valerii Korobeinikov - Enterprise Architect"
 description: "20+ years of experience in enterprise architecture, digital transformation, and IT strategy. MBA graduate specializing in TOGAF, ArchiMate, business analysis, and product management across multiple industries."
 keywords: "Enterprise Architect experience, TOGAF certified, ArchiMate, Business Analyst, Digital Transformation expert, IT Strategy consultant"
 lang: en
