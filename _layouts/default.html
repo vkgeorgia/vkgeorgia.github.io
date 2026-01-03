@@ -15,8 +15,8 @@
     {% include schema-service.html %}
     {% endif %}
 
-    <title>{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{%
-        endif %}</title>
+    <title>{% if page.seo_title %}{{ page.seo_title | escape }} - {{ site.title | escape }}{% elsif page.title %}{{
+        page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description"
         content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
