@@ -54,21 +54,37 @@ As a result, the company receives a clear action plan, a roadmap for achieving i
 
 I help organizations design and implement enterprise architecture that aligns with business strategy, enabling transformation and growth. Using frameworks like TOGAF and ArchiMate, I create clear architectural blueprints that guide decision-making and change.
 
-### IT Strategy Development
+[Learn more →](/services/enterprise-architecture-consulting/)
+
+### Technology Strategy Advisory
 
 I develop IT strategies that support business objectives, optimize technology investments, and create competitive advantage. My approach ensures that technology serves business needs, not the other way around.
 
-### Digital Transformation
+[Learn more →](/services/technology-strategy-advisory/)
+
+### Digital Transformation Advisory
 
 I guide organizations through digital transformation by creating practical roadmaps, aligning stakeholders, and ensuring that change delivers measurable business value. I focus on sustainable transformation that builds organizational capability.
 
-### Business Analysis & Requirements
+[Learn more →](/services/digital-transformation-advisory/)
 
-I conduct thorough business analysis to understand current state, identify gaps, and define clear requirements for future solutions. My structured approach ensures that projects deliver what the business actually needs.
+### Application Portfolio Optimization
 
-### Product Strategy & Management
+I help organizations rationalize application portfolios to reduce costs and complexity. My approach includes portfolio assessment, eliminating redundancy and technical debt, and establishing effective portfolio governance.
 
-I help organizations develop product strategies, harmonize portfolios, and implement effective product management practices. My experience includes reducing product portfolios by 75% while maintaining profitability and reducing time-to-market by 3x.
+[Learn more →](/services/application-portfolio-optimization/)
+
+### AI Readiness & Governance
+
+I support organizations in responsible AI adoption with proper governance and risk management. This includes AI readiness assessment, governance framework establishment, and implementing responsible AI practices at enterprise scale.
+
+[Learn more →](/services/ai-readiness-governance/)
+
+### Executive Architecture Advisory
+
+I provide ongoing advisory support for executives making high-stakes technology and architecture decisions. This includes strategic technology guidance, architecture review and oversight, and continuous decision support.
+
+[Learn more →](/services/executive-architecture-advisory/)
 
 ---
 
