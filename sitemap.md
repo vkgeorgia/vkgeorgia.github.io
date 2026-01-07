@@ -11,8 +11,7 @@ permalink: /sitemap/
 vkgeorgia.github.io/
 ├── index.html                    # Home page
 ├── about.md                      # About Valerii Korobeinikov
-├── projects.md                   # Featured projects
-├── downloads.md                  # All 44 projects + resume
+├── cases.md                      # All 44 projects + resume
 │
 ├── downloads/                    # PDF files
 │   ├── resume.pdf               # CV
