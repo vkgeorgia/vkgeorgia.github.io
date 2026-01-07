@@ -11,23 +11,23 @@
 
 /* Custom styles - smaller headings */
 h1 {
-    font-size: 1.8rem !important;
+    font-size: 1.44rem !important;
     line-height: 1.3 !important;
 }
 
 .post-title,
 .page-heading {
-    font-size: 1.8rem !important;
+    font-size: 1.44rem !important;
     line-height: 1.3 !important;
 }
 
 @media screen and (max-width: 800px) {
     h1 {
-        font-size: 1.5rem !important;
+        font-size: 1.2rem !important;
     }
 
     .post-title,
     .page-heading {
-        font-size: 1.5rem !important;
+        font-size: 1.2rem !important;
     }
 }
