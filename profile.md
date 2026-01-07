@@ -1,138 +1,120 @@
 ---
 layout: page
-title: "Business Challenges"
-seo_title: "Business Challenges | Technology & Architecture Advisory"
-description: "Decision support for leaders facing reorganization, growth pressure, cost optimization, and risk—using enterprise architecture as a decision-making framework."
-keywords: "Business Challenges, Reorganization, M&A, Technology Strategy, Cost Optimization, Risk Reduction, Enterprise Architecture Advisory"
+title: "Profile"
+seo_title: "Valerii Korobeinikov | Enterprise Architecture & Technology Advisory"
+description: "Independent advisor helping business and technology leaders make sound decisions in reorganization, transformation, growth, cost optimization, and risk management."
+keywords: "Enterprise Architecture Consulting, Technology Strategy Advisory, Digital Transformation, IT Strategy, Risk Reduction, Reorganization, Georgia"
 lang: en
-permalink: /business-challenges/
+permalink: /profile/
 ---
 
-# Business challenges I help leaders navigate
+# Helping leaders make sound technology decisions in times of change
 
-Most complex transformations do not fail because of technology.  
-They fail because **high-stakes decisions are made without a clear, shared view of the system**.
+Reorganization, growth, cost pressure, and risk often appear as technology problems —  
+but in reality, they are **decision problems**.
 
-I help business and technology leaders structure complex situations into **clear decision options**, evaluate trade-offs, and move forward with confidence — using enterprise architecture as a decision-making framework, not as documentation.
+I help business and technology leaders make clear, well-founded decisions by using enterprise architecture as a **decision-making framework**, not as documentation.
 
-Below are the most common situations where clients reach out.
-
----
-
-## Reorganization, M&A, structural change
-
-Organizational change almost always exposes hidden dependencies between structure, processes, systems, and data.
-
-**What typically happens**
-- Business units are reorganized, but systems remain tied to the old structure.
-- Overlaps and duplication appear across applications, data ownership, and vendors.
-- Integration becomes a series of local fixes instead of a coherent operating model.
-
-**What leaders need in this moment**
-- Visibility into what must be preserved, consolidated, or redesigned.
-- A pragmatic target picture aligned with the new business structure.
-- Clear priorities that prevent “integration for the sake of integration”.
-
-**Outcomes I aim for**
-- Reduced complexity and duplication after organizational change.
-- Faster harmonization of portfolios, processes, and ownership.
-- Clear sequencing of integration decisions.
-
-**Relevant services**
-- [Enterprise Architecture Consulting](/services/enterprise-architecture-consulting/)
-- [Application Portfolio Optimization](/services/application-portfolio-optimization/)
-- [Executive Architecture Advisory](/services/executive-architecture-advisory/)
+Over 20 years of experience supporting complex technology and organizational decisions in large and mid-size enterprises across multiple industries.
 
 ---
 
-## Revenue and profitability growth
+## When leaders usually reach out to me
 
-Growth initiatives often stall when technology investments are disconnected from value creation.
+Most engagements start when organizations face one or more of these situations:
 
-**What typically happens**
-- Product and feature delivery accelerates, but platforms do not scale.
-- Teams optimize locally while customer journeys remain fragmented.
-- Roadmaps turn into delivery backlogs instead of investment logic.
+- **Reorganization, merger, or structural change**, where existing systems and processes no longer support the new operating model.
+- Pressure to **increase revenue or profitability**, while technology investments feel disconnected from business outcomes.
+- The need to **reduce costs or optimize a business unit** without breaking critical capabilities.
+- Growing concern about **risk** — legacy systems, fragmented architecture, regulatory exposure, or AI-related uncertainty.
 
-**What leaders need in this moment**
-- A shared understanding of how technology enables revenue and margin.
-- A platform and product strategy aligned with business priorities.
-- Explicit trade-offs between speed, cost, and long-term sustainability.
-
-**Outcomes I aim for**
-- Stronger alignment between strategy, portfolio, and technology investment.
-- Improved time-to-market without increasing structural risk.
-- Clear decision logic behind growth initiatives.
-
-**Relevant services**
-- [Technology Strategy Advisory](/services/technology-strategy-advisory/)
-- [Digital Transformation Advisory](/services/digital-transformation-advisory/)
-- [Enterprise Architecture Consulting](/services/enterprise-architecture-consulting/)
+In these moments, speed matters — but **clarity matters more**, because wrong decisions become expensive.
 
 ---
 
-## Cost reduction and efficiency — without breaking the business
+## What I do — in simple terms
 
-Cost pressure often leads to short-term cuts that create long-term problems.
+Many companies struggle to understand what an enterprise architect actually does.  
+So here it is, plainly.
 
-**What typically happens**
-- Savings targets are set without visibility into critical dependencies.
-- Legacy systems are kept “because they work”, while costs keep growing.
-- Efficiency programs reduce capacity but increase delivery friction.
+First, I listen to business leaders and stakeholders to understand the **real problem**, not just its symptoms. My business education and long experience in enterprise environments allow me to speak the same language as management — not only IT.
 
-**What leaders need in this moment**
-- A fact-based view of where cost actually accumulates.
-- A rationalization approach that protects critical capabilities.
-- Decisions that reduce cost structurally, not cosmetically.
+Next, I help articulate:
+- the **current state** of the organization and its technology landscape;
+- the **desired future state** — what the business is truly trying to achieve.
 
-**Outcomes I aim for**
-- Lower run costs through portfolio and architecture decisions.
-- Simplified landscape with fewer redundant systems.
-- Sustainable efficiency improvements, not one-off cuts.
+Then, based on experience and modern technologies, I outline **realistic decision options and next steps**, always accounting for constraints, resources, and risk.
 
-In similar situations, this approach often leads to measurable portfolio reduction and sustainable run-cost savings.
+The result is a **clear, actionable direction** that connects business intent with technology decisions.
 
-**Relevant services**
-- [Application Portfolio Optimization](/services/application-portfolio-optimization/)
-- [Enterprise Architecture Consulting](/services/enterprise-architecture-consulting/)
-- [Executive Architecture Advisory](/services/executive-architecture-advisory/)
+In short:  
+**I help organizations solve business problems through sound technology decisions.**
 
 ---
 
-## Risk reduction: legacy, fragmentation, compliance, and AI uncertainty
+## How I help leaders move from complexity to clarity
 
-Risk rarely comes from a single system.  
-It accumulates across architecture, data, governance, and decision-making.
+My work combines enterprise architecture, business analysis, and strategic thinking — but the focus is always on **decision quality**, not artifacts.
 
-**What typically happens**
-- Legacy systems become both “too risky to change” and “too expensive to keep”.
-- Fragmentation increases security and compliance exposure.
-- AI initiatives start as experiments and quietly turn into enterprise risk.
+Typically, I help organizations:
 
-**What leaders need in this moment**
-- A clear risk picture tied to business impact.
-- Architecture and governance that make risk visible and manageable.
-- Practical guardrails for AI based on data readiness and accountability.
+- Identify the **root causes** behind strategic or operational challenges
+- Structure complex situations into **clear decision options**
+- Evaluate **trade-offs** between cost, risk, speed, and long-term sustainability
+- Align business strategy, architecture, and execution
+- Build roadmaps that leaders can actually use to act with confidence
 
-**Outcomes I aim for**
-- Reduced strategic and technology risk before it becomes expensive.
-- Better control through architecture-driven governance.
-- AI readiness grounded in responsibility, not hype.
-
-**Relevant services**
-- [AI Readiness & Governance](/services/ai-readiness-governance/)
-- [Enterprise Architecture Consulting](/services/enterprise-architecture-consulting/)
-- [Executive Architecture Advisory](/services/executive-architecture-advisory/)
+I do not sell frameworks or documents.  
+I help leadership teams **see the landscape clearly and decide deliberately**.
 
 ---
 
-## How to start
+## Who I am
 
-If you recognize your situation in one of the challenges above, the first step is usually a short, structured conversation.
+I am an Enterprise Architect and Business Analyst with **20+ years of experience** working at the intersection of business, technology, and transformation.
 
-We clarify:
-- the decision that actually needs to be made,
-- the constraints and stakeholders involved,
-- what information is missing to decide well.
+I have worked across multiple industries — including telecom, retail, oil & gas, transportation, healthcare, manufacturing, and public sector — but my value does not come from industry templates.
 
-Contact details are available in the site footer.
+It comes from a **systemic perspective**:
+
+- abstracting away industry noise and focusing on **goals, capabilities, and structure**;
+- assessing organizations objectively, regardless of domain;
+- designing solutions based on **strategic intent**, not recycled patterns.
+
+Industry experience is useful — but it can also be limiting.  
+My role is to help each organization find a **coherent and sustainable path forward**.
+
+---
+
+## Selected outcomes
+
+- **Large transportation hub**: supported IT reorganization and product portfolio harmonization, reducing the portfolio from 4600 to 1200 products, tripling time-to-market, and enabling new revenue streams.
+- **Energy sector**: designed loyalty and fleet management systems, migrated infrastructure to cloud, and reduced operating costs by an order of magnitude.
+- **Telecom & manufacturing**: led architecture and analytical initiatives that enabled platform transformation and process automation at enterprise scale.
+
+(Details and additional cases are available in the *Cases* section.)
+
+---
+
+## How I usually work with clients
+
+Common engagement formats include:
+
+- **Executive technology and architecture advisory**
+- **Decision support** during reorganization, transformation, or high-risk initiatives
+- **Ongoing advisory support** when continuity matters more than one-off recommendations
+- **Embedded or fractional architect roles** in complex change programs
+
+The common denominator is responsibility for **decision quality**, not just delivery.
+
+---
+
+## Let’s talk
+
+If you are facing a complex decision related to structure, growth, cost, or risk,  
+a short conversation is often the best place to start.
+
+**Email:** vkgeorgia@icloud.com  
+**LinkedIn:** https://www.linkedin.com/in/valeriikorobeinikov/
+
+_No sales pitch. Just a structured discussion about your situation._
