@@ -2,182 +2,46 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Title -->
-  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} - Enterprise Architect &
-    Business Analyst{% endif %}</title>
+    <!-- SEO Meta Tags -->
+    {% include seo-meta.html %}
 
-  <!-- Meta Description -->
-  <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta name="author" content="{{ site.author.name | default: 'Valerii Korobeinikov' }}">
+    <!-- Structured Data -->
+    {% include schema-person.html %}
+    {% if page.url == '/services/' or page.url == '/services' %}
+    {% include schema-service.html %}
+    {% endif %}
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <title>{% if page.seo_title %}{{ page.seo_title | escape }} - {{ site.title | escape }}{% elsif page.title %}{{
+        page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description"
+        content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:title" content="{{ page.title | default: site.title }}">
-  <meta property="og:description" content="{{ page.description | default: site.description }}">
-  <meta property="og:image" content="{{ '/images/108.jpg' | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}"
+        href="{{ '/feed.xml' | relative_url }}">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
-  <meta property="twitter:title" content="{{ page.title | default: site.title }}">
-  <meta property="twitter:description" content="{{ page.description | default: site.description }}">
-  <meta property="twitter:image" content="{{ '/images/108.jpg' | absolute_url }}">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-  <!-- Feed -->
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Valerii Korobeinikov",
-    "jobTitle": "Enterprise Architect",
-    "description": "Enterprise Architect and Business Analyst with 20+ years of experience",
-    "url": "https://vkgeorgia.github.io",
-    "email": "vkgeorgia@icloud.com",
-    "sameAs": [
-      "https://www.linkedin.com/in/valeriikorobeinikov/"
-    ]
-  }
-  </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
 </head>
 
 <body>
-  <div class="container">
-    <header class="site-header">
-      <div class="header-wrapper">
-        <h1 class="site-title">
-          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-        </h1>
-        <nav class="top-navigation">
-          <ul>
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/about' | relative_url }}">About</a></li>
-            <li><a href="{{ '/downloads' | relative_url }}">Downloads</a></li>
-            <li><a href="{{ '/services' | relative_url }}">Services</a></li>
-          </ul>
-        </nav>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-          ☰
-        </button>
-      </div>
-    </header>
 
-    <main class="site-content">
-      {{ content }}
+    {% include header.html %}
+
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
     </main>
 
-    <footer class="site-footer">
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-    </footer>
-  </div>
+    {% include footer.html %}
 
-  <script>
-    // Mobile menu toggle
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.mobile-menu-toggle');
-      const topNav = document.querySelector('.top-navigation');
-
-      if (menuToggle && topNav) {
-        menuToggle.addEventListener('click', function () {
-          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-          menuToggle.setAttribute('aria-expanded', !isExpanded);
-          topNav.classList.toggle('is-open');
-        });
-
-        // Close menu when clicking on a navigation link
-        const navLinks = topNav.querySelectorAll('a');
-        navLinks.forEach(link => {
-          link.addEventListener('click', function () {
-            menuToggle.setAttribute('aria-expanded', 'false');
-            topNav.classList.remove('is-open');
-          });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function (event) {
-          const isInsideNav = topNav.contains(event.target);
-          const isToggleButton = menuToggle.contains(event.target);
-
-          if (!isInsideNav && !isToggleButton && topNav.classList.contains('is-open')) {
-            menuToggle.setAttribute('aria-expanded', 'false');
-            topNav.classList.remove('is-open');
-          }
-        });
-      }
-    });
-  </script>
-
-  <!-- Back to Top Button -->
-  <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
-
-  <style>
-    #back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: none;
-      background: #004d67;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 998;
-      transition: opacity 0.3s, transform 0.2s;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    #back-to-top:hover {
-      opacity: 0.8;
-      transform: scale(1.1);
-    }
-
-    @media (max-width: 600px) {
-      #back-to-top {
-        bottom: 80px;
-        right: 15px;
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
-      }
-    }
-  </style>
-
-  <script>
-    window.addEventListener('scroll', function () {
-      const btn = document.getElementById('back-to-top');
-      if (window.scrollY > 300) {
-        btn.style.display = 'block';
-      } else {
-        btn.style.display = 'none';
-      }
-    });
-
-    document.getElementById('back-to-top').addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
-
-  <!-- AI Avatar Widget -->
-  <link rel="stylesheet" href="{{ '/digital-avatar/frontend/widget.css' | relative_url }}">
-  <script src="{{ '/digital-avatar/frontend/widget.js' | relative_url }}"></script>
 </body>
 
 </html>

@@ -1,94 +1,165 @@
-# Deploy script for Google Cloud Run
-# Usage: .\deploy.ps1
+# AI Avatar Backend Deployment Script for PowerShell
+# This script deploys the backend to Google Cloud Run
 
-Write-Host "Deploying AI Avatar to Google Cloud Run..." -ForegroundColor Green
+param(
+    [string]$ProjectId,
+    [string]$ApiKey,
+    [string]$Region = "us-central1"
+)
 
-# Check if gcloud is installed
+# Colors
+$ErrorColor = "Red"
+$SuccessColor = "Green"
+$InfoColor = "Yellow"
+
+Write-Host "=== AI Avatar Backend Deployment ===" -ForegroundColor $SuccessColor
+Write-Host ""
+
+# Check if required commands are available
 if (-not (Get-Command gcloud -ErrorAction SilentlyContinue)) {
-    Write-Host "Error: gcloud CLI not found. Please install Google Cloud SDK." -ForegroundColor Red
-    Write-Host "Download from: https://cloud.google.com/sdk/docs/install" -ForegroundColor Yellow
+    Write-Host "Error: gcloud CLI is not installed" -ForegroundColor $ErrorColor
     exit 1
 }
 
-# Check if .env file exists
-if (-not (Test-Path "../.env")) {
-    Write-Host "Error: .env file not found in parent directory" -ForegroundColor Red
+if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
+    Write-Host "Error: Docker is not installed" -ForegroundColor $ErrorColor
     exit 1
 }
 
-# Load environment variables
-Get-Content "../.env" | ForEach-Object {
-    if ($_ -match '^([^=]+)=(.*)$') {
-        $name = $matches[1]
-        $value = $matches[2]
-        Set-Variable -Name $name -Value $value -Scope Script
+# Get configuration if not provided
+if (-not $ProjectId) {
+    $ProjectId = Read-Host "Enter GCP Project ID"
+}
+
+if (-not $ApiKey) {
+    $ApiKey = Read-Host "Enter Gemini API Key"
+}
+
+if (-not $Region) {
+    $Region = Read-Host "Enter Cloud Run region [us-central1]"
+    if ([string]::IsNullOrWhiteSpace($Region)) {
+        $Region = "us-central1"
     }
 }
 
-# Prompt for project ID if not set
-if (-not $env:GCP_PROJECT_ID) {
-    try {
-        $projectId = Read-Host "Enter your Google Cloud Project ID"
-    } catch {
-        $projectId = ""
+Write-Host ""
+Write-Host "Configuration:" -ForegroundColor $InfoColor
+Write-Host "  Project ID: $ProjectId"
+Write-Host "  Region: $Region"
+Write-Host "  API Key: $($ApiKey.Substring(0, [Math]::Min(10, $ApiKey.Length)))..."
+Write-Host ""
+
+$confirm = Read-Host "Continue with deployment? (y/n)"
+if ($confirm -ne 'y' -and $confirm -ne 'Y') {
+    Write-Host "Deployment cancelled."
+    exit 0
+}
+
+# Set GCP project
+Write-Host ""
+Write-Host "Setting GCP project..." -ForegroundColor $InfoColor
+$timer = [System.Diagnostics.Stopwatch]::StartNew()
+try {
+    $output = gcloud config set project $ProjectId 2>&1
+    Write-Host "  $output" -ForegroundColor DarkGray
+    $timer.Stop()
+    Write-Host "[OK] Project set ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
+} catch {
+    Write-Host "Error setting project: $_" -ForegroundColor $ErrorColor
+    exit 1
+}
+
+# Navigate to script directory
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+Set-Location $ScriptDir
+
+# Step 1: Sync knowledge base
+Write-Host ""
+Write-Host "Step 1/5: Syncing knowledge base..." -ForegroundColor $InfoColor
+$timer = [System.Diagnostics.Stopwatch]::StartNew()
+if (Test-Path "knowledge_base") {
+    Remove-Item -Recurse -Force "knowledge_base"
+}
+New-Item -ItemType Directory -Path "knowledge_base" | Out-Null
+Copy-Item -Recurse -Path "..\..\knowledge-base\*" -Destination "knowledge_base\"
+$fileCount = (Get-ChildItem -Recurse "knowledge_base" -File).Count
+$timer.Stop()
+Write-Host "[OK] Knowledge base synced - $fileCount files ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
+
+# Step 2: Build Docker image
+Write-Host ""
+Write-Host "Step 2/5: Building Docker image (this may take 2-3 minutes)..." -ForegroundColor $InfoColor
+$timer = [System.Diagnostics.Stopwatch]::StartNew()
+$ImageName = "gcr.io/$ProjectId/ai-avatar:latest"
+docker build -t $ImageName . 2>&1 | ForEach-Object {
+    if ($_ -match "Step \d+/\d+") {
+        Write-Host "  $_" -ForegroundColor DarkGray
     }
-} else {
-    $projectId = $env:GCP_PROJECT_ID
 }
-
-if ($projectId) {
-    Write-Host "Using project: $projectId" -ForegroundColor Cyan
-    # Set project
-    gcloud config set project $projectId
-} else {
-    Write-Host "No project ID provided; using gcloud default project." -ForegroundColor Yellow
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "Error: Docker build failed" -ForegroundColor $ErrorColor
+    exit 1
 }
+$timer.Stop()
+Write-Host "[OK] Docker image built ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
 
-# Sync knowledge base into backend/knowledge_base for deployment
-$kbSource = Join-Path $PSScriptRoot "..\\..\\knowledge-base"
-$kbDest = Join-Path $PSScriptRoot "knowledge_base"
-if (Test-Path $kbSource) {
-    New-Item -ItemType Directory -Force -Path $kbDest | Out-Null
-    Copy-Item -Path (Join-Path $kbSource "*") -Destination $kbDest -Recurse -Force
-    Write-Host "Knowledge base synced to backend/knowledge_base" -ForegroundColor Green
-} else {
-    Write-Host "Warning: knowledge-base folder not found; local KB won't be bundled." -ForegroundColor Yellow
+# Step 3: Configure Docker for GCR
+Write-Host ""
+Write-Host "Step 3/5: Configuring Docker authentication..." -ForegroundColor $InfoColor
+$timer = [System.Diagnostics.Stopwatch]::StartNew()
+$output = gcloud auth configure-docker gcr.io --quiet 2>&1
+if ($output) {
+    Write-Host "  $output" -ForegroundColor DarkGray
 }
+$timer.Stop()
+Write-Host "[OK] Docker configured ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
 
-# Resolve project ID if not provided
-if (-not $projectId) {
-    $projectId = (gcloud config get-value project).Trim()
-    if (-not $projectId) {
-        Write-Host "Error: project ID not set in gcloud config." -ForegroundColor Red
-        exit 1
+# Step 4: Push to Google Container Registry
+Write-Host ""
+Write-Host "Step 4/5: Pushing image to GCR (this may take 2-5 minutes)..." -ForegroundColor $InfoColor
+$timer = [System.Diagnostics.Stopwatch]::StartNew()
+docker push $ImageName 2>&1 | ForEach-Object {
+    if ($_ -match "Pushed|Pushing|Waiting") {
+        Write-Host "  $_" -ForegroundColor DarkGray
     }
-    Write-Host "Using project from gcloud config: $projectId" -ForegroundColor Cyan
 }
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "Error: Docker push failed" -ForegroundColor $ErrorColor
+    exit 1
+}
+$timer.Stop()
+Write-Host "[OK] Image pushed to GCR ($($timer.Elapsed.TotalSeconds.ToString('0.0'))s)" -ForegroundColor $SuccessColor
 
-# Build and deploy
-Write-Host "Building container image..." -ForegroundColor Cyan
-gcloud builds submit --tag "gcr.io/$projectId/ai-avatar"
+# Step 5: Deploy to Cloud Run
+Write-Host ""
+Write-Host "Step 5/5: Deploying to Cloud Run..." -ForegroundColor $InfoColor
+gcloud run deploy ai-avatar `
+    --image $ImageName `
+    --platform managed `
+    --region $Region `
+    --allow-unauthenticated `
+    --set-env-vars GEMINI_API_KEY=$ApiKey `
+    --memory 512Mi `
+    --cpu 1 `
+    --max-instances 10 `
+    --timeout 300
 
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "Build failed. Aborting deploy." -ForegroundColor Red
+    Write-Host "Error: Cloud Run deployment failed" -ForegroundColor $ErrorColor
     exit 1
 }
 
-Write-Host "Deploying to Cloud Run..." -ForegroundColor Cyan
+Write-Host ""
+Write-Host "=== Deployment Complete ===" -ForegroundColor $SuccessColor
+Write-Host ""
 
-gcloud run deploy ai-avatar `
-    --image "gcr.io/$projectId/ai-avatar:latest" `
-    --platform managed `
-    --region us-central1 `
-    --allow-unauthenticated `
-    --set-env-vars "GEMINI_API_KEY=$GEMINI_API_KEY"
-
-if ($LASTEXITCODE -eq 0) {
-    Write-Host "`nDeployment successful!" -ForegroundColor Green
-    Write-Host "Next steps:" -ForegroundColor Yellow
-    Write-Host "1. Note the Service URL from above" -ForegroundColor White
-    Write-Host "2. Update frontend/widget.js with the URL" -ForegroundColor White
-    Write-Host "3. Add widget to your GitHub Pages site" -ForegroundColor White
-} else {
-    Write-Host "`nDeployment failed. Check the error messages above." -ForegroundColor Red
-}
+# Get service URL
+$ServiceUrl = gcloud run services describe ai-avatar --region $Region --format "value(status.url)"
+Write-Host "Service URL: $ServiceUrl" -ForegroundColor $SuccessColor
+Write-Host ""
+Write-Host "Test the service:"
+Write-Host "  curl $ServiceUrl/"
+Write-Host ""
+Write-Host "View logs:"
+Write-Host "  gcloud run services logs read ai-avatar --region $Region"
+Write-Host ""

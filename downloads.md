@@ -1,7 +1,9 @@
 ---
 layout: page
-title: "📥 Downloads"
-description: "Project portfolio and professional materials - 44 completed projects across Retail, Oil & Gas, Telecom, Healthcare, and IT Consulting"
+title: "Downloads"
+seo_title: "Project Portfolio & Downloads - Enterprise Architecture Projects"
+description: "Browse 44+ enterprise architecture projects across Retail, Finance, Healthcare, Telecom, and Oil & Gas industries. Download detailed project documentation, architecture diagrams, and case studies with TOGAF and ArchiMate frameworks."
+keywords: "Enterprise Architecture projects, TOGAF projects, ArchiMate diagrams, Business Transformation case studies, IT Strategy projects, Digital Transformation portfolio"
 lang: en
 permalink: /downloads/
 ---
@@ -9,11 +11,9 @@ Browse my project portfolio organized by industry, role, and functional domain. 
 
 ---
 
-## 📄 Professional Profile
+## Professional Profile
 
-<ul>
-  <li><a href="/downloads/resume.pdf" target="_blank"><strong>Resume (PDF)</strong></a> — My up-to-date CV in English</li>
-</ul>
+<a href="/downloads/resume.pdf" target="_blank"><strong>Resume (PDF)</strong></a> — My up-to-date CV in English
 
 ---
 
@@ -21,7 +21,7 @@ Browse my project portfolio organized by industry, role, and functional domain. 
 
 Browse my **44 completed projects** organized by industry, role, or functional domain. Click on any category to expand and view projects.
 
-<h2 id="industry">🏭 By Industry</h2>
+<h2 id="industry">By Industry</h2>
 
 <details>
 <summary><strong>Retail (10 projects)</strong></summary>
@@ -105,7 +105,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 
 ---
 
-<h2 id="role">👔 By Role</h2>
+<h2 id="role">By Role</h2>
 
 <details>
 <summary><strong>Enterprise Architect (15 projects)</strong></summary>
@@ -177,7 +177,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 
 ---
 
-<h2 id="domain">🎯 By Functional Domain</h2>
+<h2 id="domain">By Functional Domain</h2>
 
 <details>
 <summary><strong>Data Analytics & Big Data (12 projects)</strong></summary>
@@ -258,11 +258,3 @@ Browse my **44 completed projects** organized by industry, role, or functional d
   <li><a href="/downloads/44.pdf" target="_blank"><strong>Project 44:</strong> HR-BOT - AI-Driven Assistant</a></li>
 </ul>
 </details>
-
----
-
-<p align="center" style="font-size: 14px;">
-  📧 <a href="mailto:vkgeorgia@icloud.com">vkgeorgia@icloud.com</a> | 
-  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> | 
-  📅 <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
-</p>

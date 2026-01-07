@@ -40,10 +40,22 @@ vkgeorgia.github.io/
 
 ## Main Pages
 
-- **[Home](/)** - Welcome and introduction
-- **[About](/about/)** - Professional biography and achievements
-- **[Projects](/projects/)** - Featured projects
-- **[Downloads](/downloads/)** - All 44 projects + resume
+- **[Profile](/)** - Welcome and professional introduction (home)
+- **[Profile](/profile/)** - Profile page URL
+- **[Business Challenges](/business-challenges/)** - Business problems we solve
+- **[Services](/services/)** - Consulting services offered
+- **[Cases](/cases/)** - All 44 projects + resume
+- **[Approach](/approach/)** - Our methodology and process
+- **[Articles](/articles/)** - Insights and thought leadership
+
+## Service Pages
+
+- **[Technology Strategy Advisory](/services/technology-strategy-advisory/)** - Align tech and business strategy
+- **[Executive Architecture Advisory](/services/executive-architecture-advisory/)** - Decision support for leaders
+- **[Enterprise Architecture Consulting](/services/enterprise-architecture-consulting/)** - Architecture-led transformation
+- **[Digital Transformation Advisory](/services/digital-transformation-advisory/)** - Outcome-driven change
+- **[Application Portfolio Optimization](/services/application-portfolio-optimization/)** - Reduce cost and complexity
+- **[AI Readiness & Governance](/services/ai-readiness-governance/)** - Responsible AI at scale
 
 ## External Links
 
