@@ -6,9 +6,12 @@ lang: en
 permalink:/_sidebar/
 ---
 
-- [Home](/)
-- [About](/about)
-- [Downloads](/downloads)
+- [Profile](/profile)
+- [Business Challenges](/business-challenges)
+- [Services](/services)
+- [Cases](/cases)
+- [Approach](/approach)
+- [Articles](/articles)
 
 - **Projects by Industry**
   - [Transport](/projects/transport)

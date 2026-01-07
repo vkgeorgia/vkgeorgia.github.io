@@ -40,10 +40,12 @@ vkgeorgia.github.io/
 
 ## Main Pages
 
-- **[Home](/)** - Welcome and introduction
-- **[About](/about/)** - Professional biography and achievements
-- **[Projects](/projects/)** - Featured projects
-- **[Downloads](/downloads/)** - All 44 projects + resume
+- **[Profile](/profile/)** - Welcome and professional introduction
+- **[Business Challenges](/business-challenges/)** - Business problems we solve
+- **[Services](/services/)** - Consulting services offered
+- **[Cases](/cases/)** - All 44 projects + resume
+- **[Approach](/approach/)** - Our methodology and process
+- **[Articles](/articles/)** - Insights and thought leadership
 
 ## External Links
 
