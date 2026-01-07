@@ -23,10 +23,12 @@ minima:
 
 # Header pages - only show these in navigation
 header_pages:
-  - about.md
+  - profile.md
+  - business-challenges.md
   - services.md
+  - cases.md
+  - approach.md
   - articles.md
-  - downloads.md
 
 # Build settings
 markdown: kramdown
