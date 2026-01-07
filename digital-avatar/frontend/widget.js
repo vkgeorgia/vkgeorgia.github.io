@@ -37,7 +37,7 @@
                     
                     <div id="ai-widget-messages" class="ai-widget-messages">
                         <div class="ai-widget-message ai-widget-message-bot">
-                            Hello! I'm Valerii Korobeinikov's AI assistant. I'm here to tell you about his professional experience, the consulting services he provides, and help you schedule a meeting if needed. How can I assist you today?
+                            Hello! I'm Valerii's AI assistant. I can tell you about his professional experience, consulting services, and help schedule a meeting. How can I assist you?
                         </div>
                     </div>
                     
@@ -70,6 +70,15 @@
 
         let socket;
         let isOpen = false;
+
+        // Helper function to convert URLs to clickable links
+        function linkify(text) {
+            // Regular expression to match URLs
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            return text.replace(urlRegex, function (url) {
+                return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: #4a9eff; text-decoration: underline;">${url}</a>`;
+            });
+        }
 
         // Toggle chat
         toggle.addEventListener('click', () => {
@@ -128,9 +137,13 @@
         }
 
         function parseMarkdown(text) {
+            // First, convert plain URLs to clickable links
+            text = text.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: #4a9eff; text-decoration: underline;">$1</a>');
+
+            // Then apply markdown formatting
             return text
                 .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank">$1</a>')
+                .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" style="color: #4a9eff; text-decoration: underline;">$1</a>')
                 .replace(/^[\*\-] (.+)$/gm, '<li>$1</li>')
                 .replace(/(<li>.*<\/li>\s*)+/gs, '<ul>$&</ul>')
                 .replace(/\n/g, '<br>');

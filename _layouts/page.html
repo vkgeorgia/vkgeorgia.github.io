@@ -2,15 +2,16 @@
 layout: default
 ---
 
-<article class="page">
-  <header class="page-header">
-    <h1 class="page-title">{{ page.title }}</h1>
-    {% if page.description %}
-    <p class="page-description">{{ page.description }}</p>
-    {% endif %}
-  </header>
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
 
-  <div class="page-content">
-    {{ content }}
-  </div>
+    <div class="post-content">
+        {{ content }}
+    </div>
 </article>
+
+<!-- AI Avatar Widget -->
+<script src="/digital-avatar/frontend/widget.js"></script>
+<link rel="stylesheet" href="/digital-avatar/frontend/widget.css">

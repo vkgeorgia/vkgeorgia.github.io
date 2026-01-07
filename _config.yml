@@ -4,9 +4,31 @@ url: "https://vkgeorgia.github.io"
 baseurl: ""
 lang: en
 
-author:
-  name: "Valerii Korobeinikov"
-  email: ""
+# Theme
+theme: minima
+
+# Author (Minima format)
+author: Valerii Korobeinikov
+email: vkgeorgia@icloud.com
+
+# Minima settings
+minima:
+  social_links:
+    - platform: linkedin
+      user_url: "https://www.linkedin.com/in/valeriikorobeinikov/"
+    - platform: github
+      user_url: "https://github.com/vkgeorgia"
+    - platform: google
+      user_url: "https://calendar.app.google/YwmXZytfSQ2qWX4Z7"
+
+# Header pages - only show these in navigation
+header_pages:
+  - index.md
+  - business-challenges.md
+  - services/index.md
+  - cases.md
+  - approach.md
+  - articles.md
 
 # Build settings
 markdown: kramdown
@@ -24,6 +46,7 @@ include:
 
 # Exclude from processing
 exclude:
+  - README.md
   - Gemfile
   - Gemfile.lock
   - node_modules
@@ -39,4 +62,7 @@ exclude:
   - digital-avatar/.env
   - digital-avatar/google_credentials.json
   - digital-avatar/README.md
-
+  - projects/
+  - domains/
+  - industries/
+  - roles/

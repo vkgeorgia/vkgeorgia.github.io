@@ -6,9 +6,18 @@ lang: en
 permalink:/_sidebar/
 ---
 
-- [Home](/)
-- [About](/about)
-- [Downloads](/downloads)
+- [Profile](/)
+- [Business Challenges](/business-challenges)
+- [Services](/services)
+  - [Technology Strategy Advisory](/services/technology-strategy-advisory)
+  - [Executive Architecture Advisory](/services/executive-architecture-advisory)
+  - [Enterprise Architecture Consulting](/services/enterprise-architecture-consulting)
+  - [Digital Transformation Advisory](/services/digital-transformation-advisory)
+  - [Application Portfolio Optimization](/services/application-portfolio-optimization)
+  - [AI Readiness & Governance](/services/ai-readiness-governance)
+- [Cases](/cases)
+- [Approach](/approach)
+- [Articles](/articles)
 
 - **Projects by Industry**
   - [Transport](/projects/transport)
