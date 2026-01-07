@@ -8,8 +8,6 @@ lang: en
 permalink: /services/
 ---
 
-# Services
-
 These services are not about producing documents or applying frameworks.
 
 They are designed to support **high-stakes decisions** where business goals, organizational structure, technology, cost, and risk intersect — and where clarity matters more than speed.
