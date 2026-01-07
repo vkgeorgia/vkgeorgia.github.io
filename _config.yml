@@ -23,9 +23,9 @@ minima:
 
 # Header pages - only show these in navigation
 header_pages:
-  - profile.md
+  - index.md
   - business-challenges.md
-  - services.md
+  - services/index.md
   - cases.md
   - approach.md
   - articles.md
@@ -46,6 +46,7 @@ include:
 
 # Exclude from processing
 exclude:
+  - README.md
   - Gemfile
   - Gemfile.lock
   - node_modules
