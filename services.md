@@ -1,53 +1,104 @@
 ---
 layout: page
 title: "Services"
-description: "Professional consulting and architecture services"
+seo_title: "Services | Technology & Architecture Advisory"
+description: "Advisory services focused on supporting high-stakes business and technology decisions—using architecture as a decision-making framework."
+keywords: "Technology Advisory, Enterprise Architecture, Decision Support, Digital Transformation, IT Strategy"
 lang: en
 permalink: /services/
 ---
 
-I help companies transform and achieve their strategic goals by aligning business and IT through enterprise architecture, business analysis, and change planning. I work at the intersection of strategy, operations, and technology — combining systems thinking with practical experience.
+# Services
+
+These services are not about producing documents or applying frameworks.
+
+They are designed to support **high-stakes decisions** where business goals, organizational structure, technology, cost, and risk intersect — and where clarity matters more than speed.
+
+Each service below represents a **format of decision support**, not a predefined delivery model.
 
 ---
 
-## 🤝 How I Help Businesses
+## Executive Architecture Advisory
 
-I work with organisations that face strategic or operational challenges and need clarity on how to move forward.
+**Ongoing decision support for leaders facing complex, high-stakes technology and architecture choices.**
 
-**I conduct a structured assessment** of the enterprise to identify the root cause of the problem, not just the symptoms.
+This service is for situations where decisions recur over time and their consequences accumulate.  
+Continuity, context, and senior judgment matter more than one-off recommendations.
 
-**I deliver a clear, actionable roadmap** that connects business goals with technology and shows exactly what to change and how.
-
-**I solve business problems** using enterprise architecture, business analysis, and product strategy, ensuring that every solution is technically sound and strategically aligned.
-
----
-
-## 🛠️ What I Offer
-
-### 🏛️ Enterprise Architecture Consulting
-
-I help organizations design and implement enterprise architecture that aligns with business strategy, enabling transformation and growth. Using frameworks like TOGAF and ArchiMate, I create clear architectural blueprints that guide decision-making and change.
-
-### 📊 IT Strategy Development
-
-I develop IT strategies that support business objectives, optimize technology investments, and create competitive advantage. My approach ensures that technology serves business needs, not the other way around.
-
-### 🚀 Digital Transformation
-
-I guide organizations through digital transformation by creating practical roadmaps, aligning stakeholders, and ensuring that change delivers measurable business value. I focus on sustainable transformation that builds organizational capability.
-
-### 📋 Business Analysis & Requirements
-
-I conduct thorough business analysis to understand current state, identify gaps, and define clear requirements for future solutions. My structured approach ensures that projects deliver what the business actually needs.
-
-### 📦 Product Strategy & Management
-
-I help organizations develop product strategies, harmonize portfolios, and implement effective product management practices. My experience includes reducing product portfolios by 75% while maintaining profitability and reducing time-to-market by 3x.
+→ [Learn more](/services/executive-architecture-advisory/)
 
 ---
 
-<p align="center" style="font-size: 14px;">
-  📧 <a href="mailto:vkgeorgia@icloud.com">vkgeorgia@icloud.com</a> | 
-  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> | 
-  📅 <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
-</p>
+## Enterprise Architecture Consulting
+
+**Using architecture as a decision framework to align strategy, structure, and execution.**
+
+Most often used during reorganization, mergers, or large-scale transformation, when organizations lose coherence and need a clear structural direction.
+
+→ [Learn more](/services/enterprise-architecture-consulting/)
+
+---
+
+## Technology Strategy Advisory
+
+**Connecting business strategy with technology investment decisions and trade-offs.**
+
+Focused on questions such as platform strategy, build vs buy, prioritization, and aligning technology choices with growth and profitability goals.
+
+→ [Learn more](/services/technology-strategy-advisory/)
+
+---
+
+## Digital Transformation Advisory
+
+**Turning fragmented initiatives into coherent, outcome-driven change.**
+
+Helps organizations regain direction when transformation efforts stall, multiply, or drift away from original business intent.
+
+→ [Learn more](/services/digital-transformation-advisory/)
+
+---
+
+## Application Portfolio Optimization
+
+**Reducing cost and complexity by making the application landscape visible and actionable.**
+
+Used when cost pressure, legacy systems, or duplication make the landscape hard to manage and even harder to change safely.
+
+→ [Learn more](/services/application-portfolio-optimization/)
+
+---
+
+## AI Readiness & Governance
+
+**Preparing architecture, data, and governance for responsible and sustainable AI adoption.**
+
+Focused on making AI initiatives manageable at enterprise scale — before experimentation quietly turns into structural risk.
+
+→ [Learn more](/services/ai-readiness-governance/)
+
+---
+
+## How to choose the right starting point
+
+Clients rarely start with a service.  
+They usually start with a **business challenge**.
+
+If you are unsure which format fits your situation:
+- start from the challenges you are facing,
+- then explore the relevant service.
+
+→ [Business Challenges](/business-challenges/)
+
+---
+
+## How engagements typically work
+
+The exact format always depends on context, but most engagements involve:
+- clarifying the decision that needs to be made,
+- understanding constraints and trade-offs,
+- supporting leaders as decisions evolve over time.
+
+Details are discussed after an initial conversation.
+
+Contact information is available in the site footer.
