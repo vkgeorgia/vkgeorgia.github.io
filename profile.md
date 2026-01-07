@@ -1,103 +1,118 @@
 ---
 layout: page
 title: "Profile"
-seo_title: "Valerii Korobeinikov | Enterprise Architect"
-description: "Enterprise Architect with 20+ years in digital transformation, TOGAF, ArchiMate. Aligning business strategy with technology."
-keywords: "Enterprise Architect, IT Consultant, TOGAF, ArchiMate, Digital Transformation, Business Analysis, IT Strategy, Tbilisi Georgia"
+seo_title: "Valerii Korobeinikov | Enterprise Architecture & Technology Advisory"
+description: "Independent advisor helping business and technology leaders make sound decisions in reorganization, transformation, growth, cost optimization, and risk management."
+keywords: "Enterprise Architecture Consulting, Technology Strategy Advisory, Digital Transformation, IT Strategy, Risk Reduction, Reorganization, Georgia"
 lang: en
 permalink: /profile/
 ---
 
-<div class="home">
-  <h1>Welcome</h1>
+# Helping leaders make sound technology decisions in times of change
 
-  <p>I'm <strong>Valerii Korobeinikov</strong>, an enterprise architect and business analyst with over 20 years of
-    experience helping organizations align business strategy with technology.</p>
+Reorganization, growth, cost pressure, and risk often appear as technology problems —  
+but in reality, they are **decision problems**.
 
-  <p>I work at the intersection of strategy, operations, and technology — combining systems thinking with practical
-    experience to deliver transformational change.</p>
-
-  <hr>
-
-  <h2>What You'll Find Here</h2>
-
-  <p>This site is my <strong>technical portfolio</strong> — a comprehensive collection of real-world projects and
-    professional materials:</p>
-
-  <ul>
-    <li><strong>44 completed projects</strong> across Retail, Oil & Gas, Telecom, Healthcare, Finance, and IT Consulting
-    </li>
-    <li><strong>Detailed project documentation</strong> with architecture diagrams, capability models, and
-      implementation outcomes</li>
-    <li><strong>Enterprise architecture blueprints</strong> using TOGAF and ArchiMate frameworks</li>
-    <li><strong>Business transformation roadmaps</strong> that connect strategy with execution</li>
-    <li><strong>Product management case studies</strong> including portfolio optimization and time-to-market
-      improvements</li>
-  </ul>
-
-  <p>Browse projects by <a href="/cases#industry">industry</a>, <a href="/cases#role">role</a>, or <a
-      href="/cases#domain">functional domain</a>. Each project includes measurable outcomes and lessons learned.</p>
-
-  <hr>
-
-  <h2>My Focus</h2>
-
-  <p>I help organizations solve complex business challenges through:</p>
-
-  <ul>
-    <li><strong>Enterprise Architecture</strong> — designing scalable, aligned IT landscapes</li>
-    <li><strong>Business Analysis</strong> — identifying root causes and defining clear requirements</li>
-    <li><strong>Digital Transformation</strong> — creating practical roadmaps that deliver measurable value</li>
-    <li><strong>Product Strategy</strong> — harmonizing portfolios and accelerating time-to-market</li>
-  </ul>
-
-  <p>Explore <a href="/services">how I can help your organization</a>.</p>
-
-</div>
+I help business and technology leaders make clear, well-founded decisions by using enterprise architecture as a **decision-making framework**, not as documentation.
 
 ---
 
-<img src="/images/photo.jpg" alt="Valerii" class="profile-photo" style="max-width: 50%; height: auto; display: block; margin: 0 auto 2rem;">
+## When leaders usually reach out to me
 
-## Who I Am
+Most engagements start when organizations face one or more of these situations:
 
-I am an enterprise architect and business analyst with a strong technical foundation and strategic vision. I help organisations make more intelligent decisions by aligning business goals with technology through clear architecture, structured analysis, and practical roadmaps. With a strong technical background and business mindset, I simplify complexity, bring clarity to strategic initiatives, and enable confident action in digital transformation.
+- **Reorganization, merger, or structural change**, where existing systems and processes no longer support the new operating model.
+- Pressure to **increase revenue or profitability**, while technology investments feel disconnected from business outcomes.
+- The need to **reduce costs or optimize a business unit** without breaking critical capabilities.
+- Growing concern about **risk** — legacy systems, fragmented architecture, regulatory exposure, or AI-related uncertainty.
 
-## Professional Background
+In these moments, speed matters — but **clarity matters more**, because wrong decisions become expensive.
 
-I am a highly accomplished **Enterprise Architect and Business Analyst** with **over 20 years of experience** in Software and IT Consulting. I am renowned for my primary focus on achieving **Business and IT Strategy Alignment** through expert application of Enterprise Architecture and Business Analysis principles. I excel at helping organizations **structure change, solve complex business challenges, and align business goals, capabilities, and IT initiatives to drive transformation**, delivering solutions with clarity, structure, and measurable impact.
+---
 
-My expertise spans **strategic planning, capability-based planning, and enterprise transformation**. My professional journey has seen me in diverse roles such as Enterprise Architect, Business Architect, Solution Architect, Lead Business Analyst, and IT Strategy Consultant.
+## What I do — in simple terms
 
-I have a proven track record of **delivering transformational change** for both large enterprises and mid-size companies across a wide array of **vertical industries**, including Telecom, Retail, Oil & Gas, Transportation (Aviation), Public Sector, Healthcare, and Manufacturing. My notable client list includes Domodedovo Airport, Gazprom Neft, BTC, ADNOC, FMBA, Skylink, and Wincor Nixdorf.
+Many companies struggle to understand what an enterprise architect actually does.  
+So here it is, plainly.
 
-## Key Achievements
+First, I listen to business leaders and stakeholders to understand the **real problem**, not just its symptoms. My business education and long experience in enterprise environments allow me to speak the same language as management — not only IT.
 
-- **At Domodedovo Airport**: I spearheaded crisis management for the IT department during COVID-19, reorienting services to external clients and opening new revenue streams. I also harmonized the airport's product portfolio, reducing it from 4600 to 1200 products without compromising profitability, and **reduced Time-to-Market (TTM) by three times**. I also developed a cohesive IT strategy and led the reorganization of the IT department, implementing TOGAF-based change management and Agile methodologies.
+Next, I help articulate:
+- the **current state** of the organization and its technology landscape;
+- the **desired future state** — what the business is truly trying to achieve.
 
-- **At EPAM Systems**: I led architectural and analytical efforts to transform a telecom provider into a digital services platform, automated Lead-to-Cash and Access Management processes in manufacturing, and designed scalable integration and data services.
+Then, based on experience and modern technologies, I outline **realistic decision options and next steps**, always accounting for constraints, resources, and risk.
 
-- **At Gazprom Neft**: I implemented a **Loyalty Program** for private customers and the **Fleet Management IT system** for CAR5, where I also migrated IT infrastructure to AWS, **reducing costs by 10 times**.
+The result is a **clear, actionable direction** that connects business intent with technology decisions.
 
-## Certifications
+In short:  
+**I help organizations solve business problems through sound technology decisions.**
 
--	TOGAF 10 Enterprise Architect, 2024
--	Google Cloud Digital Leader, 2022
--	AWS Certified Solution Architect, 2018
--	IIBA Academic Diploma, 2018
--	HSE MBA Degree, 2018
--	English IELTS – 7.0 (C1), 2024
+---
 
-## Areas of Expertise
+## How I help leaders move from complexity to clarity
 
-- Strategic Planning and Execution
-- Enterprise Architecture (TOGAF, ArchiMate)
-- IT Strategy Alignment
-- Business Capability Mapping
-- Product Portfolio Management
-- Business Process Optimization
-- System and Requirements Analysis
+My work combines enterprise architecture, business analysis, and strategic thinking — but the focus is always on **decision quality**, not artifacts.
 
-## Teaching and Mentoring
+Typically, I help organizations:
 
-I have taught courses on Enterprise Architecture and Project Management at MIIT (Moscow State University of Railway Engineering), trained over 60 product managers at Domodedovo Airport, and mentored professionals transitioning into IT roles.
+- Identify the **root causes** behind strategic or operational challenges
+- Structure complex situations into **clear decision options**
+- Evaluate **trade-offs** between cost, risk, speed, and long-term sustainability
+- Align business strategy, architecture, and execution
+- Build roadmaps that leaders can actually use to act with confidence
+
+I do not sell frameworks or documents.  
+I help leadership teams **see the landscape clearly and decide deliberately**.
+
+---
+
+## Who I am
+
+I am an Enterprise Architect and Business Analyst with **20+ years of experience** working at the intersection of business, technology, and transformation.
+
+I have worked across multiple industries — including telecom, retail, oil & gas, transportation, healthcare, manufacturing, and public sector — but my value does not come from industry templates.
+
+It comes from a **systemic perspective**:
+
+- abstracting away industry noise and focusing on **goals, capabilities, and structure**;
+- assessing organizations objectively, regardless of domain;
+- designing solutions based on **strategic intent**, not recycled patterns.
+
+Industry experience is useful — but it can also be limiting.  
+My role is to help each organization find a **coherent and sustainable path forward**.
+
+---
+
+## Selected outcomes
+
+- **Large transportation hub**: supported IT reorganization and product portfolio harmonization, reducing the portfolio from 4600 to 1200 products, tripling time-to-market, and enabling new revenue streams.
+- **Energy sector**: designed loyalty and fleet management systems, migrated infrastructure to cloud, and reduced operating costs by an order of magnitude.
+- **Telecom & manufacturing**: led architecture and analytical initiatives that enabled platform transformation and process automation at enterprise scale.
+
+(Details and additional cases are available in the *Cases* section.)
+
+---
+
+## How I usually work with clients
+
+Common engagement formats include:
+
+- **Executive technology and architecture advisory**
+- **Decision support** during reorganization, transformation, or high-risk initiatives
+- **Retained advisory support** for ongoing access to senior-level judgment
+- **Embedded or fractional architect roles** in complex programs
+
+The common denominator is responsibility for **decision quality**, not just delivery.
+
+---
+
+## Let’s talk
+
+If you are facing a complex decision related to structure, growth, cost, or risk,  
+a short conversation is often the best place to start.
+
+**Email:** vkgeorgia@icloud.com  
+**LinkedIn:** https://www.linkedin.com/in/valeriikorobeinikov/
+
+_No sales pitch. Just a structured discussion about your situation._
