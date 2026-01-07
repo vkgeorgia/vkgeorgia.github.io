@@ -40,4 +40,30 @@ So here it is, plainly.
 First, I listen to business leaders and stakeholders to understand the **real problem**, not just its symptoms. My business education and long experience in enterprise environments allow me to speak the same language as management — not only IT.
 
 Next, I help articulate:
-- the **cu**
+- the **current state** of the organization and its technology landscape;
+- the **desired future state** — what the business is truly trying to achieve.
+
+Then, based on experience and modern technologies, I outline **realistic decision options and next steps**, always accounting for constraints, resources, and risk.
+
+The result is a **clear, actionable direction** that connects business intent with technology decisions.
+
+In short:  
+**I help organizations solve business problems through sound technology decisions.**
+
+---
+
+## How to start
+
+If you are facing a complex decision related to reorganization, transformation, growth, cost optimization, or risk management, a short conversation is often the best place to start.
+
+We clarify:
+- the decision that actually needs to be made,
+- the constraints and stakeholders involved,
+- what information is missing to decide well.
+
+**Contact details are available in the site footer.**
+
+For more details:
+- [Business Challenges I help with](/business-challenges/)
+- [Services](/services/)
+- [Full Profile](/profile/)
