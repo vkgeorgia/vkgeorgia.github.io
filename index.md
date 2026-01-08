@@ -10,6 +10,8 @@ permalink: /
 
 # Helping leaders make sound technology decisions in times of change
 
+<img src="{{ '/images/profile_photo.jpg?v=2' | relative_url }}" style="float: right; margin-left: 20px; margin-bottom: 20px; max-width: 400px; border-radius: 8px;" alt="Valerii Korobeinikov" />
+
 Reorganization, growth, cost pressure, and risk often appear as technology problems —  
 but in reality, they are **decision problems**.
 
@@ -52,18 +54,69 @@ In short:
 
 ---
 
-## How to start
+## How I help leaders move from complexity to clarity
 
-If you are facing a complex decision related to reorganization, transformation, growth, cost optimization, or risk management, a short conversation is often the best place to start.
+My work combines enterprise architecture, business analysis, and strategic thinking — but the focus is always on **decision quality**, not artifacts.
 
-We clarify:
-- the decision that actually needs to be made,
-- the constraints and stakeholders involved,
-- what information is missing to decide well.
+Typically, I help organizations:
 
-**Contact details are available in the site footer.**
+- Identify the **root causes** behind strategic or operational challenges
+- Structure complex situations into **clear decision options**
+- Evaluate **trade-offs** between cost, risk, speed, and long-term sustainability
+- Align business strategy, architecture, and execution
+- Build roadmaps that leaders can actually use to act with confidence
 
-For more details:
-- [Business Challenges I help with](/business-challenges/)
-- [Services](/services/)
-- [Full Profile](/profile/)
+I do not sell frameworks or documents.  
+I help leadership teams **see the landscape clearly and decide deliberately**.
+
+---
+
+## Who I am
+
+I am an Enterprise Architect and Business Analyst with **20+ years of experience** working at the intersection of business, technology, and transformation.
+
+I have worked across multiple industries — including telecom, retail, oil & gas, transportation, healthcare, manufacturing, and public sector — but my value does not come from industry templates.
+
+It comes from a **systemic perspective**:
+
+- abstracting away industry noise and focusing on **goals, capabilities, and structure**;
+- assessing organizations objectively, regardless of domain;
+- designing solutions based on **strategic intent**, not recycled patterns.
+
+Industry experience is useful — but it can also be limiting.  
+My role is to help each organization find a **coherent and sustainable path forward**.
+
+---
+
+## Selected outcomes
+
+- **Large transportation hub**: supported IT reorganization and product portfolio harmonization, reducing the portfolio from 4600 to 1200 products, tripling time-to-market, and enabling new revenue streams.
+- **Energy sector**: designed loyalty and fleet management systems, migrated infrastructure to cloud, and reduced operating costs by an order of magnitude.
+- **Telecom & manufacturing**: led architecture and analytical initiatives that enabled platform transformation and process automation at enterprise scale.
+
+(Details and additional cases are available in the *Cases* section.)
+
+---
+
+## How I usually work with clients
+
+Common engagement formats include:
+
+- **Executive technology and architecture advisory**
+- **Decision support** during reorganization, transformation, or high-risk initiatives
+- **Ongoing advisory support** when continuity matters more than one-off recommendations
+- **Embedded or fractional architect roles** in complex change programs
+
+The common denominator is responsibility for **decision quality**, not just delivery.
+
+---
+
+## Let’s talk
+
+If you are facing a complex decision related to structure, growth, cost, or risk,  
+a short conversation is often the best place to start.
+
+**Email:** vkgeorgia@icloud.com  
+**LinkedIn:** https://www.linkedin.com/in/valeriikorobeinikov/
+
+_No sales pitch. Just a structured discussion about your situation._
