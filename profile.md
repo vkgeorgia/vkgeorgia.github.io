@@ -8,9 +8,9 @@ lang: en
 permalink: /profile/
 ---
 
-# Helping leaders make sound technology decisions in times of change
-
 <img src="{{ '/images/profile_photo.jpg?v=2' | relative_url }}" style="float: right; margin-left: 20px; margin-bottom: 20px; max-width: 400px; border-radius: 8px;" alt="Valerii Korobeinikov" />
+
+# Helping leaders make sound technology decisions in times of change
 
 Reorganization, growth, cost pressure, and risk often appear as technology problems —  
 but in reality, they are **decision problems**.
