@@ -31,4 +31,12 @@ digital-avatar/backend/app/services/__pycache__/
 digital-avatar/backend/knowledge_base/
 
 # LinkedIn video materials (working folder, not for publication)
-linkedin-video/
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
