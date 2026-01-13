@@ -15,11 +15,14 @@ import markdown
 # Client name replacement patterns for hidden clients
 CLIENT_REPLACEMENTS = {
     'X5 Retail Group': 'a major European retail company',
+    'X5': 'a major retail company',
     'Ahold Delhaize': 'a large European grocery chain',
     'Carrefour': 'a major retail company',
     'Namos': 'a retail company',
     'Zastava Group': 'a retail company',
     'BTC': 'a telecommunications company',
+    'VTB Pension Fund': 'a financial services company',
+    'VTB': 'a financial services company',
     'EPAM': 'an IT services company',
     'Transitrix': 'a consulting company',
     'DME': 'a manufacturing company',
@@ -96,8 +99,11 @@ def generate_accordion_html(project):
     """Generate HTML for a single project accordion."""
     metadata = project['metadata']
     
-    # Extract title from content (first # heading)
-    title_match = re.search(r'^#\s+(.+)$', project['content'], re.MULTILINE)
+    # Replace client names in content if needed (do this FIRST)
+    content = replace_client_names(project['content'], metadata)
+    
+    # Extract title from content (first # heading) - now from cleaned content
+    title_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
     title = title_match.group(1) if title_match else f"Project {project['number']}"
     
     # Get project code
@@ -118,9 +124,6 @@ def generate_accordion_html(project):
         tags_display.append(f"<em>Domain:</em> {', '.join(functional[:2])}")  # Limit to 2 for brevity
     
     tags_html = ' | '.join(tags_display) if tags_display else ''
-    
-    # Replace client names if needed
-    content = replace_client_names(project['content'], metadata)
     
     # Convert to HTML
     content_html = convert_markdown_to_html(content)
