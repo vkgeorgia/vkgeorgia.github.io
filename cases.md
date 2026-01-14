@@ -538,10 +538,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</strong></summary>
+<summary><strong>Target-state information architecture for marketplace transformation</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
-<h1>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</h1>
+<h1>Target-state information architecture for marketplace transformation</h1>
 <h2>Context</h2>
 <p>BTC aimed to evolve from a traditional telecom operator into a digital services marketplace, expanding into adjacent digital domains. Competitive pressure increased the cost of slow transformation, while the existing information landscape was not structured for a multi-domain marketplace model.</p>
 <h2>The Decision Challenge</h2>
@@ -558,10 +558,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Product domain restructuring for a digital marketplace direction (BTC-ARCO (2))</strong></summary>
+<summary><strong>Product domain restructuring for a digital marketplace direction</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Product Domain Architect | <em>Domain:</em> Architecture</p>
-<h1>Product domain restructuring for a digital marketplace direction (BTC-ARCO (2))</h1>
+<h1>Product domain restructuring for a digital marketplace direction</h1>
 <h2>Context</h2>
 <p>BTC continued its transformation toward a digital services marketplace, but its product domain remained shaped around traditional telecom offerings. The catalog was cluttered, concepts of product and offer were mixed, partner onboarding was not supported, and both configuration and pricing were inflexible.</p>
 <h2>The Decision Challenge</h2>
@@ -1331,10 +1331,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</strong></summary>
+<summary><strong>Target-state information architecture for marketplace transformation</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
-<h1>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</h1>
+<h1>Target-state information architecture for marketplace transformation</h1>
 <h2>Context</h2>
 <p>BTC aimed to evolve from a traditional telecom operator into a digital services marketplace, expanding into adjacent digital domains. Competitive pressure increased the cost of slow transformation, while the existing information landscape was not structured for a multi-domain marketplace model.</p>
 <h2>The Decision Challenge</h2>
@@ -2936,10 +2936,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</strong></summary>
+<summary><strong>Target-state information architecture for marketplace transformation</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
-<h1>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</h1>
+<h1>Target-state information architecture for marketplace transformation</h1>
 <h2>Context</h2>
 <p>BTC aimed to evolve from a traditional telecom operator into a digital services marketplace, expanding into adjacent digital domains. Competitive pressure increased the cost of slow transformation, while the existing information landscape was not structured for a multi-domain marketplace model.</p>
 <h2>The Decision Challenge</h2>
@@ -2976,10 +2976,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Product domain restructuring for a digital marketplace direction (BTC-ARCO (2))</strong></summary>
+<summary><strong>Product domain restructuring for a digital marketplace direction</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Product Domain Architect | <em>Domain:</em> Architecture</p>
-<h1>Product domain restructuring for a digital marketplace direction (BTC-ARCO (2))</h1>
+<h1>Product domain restructuring for a digital marketplace direction</h1>
 <h2>Context</h2>
 <p>BTC continued its transformation toward a digital services marketplace, but its product domain remained shaped around traditional telecom offerings. The catalog was cluttered, concepts of product and offer were mixed, partner onboarding was not supported, and both configuration and pricing were inflexible.</p>
 <h2>The Decision Challenge</h2>
