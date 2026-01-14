@@ -97,9 +97,9 @@ def get_tag_display_name(tag):
 
 def remove_project_code_from_title(title):
     """Remove project code in parentheses from title."""
-    # Remove patterns like (SKY-BARS), (GAM-X5), etc.
-    # Match: opening paren, uppercase letters/numbers/hyphens, closing paren
-    cleaned_title = re.sub(r'\s*\([A-Z0-9\-]+\)\s*$', '', title)
+    # Remove patterns like (SKY-BARS), (GAM-X5), (BTCL-ARCO (1)), etc.
+    # Match: opening paren, any content with uppercase/numbers/hyphens/spaces/parens, closing paren at end
+    cleaned_title = re.sub(r'\s*\([A-Z0-9\-\s()]+\)\s*$', '', title)
     return cleaned_title.strip()
 
 def generate_accordion_html(project):
@@ -116,8 +116,8 @@ def generate_accordion_html(project):
     # Remove project code from title
     title = remove_project_code_from_title(title)
     
-    # Also remove project codes from H1 in content
-    content = re.sub(r'^(#\s+.+?)\s*\([A-Z0-9\-]+\)\s*$', r'\1', content, flags=re.MULTILINE)
+    # Also remove project codes from H1 in content (including nested parens like BTCL-ARCO (1))
+    content = re.sub(r'^(#\s+.+?)\s*\([A-Z0-9\-\s()]+\)\s*$', r'\1', content, flags=re.MULTILINE)
     
     # Get project code
     project_code = metadata.get('project_code', [''])[0]
