@@ -131,7 +131,7 @@ def generate_accordion_html(project):
     # Build accordion
     accordion = f"""
 <details>
-<summary><strong>{title}</strong>{' (' + project_code + ')' if project_code else ''}</summary>
+<summary><strong>{title}</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 {f'<p style="color: #666; font-size: 0.9em;">{tags_html}</p>' if tags_html else ''}
 {content_html}

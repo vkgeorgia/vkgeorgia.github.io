@@ -30,7 +30,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong> (SKY-BARS)</summary>
+<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Finance, Budgeting</p>
 <h1>Internal budgeting and financial control (SKY-BARS)</h1>
@@ -50,7 +50,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong> (SKY-ACC-TRD)</summary>
+<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
 <h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
@@ -70,7 +70,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong> (SKY-ZUP)</summary>
+<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Hr, Erp</p>
 <h1>Unified payroll and HR operating model across branches (SKY-ZUP)</h1>
@@ -90,7 +90,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong> (SKY-DAX)</summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
 <h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
@@ -110,7 +110,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong> (OILPC-KSBR)</summary>
+<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Payment Systems</p>
 <h1>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</h1>
@@ -130,7 +130,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong> (OILPC-LOY)</summary>
+<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
 <h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
@@ -150,7 +150,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong> (GAM-NAMOS)</summary>
+<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas, Consulting | <em>Role:</em> Business Analyst, Solution Architect, System Analyst | <em>Domain:</em> Architecture, Erp</p>
 <h1>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</h1>
@@ -170,7 +170,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</strong> (GAM-X5)</summary>
+<summary><strong>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture, Iot</p>
 <h1>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</h1>
@@ -190,7 +190,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong> (GAM-ZG)</summary>
+<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager | <em>Domain:</em> Fuel Retail Automation, Fuel Station Pos</p>
 <h1>Fuel station management system replacement with integration and migration (GAM-ZG)</h1>
@@ -210,7 +210,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Core retail platform roadmap under M&A-driven complexity (DELB-CRP)</strong> (DELB-CRP)</summary>
+<summary><strong>Core retail platform roadmap under M&A-driven complexity (DELB-CRP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Core retail platform roadmap under M&amp;A-driven complexity (DELB-CRP)</h1>
@@ -238,7 +238,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong> (SKY-BARS)</summary>
+<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Finance, Budgeting</p>
 <h1>Internal budgeting and financial control (SKY-BARS)</h1>
@@ -258,7 +258,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong> (SKY-ACC-TRD)</summary>
+<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
 <h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
@@ -278,7 +278,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong> (SKY-ZUP)</summary>
+<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Hr, Erp</p>
 <h1>Unified payroll and HR operating model across branches (SKY-ZUP)</h1>
@@ -298,7 +298,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong> (SKY-DAX)</summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
 <h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
@@ -318,7 +318,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong> (RTK-PROTEUS)</summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
 <h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
@@ -338,7 +338,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong> (RTK-DASH)</summary>
+<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
 <h1>Audit of reporting interface layer and data marts (RTK-DASH)</h1>
@@ -358,7 +358,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong> (RTK-SDS)</summary>
+<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Architecture, Customer Analytics</p>
 <h1>Enterprise storage option selection under mixed data needs (RTK-SDS)</h1>
@@ -378,7 +378,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong> (RTK-EA)</summary>
+<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>EA baseline and transformation roadmap for managed growth (RTK-EA)</h1>
@@ -398,7 +398,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong> (RTK-DL)</summary>
+<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
 <h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
@@ -418,7 +418,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong> (RTK-EKHD)</summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
@@ -438,7 +438,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong> (RTK-B2B)</summary>
+<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Communications, Audience Targeting</p>
 <h1>B2B multichannel communications capability for targeted outreach (RTK-B2B)</h1>
@@ -458,7 +458,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong> (RTK-SPDZ)</summary>
+<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Finance, Communications</p>
 <h1>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</h1>
@@ -478,7 +478,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong> (RTK-O2O)</summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
@@ -498,7 +498,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong> (RTK-DMP)</summary>
+<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
@@ -518,7 +518,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</strong> (RTK-PLE)</summary>
+<summary><strong>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Loyalty, Loyalty Systems</p>
 <h1>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</h1>
@@ -538,7 +538,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</strong> (BTCL-ARCO (1))</summary>
+<summary><strong>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</h1>
@@ -558,7 +558,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Product domain restructuring for a digital marketplace direction (BTC-ARCO (2))</strong> (BTC-ARCO (2))</summary>
+<summary><strong>Product domain restructuring for a digital marketplace direction (BTC-ARCO (2))</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Product Domain Architect | <em>Domain:</em> Architecture</p>
 <h1>Product domain restructuring for a digital marketplace direction (BTC-ARCO (2))</h1>
@@ -586,7 +586,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong> (OILPC-KSBR)</summary>
+<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Payment Systems</p>
 <h1>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</h1>
@@ -606,7 +606,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong> (OILPC-LOY)</summary>
+<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
 <h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
@@ -626,7 +626,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong> (GAM-NAMOS)</summary>
+<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas, Consulting | <em>Role:</em> Business Analyst, Solution Architect, System Analyst | <em>Domain:</em> Architecture, Erp</p>
 <h1>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</h1>
@@ -646,7 +646,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong> (GAM-ZG)</summary>
+<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager | <em>Domain:</em> Fuel Retail Automation, Fuel Station Pos</p>
 <h1>Fuel station management system replacement with integration and migration (GAM-ZG)</h1>
@@ -666,7 +666,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong> (RTK-LAKE)</summary>
+<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
 <h1>Data lake presale and solution defense for an oil &amp; gas enterprise (RTK-LAKE)</h1>
@@ -686,7 +686,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong> (ADNO-BCP)</summary>
+<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</h1>
@@ -706,7 +706,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong> (ADNO-TRMS)</summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
 <h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
@@ -734,7 +734,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Omnichannel client notifications under compliance and volume constraints (GAM-a financial services company)</strong> (GAM-VTB)</summary>
+<summary><strong>Omnichannel client notifications under compliance and volume constraints (GAM-a financial services company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Communications, Omni Channel Communications</p>
 <h1>Omnichannel client notifications under compliance and volume constraints (GAM-a financial services company)</h1>
@@ -754,7 +754,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong> (EPM-AST)</summary>
+<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</h1>
@@ -782,7 +782,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong> (FMBA-MIAS)</summary>
+<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Healthcare | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Data Analytics, Predictive Analytics</p>
 <h1>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</h1>
@@ -810,7 +810,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong> (GAM-NAMOS)</summary>
+<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas, Consulting | <em>Role:</em> Business Analyst, Solution Architect, System Analyst | <em>Domain:</em> Architecture, Erp</p>
 <h1>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</h1>
@@ -830,7 +830,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong> (TRANS-EAM)</summary>
+<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Consulting | <em>Role:</em> Enterprise Architect, Product Manager | <em>Domain:</em> Architecture</p>
 <h1>Capability-based planning methodology and EA management product (TRANS-EAM)</h1>
@@ -858,7 +858,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong> (EPM-HRMS)</summary>
+<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Hr, Erp</p>
 <h1>People profile management under global compliance and organizational change (EPM-HRMS)</h1>
@@ -878,7 +878,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</strong> (EPM-SPC)</summary>
+<summary><strong>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Erp</p>
 <h1>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</h1>
@@ -898,7 +898,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong> (EPM-PSR)</summary>
+<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Centralized permission model for mixed user populations (EPM-PSR)</h1>
@@ -918,7 +918,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong> (EPM-PSR)</summary>
+<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Profile storage and migration to operationalize unified profiles (DMPL)</h1>
@@ -938,7 +938,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong> (HR-BOT)</summary>
+<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Hr, Ai</p>
 <h1>HR self-service assistant to reduce response time and operational load (HR-BOT)</h1>
@@ -971,7 +971,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong> (SKY-DAX)</summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
 <h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
@@ -991,7 +991,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</strong> (GAM-X5)</summary>
+<summary><strong>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture, Iot</p>
 <h1>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</h1>
@@ -1011,7 +1011,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong> (GAM-ZG)</summary>
+<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager | <em>Domain:</em> Fuel Retail Automation, Fuel Station Pos</p>
 <h1>Fuel station management system replacement with integration and migration (GAM-ZG)</h1>
@@ -1031,7 +1031,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong> (RTK-EA)</summary>
+<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>EA baseline and transformation roadmap for managed growth (RTK-EA)</h1>
@@ -1051,7 +1051,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong> (RTK-DL)</summary>
+<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
 <h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
@@ -1071,7 +1071,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong> (RTK-EKHD)</summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
@@ -1091,7 +1091,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong> (RTK-O2O)</summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
@@ -1111,7 +1111,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</strong> (RTK-PLE)</summary>
+<summary><strong>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Loyalty, Loyalty Systems</p>
 <h1>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</h1>
@@ -1131,7 +1131,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Strategy formation and risk posture for an airport enterprise (a manufacturing company-25)</strong> (DME-25)</summary>
+<summary><strong>Strategy formation and risk posture for an airport enterprise (a manufacturing company-25)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Aviation, Transport | <em>Role:</em> Enterprise Architect, Chief Architect | <em>Domain:</em> Architecture</p>
 <h1>Strategy formation and risk posture for an airport enterprise (a manufacturing company-25)</h1>
@@ -1151,7 +1151,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Crisis pivot of an internal IT unit toward external clients (a manufacturing company-26)</strong> (DME-26)</summary>
+<summary><strong>Crisis pivot of an internal IT unit toward external clients (a manufacturing company-26)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Aviation, Transport | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Crisis pivot of an internal IT unit toward external clients (a manufacturing company-26)</h1>
@@ -1171,7 +1171,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Product portfolio rationalization and development process reset (a manufacturing company-27)</strong> (DME-27)</summary>
+<summary><strong>Product portfolio rationalization and development process reset (a manufacturing company-27)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Aviation, Transport | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Product portfolio rationalization and development process reset (a manufacturing company-27)</h1>
@@ -1191,7 +1191,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>IT strategy aligned to airport business goals (a manufacturing company-28)</strong> (DME-28)</summary>
+<summary><strong>IT strategy aligned to airport business goals (a manufacturing company-28)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Aviation, Transport | <em>Role:</em> Enterprise Architect, Head Of It Strategy | <em>Domain:</em> Architecture</p>
 <h1>IT strategy aligned to airport business goals (a manufacturing company-28)</h1>
@@ -1211,7 +1211,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Operating model reset for an IT subsidiary with modern delivery practices (a manufacturing company-29)</strong> (DME-29)</summary>
+<summary><strong>Operating model reset for an IT subsidiary with modern delivery practices (a manufacturing company-29)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Aviation, Transport | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Operating model reset for an IT subsidiary with modern delivery practices (a manufacturing company-29)</h1>
@@ -1231,7 +1231,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong> (EPM-HRMS)</summary>
+<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Hr, Erp</p>
 <h1>People profile management under global compliance and organizational change (EPM-HRMS)</h1>
@@ -1251,7 +1251,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</strong> (EPM-SPC)</summary>
+<summary><strong>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Erp</p>
 <h1>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</h1>
@@ -1271,7 +1271,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong> (EPM-PSR)</summary>
+<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Centralized permission model for mixed user populations (EPM-PSR)</h1>
@@ -1291,7 +1291,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong> (EPM-PSR)</summary>
+<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Profile storage and migration to operationalize unified profiles (DMPL)</h1>
@@ -1311,7 +1311,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Core retail platform roadmap under M&A-driven complexity (DELB-CRP)</strong> (DELB-CRP)</summary>
+<summary><strong>Core retail platform roadmap under M&A-driven complexity (DELB-CRP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Core retail platform roadmap under M&amp;A-driven complexity (DELB-CRP)</h1>
@@ -1331,7 +1331,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</strong> (BTCL-ARCO (1))</summary>
+<summary><strong>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</h1>
@@ -1351,7 +1351,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong> (DANF-L2C)</summary>
+<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Finance</p>
 <h1>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</h1>
@@ -1371,7 +1371,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong> (ADNO-BCP)</summary>
+<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</h1>
@@ -1391,7 +1391,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong> (EPM-AST)</summary>
+<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</h1>
@@ -1411,7 +1411,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong> (ADNO-TRMS)</summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
 <h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
@@ -1431,7 +1431,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</strong> (TRANS-AIPOC)</summary>
+<summary><strong>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Ai Consulting | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture, Process Automation</p>
 <h1>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</h1>
@@ -1451,7 +1451,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong> (TRANS-EAM)</summary>
+<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Consulting | <em>Role:</em> Enterprise Architect, Product Manager | <em>Domain:</em> Architecture</p>
 <h1>Capability-based planning methodology and EA management product (TRANS-EAM)</h1>
@@ -1471,7 +1471,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong> (HR-BOT)</summary>
+<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Hr, Ai</p>
 <h1>HR self-service assistant to reduce response time and operational load (HR-BOT)</h1>
@@ -1499,7 +1499,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong> (SKY-DAX)</summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
 <h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
@@ -1519,7 +1519,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong> (OILPC-KSBR)</summary>
+<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Payment Systems</p>
 <h1>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</h1>
@@ -1539,7 +1539,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong> (OILPC-LOY)</summary>
+<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
 <h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
@@ -1559,7 +1559,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong> (FMBA-MIAS)</summary>
+<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Healthcare | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Data Analytics, Predictive Analytics</p>
 <h1>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</h1>
@@ -1579,7 +1579,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong> (GAM-NAMOS)</summary>
+<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas, Consulting | <em>Role:</em> Business Analyst, Solution Architect, System Analyst | <em>Domain:</em> Architecture, Erp</p>
 <h1>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</h1>
@@ -1599,7 +1599,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</strong> (GAM-CAR5)</summary>
+<summary><strong>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Transport | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Erp</p>
 <h1>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</h1>
@@ -1619,7 +1619,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</strong> (GAM-X5)</summary>
+<summary><strong>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture, Iot</p>
 <h1>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</h1>
@@ -1639,7 +1639,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong> (GAM-ZG)</summary>
+<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager | <em>Domain:</em> Fuel Retail Automation, Fuel Station Pos</p>
 <h1>Fuel station management system replacement with integration and migration (GAM-ZG)</h1>
@@ -1659,7 +1659,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong> (RTK-B2B)</summary>
+<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Communications, Audience Targeting</p>
 <h1>B2B multichannel communications capability for targeted outreach (RTK-B2B)</h1>
@@ -1679,7 +1679,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong> (RTK-SPDZ)</summary>
+<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Finance, Communications</p>
 <h1>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</h1>
@@ -1699,7 +1699,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong> (RTK-O2O)</summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
@@ -1719,7 +1719,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong> (RTK-DMP)</summary>
+<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
@@ -1739,7 +1739,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</strong> (RTK-PLE)</summary>
+<summary><strong>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Loyalty, Loyalty Systems</p>
 <h1>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</h1>
@@ -1759,7 +1759,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong> (EPM-PSR)</summary>
+<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Centralized permission model for mixed user populations (EPM-PSR)</h1>
@@ -1779,7 +1779,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong> (EPM-PSR)</summary>
+<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Profile storage and migration to operationalize unified profiles (DMPL)</h1>
@@ -1799,7 +1799,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong> (DANF-ACO)</summary>
+<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Solution Architect, Product Manager | <em>Domain:</em> Architecture</p>
 <h1>Authorization cockpit planning under MVP time pressure (DANF-ACO)</h1>
@@ -1819,7 +1819,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong> (ADNO-BCP)</summary>
+<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</h1>
@@ -1839,7 +1839,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong> (ADNO-TRMS)</summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
 <h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
@@ -1867,7 +1867,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong> (SKY-BARS)</summary>
+<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Finance, Budgeting</p>
 <h1>Internal budgeting and financial control (SKY-BARS)</h1>
@@ -1887,7 +1887,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong> (SKY-ACC-TRD)</summary>
+<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
 <h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
@@ -1907,7 +1907,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong> (SKY-ZUP)</summary>
+<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Hr, Erp</p>
 <h1>Unified payroll and HR operating model across branches (SKY-ZUP)</h1>
@@ -1927,7 +1927,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong> (OILPC-KSBR)</summary>
+<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Payment Systems</p>
 <h1>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</h1>
@@ -1947,7 +1947,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong> (OILPC-LOY)</summary>
+<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
 <h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
@@ -1967,7 +1967,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong> (GAM-NAMOS)</summary>
+<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas, Consulting | <em>Role:</em> Business Analyst, Solution Architect, System Analyst | <em>Domain:</em> Architecture, Erp</p>
 <h1>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</h1>
@@ -1987,7 +1987,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</strong> (GAM-X5)</summary>
+<summary><strong>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture, Iot</p>
 <h1>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</h1>
@@ -2007,7 +2007,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Omnichannel client notifications under compliance and volume constraints (GAM-a financial services company)</strong> (GAM-VTB)</summary>
+<summary><strong>Omnichannel client notifications under compliance and volume constraints (GAM-a financial services company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Communications, Omni Channel Communications</p>
 <h1>Omnichannel client notifications under compliance and volume constraints (GAM-a financial services company)</h1>
@@ -2027,7 +2027,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong> (RTK-PROTEUS)</summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
 <h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
@@ -2047,7 +2047,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong> (RTK-DASH)</summary>
+<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
 <h1>Audit of reporting interface layer and data marts (RTK-DASH)</h1>
@@ -2067,7 +2067,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong> (RTK-LAKE)</summary>
+<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
 <h1>Data lake presale and solution defense for an oil &amp; gas enterprise (RTK-LAKE)</h1>
@@ -2087,7 +2087,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong> (RTK-SDS)</summary>
+<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Architecture, Customer Analytics</p>
 <h1>Enterprise storage option selection under mixed data needs (RTK-SDS)</h1>
@@ -2107,7 +2107,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong> (RTK-EA)</summary>
+<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>EA baseline and transformation roadmap for managed growth (RTK-EA)</h1>
@@ -2127,7 +2127,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong> (RTK-DL)</summary>
+<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
 <h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
@@ -2147,7 +2147,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong> (RTK-B2B)</summary>
+<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Communications, Audience Targeting</p>
 <h1>B2B multichannel communications capability for targeted outreach (RTK-B2B)</h1>
@@ -2167,7 +2167,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong> (RTK-SPDZ)</summary>
+<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Finance, Communications</p>
 <h1>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</h1>
@@ -2187,7 +2187,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong> (RTK-DMP)</summary>
+<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
@@ -2207,7 +2207,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong> (EPM-HRMS)</summary>
+<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Hr, Erp</p>
 <h1>People profile management under global compliance and organizational change (EPM-HRMS)</h1>
@@ -2227,7 +2227,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong> (EPM-PSR)</summary>
+<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Profile storage and migration to operationalize unified profiles (DMPL)</h1>
@@ -2247,7 +2247,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong> (DANF-ACO)</summary>
+<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Solution Architect, Product Manager | <em>Domain:</em> Architecture</p>
 <h1>Authorization cockpit planning under MVP time pressure (DANF-ACO)</h1>
@@ -2267,7 +2267,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong> (DANF-L2C)</summary>
+<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Finance</p>
 <h1>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</h1>
@@ -2287,7 +2287,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong> (EPM-AST)</summary>
+<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</h1>
@@ -2307,7 +2307,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong> (ADNO-TRMS)</summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
 <h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
@@ -2327,7 +2327,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong> (HR-BOT)</summary>
+<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Hr, Ai</p>
 <h1>HR self-service assistant to reduce response time and operational load (HR-BOT)</h1>
@@ -2355,7 +2355,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong> (DANF-ACO)</summary>
+<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Solution Architect, Product Manager | <em>Domain:</em> Architecture</p>
 <h1>Authorization cockpit planning under MVP time pressure (DANF-ACO)</h1>
@@ -2375,7 +2375,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong> (DANF-L2C)</summary>
+<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Finance</p>
 <h1>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</h1>
@@ -2395,7 +2395,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong> (TRANS-EAM)</summary>
+<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Consulting | <em>Role:</em> Enterprise Architect, Product Manager | <em>Domain:</em> Architecture</p>
 <h1>Capability-based planning methodology and EA management product (TRANS-EAM)</h1>
@@ -2415,7 +2415,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong> (HR-BOT)</summary>
+<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Hr, Ai</p>
 <h1>HR self-service assistant to reduce response time and operational load (HR-BOT)</h1>
@@ -2443,7 +2443,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong> (SKY-BARS)</summary>
+<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Finance, Budgeting</p>
 <h1>Internal budgeting and financial control (SKY-BARS)</h1>
@@ -2463,7 +2463,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong> (SKY-ACC-TRD)</summary>
+<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
 <h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
@@ -2483,7 +2483,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong> (SKY-ZUP)</summary>
+<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Hr, Erp</p>
 <h1>Unified payroll and HR operating model across branches (SKY-ZUP)</h1>
@@ -2503,7 +2503,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong> (SKY-DAX)</summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
 <h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
@@ -2523,7 +2523,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong> (OILPC-KSBR)</summary>
+<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Payment Systems</p>
 <h1>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</h1>
@@ -2543,7 +2543,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong> (OILPC-LOY)</summary>
+<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
 <h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
@@ -2563,7 +2563,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong> (FMBA-MIAS)</summary>
+<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Healthcare | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Data Analytics, Predictive Analytics</p>
 <h1>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</h1>
@@ -2583,7 +2583,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</strong> (GAM-CAR5)</summary>
+<summary><strong>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Transport | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Erp</p>
 <h1>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</h1>
@@ -2603,7 +2603,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Omnichannel client notifications under compliance and volume constraints (GAM-a financial services company)</strong> (GAM-VTB)</summary>
+<summary><strong>Omnichannel client notifications under compliance and volume constraints (GAM-a financial services company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Communications, Omni Channel Communications</p>
 <h1>Omnichannel client notifications under compliance and volume constraints (GAM-a financial services company)</h1>
@@ -2623,7 +2623,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong> (GAM-ZG)</summary>
+<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager | <em>Domain:</em> Fuel Retail Automation, Fuel Station Pos</p>
 <h1>Fuel station management system replacement with integration and migration (GAM-ZG)</h1>
@@ -2643,7 +2643,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong> (RTK-DL)</summary>
+<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
 <h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
@@ -2676,7 +2676,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong> (GAM-NAMOS)</summary>
+<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas, Consulting | <em>Role:</em> Business Analyst, Solution Architect, System Analyst | <em>Domain:</em> Architecture, Erp</p>
 <h1>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</h1>
@@ -2696,7 +2696,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</strong> (GAM-X5)</summary>
+<summary><strong>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture, Iot</p>
 <h1>Monitoring and predictive maintenance concept for retail climate equipment (GAM-a major retail company)</h1>
@@ -2716,7 +2716,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong> (RTK-SDS)</summary>
+<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Architecture, Customer Analytics</p>
 <h1>Enterprise storage option selection under mixed data needs (RTK-SDS)</h1>
@@ -2736,7 +2736,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong> (RTK-EA)</summary>
+<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>EA baseline and transformation roadmap for managed growth (RTK-EA)</h1>
@@ -2756,7 +2756,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong> (RTK-O2O)</summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
@@ -2776,7 +2776,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Strategy formation and risk posture for an airport enterprise (a manufacturing company-25)</strong> (DME-25)</summary>
+<summary><strong>Strategy formation and risk posture for an airport enterprise (a manufacturing company-25)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Aviation, Transport | <em>Role:</em> Enterprise Architect, Chief Architect | <em>Domain:</em> Architecture</p>
 <h1>Strategy formation and risk posture for an airport enterprise (a manufacturing company-25)</h1>
@@ -2796,7 +2796,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Crisis pivot of an internal IT unit toward external clients (a manufacturing company-26)</strong> (DME-26)</summary>
+<summary><strong>Crisis pivot of an internal IT unit toward external clients (a manufacturing company-26)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Aviation, Transport | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Crisis pivot of an internal IT unit toward external clients (a manufacturing company-26)</h1>
@@ -2816,7 +2816,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Product portfolio rationalization and development process reset (a manufacturing company-27)</strong> (DME-27)</summary>
+<summary><strong>Product portfolio rationalization and development process reset (a manufacturing company-27)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Aviation, Transport | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Product portfolio rationalization and development process reset (a manufacturing company-27)</h1>
@@ -2836,7 +2836,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>IT strategy aligned to airport business goals (a manufacturing company-28)</strong> (DME-28)</summary>
+<summary><strong>IT strategy aligned to airport business goals (a manufacturing company-28)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Aviation, Transport | <em>Role:</em> Enterprise Architect, Head Of It Strategy | <em>Domain:</em> Architecture</p>
 <h1>IT strategy aligned to airport business goals (a manufacturing company-28)</h1>
@@ -2856,7 +2856,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Operating model reset for an IT subsidiary with modern delivery practices (a manufacturing company-29)</strong> (DME-29)</summary>
+<summary><strong>Operating model reset for an IT subsidiary with modern delivery practices (a manufacturing company-29)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Aviation, Transport | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Operating model reset for an IT subsidiary with modern delivery practices (a manufacturing company-29)</h1>
@@ -2876,7 +2876,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong> (EPM-PSR)</summary>
+<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Centralized permission model for mixed user populations (EPM-PSR)</h1>
@@ -2896,7 +2896,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong> (EPM-PSR)</summary>
+<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Profile storage and migration to operationalize unified profiles (DMPL)</h1>
@@ -2916,7 +2916,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Core retail platform roadmap under M&A-driven complexity (DELB-CRP)</strong> (DELB-CRP)</summary>
+<summary><strong>Core retail platform roadmap under M&A-driven complexity (DELB-CRP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Core retail platform roadmap under M&amp;A-driven complexity (DELB-CRP)</h1>
@@ -2936,7 +2936,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</strong> (BTCL-ARCO (1))</summary>
+<summary><strong>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
 <h1>Target-state information architecture for marketplace transformation (BTCL-ARCO (1))</h1>
@@ -2956,7 +2956,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong> (DANF-ACO)</summary>
+<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Solution Architect, Product Manager | <em>Domain:</em> Architecture</p>
 <h1>Authorization cockpit planning under MVP time pressure (DANF-ACO)</h1>
@@ -2976,7 +2976,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Product domain restructuring for a digital marketplace direction (BTC-ARCO (2))</strong> (BTC-ARCO (2))</summary>
+<summary><strong>Product domain restructuring for a digital marketplace direction (BTC-ARCO (2))</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Product Domain Architect | <em>Domain:</em> Architecture</p>
 <h1>Product domain restructuring for a digital marketplace direction (BTC-ARCO (2))</h1>
@@ -2996,7 +2996,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong> (ADNO-BCP)</summary>
+<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
 <h1>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</h1>
@@ -3016,7 +3016,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong> (EPM-AST)</summary>
+<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</h1>
@@ -3036,7 +3036,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong> (ADNO-TRMS)</summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
 <h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
@@ -3056,7 +3056,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</strong> (TRANS-AIPOC)</summary>
+<summary><strong>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Ai Consulting | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture, Process Automation</p>
 <h1>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</h1>
@@ -3076,7 +3076,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong> (TRANS-EAM)</summary>
+<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Consulting | <em>Role:</em> Enterprise Architect, Product Manager | <em>Domain:</em> Architecture</p>
 <h1>Capability-based planning methodology and EA management product (TRANS-EAM)</h1>
@@ -3104,7 +3104,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong> (OILPC-LOY)</summary>
+<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
 <h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
@@ -3124,7 +3124,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong> (FMBA-MIAS)</summary>
+<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Healthcare | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Data Analytics, Predictive Analytics</p>
 <h1>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</h1>
@@ -3144,7 +3144,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong> (RTK-PROTEUS)</summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
 <h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
@@ -3164,7 +3164,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong> (RTK-DASH)</summary>
+<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
 <h1>Audit of reporting interface layer and data marts (RTK-DASH)</h1>
@@ -3184,7 +3184,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong> (RTK-LAKE)</summary>
+<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
 <h1>Data lake presale and solution defense for an oil &amp; gas enterprise (RTK-LAKE)</h1>
@@ -3204,7 +3204,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong> (RTK-DL)</summary>
+<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
 <h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
@@ -3224,7 +3224,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong> (RTK-EKHD)</summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
@@ -3244,7 +3244,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong> (RTK-DMP)</summary>
+<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
@@ -3272,7 +3272,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong> (SKY-ACC-TRD)</summary>
+<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
 <h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
@@ -3292,7 +3292,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong> (SKY-ZUP)</summary>
+<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Hr, Erp</p>
 <h1>Unified payroll and HR operating model across branches (SKY-ZUP)</h1>
@@ -3312,7 +3312,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong> (SKY-DAX)</summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
 <h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
@@ -3332,7 +3332,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong> (GAM-NAMOS)</summary>
+<summary><strong>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas, Consulting | <em>Role:</em> Business Analyst, Solution Architect, System Analyst | <em>Domain:</em> Architecture, Erp</p>
 <h1>Architecture audit and standards-aligned documentation for PSMS software (GAM-a retail company)</h1>
@@ -3352,7 +3352,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</strong> (GAM-CAR5)</summary>
+<summary><strong>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Transport | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Erp</p>
 <h1>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</h1>
@@ -3372,7 +3372,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong> (EPM-HRMS)</summary>
+<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Hr, Erp</p>
 <h1>People profile management under global compliance and organizational change (EPM-HRMS)</h1>
@@ -3392,7 +3392,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</strong> (EPM-SPC)</summary>
+<summary><strong>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Erp</p>
 <h1>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</h1>
@@ -3420,7 +3420,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong> (SKY-BARS)</summary>
+<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Finance, Budgeting</p>
 <h1>Internal budgeting and financial control (SKY-BARS)</h1>
@@ -3440,7 +3440,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong> (SKY-ACC-TRD)</summary>
+<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
 <h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
@@ -3460,7 +3460,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong> (RTK-SPDZ)</summary>
+<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Finance, Communications</p>
 <h1>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</h1>
@@ -3480,7 +3480,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong> (RTK-O2O)</summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
@@ -3500,7 +3500,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong> (DANF-L2C)</summary>
+<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Finance</p>
 <h1>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</h1>
@@ -3520,7 +3520,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong> (EPM-AST)</summary>
+<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</h1>
@@ -3548,7 +3548,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong> (RTK-PROTEUS)</summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
 <h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
@@ -3568,7 +3568,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong> (RTK-DL)</summary>
+<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
 <h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
@@ -3588,7 +3588,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong> (RTK-EKHD)</summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
@@ -3608,7 +3608,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong> (RTK-B2B)</summary>
+<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Communications, Audience Targeting</p>
 <h1>B2B multichannel communications capability for targeted outreach (RTK-B2B)</h1>
@@ -3628,7 +3628,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong> (RTK-DMP)</summary>
+<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
@@ -3656,7 +3656,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong> (RTK-PROTEUS)</summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
 <h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
@@ -3676,7 +3676,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong> (RTK-DL)</summary>
+<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
 <h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
@@ -3696,7 +3696,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong> (RTK-EKHD)</summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
@@ -3716,7 +3716,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong> (RTK-B2B)</summary>
+<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Communications, Audience Targeting</p>
 <h1>B2B multichannel communications capability for targeted outreach (RTK-B2B)</h1>
@@ -3736,7 +3736,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong> (RTK-DMP)</summary>
+<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
@@ -3764,7 +3764,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong> (RTK-SPDZ)</summary>
+<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Finance, Communications</p>
 <h1>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</h1>
@@ -3784,7 +3784,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong> (RTK-O2O)</summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
 <h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
@@ -3804,7 +3804,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong> (ADNO-TRMS)</summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
 <h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
@@ -3824,7 +3824,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</strong> (TRANS-AIPOC)</summary>
+<summary><strong>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Ai Consulting | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture, Process Automation</p>
 <h1>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</h1>
@@ -3844,7 +3844,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong> (HR-BOT)</summary>
+<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Hr, Ai</p>
 <h1>HR self-service assistant to reduce response time and operational load (HR-BOT)</h1>
@@ -3872,7 +3872,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong> (RTK-PROTEUS)</summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
 <h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
@@ -3892,7 +3892,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong> (RTK-DASH)</summary>
+<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
 <h1>Audit of reporting interface layer and data marts (RTK-DASH)</h1>
@@ -3912,7 +3912,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong> (RTK-LAKE)</summary>
+<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
 <h1>Data lake presale and solution defense for an oil &amp; gas enterprise (RTK-LAKE)</h1>
@@ -3932,7 +3932,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong> (RTK-SDS)</summary>
+<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Architecture, Customer Analytics</p>
 <h1>Enterprise storage option selection under mixed data needs (RTK-SDS)</h1>
@@ -3960,7 +3960,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong> (RTK-PROTEUS)</summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
 <h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
@@ -3980,7 +3980,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong> (RTK-DL)</summary>
+<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
 <h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
@@ -4000,7 +4000,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong> (RTK-EKHD)</summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
@@ -4020,7 +4020,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong> (RTK-DMP)</summary>
+<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
@@ -4048,7 +4048,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong> (RTK-PROTEUS)</summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
 <h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
@@ -4068,7 +4068,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong> (RTK-DL)</summary>
+<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
 <h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
@@ -4088,7 +4088,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong> (RTK-EKHD)</summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
@@ -4108,7 +4108,7 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong> (RTK-DMP)</summary>
+<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
 <h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
