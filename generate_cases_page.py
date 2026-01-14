@@ -95,6 +95,13 @@ def get_tag_display_name(tag):
     """Convert tag to display name."""
     return tag.replace('-', ' ').replace('_', ' ').title()
 
+def remove_project_code_from_title(title):
+    """Remove project code in parentheses from title."""
+    # Remove patterns like (SKY-BARS), (GAM-X5), etc.
+    # Match: opening paren, uppercase letters/numbers/hyphens, closing paren
+    cleaned_title = re.sub(r'\s*\([A-Z0-9\-]+\)\s*$', '', title)
+    return cleaned_title.strip()
+
 def generate_accordion_html(project):
     """Generate HTML for a single project accordion."""
     metadata = project['metadata']
@@ -105,6 +112,12 @@ def generate_accordion_html(project):
     # Extract title from content (first # heading) - now from cleaned content
     title_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
     title = title_match.group(1) if title_match else f"Project {project['number']}"
+    
+    # Remove project code from title
+    title = remove_project_code_from_title(title)
+    
+    # Also remove project codes from H1 in content
+    content = re.sub(r'^(#\s+.+?)\s*\([A-Z0-9\-]+\)\s*$', r'\1', content, flags=re.MULTILINE)
     
     # Get project code
     project_code = metadata.get('project_code', [''])[0]

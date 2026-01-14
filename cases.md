@@ -30,10 +30,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong></summary>
+<summary><strong>Internal budgeting and financial control</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Finance, Budgeting</p>
-<h1>Internal budgeting and financial control (SKY-BARS)</h1>
+<h1>Internal budgeting and financial control</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink relied on budgeting and internal financial control processes that were slow and opaque. Budget preparation could take up to six months, which limited the organization’s ability to respond to change and reduced confidence in management reporting.</p>
 <h2>The Decision Challenge</h2>
@@ -50,10 +50,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
+<summary><strong>Consolidated accounting and inventory across legal entities</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
-<h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
+<h1>Consolidated accounting and inventory across legal entities</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink operated through multiple legal entities with fragmented accounting and inventory practices. Disparate data made consolidated reporting slow and unreliable and weakened integration with planning and control functions.</p>
 <h2>The Decision Challenge</h2>
@@ -70,10 +70,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong></summary>
+<summary><strong>Unified payroll and HR operating model across branches</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Hr, Erp</p>
-<h1>Unified payroll and HR operating model across branches (SKY-ZUP)</h1>
+<h1>Unified payroll and HR operating model across branches</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink’s distributed branch network relied on non-uniform payroll and HR practices. Differences in accrual logic and incentive schemes created inconsistencies, increased manual checks, and made personnel costs difficult to plan and control.</p>
 <h2>The Decision Challenge</h2>
@@ -90,10 +90,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
-<h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
+<h1>ERP standardization for operational transparency in a pre-sale period</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink entered a pre-sale phase where manageability and transparency mattered as much as operational performance. Fragmented operational data and non-standard reporting slowed decision-making and made it harder to demonstrate control over the business.</p>
 <h2>The Decision Challenge</h2>
@@ -110,10 +110,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong></summary>
+<summary><strong>Corporate cashless fuel payments with fraud reduction</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Payment Systems</p>
-<h1>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</h1>
+<h1>Corporate cashless fuel payments with fraud reduction</h1>
 <h2>Context</h2>
 <p>Gazprom Neft managed cashless fuel payments for a very large base of corporate customers (70,000+ legal entities). Paper fuel coupons and manual reconciliation created operational drag and opened space for fraud, producing direct losses and slow settlement cycles.</p>
 <h2>The Decision Challenge</h2>
@@ -130,10 +130,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
+<summary><strong>Loyalty platform for a fuel retail network</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
-<h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
+<h1>Loyalty platform for a fuel retail network</h1>
 <h2>Context</h2>
 <p>Gazprom Neft’s fuel retail network needed loyalty to function as a business lever rather than a simple points accumulator. Without a coherent platform, personalization, measurement of campaign impact, and consistent customer experience were limited.</p>
 <h2>The Decision Challenge</h2>
@@ -190,10 +190,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong></summary>
+<summary><strong>Fuel station management system replacement with integration and migration</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager | <em>Domain:</em> Fuel Retail Automation, Fuel Station Pos</p>
-<h1>Fuel station management system replacement with integration and migration (GAM-ZG)</h1>
+<h1>Fuel station management system replacement with integration and migration</h1>
 <h2>Context</h2>
 <p>A fuel station network needed to modernize its operational backbone for station management. The existing setup limited efficiency and made integration with adjacent capabilities (accounting, loyalty, payments, reporting) harder than it should be.</p>
 <h2>The Decision Challenge</h2>
@@ -210,10 +210,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Core retail platform roadmap under M&A-driven complexity (DELB-CRP)</strong></summary>
+<summary><strong>Core retail platform roadmap under M&A-driven complexity</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
-<h1>Core retail platform roadmap under M&amp;A-driven complexity (DELB-CRP)</h1>
+<h1>Core retail platform roadmap under M&amp;A-driven complexity</h1>
 <h2>Context</h2>
 <p>a large European grocery chain underwent multiple transformations and acquisitions, creating a complex retail and IT landscape with duplicated functions and unclear platform ownership. Omnichannel growth depended on deciding what to standardize and what to allow to remain local.</p>
 <h2>The Decision Challenge</h2>
@@ -238,10 +238,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong></summary>
+<summary><strong>Internal budgeting and financial control</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Finance, Budgeting</p>
-<h1>Internal budgeting and financial control (SKY-BARS)</h1>
+<h1>Internal budgeting and financial control</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink relied on budgeting and internal financial control processes that were slow and opaque. Budget preparation could take up to six months, which limited the organization’s ability to respond to change and reduced confidence in management reporting.</p>
 <h2>The Decision Challenge</h2>
@@ -258,10 +258,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
+<summary><strong>Consolidated accounting and inventory across legal entities</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
-<h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
+<h1>Consolidated accounting and inventory across legal entities</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink operated through multiple legal entities with fragmented accounting and inventory practices. Disparate data made consolidated reporting slow and unreliable and weakened integration with planning and control functions.</p>
 <h2>The Decision Challenge</h2>
@@ -278,10 +278,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong></summary>
+<summary><strong>Unified payroll and HR operating model across branches</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Hr, Erp</p>
-<h1>Unified payroll and HR operating model across branches (SKY-ZUP)</h1>
+<h1>Unified payroll and HR operating model across branches</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink’s distributed branch network relied on non-uniform payroll and HR practices. Differences in accrual logic and incentive schemes created inconsistencies, increased manual checks, and made personnel costs difficult to plan and control.</p>
 <h2>The Decision Challenge</h2>
@@ -298,10 +298,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
-<h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
+<h1>ERP standardization for operational transparency in a pre-sale period</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink entered a pre-sale phase where manageability and transparency mattered as much as operational performance. Fragmented operational data and non-standard reporting slowed decision-making and made it harder to demonstrate control over the business.</p>
 <h2>The Decision Challenge</h2>
@@ -318,10 +318,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
-<h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
+<h1>Traffic analytics and targeting capability for new revenue streams</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream sought profit growth and considered targeted advertising on owned resources as a viable path. That direction required turning user traffic and interest signals into segments and actionable targeting decisions, not just collecting logs.</p>
 <h2>The Decision Challenge</h2>
@@ -338,10 +338,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong></summary>
+<summary><strong>Audit of reporting interface layer and data marts</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
-<h1>Audit of reporting interface layer and data marts (RTK-DASH)</h1>
+<h1>Audit of reporting interface layer and data marts</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream depended on an interface layer and data marts to make operational and analytical data usable for business teams. The existing solution required review: misalignment with business needs, performance issues, or unclear ownership patterns can turn reporting into a bottleneck.</p>
 <h2>The Decision Challenge</h2>
@@ -358,10 +358,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong></summary>
+<summary><strong>Enterprise storage option selection under mixed data needs</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Architecture, Customer Analytics</p>
-<h1>Enterprise storage option selection under mixed data needs (RTK-SDS)</h1>
+<h1>Enterprise storage option selection under mixed data needs</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream worked with growing data volumes and a mix of structured and unstructured datasets. Different departments had different views on storage and processing needs, which created fragmentation risk and made “one-size-fits-all” decisions hard to justify.</p>
 <h2>The Decision Challenge</h2>
@@ -378,10 +378,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong></summary>
+<summary><strong>EA baseline and transformation roadmap for managed growth</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Architecture</p>
-<h1>EA baseline and transformation roadmap for managed growth (RTK-EA)</h1>
+<h1>EA baseline and transformation roadmap for managed growth</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream was expanding and needed growth to remain manageable rather than accidental. Leadership required a clear view of the current enterprise state and a roadmap that could guide change decisions across processes, systems, and technology.</p>
 <h2>The Decision Challenge</h2>
@@ -398,10 +398,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
+<summary><strong>Establishing a marketing data analytics subdivision</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
-<h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
+<h1>Establishing a marketing data analytics subdivision</h1>
 <h2>Context</h2>
 <p>Rostelecom needed to use large-scale behavioral data (visited sites, interests, web activity) to strengthen marketing outcomes: more precise targeting, timely churn response, and new data-driven products. The gap was not only technical—there was no dedicated operating model for turning this data into repeatable business capability.</p>
 <h2>The Decision Challenge</h2>
@@ -418,10 +418,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
+<h1>Post-launch audit and recovery plan for corporate data storage</h1>
 <h2>Context</h2>
 <p>Rostelecom had launched a unified corporate data storage system (EKHD) and then encountered visible operational shortcomings: unclear sources, incorrect processing, disorder in storage practices, and missed SLAs. The investment was at risk of becoming a cost center rather than a decision-support foundation.</p>
 <h2>The Decision Challenge</h2>
@@ -438,10 +438,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong></summary>
+<summary><strong>B2B multichannel communications capability for targeted outreach</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Communications, Audience Targeting</p>
-<h1>B2B multichannel communications capability for targeted outreach (RTK-B2B)</h1>
+<h1>B2B multichannel communications capability for targeted outreach</h1>
 <h2>Context</h2>
 <p>Rostelecom’s communication with client organizations lacked a consistent mechanism for segmentation and targeted outreach. Without a managed approach, outreach was either broad and noisy or slow and manual, limiting cross-sell and retention opportunities.</p>
 <h2>The Decision Challenge</h2>
@@ -458,10 +458,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong></summary>
+<summary><strong>Debtor notifications as a lever to reduce accounts receivable</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Finance, Communications</p>
-<h1>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</h1>
+<h1>Debtor notifications as a lever to reduce accounts receivable</h1>
 <h2>Context</h2>
 <p>Rostelecom faced growing accounts receivable, reducing operational flexibility and tying up funds. The existing debtor-informing practice relied on manual reconciliation statements and email correspondence, which was slow, inconsistent, and expensive to run.</p>
 <h2>The Decision Challenge</h2>
@@ -478,10 +478,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
+<h1>Simplifying inter-operator settlement accounting under complex offsets</h1>
 <h2>Context</h2>
 <p>Rostelecom’s interactions with other operators involved complex multi-party service supply and debt offset schemes. Settlement reconciliation was slow, error-prone, and paper-heavy, consuming significant operational effort and delaying the availability of funds.</p>
 <h2>The Decision Challenge</h2>
@@ -498,10 +498,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
+<summary><strong>Data management platform architecture to productize telecom data</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
+<h1>Data management platform architecture to productize telecom data</h1>
 <h2>Context</h2>
 <p>Rostelecom generated large volumes of data through core telecom services. The organization saw the opportunity to turn that data into internal decision support and external products, but that required a coherent infrastructure and operating model beyond ad-hoc analytics.</p>
 <h2>The Decision Challenge</h2>
@@ -518,10 +518,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</strong></summary>
+<summary><strong>Loyalty program effectiveness evaluation as a management discipline</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Loyalty, Loyalty Systems</p>
-<h1>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</h1>
+<h1>Loyalty program effectiveness evaluation as a management discipline</h1>
 <h2>Context</h2>
 <p>Rostelecom had a loyalty program, but it functioned primarily as a points mechanism with limited segmentation, targeting, or analytics. The organization lacked a clear way to evaluate whether the program improved profitability or merely added operational cost.</p>
 <h2>The Decision Challenge</h2>
@@ -586,10 +586,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong></summary>
+<summary><strong>Corporate cashless fuel payments with fraud reduction</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Payment Systems</p>
-<h1>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</h1>
+<h1>Corporate cashless fuel payments with fraud reduction</h1>
 <h2>Context</h2>
 <p>Gazprom Neft managed cashless fuel payments for a very large base of corporate customers (70,000+ legal entities). Paper fuel coupons and manual reconciliation created operational drag and opened space for fraud, producing direct losses and slow settlement cycles.</p>
 <h2>The Decision Challenge</h2>
@@ -606,10 +606,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
+<summary><strong>Loyalty platform for a fuel retail network</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
-<h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
+<h1>Loyalty platform for a fuel retail network</h1>
 <h2>Context</h2>
 <p>Gazprom Neft’s fuel retail network needed loyalty to function as a business lever rather than a simple points accumulator. Without a coherent platform, personalization, measurement of campaign impact, and consistent customer experience were limited.</p>
 <h2>The Decision Challenge</h2>
@@ -646,10 +646,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong></summary>
+<summary><strong>Fuel station management system replacement with integration and migration</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager | <em>Domain:</em> Fuel Retail Automation, Fuel Station Pos</p>
-<h1>Fuel station management system replacement with integration and migration (GAM-ZG)</h1>
+<h1>Fuel station management system replacement with integration and migration</h1>
 <h2>Context</h2>
 <p>A fuel station network needed to modernize its operational backbone for station management. The existing setup limited efficiency and made integration with adjacent capabilities (accounting, loyalty, payments, reporting) harder than it should be.</p>
 <h2>The Decision Challenge</h2>
@@ -666,10 +666,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong></summary>
+<summary><strong>Data lake presale and solution defense for an oil & gas enterprise</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
-<h1>Data lake presale and solution defense for an oil &amp; gas enterprise (RTK-LAKE)</h1>
+<h1>Data lake presale and solution defense for an oil &amp; gas enterprise</h1>
 <h2>Context</h2>
 <p>Gazprom Neft needed to work with large, heterogeneous datasets across fuel supply and sales and related products. Existing approaches struggled with scale and variety, limiting the organization’s ability to extract insights and identify new profit opportunities.</p>
 <h2>The Decision Challenge</h2>
@@ -686,10 +686,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong></summary>
+<summary><strong>Stabilizing fuel retail operations affected by loyalty outages</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</h1>
+<h1>Stabilizing fuel retail operations affected by loyalty outages</h1>
 <h2>Context</h2>
 <p>ADNOC experienced critical disruptions at petrol stations where loyalty program outages could cascade into full service shutdowns. The issue sat at the intersection of operational processes, integrations, and station hardware/software dependencies.</p>
 <h2>The Decision Challenge</h2>
@@ -706,10 +706,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
-<h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
+<h1>Remuneration process redesign with AI-automation readiness</h1>
 <h2>Context</h2>
 <p>A vertically integrated oil and gas company sought to overhaul remuneration planning and calculation for fixed and variable components. The existing cycle was long (around 11 weeks), error-prone, and exposed to human-factor risks, including weak transparency in bonus-related decisions.</p>
 <h2>The Decision Challenge</h2>
@@ -754,10 +754,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong></summary>
+<summary><strong>Stablecoin proof-of-concept framing under delivery constraints</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</h1>
+<h1>Stablecoin proof-of-concept framing under delivery constraints</h1>
 <h2>Context</h2>
 <p>A leading bank in Asia explored a national stablecoin concept and needed to validate feasibility through a proof of concept. The engagement required rapid clarity on what a POC can prove, and what it cannot, given surrounding regulatory and operational realities.</p>
 <h2>The Decision Challenge</h2>
@@ -782,10 +782,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong></summary>
+<summary><strong>Medical analytics for athlete health assessment and planning</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Healthcare | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Data Analytics, Predictive Analytics</p>
-<h1>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</h1>
+<h1>Medical analytics for athlete health assessment and planning</h1>
 <h2>Context</h2>
 <p>The Federal Medical-Biological Agency needed a more systematic way to collect and use medical data related to athletes’ health assessments. Without a consolidated analytical view, forecasting performance trends and adjusting training plans relied too heavily on fragmented information and individual interpretation.</p>
 <h2>The Decision Challenge</h2>
@@ -830,10 +830,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong></summary>
+<summary><strong>Capability-based planning methodology and EA management product</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Consulting | <em>Role:</em> Enterprise Architect, Product Manager | <em>Domain:</em> Architecture</p>
-<h1>Capability-based planning methodology and EA management product (TRANS-EAM)</h1>
+<h1>Capability-based planning methodology and EA management product</h1>
 <h2>Context</h2>
 <p>a consulting company identified market demand for more effective tools that support strategic planning through enterprise architecture concepts. Many organizations struggle to connect strategy to execution because capabilities, initiatives, and investments are not linked in a consistent way.</p>
 <h2>The Decision Challenge</h2>
@@ -858,10 +858,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong></summary>
+<summary><strong>People profile management under global compliance and organizational change</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Hr, Erp</p>
-<h1>People profile management under global compliance and organizational change (EPM-HRMS)</h1>
+<h1>People profile management under global compliance and organizational change</h1>
 <h2>Context</h2>
 <p>an IT services company experienced large-scale organizational change driven by remote work and relocations. People data existed across fragmented and outdated systems, and the scope extended beyond employees to external contacts, students, and community members. Operating across 58 countries also raised significant data privacy obligations.</p>
 <h2>The Decision Challenge</h2>
@@ -878,10 +878,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</strong></summary>
+<summary><strong>Unified contact profile concept for enterprise-wide consistency</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Erp</p>
-<h1>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</h1>
+<h1>Unified contact profile concept for enterprise-wide consistency</h1>
 <h2>Context</h2>
 <p>an IT services company maintained multiple systems that stored information about employees and other contact types (students, interns, community members). Fragmentation created discrepancies, confusion in processes, and barriers to unification and consistent management.</p>
 <h2>The Decision Challenge</h2>
@@ -898,10 +898,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong></summary>
+<summary><strong>Centralized permission model for mixed user populations</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Centralized permission model for mixed user populations (EPM-PSR)</h1>
+<h1>Centralized permission model for mixed user populations</h1>
 <h2>Context</h2>
 <p>an IT services company operated many internal and external systems used by employees and non-employees (students, subcontractors, partners). Access control was decentralized, handled separately by each system and process, increasing cost and the risk of inconsistent or excessive access.</p>
 <h2>The Decision Challenge</h2>
@@ -918,10 +918,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong></summary>
+<summary><strong>Profile storage and migration to operationalize unified profiles</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Profile storage and migration to operationalize unified profiles (DMPL)</h1>
+<h1>Profile storage and migration to operationalize unified profiles</h1>
 <h2>Context</h2>
 <p>After establishing a unified profile concept, an IT services company needed a practical implementation: centralized profile storage that consolidates data from multiple sources and provides reliable access for consuming systems. Without a shared storage capability, the concept would remain theoretical and fragmentation would persist.</p>
 <h2>The Decision Challenge</h2>
@@ -938,10 +938,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong></summary>
+<summary><strong>HR self-service assistant to reduce response time and operational load</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Hr, Ai</p>
-<h1>HR self-service assistant to reduce response time and operational load (HR-BOT)</h1>
+<h1>HR self-service assistant to reduce response time and operational load</h1>
 <h2>Context</h2>
 <p>an IT services company operated at a scale of 68,000 employees and faced high volume of routine HR inquiries across 12 processes. Human-operated response times often stretched into several days, reducing employee satisfaction and limiting HR capacity for higher-value work.</p>
 <h2>The Decision Challenge</h2>
@@ -971,10 +971,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
-<h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
+<h1>ERP standardization for operational transparency in a pre-sale period</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink entered a pre-sale phase where manageability and transparency mattered as much as operational performance. Fragmented operational data and non-standard reporting slowed decision-making and made it harder to demonstrate control over the business.</p>
 <h2>The Decision Challenge</h2>
@@ -1011,10 +1011,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong></summary>
+<summary><strong>Fuel station management system replacement with integration and migration</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager | <em>Domain:</em> Fuel Retail Automation, Fuel Station Pos</p>
-<h1>Fuel station management system replacement with integration and migration (GAM-ZG)</h1>
+<h1>Fuel station management system replacement with integration and migration</h1>
 <h2>Context</h2>
 <p>A fuel station network needed to modernize its operational backbone for station management. The existing setup limited efficiency and made integration with adjacent capabilities (accounting, loyalty, payments, reporting) harder than it should be.</p>
 <h2>The Decision Challenge</h2>
@@ -1031,10 +1031,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong></summary>
+<summary><strong>EA baseline and transformation roadmap for managed growth</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Architecture</p>
-<h1>EA baseline and transformation roadmap for managed growth (RTK-EA)</h1>
+<h1>EA baseline and transformation roadmap for managed growth</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream was expanding and needed growth to remain manageable rather than accidental. Leadership required a clear view of the current enterprise state and a roadmap that could guide change decisions across processes, systems, and technology.</p>
 <h2>The Decision Challenge</h2>
@@ -1051,10 +1051,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
+<summary><strong>Establishing a marketing data analytics subdivision</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
-<h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
+<h1>Establishing a marketing data analytics subdivision</h1>
 <h2>Context</h2>
 <p>Rostelecom needed to use large-scale behavioral data (visited sites, interests, web activity) to strengthen marketing outcomes: more precise targeting, timely churn response, and new data-driven products. The gap was not only technical—there was no dedicated operating model for turning this data into repeatable business capability.</p>
 <h2>The Decision Challenge</h2>
@@ -1071,10 +1071,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
+<h1>Post-launch audit and recovery plan for corporate data storage</h1>
 <h2>Context</h2>
 <p>Rostelecom had launched a unified corporate data storage system (EKHD) and then encountered visible operational shortcomings: unclear sources, incorrect processing, disorder in storage practices, and missed SLAs. The investment was at risk of becoming a cost center rather than a decision-support foundation.</p>
 <h2>The Decision Challenge</h2>
@@ -1091,10 +1091,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
+<h1>Simplifying inter-operator settlement accounting under complex offsets</h1>
 <h2>Context</h2>
 <p>Rostelecom’s interactions with other operators involved complex multi-party service supply and debt offset schemes. Settlement reconciliation was slow, error-prone, and paper-heavy, consuming significant operational effort and delaying the availability of funds.</p>
 <h2>The Decision Challenge</h2>
@@ -1111,10 +1111,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</strong></summary>
+<summary><strong>Loyalty program effectiveness evaluation as a management discipline</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Loyalty, Loyalty Systems</p>
-<h1>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</h1>
+<h1>Loyalty program effectiveness evaluation as a management discipline</h1>
 <h2>Context</h2>
 <p>Rostelecom had a loyalty program, but it functioned primarily as a points mechanism with limited segmentation, targeting, or analytics. The organization lacked a clear way to evaluate whether the program improved profitability or merely added operational cost.</p>
 <h2>The Decision Challenge</h2>
@@ -1231,10 +1231,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong></summary>
+<summary><strong>People profile management under global compliance and organizational change</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Hr, Erp</p>
-<h1>People profile management under global compliance and organizational change (EPM-HRMS)</h1>
+<h1>People profile management under global compliance and organizational change</h1>
 <h2>Context</h2>
 <p>an IT services company experienced large-scale organizational change driven by remote work and relocations. People data existed across fragmented and outdated systems, and the scope extended beyond employees to external contacts, students, and community members. Operating across 58 countries also raised significant data privacy obligations.</p>
 <h2>The Decision Challenge</h2>
@@ -1251,10 +1251,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</strong></summary>
+<summary><strong>Unified contact profile concept for enterprise-wide consistency</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Erp</p>
-<h1>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</h1>
+<h1>Unified contact profile concept for enterprise-wide consistency</h1>
 <h2>Context</h2>
 <p>an IT services company maintained multiple systems that stored information about employees and other contact types (students, interns, community members). Fragmentation created discrepancies, confusion in processes, and barriers to unification and consistent management.</p>
 <h2>The Decision Challenge</h2>
@@ -1271,10 +1271,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong></summary>
+<summary><strong>Centralized permission model for mixed user populations</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Centralized permission model for mixed user populations (EPM-PSR)</h1>
+<h1>Centralized permission model for mixed user populations</h1>
 <h2>Context</h2>
 <p>an IT services company operated many internal and external systems used by employees and non-employees (students, subcontractors, partners). Access control was decentralized, handled separately by each system and process, increasing cost and the risk of inconsistent or excessive access.</p>
 <h2>The Decision Challenge</h2>
@@ -1291,10 +1291,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong></summary>
+<summary><strong>Profile storage and migration to operationalize unified profiles</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Profile storage and migration to operationalize unified profiles (DMPL)</h1>
+<h1>Profile storage and migration to operationalize unified profiles</h1>
 <h2>Context</h2>
 <p>After establishing a unified profile concept, an IT services company needed a practical implementation: centralized profile storage that consolidates data from multiple sources and provides reliable access for consuming systems. Without a shared storage capability, the concept would remain theoretical and fragmentation would persist.</p>
 <h2>The Decision Challenge</h2>
@@ -1311,10 +1311,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Core retail platform roadmap under M&A-driven complexity (DELB-CRP)</strong></summary>
+<summary><strong>Core retail platform roadmap under M&A-driven complexity</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
-<h1>Core retail platform roadmap under M&amp;A-driven complexity (DELB-CRP)</h1>
+<h1>Core retail platform roadmap under M&amp;A-driven complexity</h1>
 <h2>Context</h2>
 <p>a large European grocery chain underwent multiple transformations and acquisitions, creating a complex retail and IT landscape with duplicated functions and unclear platform ownership. Omnichannel growth depended on deciding what to standardize and what to allow to remain local.</p>
 <h2>The Decision Challenge</h2>
@@ -1351,10 +1351,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong></summary>
+<summary><strong>Subscription management blueprint for lead-to-cash transformation</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Finance</p>
-<h1>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</h1>
+<h1>Subscription management blueprint for lead-to-cash transformation</h1>
 <h2>Context</h2>
 <p>Danfoss moved toward a service-based business model, which required subscription management as a connective layer between customer engagement and enterprise operations. The organization needed a coherent blueprint before committing to implementation.</p>
 <h2>The Decision Challenge</h2>
@@ -1371,10 +1371,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong></summary>
+<summary><strong>Stabilizing fuel retail operations affected by loyalty outages</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</h1>
+<h1>Stabilizing fuel retail operations affected by loyalty outages</h1>
 <h2>Context</h2>
 <p>ADNOC experienced critical disruptions at petrol stations where loyalty program outages could cascade into full service shutdowns. The issue sat at the intersection of operational processes, integrations, and station hardware/software dependencies.</p>
 <h2>The Decision Challenge</h2>
@@ -1391,10 +1391,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong></summary>
+<summary><strong>Stablecoin proof-of-concept framing under delivery constraints</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</h1>
+<h1>Stablecoin proof-of-concept framing under delivery constraints</h1>
 <h2>Context</h2>
 <p>A leading bank in Asia explored a national stablecoin concept and needed to validate feasibility through a proof of concept. The engagement required rapid clarity on what a POC can prove, and what it cannot, given surrounding regulatory and operational realities.</p>
 <h2>The Decision Challenge</h2>
@@ -1411,10 +1411,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
-<h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
+<h1>Remuneration process redesign with AI-automation readiness</h1>
 <h2>Context</h2>
 <p>A vertically integrated oil and gas company sought to overhaul remuneration planning and calculation for fixed and variable components. The existing cycle was long (around 11 weeks), error-prone, and exposed to human-factor risks, including weak transparency in bonus-related decisions.</p>
 <h2>The Decision Challenge</h2>
@@ -1431,10 +1431,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</strong></summary>
+<summary><strong>AI-agent proof-of-concept for product development process automation</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Ai Consulting | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture, Process Automation</p>
-<h1>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</h1>
+<h1>AI-agent proof-of-concept for product development process automation</h1>
 <h2>Context</h2>
 <p>A client’s product development process for launching and evolving confectionery products for the European market was lengthy and unpredictable. The process involved iterative workflows across multiple functions, making it difficult to forecast timelines and manage a product portfolio effectively.</p>
 <h2>The Decision Challenge</h2>
@@ -1451,10 +1451,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong></summary>
+<summary><strong>Capability-based planning methodology and EA management product</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Consulting | <em>Role:</em> Enterprise Architect, Product Manager | <em>Domain:</em> Architecture</p>
-<h1>Capability-based planning methodology and EA management product (TRANS-EAM)</h1>
+<h1>Capability-based planning methodology and EA management product</h1>
 <h2>Context</h2>
 <p>a consulting company identified market demand for more effective tools that support strategic planning through enterprise architecture concepts. Many organizations struggle to connect strategy to execution because capabilities, initiatives, and investments are not linked in a consistent way.</p>
 <h2>The Decision Challenge</h2>
@@ -1471,10 +1471,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong></summary>
+<summary><strong>HR self-service assistant to reduce response time and operational load</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Hr, Ai</p>
-<h1>HR self-service assistant to reduce response time and operational load (HR-BOT)</h1>
+<h1>HR self-service assistant to reduce response time and operational load</h1>
 <h2>Context</h2>
 <p>an IT services company operated at a scale of 68,000 employees and faced high volume of routine HR inquiries across 12 processes. Human-operated response times often stretched into several days, reducing employee satisfaction and limiting HR capacity for higher-value work.</p>
 <h2>The Decision Challenge</h2>
@@ -1499,10 +1499,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
-<h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
+<h1>ERP standardization for operational transparency in a pre-sale period</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink entered a pre-sale phase where manageability and transparency mattered as much as operational performance. Fragmented operational data and non-standard reporting slowed decision-making and made it harder to demonstrate control over the business.</p>
 <h2>The Decision Challenge</h2>
@@ -1519,10 +1519,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong></summary>
+<summary><strong>Corporate cashless fuel payments with fraud reduction</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Payment Systems</p>
-<h1>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</h1>
+<h1>Corporate cashless fuel payments with fraud reduction</h1>
 <h2>Context</h2>
 <p>Gazprom Neft managed cashless fuel payments for a very large base of corporate customers (70,000+ legal entities). Paper fuel coupons and manual reconciliation created operational drag and opened space for fraud, producing direct losses and slow settlement cycles.</p>
 <h2>The Decision Challenge</h2>
@@ -1539,10 +1539,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
+<summary><strong>Loyalty platform for a fuel retail network</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
-<h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
+<h1>Loyalty platform for a fuel retail network</h1>
 <h2>Context</h2>
 <p>Gazprom Neft’s fuel retail network needed loyalty to function as a business lever rather than a simple points accumulator. Without a coherent platform, personalization, measurement of campaign impact, and consistent customer experience were limited.</p>
 <h2>The Decision Challenge</h2>
@@ -1559,10 +1559,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong></summary>
+<summary><strong>Medical analytics for athlete health assessment and planning</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Healthcare | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Data Analytics, Predictive Analytics</p>
-<h1>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</h1>
+<h1>Medical analytics for athlete health assessment and planning</h1>
 <h2>Context</h2>
 <p>The Federal Medical-Biological Agency needed a more systematic way to collect and use medical data related to athletes’ health assessments. Without a consolidated analytical view, forecasting performance trends and adjusting training plans relied too heavily on fragmented information and individual interpretation.</p>
 <h2>The Decision Challenge</h2>
@@ -1599,10 +1599,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</strong></summary>
+<summary><strong>Carsharing service launch with cloud-based fleet operations</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Transport | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Erp</p>
-<h1>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</h1>
+<h1>Carsharing service launch with cloud-based fleet operations</h1>
 <h2>Context</h2>
 <p>CAR5 planned a carsharing launch from zero, requiring an operational backbone for fleet availability, customer interaction, and integration with in-car devices and external service providers. The viability of the business depended on reliability and the ability to scale with growth in users and vehicles.</p>
 <h2>The Decision Challenge</h2>
@@ -1639,10 +1639,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong></summary>
+<summary><strong>Fuel station management system replacement with integration and migration</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager | <em>Domain:</em> Fuel Retail Automation, Fuel Station Pos</p>
-<h1>Fuel station management system replacement with integration and migration (GAM-ZG)</h1>
+<h1>Fuel station management system replacement with integration and migration</h1>
 <h2>Context</h2>
 <p>A fuel station network needed to modernize its operational backbone for station management. The existing setup limited efficiency and made integration with adjacent capabilities (accounting, loyalty, payments, reporting) harder than it should be.</p>
 <h2>The Decision Challenge</h2>
@@ -1659,10 +1659,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong></summary>
+<summary><strong>B2B multichannel communications capability for targeted outreach</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Communications, Audience Targeting</p>
-<h1>B2B multichannel communications capability for targeted outreach (RTK-B2B)</h1>
+<h1>B2B multichannel communications capability for targeted outreach</h1>
 <h2>Context</h2>
 <p>Rostelecom’s communication with client organizations lacked a consistent mechanism for segmentation and targeted outreach. Without a managed approach, outreach was either broad and noisy or slow and manual, limiting cross-sell and retention opportunities.</p>
 <h2>The Decision Challenge</h2>
@@ -1679,10 +1679,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong></summary>
+<summary><strong>Debtor notifications as a lever to reduce accounts receivable</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Finance, Communications</p>
-<h1>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</h1>
+<h1>Debtor notifications as a lever to reduce accounts receivable</h1>
 <h2>Context</h2>
 <p>Rostelecom faced growing accounts receivable, reducing operational flexibility and tying up funds. The existing debtor-informing practice relied on manual reconciliation statements and email correspondence, which was slow, inconsistent, and expensive to run.</p>
 <h2>The Decision Challenge</h2>
@@ -1699,10 +1699,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
+<h1>Simplifying inter-operator settlement accounting under complex offsets</h1>
 <h2>Context</h2>
 <p>Rostelecom’s interactions with other operators involved complex multi-party service supply and debt offset schemes. Settlement reconciliation was slow, error-prone, and paper-heavy, consuming significant operational effort and delaying the availability of funds.</p>
 <h2>The Decision Challenge</h2>
@@ -1719,10 +1719,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
+<summary><strong>Data management platform architecture to productize telecom data</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
+<h1>Data management platform architecture to productize telecom data</h1>
 <h2>Context</h2>
 <p>Rostelecom generated large volumes of data through core telecom services. The organization saw the opportunity to turn that data into internal decision support and external products, but that required a coherent infrastructure and operating model beyond ad-hoc analytics.</p>
 <h2>The Decision Challenge</h2>
@@ -1739,10 +1739,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</strong></summary>
+<summary><strong>Loyalty program effectiveness evaluation as a management discipline</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Loyalty, Loyalty Systems</p>
-<h1>Loyalty program effectiveness evaluation as a management discipline (RTK-PLE)</h1>
+<h1>Loyalty program effectiveness evaluation as a management discipline</h1>
 <h2>Context</h2>
 <p>Rostelecom had a loyalty program, but it functioned primarily as a points mechanism with limited segmentation, targeting, or analytics. The organization lacked a clear way to evaluate whether the program improved profitability or merely added operational cost.</p>
 <h2>The Decision Challenge</h2>
@@ -1759,10 +1759,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong></summary>
+<summary><strong>Centralized permission model for mixed user populations</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Centralized permission model for mixed user populations (EPM-PSR)</h1>
+<h1>Centralized permission model for mixed user populations</h1>
 <h2>Context</h2>
 <p>an IT services company operated many internal and external systems used by employees and non-employees (students, subcontractors, partners). Access control was decentralized, handled separately by each system and process, increasing cost and the risk of inconsistent or excessive access.</p>
 <h2>The Decision Challenge</h2>
@@ -1779,10 +1779,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong></summary>
+<summary><strong>Profile storage and migration to operationalize unified profiles</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Profile storage and migration to operationalize unified profiles (DMPL)</h1>
+<h1>Profile storage and migration to operationalize unified profiles</h1>
 <h2>Context</h2>
 <p>After establishing a unified profile concept, an IT services company needed a practical implementation: centralized profile storage that consolidates data from multiple sources and provides reliable access for consuming systems. Without a shared storage capability, the concept would remain theoretical and fragmentation would persist.</p>
 <h2>The Decision Challenge</h2>
@@ -1799,10 +1799,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong></summary>
+<summary><strong>Authorization cockpit planning under MVP time pressure</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Solution Architect, Product Manager | <em>Domain:</em> Architecture</p>
-<h1>Authorization cockpit planning under MVP time pressure (DANF-ACO)</h1>
+<h1>Authorization cockpit planning under MVP time pressure</h1>
 <h2>Context</h2>
 <p>Danfoss needed a new authorization management application for users and partners, with an MVP expected within the year. The initiative required clarity on scope, priorities, and how the solution fits the broader identity and access landscape.</p>
 <h2>The Decision Challenge</h2>
@@ -1819,10 +1819,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong></summary>
+<summary><strong>Stabilizing fuel retail operations affected by loyalty outages</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</h1>
+<h1>Stabilizing fuel retail operations affected by loyalty outages</h1>
 <h2>Context</h2>
 <p>ADNOC experienced critical disruptions at petrol stations where loyalty program outages could cascade into full service shutdowns. The issue sat at the intersection of operational processes, integrations, and station hardware/software dependencies.</p>
 <h2>The Decision Challenge</h2>
@@ -1839,10 +1839,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
-<h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
+<h1>Remuneration process redesign with AI-automation readiness</h1>
 <h2>Context</h2>
 <p>A vertically integrated oil and gas company sought to overhaul remuneration planning and calculation for fixed and variable components. The existing cycle was long (around 11 weeks), error-prone, and exposed to human-factor risks, including weak transparency in bonus-related decisions.</p>
 <h2>The Decision Challenge</h2>
@@ -1867,10 +1867,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong></summary>
+<summary><strong>Internal budgeting and financial control</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Finance, Budgeting</p>
-<h1>Internal budgeting and financial control (SKY-BARS)</h1>
+<h1>Internal budgeting and financial control</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink relied on budgeting and internal financial control processes that were slow and opaque. Budget preparation could take up to six months, which limited the organization’s ability to respond to change and reduced confidence in management reporting.</p>
 <h2>The Decision Challenge</h2>
@@ -1887,10 +1887,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
+<summary><strong>Consolidated accounting and inventory across legal entities</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
-<h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
+<h1>Consolidated accounting and inventory across legal entities</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink operated through multiple legal entities with fragmented accounting and inventory practices. Disparate data made consolidated reporting slow and unreliable and weakened integration with planning and control functions.</p>
 <h2>The Decision Challenge</h2>
@@ -1907,10 +1907,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong></summary>
+<summary><strong>Unified payroll and HR operating model across branches</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Hr, Erp</p>
-<h1>Unified payroll and HR operating model across branches (SKY-ZUP)</h1>
+<h1>Unified payroll and HR operating model across branches</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink’s distributed branch network relied on non-uniform payroll and HR practices. Differences in accrual logic and incentive schemes created inconsistencies, increased manual checks, and made personnel costs difficult to plan and control.</p>
 <h2>The Decision Challenge</h2>
@@ -1927,10 +1927,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong></summary>
+<summary><strong>Corporate cashless fuel payments with fraud reduction</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Payment Systems</p>
-<h1>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</h1>
+<h1>Corporate cashless fuel payments with fraud reduction</h1>
 <h2>Context</h2>
 <p>Gazprom Neft managed cashless fuel payments for a very large base of corporate customers (70,000+ legal entities). Paper fuel coupons and manual reconciliation created operational drag and opened space for fraud, producing direct losses and slow settlement cycles.</p>
 <h2>The Decision Challenge</h2>
@@ -1947,10 +1947,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
+<summary><strong>Loyalty platform for a fuel retail network</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
-<h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
+<h1>Loyalty platform for a fuel retail network</h1>
 <h2>Context</h2>
 <p>Gazprom Neft’s fuel retail network needed loyalty to function as a business lever rather than a simple points accumulator. Without a coherent platform, personalization, measurement of campaign impact, and consistent customer experience were limited.</p>
 <h2>The Decision Challenge</h2>
@@ -2027,10 +2027,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
-<h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
+<h1>Traffic analytics and targeting capability for new revenue streams</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream sought profit growth and considered targeted advertising on owned resources as a viable path. That direction required turning user traffic and interest signals into segments and actionable targeting decisions, not just collecting logs.</p>
 <h2>The Decision Challenge</h2>
@@ -2047,10 +2047,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong></summary>
+<summary><strong>Audit of reporting interface layer and data marts</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
-<h1>Audit of reporting interface layer and data marts (RTK-DASH)</h1>
+<h1>Audit of reporting interface layer and data marts</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream depended on an interface layer and data marts to make operational and analytical data usable for business teams. The existing solution required review: misalignment with business needs, performance issues, or unclear ownership patterns can turn reporting into a bottleneck.</p>
 <h2>The Decision Challenge</h2>
@@ -2067,10 +2067,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong></summary>
+<summary><strong>Data lake presale and solution defense for an oil & gas enterprise</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
-<h1>Data lake presale and solution defense for an oil &amp; gas enterprise (RTK-LAKE)</h1>
+<h1>Data lake presale and solution defense for an oil &amp; gas enterprise</h1>
 <h2>Context</h2>
 <p>Gazprom Neft needed to work with large, heterogeneous datasets across fuel supply and sales and related products. Existing approaches struggled with scale and variety, limiting the organization’s ability to extract insights and identify new profit opportunities.</p>
 <h2>The Decision Challenge</h2>
@@ -2087,10 +2087,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong></summary>
+<summary><strong>Enterprise storage option selection under mixed data needs</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Architecture, Customer Analytics</p>
-<h1>Enterprise storage option selection under mixed data needs (RTK-SDS)</h1>
+<h1>Enterprise storage option selection under mixed data needs</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream worked with growing data volumes and a mix of structured and unstructured datasets. Different departments had different views on storage and processing needs, which created fragmentation risk and made “one-size-fits-all” decisions hard to justify.</p>
 <h2>The Decision Challenge</h2>
@@ -2107,10 +2107,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong></summary>
+<summary><strong>EA baseline and transformation roadmap for managed growth</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Architecture</p>
-<h1>EA baseline and transformation roadmap for managed growth (RTK-EA)</h1>
+<h1>EA baseline and transformation roadmap for managed growth</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream was expanding and needed growth to remain manageable rather than accidental. Leadership required a clear view of the current enterprise state and a roadmap that could guide change decisions across processes, systems, and technology.</p>
 <h2>The Decision Challenge</h2>
@@ -2127,10 +2127,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
+<summary><strong>Establishing a marketing data analytics subdivision</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
-<h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
+<h1>Establishing a marketing data analytics subdivision</h1>
 <h2>Context</h2>
 <p>Rostelecom needed to use large-scale behavioral data (visited sites, interests, web activity) to strengthen marketing outcomes: more precise targeting, timely churn response, and new data-driven products. The gap was not only technical—there was no dedicated operating model for turning this data into repeatable business capability.</p>
 <h2>The Decision Challenge</h2>
@@ -2147,10 +2147,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong></summary>
+<summary><strong>B2B multichannel communications capability for targeted outreach</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Communications, Audience Targeting</p>
-<h1>B2B multichannel communications capability for targeted outreach (RTK-B2B)</h1>
+<h1>B2B multichannel communications capability for targeted outreach</h1>
 <h2>Context</h2>
 <p>Rostelecom’s communication with client organizations lacked a consistent mechanism for segmentation and targeted outreach. Without a managed approach, outreach was either broad and noisy or slow and manual, limiting cross-sell and retention opportunities.</p>
 <h2>The Decision Challenge</h2>
@@ -2167,10 +2167,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong></summary>
+<summary><strong>Debtor notifications as a lever to reduce accounts receivable</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Finance, Communications</p>
-<h1>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</h1>
+<h1>Debtor notifications as a lever to reduce accounts receivable</h1>
 <h2>Context</h2>
 <p>Rostelecom faced growing accounts receivable, reducing operational flexibility and tying up funds. The existing debtor-informing practice relied on manual reconciliation statements and email correspondence, which was slow, inconsistent, and expensive to run.</p>
 <h2>The Decision Challenge</h2>
@@ -2187,10 +2187,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
+<summary><strong>Data management platform architecture to productize telecom data</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
+<h1>Data management platform architecture to productize telecom data</h1>
 <h2>Context</h2>
 <p>Rostelecom generated large volumes of data through core telecom services. The organization saw the opportunity to turn that data into internal decision support and external products, but that required a coherent infrastructure and operating model beyond ad-hoc analytics.</p>
 <h2>The Decision Challenge</h2>
@@ -2207,10 +2207,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong></summary>
+<summary><strong>People profile management under global compliance and organizational change</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Hr, Erp</p>
-<h1>People profile management under global compliance and organizational change (EPM-HRMS)</h1>
+<h1>People profile management under global compliance and organizational change</h1>
 <h2>Context</h2>
 <p>an IT services company experienced large-scale organizational change driven by remote work and relocations. People data existed across fragmented and outdated systems, and the scope extended beyond employees to external contacts, students, and community members. Operating across 58 countries also raised significant data privacy obligations.</p>
 <h2>The Decision Challenge</h2>
@@ -2227,10 +2227,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong></summary>
+<summary><strong>Profile storage and migration to operationalize unified profiles</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Profile storage and migration to operationalize unified profiles (DMPL)</h1>
+<h1>Profile storage and migration to operationalize unified profiles</h1>
 <h2>Context</h2>
 <p>After establishing a unified profile concept, an IT services company needed a practical implementation: centralized profile storage that consolidates data from multiple sources and provides reliable access for consuming systems. Without a shared storage capability, the concept would remain theoretical and fragmentation would persist.</p>
 <h2>The Decision Challenge</h2>
@@ -2247,10 +2247,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong></summary>
+<summary><strong>Authorization cockpit planning under MVP time pressure</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Solution Architect, Product Manager | <em>Domain:</em> Architecture</p>
-<h1>Authorization cockpit planning under MVP time pressure (DANF-ACO)</h1>
+<h1>Authorization cockpit planning under MVP time pressure</h1>
 <h2>Context</h2>
 <p>Danfoss needed a new authorization management application for users and partners, with an MVP expected within the year. The initiative required clarity on scope, priorities, and how the solution fits the broader identity and access landscape.</p>
 <h2>The Decision Challenge</h2>
@@ -2267,10 +2267,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong></summary>
+<summary><strong>Subscription management blueprint for lead-to-cash transformation</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Finance</p>
-<h1>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</h1>
+<h1>Subscription management blueprint for lead-to-cash transformation</h1>
 <h2>Context</h2>
 <p>Danfoss moved toward a service-based business model, which required subscription management as a connective layer between customer engagement and enterprise operations. The organization needed a coherent blueprint before committing to implementation.</p>
 <h2>The Decision Challenge</h2>
@@ -2287,10 +2287,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong></summary>
+<summary><strong>Stablecoin proof-of-concept framing under delivery constraints</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</h1>
+<h1>Stablecoin proof-of-concept framing under delivery constraints</h1>
 <h2>Context</h2>
 <p>A leading bank in Asia explored a national stablecoin concept and needed to validate feasibility through a proof of concept. The engagement required rapid clarity on what a POC can prove, and what it cannot, given surrounding regulatory and operational realities.</p>
 <h2>The Decision Challenge</h2>
@@ -2307,10 +2307,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
-<h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
+<h1>Remuneration process redesign with AI-automation readiness</h1>
 <h2>Context</h2>
 <p>A vertically integrated oil and gas company sought to overhaul remuneration planning and calculation for fixed and variable components. The existing cycle was long (around 11 weeks), error-prone, and exposed to human-factor risks, including weak transparency in bonus-related decisions.</p>
 <h2>The Decision Challenge</h2>
@@ -2327,10 +2327,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong></summary>
+<summary><strong>HR self-service assistant to reduce response time and operational load</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Hr, Ai</p>
-<h1>HR self-service assistant to reduce response time and operational load (HR-BOT)</h1>
+<h1>HR self-service assistant to reduce response time and operational load</h1>
 <h2>Context</h2>
 <p>an IT services company operated at a scale of 68,000 employees and faced high volume of routine HR inquiries across 12 processes. Human-operated response times often stretched into several days, reducing employee satisfaction and limiting HR capacity for higher-value work.</p>
 <h2>The Decision Challenge</h2>
@@ -2355,10 +2355,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong></summary>
+<summary><strong>Authorization cockpit planning under MVP time pressure</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Solution Architect, Product Manager | <em>Domain:</em> Architecture</p>
-<h1>Authorization cockpit planning under MVP time pressure (DANF-ACO)</h1>
+<h1>Authorization cockpit planning under MVP time pressure</h1>
 <h2>Context</h2>
 <p>Danfoss needed a new authorization management application for users and partners, with an MVP expected within the year. The initiative required clarity on scope, priorities, and how the solution fits the broader identity and access landscape.</p>
 <h2>The Decision Challenge</h2>
@@ -2375,10 +2375,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong></summary>
+<summary><strong>Subscription management blueprint for lead-to-cash transformation</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Finance</p>
-<h1>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</h1>
+<h1>Subscription management blueprint for lead-to-cash transformation</h1>
 <h2>Context</h2>
 <p>Danfoss moved toward a service-based business model, which required subscription management as a connective layer between customer engagement and enterprise operations. The organization needed a coherent blueprint before committing to implementation.</p>
 <h2>The Decision Challenge</h2>
@@ -2395,10 +2395,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong></summary>
+<summary><strong>Capability-based planning methodology and EA management product</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Consulting | <em>Role:</em> Enterprise Architect, Product Manager | <em>Domain:</em> Architecture</p>
-<h1>Capability-based planning methodology and EA management product (TRANS-EAM)</h1>
+<h1>Capability-based planning methodology and EA management product</h1>
 <h2>Context</h2>
 <p>a consulting company identified market demand for more effective tools that support strategic planning through enterprise architecture concepts. Many organizations struggle to connect strategy to execution because capabilities, initiatives, and investments are not linked in a consistent way.</p>
 <h2>The Decision Challenge</h2>
@@ -2415,10 +2415,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong></summary>
+<summary><strong>HR self-service assistant to reduce response time and operational load</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Hr, Ai</p>
-<h1>HR self-service assistant to reduce response time and operational load (HR-BOT)</h1>
+<h1>HR self-service assistant to reduce response time and operational load</h1>
 <h2>Context</h2>
 <p>an IT services company operated at a scale of 68,000 employees and faced high volume of routine HR inquiries across 12 processes. Human-operated response times often stretched into several days, reducing employee satisfaction and limiting HR capacity for higher-value work.</p>
 <h2>The Decision Challenge</h2>
@@ -2443,10 +2443,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong></summary>
+<summary><strong>Internal budgeting and financial control</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Finance, Budgeting</p>
-<h1>Internal budgeting and financial control (SKY-BARS)</h1>
+<h1>Internal budgeting and financial control</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink relied on budgeting and internal financial control processes that were slow and opaque. Budget preparation could take up to six months, which limited the organization’s ability to respond to change and reduced confidence in management reporting.</p>
 <h2>The Decision Challenge</h2>
@@ -2463,10 +2463,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
+<summary><strong>Consolidated accounting and inventory across legal entities</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
-<h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
+<h1>Consolidated accounting and inventory across legal entities</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink operated through multiple legal entities with fragmented accounting and inventory practices. Disparate data made consolidated reporting slow and unreliable and weakened integration with planning and control functions.</p>
 <h2>The Decision Challenge</h2>
@@ -2483,10 +2483,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong></summary>
+<summary><strong>Unified payroll and HR operating model across branches</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Hr, Erp</p>
-<h1>Unified payroll and HR operating model across branches (SKY-ZUP)</h1>
+<h1>Unified payroll and HR operating model across branches</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink’s distributed branch network relied on non-uniform payroll and HR practices. Differences in accrual logic and incentive schemes created inconsistencies, increased manual checks, and made personnel costs difficult to plan and control.</p>
 <h2>The Decision Challenge</h2>
@@ -2503,10 +2503,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
-<h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
+<h1>ERP standardization for operational transparency in a pre-sale period</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink entered a pre-sale phase where manageability and transparency mattered as much as operational performance. Fragmented operational data and non-standard reporting slowed decision-making and made it harder to demonstrate control over the business.</p>
 <h2>The Decision Challenge</h2>
@@ -2523,10 +2523,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</strong></summary>
+<summary><strong>Corporate cashless fuel payments with fraud reduction</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Payment Systems</p>
-<h1>Corporate cashless fuel payments with fraud reduction (OILPC-KSBR)</h1>
+<h1>Corporate cashless fuel payments with fraud reduction</h1>
 <h2>Context</h2>
 <p>Gazprom Neft managed cashless fuel payments for a very large base of corporate customers (70,000+ legal entities). Paper fuel coupons and manual reconciliation created operational drag and opened space for fraud, producing direct losses and slow settlement cycles.</p>
 <h2>The Decision Challenge</h2>
@@ -2543,10 +2543,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
+<summary><strong>Loyalty platform for a fuel retail network</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
-<h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
+<h1>Loyalty platform for a fuel retail network</h1>
 <h2>Context</h2>
 <p>Gazprom Neft’s fuel retail network needed loyalty to function as a business lever rather than a simple points accumulator. Without a coherent platform, personalization, measurement of campaign impact, and consistent customer experience were limited.</p>
 <h2>The Decision Challenge</h2>
@@ -2563,10 +2563,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong></summary>
+<summary><strong>Medical analytics for athlete health assessment and planning</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Healthcare | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Data Analytics, Predictive Analytics</p>
-<h1>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</h1>
+<h1>Medical analytics for athlete health assessment and planning</h1>
 <h2>Context</h2>
 <p>The Federal Medical-Biological Agency needed a more systematic way to collect and use medical data related to athletes’ health assessments. Without a consolidated analytical view, forecasting performance trends and adjusting training plans relied too heavily on fragmented information and individual interpretation.</p>
 <h2>The Decision Challenge</h2>
@@ -2583,10 +2583,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</strong></summary>
+<summary><strong>Carsharing service launch with cloud-based fleet operations</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Transport | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Erp</p>
-<h1>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</h1>
+<h1>Carsharing service launch with cloud-based fleet operations</h1>
 <h2>Context</h2>
 <p>CAR5 planned a carsharing launch from zero, requiring an operational backbone for fleet availability, customer interaction, and integration with in-car devices and external service providers. The viability of the business depended on reliability and the ability to scale with growth in users and vehicles.</p>
 <h2>The Decision Challenge</h2>
@@ -2623,10 +2623,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Fuel station management system replacement with integration and migration (GAM-ZG)</strong></summary>
+<summary><strong>Fuel station management system replacement with integration and migration</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail, Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager | <em>Domain:</em> Fuel Retail Automation, Fuel Station Pos</p>
-<h1>Fuel station management system replacement with integration and migration (GAM-ZG)</h1>
+<h1>Fuel station management system replacement with integration and migration</h1>
 <h2>Context</h2>
 <p>A fuel station network needed to modernize its operational backbone for station management. The existing setup limited efficiency and made integration with adjacent capabilities (accounting, loyalty, payments, reporting) harder than it should be.</p>
 <h2>The Decision Challenge</h2>
@@ -2643,10 +2643,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
+<summary><strong>Establishing a marketing data analytics subdivision</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
-<h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
+<h1>Establishing a marketing data analytics subdivision</h1>
 <h2>Context</h2>
 <p>Rostelecom needed to use large-scale behavioral data (visited sites, interests, web activity) to strengthen marketing outcomes: more precise targeting, timely churn response, and new data-driven products. The gap was not only technical—there was no dedicated operating model for turning this data into repeatable business capability.</p>
 <h2>The Decision Challenge</h2>
@@ -2716,10 +2716,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong></summary>
+<summary><strong>Enterprise storage option selection under mixed data needs</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Architecture, Customer Analytics</p>
-<h1>Enterprise storage option selection under mixed data needs (RTK-SDS)</h1>
+<h1>Enterprise storage option selection under mixed data needs</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream worked with growing data volumes and a mix of structured and unstructured datasets. Different departments had different views on storage and processing needs, which created fragmentation risk and made “one-size-fits-all” decisions hard to justify.</p>
 <h2>The Decision Challenge</h2>
@@ -2736,10 +2736,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>EA baseline and transformation roadmap for managed growth (RTK-EA)</strong></summary>
+<summary><strong>EA baseline and transformation roadmap for managed growth</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Architecture</p>
-<h1>EA baseline and transformation roadmap for managed growth (RTK-EA)</h1>
+<h1>EA baseline and transformation roadmap for managed growth</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream was expanding and needed growth to remain manageable rather than accidental. Leadership required a clear view of the current enterprise state and a roadmap that could guide change decisions across processes, systems, and technology.</p>
 <h2>The Decision Challenge</h2>
@@ -2756,10 +2756,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
+<h1>Simplifying inter-operator settlement accounting under complex offsets</h1>
 <h2>Context</h2>
 <p>Rostelecom’s interactions with other operators involved complex multi-party service supply and debt offset schemes. Settlement reconciliation was slow, error-prone, and paper-heavy, consuming significant operational effort and delaying the availability of funds.</p>
 <h2>The Decision Challenge</h2>
@@ -2876,10 +2876,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Centralized permission model for mixed user populations (EPM-PSR)</strong></summary>
+<summary><strong>Centralized permission model for mixed user populations</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Centralized permission model for mixed user populations (EPM-PSR)</h1>
+<h1>Centralized permission model for mixed user populations</h1>
 <h2>Context</h2>
 <p>an IT services company operated many internal and external systems used by employees and non-employees (students, subcontractors, partners). Access control was decentralized, handled separately by each system and process, increasing cost and the risk of inconsistent or excessive access.</p>
 <h2>The Decision Challenge</h2>
@@ -2896,10 +2896,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Profile storage and migration to operationalize unified profiles (DMPL)</strong></summary>
+<summary><strong>Profile storage and migration to operationalize unified profiles</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Profile storage and migration to operationalize unified profiles (DMPL)</h1>
+<h1>Profile storage and migration to operationalize unified profiles</h1>
 <h2>Context</h2>
 <p>After establishing a unified profile concept, an IT services company needed a practical implementation: centralized profile storage that consolidates data from multiple sources and provides reliable access for consuming systems. Without a shared storage capability, the concept would remain theoretical and fragmentation would persist.</p>
 <h2>The Decision Challenge</h2>
@@ -2916,10 +2916,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Core retail platform roadmap under M&A-driven complexity (DELB-CRP)</strong></summary>
+<summary><strong>Core retail platform roadmap under M&A-driven complexity</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Retail | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture</p>
-<h1>Core retail platform roadmap under M&amp;A-driven complexity (DELB-CRP)</h1>
+<h1>Core retail platform roadmap under M&amp;A-driven complexity</h1>
 <h2>Context</h2>
 <p>a large European grocery chain underwent multiple transformations and acquisitions, creating a complex retail and IT landscape with duplicated functions and unclear platform ownership. Omnichannel growth depended on deciding what to standardize and what to allow to remain local.</p>
 <h2>The Decision Challenge</h2>
@@ -2956,10 +2956,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Authorization cockpit planning under MVP time pressure (DANF-ACO)</strong></summary>
+<summary><strong>Authorization cockpit planning under MVP time pressure</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Solution Architect, Product Manager | <em>Domain:</em> Architecture</p>
-<h1>Authorization cockpit planning under MVP time pressure (DANF-ACO)</h1>
+<h1>Authorization cockpit planning under MVP time pressure</h1>
 <h2>Context</h2>
 <p>Danfoss needed a new authorization management application for users and partners, with an MVP expected within the year. The initiative required clarity on scope, priorities, and how the solution fits the broader identity and access landscape.</p>
 <h2>The Decision Challenge</h2>
@@ -2996,10 +2996,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</strong></summary>
+<summary><strong>Stabilizing fuel retail operations affected by loyalty outages</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Architecture</p>
-<h1>Stabilizing fuel retail operations affected by loyalty outages (ADNO-BCP)</h1>
+<h1>Stabilizing fuel retail operations affected by loyalty outages</h1>
 <h2>Context</h2>
 <p>ADNOC experienced critical disruptions at petrol stations where loyalty program outages could cascade into full service shutdowns. The issue sat at the intersection of operational processes, integrations, and station hardware/software dependencies.</p>
 <h2>The Decision Challenge</h2>
@@ -3016,10 +3016,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong></summary>
+<summary><strong>Stablecoin proof-of-concept framing under delivery constraints</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</h1>
+<h1>Stablecoin proof-of-concept framing under delivery constraints</h1>
 <h2>Context</h2>
 <p>A leading bank in Asia explored a national stablecoin concept and needed to validate feasibility through a proof of concept. The engagement required rapid clarity on what a POC can prove, and what it cannot, given surrounding regulatory and operational realities.</p>
 <h2>The Decision Challenge</h2>
@@ -3036,10 +3036,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
-<h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
+<h1>Remuneration process redesign with AI-automation readiness</h1>
 <h2>Context</h2>
 <p>A vertically integrated oil and gas company sought to overhaul remuneration planning and calculation for fixed and variable components. The existing cycle was long (around 11 weeks), error-prone, and exposed to human-factor risks, including weak transparency in bonus-related decisions.</p>
 <h2>The Decision Challenge</h2>
@@ -3056,10 +3056,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</strong></summary>
+<summary><strong>AI-agent proof-of-concept for product development process automation</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Ai Consulting | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture, Process Automation</p>
-<h1>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</h1>
+<h1>AI-agent proof-of-concept for product development process automation</h1>
 <h2>Context</h2>
 <p>A client’s product development process for launching and evolving confectionery products for the European market was lengthy and unpredictable. The process involved iterative workflows across multiple functions, making it difficult to forecast timelines and manage a product portfolio effectively.</p>
 <h2>The Decision Challenge</h2>
@@ -3076,10 +3076,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Capability-based planning methodology and EA management product (TRANS-EAM)</strong></summary>
+<summary><strong>Capability-based planning methodology and EA management product</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Consulting | <em>Role:</em> Enterprise Architect, Product Manager | <em>Domain:</em> Architecture</p>
-<h1>Capability-based planning methodology and EA management product (TRANS-EAM)</h1>
+<h1>Capability-based planning methodology and EA management product</h1>
 <h2>Context</h2>
 <p>a consulting company identified market demand for more effective tools that support strategic planning through enterprise architecture concepts. Many organizations struggle to connect strategy to execution because capabilities, initiatives, and investments are not linked in a consistent way.</p>
 <h2>The Decision Challenge</h2>
@@ -3104,10 +3104,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Loyalty platform for a fuel retail network (OILPC-LOY)</strong></summary>
+<summary><strong>Loyalty platform for a fuel retail network</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas, Retail | <em>Role:</em> Business Analyst, Solution Architect, Project Manager | <em>Domain:</em> Loyalty, Data Analytics</p>
-<h1>Loyalty platform for a fuel retail network (OILPC-LOY)</h1>
+<h1>Loyalty platform for a fuel retail network</h1>
 <h2>Context</h2>
 <p>Gazprom Neft’s fuel retail network needed loyalty to function as a business lever rather than a simple points accumulator. Without a coherent platform, personalization, measurement of campaign impact, and consistent customer experience were limited.</p>
 <h2>The Decision Challenge</h2>
@@ -3124,10 +3124,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</strong></summary>
+<summary><strong>Medical analytics for athlete health assessment and planning</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Healthcare | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Data Analytics, Predictive Analytics</p>
-<h1>Medical analytics for athlete health assessment and planning (FMBA-MIAS)</h1>
+<h1>Medical analytics for athlete health assessment and planning</h1>
 <h2>Context</h2>
 <p>The Federal Medical-Biological Agency needed a more systematic way to collect and use medical data related to athletes’ health assessments. Without a consolidated analytical view, forecasting performance trends and adjusting training plans relied too heavily on fragmented information and individual interpretation.</p>
 <h2>The Decision Challenge</h2>
@@ -3144,10 +3144,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
-<h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
+<h1>Traffic analytics and targeting capability for new revenue streams</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream sought profit growth and considered targeted advertising on owned resources as a viable path. That direction required turning user traffic and interest signals into segments and actionable targeting decisions, not just collecting logs.</p>
 <h2>The Decision Challenge</h2>
@@ -3164,10 +3164,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong></summary>
+<summary><strong>Audit of reporting interface layer and data marts</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
-<h1>Audit of reporting interface layer and data marts (RTK-DASH)</h1>
+<h1>Audit of reporting interface layer and data marts</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream depended on an interface layer and data marts to make operational and analytical data usable for business teams. The existing solution required review: misalignment with business needs, performance issues, or unclear ownership patterns can turn reporting into a bottleneck.</p>
 <h2>The Decision Challenge</h2>
@@ -3184,10 +3184,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong></summary>
+<summary><strong>Data lake presale and solution defense for an oil & gas enterprise</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
-<h1>Data lake presale and solution defense for an oil &amp; gas enterprise (RTK-LAKE)</h1>
+<h1>Data lake presale and solution defense for an oil &amp; gas enterprise</h1>
 <h2>Context</h2>
 <p>Gazprom Neft needed to work with large, heterogeneous datasets across fuel supply and sales and related products. Existing approaches struggled with scale and variety, limiting the organization’s ability to extract insights and identify new profit opportunities.</p>
 <h2>The Decision Challenge</h2>
@@ -3204,10 +3204,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
+<summary><strong>Establishing a marketing data analytics subdivision</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
-<h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
+<h1>Establishing a marketing data analytics subdivision</h1>
 <h2>Context</h2>
 <p>Rostelecom needed to use large-scale behavioral data (visited sites, interests, web activity) to strengthen marketing outcomes: more precise targeting, timely churn response, and new data-driven products. The gap was not only technical—there was no dedicated operating model for turning this data into repeatable business capability.</p>
 <h2>The Decision Challenge</h2>
@@ -3224,10 +3224,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
+<h1>Post-launch audit and recovery plan for corporate data storage</h1>
 <h2>Context</h2>
 <p>Rostelecom had launched a unified corporate data storage system (EKHD) and then encountered visible operational shortcomings: unclear sources, incorrect processing, disorder in storage practices, and missed SLAs. The investment was at risk of becoming a cost center rather than a decision-support foundation.</p>
 <h2>The Decision Challenge</h2>
@@ -3244,10 +3244,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
+<summary><strong>Data management platform architecture to productize telecom data</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
+<h1>Data management platform architecture to productize telecom data</h1>
 <h2>Context</h2>
 <p>Rostelecom generated large volumes of data through core telecom services. The organization saw the opportunity to turn that data into internal decision support and external products, but that required a coherent infrastructure and operating model beyond ad-hoc analytics.</p>
 <h2>The Decision Challenge</h2>
@@ -3272,10 +3272,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
+<summary><strong>Consolidated accounting and inventory across legal entities</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
-<h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
+<h1>Consolidated accounting and inventory across legal entities</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink operated through multiple legal entities with fragmented accounting and inventory practices. Disparate data made consolidated reporting slow and unreliable and weakened integration with planning and control functions.</p>
 <h2>The Decision Challenge</h2>
@@ -3292,10 +3292,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified payroll and HR operating model across branches (SKY-ZUP)</strong></summary>
+<summary><strong>Unified payroll and HR operating model across branches</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Hr, Erp</p>
-<h1>Unified payroll and HR operating model across branches (SKY-ZUP)</h1>
+<h1>Unified payroll and HR operating model across branches</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink’s distributed branch network relied on non-uniform payroll and HR practices. Differences in accrual logic and incentive schemes created inconsistencies, increased manual checks, and made personnel costs difficult to plan and control.</p>
 <h2>The Decision Challenge</h2>
@@ -3312,10 +3312,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</strong></summary>
+<summary><strong>ERP standardization for operational transparency in a pre-sale period</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Enterprise Architect, Solution Architect, Project Manager, Dynamics Administrator | <em>Domain:</em> Erp, Integration</p>
-<h1>ERP standardization for operational transparency in a pre-sale period (SKY-DAX)</h1>
+<h1>ERP standardization for operational transparency in a pre-sale period</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink entered a pre-sale phase where manageability and transparency mattered as much as operational performance. Fragmented operational data and non-standard reporting slowed decision-making and made it harder to demonstrate control over the business.</p>
 <h2>The Decision Challenge</h2>
@@ -3352,10 +3352,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</strong></summary>
+<summary><strong>Carsharing service launch with cloud-based fleet operations</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Transport | <em>Role:</em> Solution Architect, Project Manager | <em>Domain:</em> Erp</p>
-<h1>Carsharing service launch with cloud-based fleet operations (GAM-CAR5)</h1>
+<h1>Carsharing service launch with cloud-based fleet operations</h1>
 <h2>Context</h2>
 <p>CAR5 planned a carsharing launch from zero, requiring an operational backbone for fleet availability, customer interaction, and integration with in-car devices and external service providers. The viability of the business depended on reliability and the ability to scale with growth in users and vehicles.</p>
 <h2>The Decision Challenge</h2>
@@ -3372,10 +3372,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>People profile management under global compliance and organizational change (EPM-HRMS)</strong></summary>
+<summary><strong>People profile management under global compliance and organizational change</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Hr, Erp</p>
-<h1>People profile management under global compliance and organizational change (EPM-HRMS)</h1>
+<h1>People profile management under global compliance and organizational change</h1>
 <h2>Context</h2>
 <p>an IT services company experienced large-scale organizational change driven by remote work and relocations. People data existed across fragmented and outdated systems, and the scope extended beyond employees to external contacts, students, and community members. Operating across 58 countries also raised significant data privacy obligations.</p>
 <h2>The Decision Challenge</h2>
@@ -3392,10 +3392,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</strong></summary>
+<summary><strong>Unified contact profile concept for enterprise-wide consistency</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Erp</p>
-<h1>Unified contact profile concept for enterprise-wide consistency (EPM-SPC)</h1>
+<h1>Unified contact profile concept for enterprise-wide consistency</h1>
 <h2>Context</h2>
 <p>an IT services company maintained multiple systems that stored information about employees and other contact types (students, interns, community members). Fragmentation created discrepancies, confusion in processes, and barriers to unification and consistent management.</p>
 <h2>The Decision Challenge</h2>
@@ -3420,10 +3420,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Internal budgeting and financial control (SKY-BARS)</strong></summary>
+<summary><strong>Internal budgeting and financial control</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Finance, Budgeting</p>
-<h1>Internal budgeting and financial control (SKY-BARS)</h1>
+<h1>Internal budgeting and financial control</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink relied on budgeting and internal financial control processes that were slow and opaque. Budget preparation could take up to six months, which limited the organization’s ability to respond to change and reduced confidence in management reporting.</p>
 <h2>The Decision Challenge</h2>
@@ -3440,10 +3440,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</strong></summary>
+<summary><strong>Consolidated accounting and inventory across legal entities</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom, Retail | <em>Role:</em> Business Analyst, Project Manager | <em>Domain:</em> Erp, Finance</p>
-<h1>Consolidated accounting and inventory across legal entities (SKY-ACC-TRD)</h1>
+<h1>Consolidated accounting and inventory across legal entities</h1>
 <h2>Context</h2>
 <p>Rostelecom.SkyLink operated through multiple legal entities with fragmented accounting and inventory practices. Disparate data made consolidated reporting slow and unreliable and weakened integration with planning and control functions.</p>
 <h2>The Decision Challenge</h2>
@@ -3460,10 +3460,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong></summary>
+<summary><strong>Debtor notifications as a lever to reduce accounts receivable</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Finance, Communications</p>
-<h1>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</h1>
+<h1>Debtor notifications as a lever to reduce accounts receivable</h1>
 <h2>Context</h2>
 <p>Rostelecom faced growing accounts receivable, reducing operational flexibility and tying up funds. The existing debtor-informing practice relied on manual reconciliation statements and email correspondence, which was slow, inconsistent, and expensive to run.</p>
 <h2>The Decision Challenge</h2>
@@ -3480,10 +3480,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
+<h1>Simplifying inter-operator settlement accounting under complex offsets</h1>
 <h2>Context</h2>
 <p>Rostelecom’s interactions with other operators involved complex multi-party service supply and debt offset schemes. Settlement reconciliation was slow, error-prone, and paper-heavy, consuming significant operational effort and delaying the availability of funds.</p>
 <h2>The Decision Challenge</h2>
@@ -3500,10 +3500,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</strong></summary>
+<summary><strong>Subscription management blueprint for lead-to-cash transformation</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Manufacturing | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Finance</p>
-<h1>Subscription management blueprint for lead-to-cash transformation (DANF-L2C)</h1>
+<h1>Subscription management blueprint for lead-to-cash transformation</h1>
 <h2>Context</h2>
 <p>Danfoss moved toward a service-based business model, which required subscription management as a connective layer between customer engagement and enterprise operations. The organization needed a coherent blueprint before committing to implementation.</p>
 <h2>The Decision Challenge</h2>
@@ -3520,10 +3520,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</strong></summary>
+<summary><strong>Stablecoin proof-of-concept framing under delivery constraints</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Finance | <em>Role:</em> Business Analyst, Enterprise Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Stablecoin proof-of-concept framing under delivery constraints (EPM-AST)</h1>
+<h1>Stablecoin proof-of-concept framing under delivery constraints</h1>
 <h2>Context</h2>
 <p>A leading bank in Asia explored a national stablecoin concept and needed to validate feasibility through a proof of concept. The engagement required rapid clarity on what a POC can prove, and what it cannot, given surrounding regulatory and operational realities.</p>
 <h2>The Decision Challenge</h2>
@@ -3548,10 +3548,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
-<h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
+<h1>Traffic analytics and targeting capability for new revenue streams</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream sought profit growth and considered targeted advertising on owned resources as a viable path. That direction required turning user traffic and interest signals into segments and actionable targeting decisions, not just collecting logs.</p>
 <h2>The Decision Challenge</h2>
@@ -3568,10 +3568,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
+<summary><strong>Establishing a marketing data analytics subdivision</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
-<h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
+<h1>Establishing a marketing data analytics subdivision</h1>
 <h2>Context</h2>
 <p>Rostelecom needed to use large-scale behavioral data (visited sites, interests, web activity) to strengthen marketing outcomes: more precise targeting, timely churn response, and new data-driven products. The gap was not only technical—there was no dedicated operating model for turning this data into repeatable business capability.</p>
 <h2>The Decision Challenge</h2>
@@ -3588,10 +3588,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
+<h1>Post-launch audit and recovery plan for corporate data storage</h1>
 <h2>Context</h2>
 <p>Rostelecom had launched a unified corporate data storage system (EKHD) and then encountered visible operational shortcomings: unclear sources, incorrect processing, disorder in storage practices, and missed SLAs. The investment was at risk of becoming a cost center rather than a decision-support foundation.</p>
 <h2>The Decision Challenge</h2>
@@ -3608,10 +3608,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong></summary>
+<summary><strong>B2B multichannel communications capability for targeted outreach</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Communications, Audience Targeting</p>
-<h1>B2B multichannel communications capability for targeted outreach (RTK-B2B)</h1>
+<h1>B2B multichannel communications capability for targeted outreach</h1>
 <h2>Context</h2>
 <p>Rostelecom’s communication with client organizations lacked a consistent mechanism for segmentation and targeted outreach. Without a managed approach, outreach was either broad and noisy or slow and manual, limiting cross-sell and retention opportunities.</p>
 <h2>The Decision Challenge</h2>
@@ -3628,10 +3628,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
+<summary><strong>Data management platform architecture to productize telecom data</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
+<h1>Data management platform architecture to productize telecom data</h1>
 <h2>Context</h2>
 <p>Rostelecom generated large volumes of data through core telecom services. The organization saw the opportunity to turn that data into internal decision support and external products, but that required a coherent infrastructure and operating model beyond ad-hoc analytics.</p>
 <h2>The Decision Challenge</h2>
@@ -3656,10 +3656,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
-<h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
+<h1>Traffic analytics and targeting capability for new revenue streams</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream sought profit growth and considered targeted advertising on owned resources as a viable path. That direction required turning user traffic and interest signals into segments and actionable targeting decisions, not just collecting logs.</p>
 <h2>The Decision Challenge</h2>
@@ -3676,10 +3676,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
+<summary><strong>Establishing a marketing data analytics subdivision</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
-<h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
+<h1>Establishing a marketing data analytics subdivision</h1>
 <h2>Context</h2>
 <p>Rostelecom needed to use large-scale behavioral data (visited sites, interests, web activity) to strengthen marketing outcomes: more precise targeting, timely churn response, and new data-driven products. The gap was not only technical—there was no dedicated operating model for turning this data into repeatable business capability.</p>
 <h2>The Decision Challenge</h2>
@@ -3696,10 +3696,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
+<h1>Post-launch audit and recovery plan for corporate data storage</h1>
 <h2>Context</h2>
 <p>Rostelecom had launched a unified corporate data storage system (EKHD) and then encountered visible operational shortcomings: unclear sources, incorrect processing, disorder in storage practices, and missed SLAs. The investment was at risk of becoming a cost center rather than a decision-support foundation.</p>
 <h2>The Decision Challenge</h2>
@@ -3716,10 +3716,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>B2B multichannel communications capability for targeted outreach (RTK-B2B)</strong></summary>
+<summary><strong>B2B multichannel communications capability for targeted outreach</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Communications, Audience Targeting</p>
-<h1>B2B multichannel communications capability for targeted outreach (RTK-B2B)</h1>
+<h1>B2B multichannel communications capability for targeted outreach</h1>
 <h2>Context</h2>
 <p>Rostelecom’s communication with client organizations lacked a consistent mechanism for segmentation and targeted outreach. Without a managed approach, outreach was either broad and noisy or slow and manual, limiting cross-sell and retention opportunities.</p>
 <h2>The Decision Challenge</h2>
@@ -3736,10 +3736,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
+<summary><strong>Data management platform architecture to productize telecom data</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
+<h1>Data management platform architecture to productize telecom data</h1>
 <h2>Context</h2>
 <p>Rostelecom generated large volumes of data through core telecom services. The organization saw the opportunity to turn that data into internal decision support and external products, but that required a coherent infrastructure and operating model beyond ad-hoc analytics.</p>
 <h2>The Decision Challenge</h2>
@@ -3764,10 +3764,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</strong></summary>
+<summary><strong>Debtor notifications as a lever to reduce accounts receivable</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Finance, Communications</p>
-<h1>Debtor notifications as a lever to reduce accounts receivable (RTK-SPDZ)</h1>
+<h1>Debtor notifications as a lever to reduce accounts receivable</h1>
 <h2>Context</h2>
 <p>Rostelecom faced growing accounts receivable, reducing operational flexibility and tying up funds. The existing debtor-informing practice relied on manual reconciliation statements and email correspondence, which was slow, inconsistent, and expensive to run.</p>
 <h2>The Decision Challenge</h2>
@@ -3784,10 +3784,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</strong></summary>
+<summary><strong>Simplifying inter-operator settlement accounting under complex offsets</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect, Solution Architect | <em>Domain:</em> Finance, Architecture</p>
-<h1>Simplifying inter-operator settlement accounting under complex offsets (RTK-O2O)</h1>
+<h1>Simplifying inter-operator settlement accounting under complex offsets</h1>
 <h2>Context</h2>
 <p>Rostelecom’s interactions with other operators involved complex multi-party service supply and debt offset schemes. Settlement reconciliation was slow, error-prone, and paper-heavy, consuming significant operational effort and delaying the availability of funds.</p>
 <h2>The Decision Challenge</h2>
@@ -3804,10 +3804,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</strong></summary>
+<summary><strong>Remuneration process redesign with AI-automation readiness</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst, Enterprise Architect, Solution Architect, Lead Business Analyst | <em>Domain:</em> Architecture, Process Automation</p>
-<h1>Remuneration process redesign with AI-automation readiness (ADNO-TRMS)</h1>
+<h1>Remuneration process redesign with AI-automation readiness</h1>
 <h2>Context</h2>
 <p>A vertically integrated oil and gas company sought to overhaul remuneration planning and calculation for fixed and variable components. The existing cycle was long (around 11 weeks), error-prone, and exposed to human-factor risks, including weak transparency in bonus-related decisions.</p>
 <h2>The Decision Challenge</h2>
@@ -3824,10 +3824,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</strong></summary>
+<summary><strong>AI-agent proof-of-concept for product development process automation</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Ai Consulting | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Architecture, Process Automation</p>
-<h1>AI-agent proof-of-concept for product development process automation (TRANS-AIPOC)</h1>
+<h1>AI-agent proof-of-concept for product development process automation</h1>
 <h2>Context</h2>
 <p>A client’s product development process for launching and evolving confectionery products for the European market was lengthy and unpredictable. The process involved iterative workflows across multiple functions, making it difficult to forecast timelines and manage a product portfolio effectively.</p>
 <h2>The Decision Challenge</h2>
@@ -3844,10 +3844,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>HR self-service assistant to reduce response time and operational load (HR-BOT)</strong></summary>
+<summary><strong>HR self-service assistant to reduce response time and operational load</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> It Services | <em>Role:</em> Business Analyst, Enterprise Architect, Product Manager | <em>Domain:</em> Hr, Ai</p>
-<h1>HR self-service assistant to reduce response time and operational load (HR-BOT)</h1>
+<h1>HR self-service assistant to reduce response time and operational load</h1>
 <h2>Context</h2>
 <p>an IT services company operated at a scale of 68,000 employees and faced high volume of routine HR inquiries across 12 processes. Human-operated response times often stretched into several days, reducing employee satisfaction and limiting HR capacity for higher-value work.</p>
 <h2>The Decision Challenge</h2>
@@ -3872,10 +3872,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
-<h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
+<h1>Traffic analytics and targeting capability for new revenue streams</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream sought profit growth and considered targeted advertising on owned resources as a viable path. That direction required turning user traffic and interest signals into segments and actionable targeting decisions, not just collecting logs.</p>
 <h2>The Decision Challenge</h2>
@@ -3892,10 +3892,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Audit of reporting interface layer and data marts (RTK-DASH)</strong></summary>
+<summary><strong>Audit of reporting interface layer and data marts</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
-<h1>Audit of reporting interface layer and data marts (RTK-DASH)</h1>
+<h1>Audit of reporting interface layer and data marts</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream depended on an interface layer and data marts to make operational and analytical data usable for business teams. The existing solution required review: misalignment with business needs, performance issues, or unclear ownership patterns can turn reporting into a bottleneck.</p>
 <h2>The Decision Challenge</h2>
@@ -3912,10 +3912,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data lake presale and solution defense for an oil & gas enterprise (RTK-LAKE)</strong></summary>
+<summary><strong>Data lake presale and solution defense for an oil & gas enterprise</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Oil Gas | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Customer Analytics</p>
-<h1>Data lake presale and solution defense for an oil &amp; gas enterprise (RTK-LAKE)</h1>
+<h1>Data lake presale and solution defense for an oil &amp; gas enterprise</h1>
 <h2>Context</h2>
 <p>Gazprom Neft needed to work with large, heterogeneous datasets across fuel supply and sales and related products. Existing approaches struggled with scale and variety, limiting the organization’s ability to extract insights and identify new profit opportunities.</p>
 <h2>The Decision Challenge</h2>
@@ -3932,10 +3932,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Enterprise storage option selection under mixed data needs (RTK-SDS)</strong></summary>
+<summary><strong>Enterprise storage option selection under mixed data needs</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Architecture, Customer Analytics</p>
-<h1>Enterprise storage option selection under mixed data needs (RTK-SDS)</h1>
+<h1>Enterprise storage option selection under mixed data needs</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream worked with growing data volumes and a mix of structured and unstructured datasets. Different departments had different views on storage and processing needs, which created fragmentation risk and made “one-size-fits-all” decisions hard to justify.</p>
 <h2>The Decision Challenge</h2>
@@ -3960,10 +3960,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
-<h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
+<h1>Traffic analytics and targeting capability for new revenue streams</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream sought profit growth and considered targeted advertising on owned resources as a viable path. That direction required turning user traffic and interest signals into segments and actionable targeting decisions, not just collecting logs.</p>
 <h2>The Decision Challenge</h2>
@@ -3980,10 +3980,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
+<summary><strong>Establishing a marketing data analytics subdivision</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
-<h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
+<h1>Establishing a marketing data analytics subdivision</h1>
 <h2>Context</h2>
 <p>Rostelecom needed to use large-scale behavioral data (visited sites, interests, web activity) to strengthen marketing outcomes: more precise targeting, timely churn response, and new data-driven products. The gap was not only technical—there was no dedicated operating model for turning this data into repeatable business capability.</p>
 <h2>The Decision Challenge</h2>
@@ -4000,10 +4000,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
+<h1>Post-launch audit and recovery plan for corporate data storage</h1>
 <h2>Context</h2>
 <p>Rostelecom had launched a unified corporate data storage system (EKHD) and then encountered visible operational shortcomings: unclear sources, incorrect processing, disorder in storage practices, and missed SLAs. The investment was at risk of becoming a cost center rather than a decision-support foundation.</p>
 <h2>The Decision Challenge</h2>
@@ -4020,10 +4020,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
+<summary><strong>Data management platform architecture to productize telecom data</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
+<h1>Data management platform architecture to productize telecom data</h1>
 <h2>Context</h2>
 <p>Rostelecom generated large volumes of data through core telecom services. The organization saw the opportunity to turn that data into internal decision support and external products, but that required a coherent infrastructure and operating model beyond ad-hoc analytics.</p>
 <h2>The Decision Challenge</h2>
@@ -4048,10 +4048,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 <div style="padding-left: 20px;">
 
 <details>
-<summary><strong>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</strong></summary>
+<summary><strong>Traffic analytics and targeting capability for new revenue streams</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst | <em>Domain:</em> Data Analytics, Marketing Automation</p>
-<h1>Traffic analytics and targeting capability for new revenue streams (RTK-PROTEUS)</h1>
+<h1>Traffic analytics and targeting capability for new revenue streams</h1>
 <h2>Context</h2>
 <p>Rostelecom.Restream sought profit growth and considered targeted advertising on owned resources as a viable path. That direction required turning user traffic and interest signals into segments and actionable targeting decisions, not just collecting logs.</p>
 <h2>The Decision Challenge</h2>
@@ -4068,10 +4068,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Establishing a marketing data analytics subdivision (RTK-DL)</strong></summary>
+<summary><strong>Establishing a marketing data analytics subdivision</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Enterprise Architect, Project Manager, Business Architect | <em>Domain:</em> Data Analytics, Audience Targeting</p>
-<h1>Establishing a marketing data analytics subdivision (RTK-DL)</h1>
+<h1>Establishing a marketing data analytics subdivision</h1>
 <h2>Context</h2>
 <p>Rostelecom needed to use large-scale behavioral data (visited sites, interests, web activity) to strengthen marketing outcomes: more precise targeting, timely churn response, and new data-driven products. The gap was not only technical—there was no dedicated operating model for turning this data into repeatable business capability.</p>
 <h2>The Decision Challenge</h2>
@@ -4088,10 +4088,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</strong></summary>
+<summary><strong>Post-launch audit and recovery plan for corporate data storage</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Enterprise Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Post-launch audit and recovery plan for corporate data storage (RTK-EKHD)</h1>
+<h1>Post-launch audit and recovery plan for corporate data storage</h1>
 <h2>Context</h2>
 <p>Rostelecom had launched a unified corporate data storage system (EKHD) and then encountered visible operational shortcomings: unclear sources, incorrect processing, disorder in storage practices, and missed SLAs. The investment was at risk of becoming a cost center rather than a decision-support foundation.</p>
 <h2>The Decision Challenge</h2>
@@ -4108,10 +4108,10 @@ Browse my **44 completed projects** organized by industry, role, or functional d
 </details>
 
 <details>
-<summary><strong>Data management platform architecture to productize telecom data (RTK-DMP)</strong></summary>
+<summary><strong>Data management platform architecture to productize telecom data</strong></summary>
 <div style="padding: 15px; border-left: 3px solid #0066cc; margin-top: 10px;">
 <p style="color: #666; font-size: 0.9em;"><em>Industry:</em> Telecom | <em>Role:</em> Business Analyst, Solution Architect | <em>Domain:</em> Data Analytics, Dmp</p>
-<h1>Data management platform architecture to productize telecom data (RTK-DMP)</h1>
+<h1>Data management platform architecture to productize telecom data</h1>
 <h2>Context</h2>
 <p>Rostelecom generated large volumes of data through core telecom services. The organization saw the opportunity to turn that data into internal decision support and external products, but that required a coherent infrastructure and operating model beyond ad-hoc analytics.</p>
 <h2>The Decision Challenge</h2>
