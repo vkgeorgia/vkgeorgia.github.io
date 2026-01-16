@@ -39,7 +39,7 @@ verify_key.py
 
 # Documentation
 README.md
-*.md
+
 
 # Site build
 _site/
