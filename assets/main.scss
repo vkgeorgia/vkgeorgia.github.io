@@ -1,10 +1,8 @@
----
----
-@import "minima";
+--- --- @import "minima";
 
 /* Custom styles - wider page width */
 .wrapper {
-    max-width: 1200px !important;
+    max-width: 1024px !important;
     padding-right: 30px;
     padding-left: 30px;
 }
