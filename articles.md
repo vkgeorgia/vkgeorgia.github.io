@@ -8,9 +8,10 @@ lang: en
 permalink: /articles/
 ---
 
-## Articles & Insights
+## Field Notes & System Design
 
-Practical perspectives on enterprise architecture, digital transformation, and strategic business consulting drawn from real-world experience across multiple industries.
+I write about what actually works (and what fails) when building and fixing complex organizations.
+No academic theory—just observations from the trenches of Enterprise Architecture, Crisis Management, and System Launching.
 
 ---
 
