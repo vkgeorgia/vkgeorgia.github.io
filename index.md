@@ -70,7 +70,7 @@ Many consultants sell "digital transformation" documents. I deliver **Operationa
 ## Selected Outcomes
 
 *   **Large transportation hub**: **Tripled time-to-market** and harmonized portfolio (4600 → 1200 products) by restructuring IT governance.
-*   **Energy sector**: **Reduced OPEX by 10x** via cloud migration and automated fleet management systems.
+*   **Mobility Startup**: **Reduced OPEX by 10x** via cloud migration and automated fleet management systems for a carsharing launch.
 *   **Telecom**: **Automated enterprise processes** at scale, enabling platform transformation.
 
 *(See the **Cases** section for details)*
