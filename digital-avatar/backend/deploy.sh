@@ -52,6 +52,7 @@ echo -e "${YELLOW}Step 1/5: Syncing knowledge base...${NC}"
 rm -rf knowledge_base
 mkdir knowledge_base
 cp -r ../../knowledge-base/* knowledge_base/
+cp -r ../../_projects knowledge_base/projects/
 echo -e "${GREEN}✓ Knowledge base synced${NC}"
 
 # Step 1.5: Copy root markdown files (M-Shape context)
