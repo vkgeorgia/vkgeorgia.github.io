@@ -54,6 +54,14 @@ mkdir knowledge_base
 cp -r ../../knowledge-base/* knowledge_base/
 echo -e "${GREEN}✓ Knowledge base synced${NC}"
 
+# Step 1.5: Copy root markdown files (M-Shape context)
+echo ""
+echo -e "${YELLOW}Step 1.5/5: Copying root context files...${NC}"
+cp ../../profile.md .
+cp ../../business-challenges.md .
+cp ../../index.md .
+echo -e "${GREEN}✓ Root files copied${NC}"
+
 # Step 2: Build Docker image
 echo ""
 echo -e "${YELLOW}Step 2/5: Building Docker image...${NC}"
