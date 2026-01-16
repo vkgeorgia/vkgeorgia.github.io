@@ -180,7 +180,7 @@ Browse my portfolio of **entropy reduction**.
       <span class="filter-label">Industry</span>
       {% assign industries = site.projects | map: "client_side_industry" | flatten | uniq | sort %}
       {% for item in industries %}
-        <button class="filter-btn" data-filter-type="industry" data-value="{{ item }}" onclick="toggleFilter(this, 'industry', '{{ item }}')">{{ item | capitalize }}</button>
+        <button class="filter-btn" data-filter-type="industry" data-value="{{ item }}" onclick="toggleFilter(this, 'industry', '{{ item }}')">{{ item }}</button>
       {% endfor %}
     </div>
 
@@ -189,7 +189,7 @@ Browse my portfolio of **entropy reduction**.
       <span class="filter-label">Functional Domain</span>
       {% assign functionals = site.projects | map: "functional" | flatten | uniq | sort %}
       {% for item in functionals %}
-        <button class="filter-btn" data-filter-type="functional" data-value="{{ item }}" onclick="toggleFilter(this, 'functional', '{{ item }}')">{{ item | replace: '-', ' ' | capitalize }}</button>
+        <button class="filter-btn" data-filter-type="functional" data-value="{{ item }}" onclick="toggleFilter(this, 'functional', '{{ item }}')">{{ item | replace: '-', ' ' }}</button>
       {% endfor %}
     </div>
 
@@ -213,7 +213,7 @@ Browse my portfolio of **entropy reduction**.
       <summary class="project-summary">
         <h3>{{ project.title }}</h3>
         <div class="project-meta">
-          <strong>Industry:</strong> {{ project.client_side_industry | join: ', ' | capitalize }} |
+          <strong>Industry:</strong> {{ project.client_side_industry | join: ', ' }} |
           <strong>Role:</strong> {{ project.roles | join: ', ' | replace: '-', ' ' | capitalize }}
         </div>
       </summary>
