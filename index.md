@@ -8,7 +8,7 @@ lang: en
 permalink: /
 ---
 
-<img src="{{ '/images/profile_photo.jpg?v=2' | relative_url }}" style="float: right; margin-left: 20px; margin-bottom: 20px; max-width: 400px; border-radius: 8px;" alt="Valerii Korobeinikov" />
+<img src="{{ '/images/profile_photo.jpg?v=2' | relative_url }}" class="profile-photo" alt="Valerii Korobeinikov" />
 
 # Helping leaders make sound technology decisions in times of change
 

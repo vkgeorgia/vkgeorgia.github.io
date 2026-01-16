@@ -31,3 +31,28 @@ h1 {
         font-size: 1.2rem !important;
     }
 }
+/* Profile Photo - Responsive */
+.profile-photo {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .profile-photo {
+        float: none !important;
+        display: block;
+        margin: 0 auto 20px auto;
+        max-width: 100% !important;
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Ensure header text doesn't look weird if it wraps */
+    h1 {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
