@@ -66,7 +66,7 @@ echo -e "${GREEN}✓ Root files copied${NC}"
 echo ""
 echo -e "${YELLOW}Step 2/5: Building Docker image...${NC}"
 IMAGE_NAME="gcr.io/$GCP_PROJECT_ID/ai-avatar:latest"
-docker build -t $IMAGE_NAME .
+docker build --platform linux/amd64 -t $IMAGE_NAME .
 echo -e "${GREEN}✓ Docker image built${NC}"
 
 # Step 3: Configure Docker for GCR
