@@ -211,7 +211,7 @@ Browse my portfolio of **entropy reduction**.
              data-functional="{{ project.functional | join: ',' }}"
              data-role="{{ project.roles | join: ',' }}">
       <summary class="project-summary">
-        <h3>{{ project.title | remove: ".md" }}</h3>
+        <h3>{{ project.title }}</h3>
         <div class="project-meta">
           <strong>Industry:</strong> {{ project.client_side_industry | join: ', ' | capitalize }} |
           <strong>Role:</strong> {{ project.roles | join: ', ' | replace: '-', ' ' | capitalize }}
