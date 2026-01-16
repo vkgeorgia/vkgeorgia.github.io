@@ -70,5 +70,4 @@ exclude:
 # Collections
 collections:
   projects:
-    path: "knowledge-base/3. projects-eng"
-    output: false # logic-only, we don't need individual pages for now
+    output: false
