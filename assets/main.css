@@ -1,6 +1,4 @@
----
----
-@import "minima";
+--- --- @import "minima";
 
 /* Custom styles - wider page width */
 .wrapper {
@@ -9,28 +7,61 @@
     padding-left: 30px;
 }
 
-/* Custom styles - smaller headings */
-h1 {
-    font-size: 1.44rem !important;
+/* Custom styles - smaller headings (Global reduction ~20%) */
+h1,
+.post-title,
+.page-heading {
+    font-size: 1.75rem !important;
+    /* Was default ~2.25rem or previous custom */
+    line-height: 1.2 !important;
+}
+
+h2 {
+    font-size: 1.5rem !important;
+    /* Was default ~2rem */
+    line-height: 1.25 !important;
+}
+
+h3 {
+    font-size: 1.25rem !important;
+    /* Was default ~1.75rem */
     line-height: 1.3 !important;
 }
 
-.post-title,
-.page-heading {
-    font-size: 1.44rem !important;
-    line-height: 1.3 !important;
+h4 {
+    font-size: 1.1rem !important;
+    /* Was default ~1.5rem */
+    line-height: 1.35 !important;
+}
+
+h5,
+h6 {
+    font-size: 1rem !important;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {
-    h1 {
+
+    h1,
+    .post-title,
+    .page-heading {
+        font-size: 1.35rem !important;
+        /* Slightly larger than 1.2 to differentiate from H2 */
+    }
+
+    h2 {
         font-size: 1.2rem !important;
     }
 
-    .post-title,
-    .page-heading {
-        font-size: 1.2rem !important;
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    h4 {
+        font-size: 1.0rem !important;
     }
 }
+
 /* Profile Photo - Responsive */
 .profile-photo {
     float: right;
@@ -49,7 +80,7 @@ h1 {
         width: 100%;
         height: auto;
     }
-    
+
     /* Ensure header text doesn't look weird if it wraps */
     h1 {
         text-align: center;
