@@ -12,9 +12,15 @@ Browse my project portfolio organized by industry, role, and functional domain. 
 
 ---
 
-## Professional Profile
+## Operational Philosophy: Build & Fix
 
-<a href="/downloads/resume.pdf" target="_blank"><strong>Resume (PDF)</strong></a> — My up-to-date CV in English
+My portfolio is a history of **entropy reduction**.
+
+I do not just "manage projects." I intervene to:
+1.  **BUILD**: Launch new systems, products, and capabilities from zero to one (The Launcher).
+2.  **FIX**: Stabilize chaotic environments, restructure failing processes, and stop bleeding (The Crisis Manager).
+
+In every case below, the outcome is the same: **order is established, and the system becomes capable of running without me.**
 
 ---
 

@@ -8,95 +8,99 @@ lang: en
 permalink: /services/
 ---
 
-These services are not about producing documents or applying frameworks.
+These services are not about "advice." They are about **intervention**.
 
-They are designed to support **high-stakes decisions** where business goals, organizational structure, technology, cost, and risk intersect — and where clarity matters more than speed.
+I operate as a **functional extension** of your leadership team during critical phases of ensuring order (FIX) or creating new capabilities (BUILD).
 
-Each service below represents a **format of decision support**, not a predefined delivery model.
+My goal in every engagement is to build a system so clear and robust that **I am no longer needed**.
 
 ---
 
-## Executive Architecture Advisory
+## Architecture Intervention & Crisis Management (FIX)
 
-**Ongoing decision support for leaders facing complex, high-stakes technology and architecture choices.**
+**Stabilizing chaotic IT landscapes and recovering failing initiatives.**
 
-This service is for situations where decisions recur over time and their consequences accumulate.  
-Continuity, context, and senior judgment matter more than one-off recommendations.
+This is for situations where "business as usual" has broken down.
+*   **Recover** critical projects that are over budget or stalled.
+*   **Untangle** complex vendor dependencies and spaghetti architecture.
+*   **Establish** immediate operational control and transparency.
 
 → [Learn more](/services/executive-architecture-advisory/)
 
 ---
 
-## Enterprise Architecture Consulting
+## Enterprise Restructuring (FIX)
 
-**Using architecture as a decision framework to align strategy, structure, and execution.**
+**Aligning organizational structure with technology strategy.**
 
-Most often used during reorganization, mergers, or large-scale transformation, when organizations lose coherence and need a clear structural direction.
+Most often used during M&A, post-merger integration, or cost-cutting phases.
+*   **Map** the reality of capabilities vs. costs.
+*   **Eliminate** redundancy in processes and systems.
+*   **Design** a lean operating model that scales.
 
 → [Learn more](/services/enterprise-architecture-consulting/)
 
 ---
 
-## Technology Strategy Advisory
+## Tech Strategy & Investment Control (BUILD)
 
-**Connecting business strategy with technology investment decisions and trade-offs.**
+**Ensuring technology choices drive ROI, not just technical debt.**
 
-Focused on questions such as platform strategy, build vs buy, prioritization, and aligning technology choices with growth and profitability goals.
+Focused on high-stakes choices: Build vs. Buy, Cloud Native vs. Hybrid, Monolith vs. Microservices.
+*   **Validate** investment hypothesis with architectural rigor.
+*   **Select** technologies that reduce, not increase, long-term entropy.
+*   **Define** clear KPIs for technology adoption.
 
 → [Learn more](/services/technology-strategy-advisory/)
 
 ---
 
-## Digital Transformation Advisory
+## Transformation Launch Control (BUILD)
 
-**Turning fragmented initiatives into coherent, outcome-driven change.**
+**Turning "Digital Transformation" buzzwords into shipping code and product.**
 
-Helps organizations regain direction when transformation efforts stall, multiply, or drift away from original business intent.
+Helps organizations move from "slides" to "production" by enforcing strict scope and sequence.
+*   **Launch** new digital products with a "Launcher" mindset.
+*   **Break** analysis paralysis with rapid prototyping and MVPs.
+*   **Enforce** delivery discipline across distributed teams.
 
 → [Learn more](/services/digital-transformation-advisory/)
 
 ---
 
-## Application Portfolio Optimization
+## Application Portfolio Rationalization (FIX)
 
-**Reducing cost and complexity by making the application landscape visible and actionable.**
+**Ruthlessly reducing run-costs and legacy drag.**
 
-Used when cost pressure, legacy systems, or duplication make the landscape hard to manage and even harder to change safely.
+Used when the IT budget is consumed by "keeping the lights on."
+*   **Audit** the full application landscape.
+*   **Identify** zombie systems and commercially unjustifiable deviations.
+*   **Execute** decommissioning and consolidation plans.
 
 → [Learn more](/services/application-portfolio-optimization/)
 
 ---
 
-## AI Readiness & Governance
+## AI Governance & Agent Frameworks (BUILD)
 
-**Preparing architecture, data, and governance for responsible and sustainable AI adoption.**
+**Architecting the next generation of autonomous business systems.**
 
-Focused on making AI initiatives manageable at enterprise scale — before experimentation quietly turns into structural risk.
+Preparing your environment for agentic workforces, not just chatbots.
+*   **Design** "human-in-the-loop" workflows.
+*   **Structure** data for machine consumption (RAG).
+*   **Deploy** pragmatic AI agents to automate routine knowledge work.
 
 → [Learn more](/services/ai-readiness-governance/)
 
 ---
 
-## How to choose the right starting point
+## How to engage
 
-Clients rarely start with a service.  
-They usually start with a **business challenge**.
+I filter for **fit**, not just budget.
 
-If you are unsure which format fits your situation:
-- start from the challenges you are facing,
-- then explore the relevant service.
+*   **Ideal Fit**: You want to fix a crisis, launch something new, or significantly reduce operational entropy. You are ready to make hard decisions.
+*   **Poor Fit**: you need "staff argumentation" or steady-state administration.
 
-→ [Business Challenges](/business-challenges/)
+If you have a challenge, let's discuss if I am the right tool for the job.
 
----
-
-## How engagements typically work
-
-The exact format always depends on context, but most engagements involve:
-- clarifying the decision that needs to be made,
-- understanding constraints and trade-offs,
-- supporting leaders as decisions evolve over time.
-
-Details are discussed after an initial conversation.
-
-Contact information is available in the site footer.
+→ [Contact Me](/contact/)
