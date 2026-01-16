@@ -207,16 +207,33 @@ class RAGService:
 
         seen = set()
         for kb_dir in candidate_dirs:
+            # 1. Load from directory
             kb_dir = kb_dir.expanduser()
             kb_dir_key = str(kb_dir)
             if kb_dir_key in seen:
                 continue
             seen.add(kb_dir_key)
+            
             if not kb_dir.exists():
                 logger.warning(f"Knowledge base directory not found: {kb_dir}")
-                continue
-            load_from_dir(kb_dir)
-    
+            else:
+                load_from_dir(kb_dir)
+                
+            # 2. ALSO Load specific root files from the parent repo if we are in the valerii-site structure
+            # kb_dir usually points to .../knowledge-base. The parent of that is the repo root.
+            repo_root = kb_dir.parent
+            for root_file in ["profile.md", "business-challenges.md", "index.md"]:
+                file_path = repo_root / root_file
+                if file_path.exists() and file_path.is_file():
+                    try:
+                        with open(file_path, "r", encoding="utf-8") as f:
+                            content = f.read()
+                            # Prepend filename context so RAG knows what this is
+                            self.knowledge_base.append(f"Content from {root_file}:\n{content}")
+                            logger.info(f"Loaded root document: {root_file}")
+                    except Exception as e:
+                        logger.error(f"Error reading root file {file_path}: {e}")
+
     async def generate_response(self, query: str) -> str:
         """Generate a response using Gemini or fallback."""
         try:
@@ -226,27 +243,34 @@ class RAGService:
             if not self.knowledge_base:
                 return "Knowledge base is empty. Please add documents to the knowledge_base folder or configure Google Drive."
             
-            # Prepare context
-            context = "\n\n".join(self.knowledge_base[:3])  # Use first 3 docs to avoid token limits
+            # Prepare context (Increase context window slightly or pick best chunks - simplified for now)
+            # We shuffle slightly or just take enough to fill context. 
+            # Given M-Shape is in root files, we want to ensure they are prioritized or definitely included.
+            # For this simple implementation, we append root files LAST in the list (see above), 
+            # so we should reverse or sample intelligently.
+            # Let's take a larger chunk if possible, or assume simple concatenation is fine for now.
+            context = "\n\n".join(self.knowledge_base[:5]) 
             
-            system_prompt = f"""You are Valerii Korobeinikov, an Enterprise Architect and Business Strategist. You are responding directly to inquiries about your professional experience, services, and expertise.
+            system_prompt = f"""You are Valerii Korobeinikov, an M-Shape Architect, Launcher, and Troubleshooter.
+You are NOT a standard "support" consultant. You specialize in BUILDING (launching new systems) and FIXING (turning around crises).
 
-Knowledge Base (Your Professional Information):
+Your Core Identity (The M-Shape):
+1. Architect of Order: You structure chaos into operational clarity.
+2. Tech Pragmatist: You use AI, Python, and Cloud ONLY for ROI, not for hype.
+3. Crisis Manager: You save failing projects and reduce entropy.
+
+Knowledge Base (Your Experience & Approach):
 {context}
 
 Response Guidelines:
-- ALWAYS respond in the SAME LANGUAGE as the user's question (English, Russian, etc.)
-- Speak in FIRST PERSON ("I have experience...", "My expertise includes...", "I offer...")
-- Maintain a PROFESSIONAL, BUSINESS-APPROPRIATE tone
-- When listing multiple items, use bullet points for clarity
-- Focus responses on: your experience, projects, education, and consulting services
-- If asked about unrelated topics, politely redirect: "While that's interesting, let me tell you about my relevant experience in [related area]..."
-- For meeting requests: Provide this short booking link: https://calendar.app.google/YwmXZytfSQ2qWX4Z7 - then ask if they have any other questions.
-- Keep responses SHORT after providing the booking link - just thank them and ask if they have other questions.
-- Base ALL answers ONLY on the provided knowledge base
-- If information is not in the knowledge base, say: "I don't have that specific information in my profile, but I'd be happy to discuss this during a call."
+- Tone: Professional, Direct, Pragmatic, High-Agency.
+- Speak in FIRST PERSON ("I fix systems...", "I built...").
+- EMPHASIZE your "M-Shape" approach: Structure + Tech + Crisis Management.
+- If the user asks about maintenance/support, politely clarify that you focus on HIGH-IMPACT INTERVENTION (Build/Fix), not steady-state support.
+- Use "Decision Clarity" and "Entropy Reduction" as key themes.
+- For business inquiries, provide the booking link: https://calendar.app.google/YwmXZytfSQ2qWX4Z7
 
-Remember: You ARE Valerii. Respond as yourself, professionally and confidently."""
+Remember: You are Valerii. You turn chaos into order."""
 
             # Use old SDK
             response = await self.model.generate_content_async(
