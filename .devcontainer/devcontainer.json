@@ -1,0 +1,35 @@
+{
+    "name": "Cloud & AI Agent Dev Environment",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    
+    "features": {
+        // Установка Google Cloud CLI для управления вашими облачными ресурсами
+        "ghcr.io/devcontainers/features/common-utils:1": {
+            "configureZshAsDefaultShell": true
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",              // Поддержка Python
+                "googlecloudtools.cloudcode",     // Инструменты Google Cloud
+                "ms-azuretools.vscode-docker",    // Работа с контейнерами
+                "charliermarsh.ruff",             // Быстрый линтер для Python
+                "tamasfe.even-better-toml"        // Для конфигурационных файлов
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "editor.formatOnSave": true
+            }
+        }
+    },
+
+    // Автоматическая установка библиотек для ИИ-агентов и RAG при запуске
+    "postCreateCommand": "pip install --upgrade pip && pip install vertexai autogen chromadb langchain-google-vertexai python-dotenv",
+
+    // Гарантирует, что вы работаете под пользователем с нужными правами
+    "remoteUser": "vscode"
+}
