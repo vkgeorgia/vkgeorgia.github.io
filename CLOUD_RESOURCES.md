@@ -1,30 +1,22 @@
-# Cloud Resources & Configuration
+# Cloud Resources: AI Avatar & Website
 
-This document lists the Google Cloud and Google AI Studio resources used for this project (Website + AI Avatar).
+Этот файл описывает облачные ресурсы Google Cloud Platform (GCP), используемые для обеспечения работы ИИ-аватара на сайте **vkgeorgia.github.io**.
 
-## Google Cloud Platform (GCP)
+## 🚀 Общая информация
+*   **Имя проекта:** Digital Avatar
+*   **Project ID:** `gen-lang-client-0202538697`
+*   **Статус:** Активен
 
-| Resource Type | Name / URI | Project ID | Location / Region | Purpose |
-| :--- | :--- | :--- | :--- | :--- |
-| **Project** | [gen-lang-client-0202538697](https://console.cloud.google.com/home/dashboard?project=gen-lang-client-0202538697) | `gen-lang-client-0202538697` | - | Primary project for backend hosting |
-| **Cloud Run** | `ai-avatar` | `gen-lang-client-0202538697` | `us-central1` | Hosts the FastAPI backend for the AI Avatar |
-| **Container Registry** | `gcr.io/gen-lang-client-0202538697/ai-avatar` | `gen-lang-client-0202538697` | - | Stores Docker images for deployment |
-| **Cloud Build** | - | `gen-lang-client-0202538697` | - | (Implicitly used by GCR/Cloud Run) |
+## 🏗 Характеристики ИИ-аватара (Cloud Run)
+*   **Сервис:** `ai-avatar`
+*   **Регион:** `us-central1`
+*   **URL:** [https://ai-avatar-103512681014.us-central1.run.app](https://ai-avatar-103512681014.us-central1.run.app)
+*   **Технологии:** FastAPI (Python), WebSockets для связи в реальном времени.
 
-## Google AI Studio (Gemini)
-
-| Resource Type | Resource Detail | Purpose |
-| :--- | :--- | :--- |
-| **Gemini API Key** | `AIzaSy...dt0` | Authentication for Generative AI requests |
-| **Model** | `gemini-2.5-flash` | The LLM powering the RAG (Retrieval-Augmented Generation) |
-| **Service** | Google AI SDK (`google-generativeai`) | Interaction with Gemini models |
-
-## Other Services
-
-| Service | Detail | Purpose |
-| :--- | :--- | :--- |
-| **GitHub Pages** | `vkgeorgia.github.io` | Hosts the static frontend of the personal website |
-| **Google Drive API** | (Optional Integration) | Configured in `rag_service.py` to pull extra knowledge if needed |
+## 🤖 Интеграция с Gemini
+*   **API:** Использует `Generative Language API`.
+*   **Модель:** `gemini-2.5-flash` для генерации ответов на основе M-Shape философии и базы знаний.
+*   **Хранилище:** `gs://gen-lang-client-0202538697_cloudbuild/` для сборки.
 
 ---
-**Note:** API keys and credentials should be managed via environment variables (like `GEMINI_API_KEY`) and not committed directly to version control.
+*Примечание: Статический контент сайта хостится на GitHub Pages. Cloud Run используется только для динамической логики аватара.*
