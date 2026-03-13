@@ -51,7 +51,8 @@ else:
 
 @app.get("/")
 async def root():
-    return {"message": "Digital Avatar Backend is running"}
+    # Version marker to verify exact build in Cloud Run
+    return {"message": "Digital Avatar Backend is running", "version": "neon-projects-contacts-v1"}
 
 
 @app.get("/debug/routes")
