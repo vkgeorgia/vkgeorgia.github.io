@@ -1,4 +1,5 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Query, HTTPException, Path
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Query, HTTPException
+from fastapi import Path as FastAPIPath
 from fastapi.routing import APIRoute
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -301,7 +302,7 @@ def api_contacts(q: Optional[str] = Query(None)):
 
 
 @app.get("/api/contacts/{contact_id}")
-def api_contact_detail(contact_id: int = Path(..., ge=1)):
+def api_contact_detail(contact_id: int = FastAPIPath(..., ge=1)):
     """
     Return full contact payload by id.
     """
