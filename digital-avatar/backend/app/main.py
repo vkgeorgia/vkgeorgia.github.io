@@ -1,4 +1,5 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Query, HTTPException, Path
+from fastapi.routing import APIRoute
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
@@ -51,6 +52,22 @@ else:
 @app.get("/")
 async def root():
     return {"message": "Digital Avatar Backend is running"}
+
+
+@app.get("/debug/routes")
+def debug_routes():
+    """Temporary helper endpoint to list registered routes in this deployment."""
+    routes_info = []
+    for route in app.routes:
+        if isinstance(route, APIRoute):
+            routes_info.append(
+                {
+                    "path": route.path,
+                    "methods": sorted(list(route.methods)),
+                    "name": route.name,
+                }
+            )
+    return {"routes": routes_info}
 
 @app.websocket("/ws/chat")
 async def chat_endpoint(websocket: WebSocket):
