@@ -20,6 +20,7 @@ knowledge-base/*/*/sources/
 
 # Digital Avatar - credentials and sensitive files
 digital-avatar/.env
+digital-avatar/backend/.env
 digital-avatar/google_credentials.json
 
 # Digital Avatar - Python cache
