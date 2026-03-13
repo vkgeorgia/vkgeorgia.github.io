@@ -62,10 +62,6 @@ exclude:
   - digital-avatar/.env
   - digital-avatar/google_credentials.json
   - digital-avatar/README.md
-  - projects/
-  - domains/
-  - industries/
-  - roles/
 
 # Collections
 collections:
