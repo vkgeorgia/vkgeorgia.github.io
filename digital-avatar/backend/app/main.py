@@ -1,4 +1,4 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Query, HTTPException
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Query, HTTPException, Path
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
@@ -230,6 +230,92 @@ def api_project_detail(code: str):
         }
     )
     return data
+
+
+@app.get("/api/contacts")
+def api_contacts(q: Optional[str] = Query(None)):
+    """
+    Return list of contacts from Neon.
+    Optional q: simple substring search in full_name / notes.
+    """
+    conn = get_db_connection()
+    try:
+        cur = conn.cursor()
+        if q:
+            like = f"%{q}%"
+            cur.execute(
+                """
+                SELECT id, full_name, email, phone, company, position, tags, notes, raw_data
+                FROM contacts
+                WHERE (full_name ILIKE %s OR notes ILIKE %s)
+                ORDER BY full_name NULLS LAST, id ASC
+                """,
+                (like, like),
+            )
+        else:
+            cur.execute(
+                """
+                SELECT id, full_name, email, phone, company, position, tags, notes, raw_data
+                FROM contacts
+                ORDER BY full_name NULLS LAST, id ASC
+                """
+            )
+        rows = cur.fetchall()
+    finally:
+        conn.close()
+
+    items: List[Dict[str, Any]] = []
+    for r in rows:
+        items.append(
+            {
+                "id": r.get("id"),
+                "full_name": r.get("full_name"),
+                "email": r.get("email"),
+                "phone": r.get("phone"),
+                "company": r.get("company"),
+                "position": r.get("position"),
+                "tags": r.get("tags"),
+                "notes": r.get("notes"),
+                "raw_data": r.get("raw_data"),
+            }
+        )
+    return {"items": items}
+
+
+@app.get("/api/contacts/{contact_id}")
+def api_contact_detail(contact_id: int = Path(..., ge=1)):
+    """
+    Return full contact payload by id.
+    """
+    conn = get_db_connection()
+    try:
+        cur = conn.cursor()
+        cur.execute(
+            """
+            SELECT id, full_name, email, phone, company, position, tags, notes, raw_data
+            FROM contacts
+            WHERE id = %s
+            """,
+            (contact_id,),
+        )
+        row = cur.fetchone()
+    finally:
+        conn.close()
+
+    if not row:
+        raise HTTPException(status_code=404, detail="Contact not found")
+
+    return {
+        "id": row.get("id"),
+        "full_name": row.get("full_name"),
+        "email": row.get("email"),
+        "phone": row.get("phone"),
+        "company": row.get("company"),
+        "position": row.get("position"),
+        "tags": row.get("tags"),
+        "notes": row.get("notes"),
+        "raw_data": row.get("raw_data"),
+    }
 
 if __name__ == "__main__":
     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
