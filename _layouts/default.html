@@ -30,7 +30,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
 </head>
 
-<body>
+<body
+  {% if page.page_type %}data-page-type="{{ page.page_type | escape }}"{% endif %}
+  {% if page.page_key %}data-page-key="{{ page.page_key | escape }}"{% endif %}
+>
 
     {% include header.html %}
 
