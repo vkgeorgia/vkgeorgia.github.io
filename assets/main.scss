@@ -91,3 +91,32 @@ h6 {
         margin-top: 10px;
     }
 }
+
+/* Dynamic projects listing */
+.projects-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: #fafafa;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-key-result {
+    font-weight: 500;
+    margin: 0.5rem 0 0.75rem 0;
+}
+
+.project-meta {
+    font-size: 0.9rem;
+    color: #666;
+}
