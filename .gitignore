@@ -33,6 +33,9 @@ digital-avatar/backend/knowledge_base/
 
 # LinkedIn video materials (working folder, not for publication)
 
+# Local archive for deprecated scripts / content
+0. archive/
+
 # macOS system files
 .DS_Store
 .DS_Store?
