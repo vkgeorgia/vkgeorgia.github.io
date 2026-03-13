@@ -1,4 +1,4 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Query, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
@@ -10,8 +10,10 @@ logger = logging.getLogger(__name__)
 
 import os
 from pathlib import Path
+from typing import Optional, List, Dict, Any
 from dotenv import load_dotenv
 from app.services.rag_service import RAGService
+from app.db import get_db_connection
 
 # Load environment variables
 load_dotenv()
@@ -77,6 +79,157 @@ async def chat_endpoint(websocket: WebSocket):
     except Exception as e:
         logger.error(f"Error: {e}")
         await websocket.close()
+
+
+def _row_to_project_payload(row: Dict[str, Any]) -> Dict[str, Any]:
+    return {
+        "id": row.get("id"),
+        "num": row.get("num_legacy"),
+        "industry": row.get("industry"),
+        "domain": row.get("domain"),
+        "employer": row.get("employer"),
+        "role": row.get("role"),
+        "title": row.get("title"),
+        "code": row.get("code"),
+        "key_result": row.get("key_result"),
+        "client": row.get("client"),
+        "technology": row.get("technology"),
+        "year_start": row.get("year_start"),
+        "month_start": row.get("month_start"),
+        "year_end": row.get("year_end"),
+        "month_end": row.get("month_end"),
+        "executive_md": row.get("executive_md"),
+    }
+
+
+@app.get("/api/projects")
+def api_projects(
+    industry: Optional[str] = Query(None),
+    domain: Optional[str] = Query(None),
+    employer: Optional[str] = Query(None),
+    role: Optional[str] = Query(None),
+    code: Optional[str] = Query(None),
+    q: Optional[str] = Query(None),
+):
+    """
+    Return list of projects from Neon with simple filters.
+    This is the shared API for Sam UI and the website.
+    """
+    where: List[str] = []
+    params: List[Any] = []
+
+    if industry:
+        where.append("industry = %s")
+        params.append(industry)
+    if domain:
+        where.append("domain = %s")
+        params.append(domain)
+    if employer:
+        where.append("employer = %s")
+        params.append(employer)
+    if role:
+        where.append('"role" = %s')
+        params.append(role)
+    if code:
+        where.append("code = %s")
+        params.append(code)
+    if q:
+        where.append("(title ILIKE %s OR key_result ILIKE %s)")
+        like = f"%{q}%"
+        params.extend([like, like])
+
+    where_clause = ""
+    if where:
+        where_clause = "WHERE " + " AND ".join(where)
+
+    sql = f"""
+        SELECT
+          id,
+          num_legacy,
+          industry,
+          domain,
+          employer,
+          "role",
+          title,
+          code,
+          key_result,
+          client,
+          technology,
+          year_start,
+          month_start,
+          year_end,
+          month_end,
+          executive_md
+        FROM projects
+        {where_clause}
+        ORDER BY num_legacy ASC NULLS LAST, code ASC
+    """
+
+    conn = get_db_connection()
+    try:
+        cur = conn.cursor()
+        cur.execute(sql, params)
+        rows = cur.fetchall()
+    finally:
+        conn.close()
+
+    items = [_row_to_project_payload(r) for r in rows]
+    return {"items": items}
+
+
+@app.get("/api/projects/{code}")
+def api_project_detail(code: str):
+    """
+    Return full project payload for a given project code.
+    """
+    conn = get_db_connection()
+    try:
+        cur = conn.cursor()
+        cur.execute(
+            """
+            SELECT
+              id,
+              num_legacy,
+              industry,
+              domain,
+              employer,
+              "role",
+              title,
+              code,
+              key_result,
+              client,
+              technology,
+              year_start,
+              month_start,
+              year_end,
+              month_end,
+              executive_md,
+              star_situation,
+              star_task,
+              star_action,
+              star_result
+            FROM projects
+            WHERE code = %s
+            """,
+            (code,),
+        )
+        row = cur.fetchone()
+    finally:
+        conn.close()
+
+    if not row:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    data = _row_to_project_payload(row)
+    data.update(
+        {
+            "star_situation": row.get("star_situation"),
+            "star_task": row.get("star_task"),
+            "star_action": row.get("star_action"),
+            "star_result": row.get("star_result"),
+        }
+    )
+    return data
 
 if __name__ == "__main__":
     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
