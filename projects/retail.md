@@ -4,7 +4,7 @@ title: "Retail"
 description: "Projects in Retail"
 permalink: /projects/retail/
 page_type: "industry"
-page_key: "retail"
+page_key: "Retail"
 ---
 
 ## Retail
