@@ -13,7 +13,8 @@ from __future__ import annotations
 import html
 import logging
 import os
-from typing import Any, Dict, Optional
+import re
+from typing import Any, Dict, List, Optional
 
 import httpx
 
@@ -22,6 +23,31 @@ from app.db import get_db_connection
 logger = logging.getLogger(__name__)
 
 TELEGRAM_API = "https://api.telegram.org"
+
+# https://… до пробела/скобки/кавычек (типичные хвосты markdown)
+_URL_RE = re.compile(r"https?://[^\s\)\]\"\'<>]+", re.IGNORECASE)
+
+
+def _extract_calendar_urls_from_texts(texts: List[str]) -> List[str]:
+    """Уникальные ссылки на Google Calendar из текстов ответов ассистента."""
+    found: List[str] = []
+    seen: set[str] = set()
+    for raw in texts:
+        if not raw:
+            continue
+        for m in _URL_RE.finditer(raw):
+            u = m.group(0).rstrip(".,;)]}\"'")
+            low = u.lower()
+            if "calendar.app.google" in low or "calendar.google.com" in low:
+                if u not in seen:
+                    seen.add(u)
+                    found.append(u)
+    return found
+
+
+def _telegram_href(url: str) -> str:
+    """& в href для Telegram HTML."""
+    return url.replace("&", "&amp;")
 
 
 def diagnostics() -> Dict[str, Any]:
@@ -97,6 +123,19 @@ def _session_summary(session_id: str) -> Optional[Dict[str, Any]]:
                 )
                 cal_row = cur.fetchone()
                 calendar_hint = bool(cal_row and cal_row.get("cal"))
+                cur.execute(
+                    """
+                    SELECT content
+                    FROM chat_messages
+                    WHERE session_id = %s::uuid AND role = 'assistant'
+                    ORDER BY created_at ASC
+                    """,
+                    (session_id,),
+                )
+                assistant_texts = [r["content"] for r in cur.fetchall() if r.get("content")]
+                calendar_urls = _extract_calendar_urls_from_texts(assistant_texts)
+                if calendar_urls:
+                    calendar_hint = True
         finally:
             conn.close()
         return {
@@ -105,6 +144,7 @@ def _session_summary(session_id: str) -> Optional[Dict[str, Any]]:
             "client_ip": row.get("client_ip"),
             "counts": counts,
             "calendar_hint": calendar_hint,
+            "calendar_urls": calendar_urls,
         }
     except Exception as e:
         logger.warning("telegram_notify: session summary failed: %s", e, exc_info=True)
@@ -164,6 +204,12 @@ def notify_session_ended(session_id: str) -> None:
             f"начало: {html.escape(str(started))}\n"
             f"конец: {html.escape(str(ended))}"
         )
+        calendar_urls = summary.get("calendar_urls") or []
+        if calendar_urls:
+            text += "\n\n<b>Ссылка на встречу (календарь):</b>\n"
+            for i, u in enumerate(calendar_urls, 1):
+                href = _telegram_href(u)
+                text += f'{i}. <a href="{href}">{html.escape(u)}</a>\n'
 
     url = f"{TELEGRAM_API}/bot{token}/sendMessage"
     try:
