@@ -1,6 +1,5 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Query, HTTPException
 from fastapi import Path as FastAPIPath
-from fastapi.routing import APIRoute
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
@@ -55,21 +54,6 @@ async def root():
     # Version marker to verify exact build in Cloud Run
     return {"message": "Digital Avatar Backend is running", "version": "neon-projects-contacts-v1"}
 
-
-@app.get("/debug/routes")
-def debug_routes():
-    """Temporary helper endpoint to list registered routes in this deployment."""
-    routes_info = []
-    for route in app.routes:
-        if isinstance(route, APIRoute):
-            routes_info.append(
-                {
-                    "path": route.path,
-                    "methods": sorted(list(route.methods)),
-                    "name": route.name,
-                }
-            )
-    return {"routes": routes_info}
 
 @app.websocket("/ws/chat")
 async def chat_endpoint(websocket: WebSocket):
@@ -138,16 +122,16 @@ def api_projects(
     params: List[Any] = []
 
     if industry:
-        where.append("industry = %s")
+        where.append("LOWER(industry) = LOWER(%s)")
         params.append(industry)
     if domain:
-        where.append("domain = %s")
+        where.append("LOWER(domain) = LOWER(%s)")
         params.append(domain)
     if employer:
-        where.append("employer = %s")
+        where.append("LOWER(employer) = LOWER(%s)")
         params.append(employer)
     if role:
-        where.append('"role" = %s')
+        where.append('LOWER("role") = LOWER(%s)')
         params.append(role)
     if code:
         where.append("code = %s")

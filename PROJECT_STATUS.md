@@ -1,6 +1,6 @@
 # Project Status: vkgeorgia.github.io
 
-**Last Updated:** 2026-01-16  
+**Last Updated:** 2026-03-13  
 **Site URL:** https://vkgeorgia.github.io
 
 ---
@@ -61,6 +61,14 @@ Personal portfolio and consulting website for Valerii Korobeinikov, positioned a
 - **Section Rename**: "Reflection (Optional but Recommended)" → "Lessons Learned" (all 44 projects)
 - **Articles Header**: "Articles & Insights" → "Field Notes & System Design"
 
+### 6. Backend + Neon Stabilization (Mar 2026)
+- **New API Endpoints**: Added `/api/projects`, `/api/projects/{code}`, `/api/contacts`, `/api/contacts/{contact_id}` in `digital-avatar/backend/app/main.py`
+- **Neon Integration**: Cloud Run now deploys with `NEON_DATABASE_URL` and serves project/contact data from PostgreSQL (Neon)
+- **Deploy Reliability**: Fixed GitHub Actions Cloud Run command formatting issues that previously caused failed revisions
+- **Case-insensitive API filters**: `/api/projects` now applies case-insensitive matching for `industry`, `domain`, `employer`, `role`
+- **Security/cleanup**: Removed temporary `/debug/routes` endpoint after production diagnostics were completed
+- **Frontend pilot**: `projects/retail/` now renders projects dynamically from backend API (Neon-backed)
+
 ---
 
 ## Technical Configuration
@@ -98,7 +106,8 @@ Personal portfolio and consulting website for Valerii Korobeinikov, positioned a
 ### CSS Frontmatter Corruption
 - **Problem**: `replace_file_content` tool sometimes corrupts YAML frontmatter in `assets/main.scss`
 - **Symptom**: First line becomes `--- --- @import "minima";` (breaks Jekyll)
-- **Fix**: Use Python script to force-overwrite with correct 3-line format:
+- **Status**: Fixed in repository on 2026-03-13.
+- **Fix Pattern**: Use exact 3-line format:
   ```
   ---
   ---
