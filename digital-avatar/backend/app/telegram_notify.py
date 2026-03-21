@@ -24,6 +24,26 @@ logger = logging.getLogger(__name__)
 TELEGRAM_API = "https://api.telegram.org"
 
 
+def diagnostics() -> Dict[str, Any]:
+    """
+    Безопасная сводка для /api/health: не раскрывает токен и chat_id.
+    """
+    token_set = bool(os.getenv("TELEGRAM_BOT_TOKEN", "").strip())
+    chat_raw = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    chat_set = bool(chat_raw)
+    raw_flag = os.getenv("TELEGRAM_NOTIFY_ENABLED", "true").strip().lower()
+    flag_off = raw_flag in ("0", "false", "no", "off")
+    return {
+        "notify_env_flag_off": flag_off,
+        "bot_token_configured": token_set,
+        "chat_id_configured": chat_set,
+        "would_attempt_send": (not flag_off) and token_set and chat_set,
+        "chat_id_parseable_as_int": bool(
+            chat_raw.lstrip("-").isdigit() if chat_raw else False
+        ),
+    }
+
+
 def _enabled() -> bool:
     raw = os.getenv("TELEGRAM_NOTIFY_ENABLED", "true").strip().lower()
     if raw in ("0", "false", "no", "off"):
@@ -104,16 +124,19 @@ def notify_session_ended(session_id: str) -> None:
     if not session_id:
         return
     if not _enabled():
-        logger.info(
-            "telegram_notify: skipped (TELEGRAM_NOTIFY_ENABLED off or missing "
-            "TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID in env)"
+        # WARNING: в Cloud Run по умолчанию часто не видны логи уровня INFO
+        logger.warning(
+            "telegram_notify: SKIPPED — выключено (TELEGRAM_NOTIFY_ENABLED) "
+            "или нет TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID в переменных окружения"
         )
         return
 
     token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
     chat_id_raw = os.getenv("TELEGRAM_CHAT_ID", "").strip()
     if not token or not chat_id_raw:
-        logger.info("telegram_notify: skipped (empty token or chat_id after strip)")
+        logger.warning(
+            "telegram_notify: SKIPPED — пустой токен или chat_id после trim"
+        )
         return
     chat_id = _parse_chat_id(chat_id_raw)
 
@@ -170,10 +193,42 @@ def notify_session_ended(session_id: str) -> None:
                     body.get("description", body),
                 )
             else:
-                logger.info(
-                    "telegram_notify: sent session summary for %s (chat_id=%s)",
+                logger.warning(
+                    "telegram_notify: OK — отправлено уведомление, session=%s chat_id=%s",
                     session_id,
                     chat_id,
                 )
     except Exception as e:
         logger.warning("telegram_notify: request failed: %s", e, exc_info=True)
+
+
+def send_test_message() -> Dict[str, Any]:
+    """
+    Одно тестовое сообщение в Telegram (для диагностики).
+    Вызывать только если защищённый эндпоинт проверил секрет.
+    """
+    if not _enabled():
+        return {"ok": False, "error": "telegram not configured or disabled"}
+    token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    chat_id_raw = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    chat_id = _parse_chat_id(chat_id_raw)
+    url = f"{TELEGRAM_API}/bot{token}/sendMessage"
+    try:
+        with httpx.Client(timeout=15.0) as client:
+            r = client.post(
+                url,
+                json={
+                    "chat_id": chat_id,
+                    "text": "AI Avatar: тестовое сообщение (диагностика Cloud Run → Telegram).",
+                },
+            )
+            body = r.json() if r.content else {}
+            if r.status_code == 200 and isinstance(body, dict) and body.get("ok"):
+                return {"ok": True, "telegram": body}
+            return {
+                "ok": False,
+                "http_status": r.status_code,
+                "telegram": body if isinstance(body, dict) else r.text[:500],
+            }
+    except Exception as e:
+        return {"ok": False, "error": str(e)}

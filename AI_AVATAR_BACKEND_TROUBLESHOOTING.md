@@ -156,3 +156,21 @@ SELECT session_id, role, left(content, 80), created_at FROM chat_messages ORDER 
 
 **Логи:** в Cloud Logging ищи `telegram_notify: skipped` (нет токена/chat_id в окружении), `Telegram API ok=false` (часто «bot was blocked», неверный `chat_id`, пользователь не нажал Start у бота).
 
+**Быстрая диагностика без логов:**
+
+1. Открой в браузере: `https://<твой-cloud-run-host>/api/health`  
+   В блоке `telegram` смотри:
+   - `would_attempt_send: true` — переменные на сервисе видны, уведомления должны пытаться уйти;
+   - `false` — в Cloud Run нет `TELEGRAM_BOT_TOKEN` и/или `TELEGRAM_CHAT_ID` (или выключено `TELEGRAM_NOTIFY_ENABLED`): перезапусти деплой после добавления секретов в GitHub.
+
+2. Ручной тест отправки (опционально): в Cloud Run задай **временно** переменную `TELEGRAM_DIAG_SECRET` (любая длинная случайная строка), задеплой, затем:
+
+   ```bash
+   curl -sS -X POST "https://<твой-cloud-run-host>/api/internal/telegram-test" \
+     -H "Authorization: Bearer <ТОТ_ЖЕ_СЕКРЕТ>"
+   ```
+
+   В ответе JSON: `ok: true` — Telegram принял сообщение; иначе смотри поле `telegram` / `error`. После проверки **удали** `TELEGRAM_DIAG_SECRET`.
+
+**Почему в логах «тишина»:** сообщения `telegram_notify` раньше были уровня INFO; в Cloud Run по умолчанию часто виден только WARNING+. В актуальной версии ключевые строки — **WARNING** (`SKIPPED`, `OK`, ошибки API).
+
