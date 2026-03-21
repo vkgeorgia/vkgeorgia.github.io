@@ -152,3 +152,7 @@ SELECT session_id, role, left(content, 80), created_at FROM chat_messages ORDER 
 
 **Если сообщения не приходят:** смотреть логи Cloud Run на строки `telegram_notify:` (ошибки HTTP от Telegram API).
 
+**Проверка переменных на Cloud Run:** Console → Cloud Run → `ai-avatar` → **Edit & deploy new revision** → **Variables** — должны быть заданы `TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID` (значения маскируются, но имена видны). Если их нет — последний деплой был без секретов; перезапусти workflow **Deploy AI Avatar Backend** после добавления секретов в GitHub.
+
+**Логи:** в Cloud Logging ищи `telegram_notify: skipped` (нет токена/chat_id в окружении), `Telegram API ok=false` (часто «bot was blocked», неверный `chat_id`, пользователь не нажал Start у бота).
+

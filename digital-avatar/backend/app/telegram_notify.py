@@ -91,15 +91,31 @@ def _session_summary(session_id: str) -> Optional[Dict[str, Any]]:
         return None
 
 
+def _parse_chat_id(raw: str):
+    """Telegram принимает chat_id как int (в т.ч. отрицательный для групп) или строку."""
+    s = raw.strip()
+    if s.lstrip("-").isdigit():
+        return int(s)
+    return s
+
+
 def notify_session_ended(session_id: str) -> None:
     """Best-effort: send one message to Telegram after a chat session closes."""
-    if not session_id or not _enabled():
+    if not session_id:
+        return
+    if not _enabled():
+        logger.info(
+            "telegram_notify: skipped (TELEGRAM_NOTIFY_ENABLED off or missing "
+            "TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID in env)"
+        )
         return
 
     token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
-    chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
-    if not token or not chat_id:
+    chat_id_raw = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    if not token or not chat_id_raw:
+        logger.info("telegram_notify: skipped (empty token or chat_id after strip)")
         return
+    chat_id = _parse_chat_id(chat_id_raw)
 
     summary = _session_summary(session_id)
     if not summary:
@@ -138,11 +154,26 @@ def notify_session_ended(session_id: str) -> None:
                     "disable_web_page_preview": True,
                 },
             )
+            try:
+                body = r.json()
+            except Exception:
+                body = None
             if r.status_code != 200:
                 logger.warning(
-                    "telegram_notify: sendMessage failed %s %s",
+                    "telegram_notify: sendMessage HTTP %s %s",
                     r.status_code,
-                    r.text[:500],
+                    r.text[:800],
+                )
+            elif isinstance(body, dict) and body.get("ok") is False:
+                logger.warning(
+                    "telegram_notify: Telegram API ok=false: %s",
+                    body.get("description", body),
+                )
+            else:
+                logger.info(
+                    "telegram_notify: sent session summary for %s (chat_id=%s)",
+                    session_id,
+                    chat_id,
                 )
     except Exception as e:
         logger.warning("telegram_notify: request failed: %s", e, exc_info=True)

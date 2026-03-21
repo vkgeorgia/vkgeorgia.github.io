@@ -55,7 +55,7 @@ else:
 @app.get("/")
 async def root():
     # Version marker to verify exact build in Cloud Run
-    return {"message": "Digital Avatar Backend is running", "version": "neon-projects-contacts-telegram-v1"}
+    return {"message": "Digital Avatar Backend is running", "version": "neon-projects-contacts-telegram-v2"}
 
 
 @app.websocket("/ws/chat")
