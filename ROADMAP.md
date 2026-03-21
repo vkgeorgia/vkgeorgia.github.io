@@ -90,7 +90,7 @@ title: "Digital Avatar & Knowledge Base Roadmap"
 
 ### 9.2. Операционный шаг (один раз на окружение)
 
-- [ ] Выполнить `sql/chat_logs.sql` в **Neon SQL Editor** для боевой БД (пока не выполнено — записи в БД не появятся).
+- [x] Выполнить `sql/chat_logs.sql` в **Neon SQL Editor** для боевой БД.
 
 ### 9.3. Telegram — запланировано (ещё не делали)
 
