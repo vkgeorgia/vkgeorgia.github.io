@@ -55,7 +55,7 @@ else:
 @app.get("/")
 async def root():
     # Version marker to verify exact build in Cloud Run
-    return {"message": "Digital Avatar Backend is running", "version": "neon-projects-contacts-telegram-v3"}
+    return {"message": "Digital Avatar Backend is running", "version": "neon-projects-contacts-telegram-v4"}
 
 
 @app.get("/api/health")
@@ -65,7 +65,7 @@ def api_health():
     """
     return {
         "ok": True,
-        "version": "neon-projects-contacts-telegram-v3",
+        "version": "neon-projects-contacts-telegram-v4",
         "telegram": telegram_notify.diagnostics(),
     }
 
