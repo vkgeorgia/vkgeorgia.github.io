@@ -42,6 +42,14 @@ jobs:
           docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/ai-avatar:latest .
           docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/ai-avatar:latest
       
+      # Важно: весь --set-env-vars в кавычках, чтобы отрицательный TELEGRAM_CHAT_ID (группы)
+      # и двоеточие в токене не ломали разбор shell / gcloud.
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy ai-avatar --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/ai-avatar:latest --platform managed --region us-central1 --allow-unauthenticated --project ${{ secrets.GCP_PROJECT_ID }} --set-env-vars GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }},NEON_DATABASE_URL=${{ secrets.NEON_DATABASE_URL }},TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }},TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
+          gcloud run deploy ai-avatar \
+            --image "gcr.io/${{ secrets.GCP_PROJECT_ID }}/ai-avatar:latest" \
+            --platform managed \
+            --region us-central1 \
+            --allow-unauthenticated \
+            --project "${{ secrets.GCP_PROJECT_ID }}" \
+            --set-env-vars "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }},NEON_DATABASE_URL=${{ secrets.NEON_DATABASE_URL }},TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }},TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}"
