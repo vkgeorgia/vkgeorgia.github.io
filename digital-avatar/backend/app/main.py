@@ -17,6 +17,7 @@ from dotenv import load_dotenv
 from app.services.rag_service import RAGService
 from app.db import get_db_connection
 from app import chat_log
+from app import telegram_notify
 
 # Load environment variables
 load_dotenv()
@@ -54,7 +55,7 @@ else:
 @app.get("/")
 async def root():
     # Version marker to verify exact build in Cloud Run
-    return {"message": "Digital Avatar Backend is running", "version": "neon-projects-contacts-v1"}
+    return {"message": "Digital Avatar Backend is running", "version": "neon-projects-contacts-telegram-v1"}
 
 
 @app.websocket("/ws/chat")
@@ -108,6 +109,7 @@ async def chat_endpoint(websocket: WebSocket):
     finally:
         if session_id:
             await asyncio.to_thread(chat_log.end_session, session_id)
+            await asyncio.to_thread(telegram_notify.notify_session_ended, session_id)
 
 
 def _row_to_project_payload(row: Dict[str, Any]) -> Dict[str, Any]:

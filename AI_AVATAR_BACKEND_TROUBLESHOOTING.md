@@ -134,3 +134,21 @@ SELECT id, started_at, ended_at FROM chat_sessions ORDER BY started_at DESC LIMI
 SELECT session_id, role, left(content, 80), created_at FROM chat_messages ORDER BY created_at DESC LIMIT 10;
 ```
 
+### 7. Уведомления в Telegram после сессии чата
+
+После закрытия WebSocket‑сессии backend отправляет **краткое** сообщение в Telegram (без полного текста диалога): `session_id`, число сообщений user/assistant, признак упоминания ссылки календаря в ответах ассистента, IP, время начала/конца.
+
+**Что сделать один раз:**
+
+1. Создать бота через **@BotFather**, получить **токен**.
+2. Узнать **chat_id** (личный чат: напиши боту `/start`, затем открой `https://api.telegram.org/bot<TOKEN>/getUpdates` и найди `"chat":{"id":...}`).
+3. В **GitHub → Settings → Secrets and variables → Actions** добавить:
+   - `TELEGRAM_BOT_TOKEN`
+   - `TELEGRAM_CHAT_ID` (строка, для групп часто отрицательное число)
+4. Убедиться, что workflow **Deploy AI Avatar Backend** передаёт их в Cloud Run (см. `.github/workflows/deploy-backend.yml` — переменные в `--set-env-vars`).
+5. Запустить деплой backend’а заново.
+
+**Отключить без удаления секретов:** в Cloud Run задать `TELEGRAM_NOTIFY_ENABLED=false`.
+
+**Если сообщения не приходят:** смотреть логи Cloud Run на строки `telegram_notify:` (ошибки HTTP от Telegram API).
+
