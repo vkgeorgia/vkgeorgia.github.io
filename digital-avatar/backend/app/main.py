@@ -1,4 +1,4 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Query, HTTPException
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Query, HTTPException, Header
 from fastapi import Path as FastAPIPath
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -55,7 +55,37 @@ else:
 @app.get("/")
 async def root():
     # Version marker to verify exact build in Cloud Run
-    return {"message": "Digital Avatar Backend is running", "version": "neon-projects-contacts-telegram-v2"}
+    return {"message": "Digital Avatar Backend is running", "version": "neon-projects-contacts-telegram-v3"}
+
+
+@app.get("/api/health")
+def api_health():
+    """
+    Диагностика без секретов: видно, дошли ли TELEGRAM_* до Cloud Run.
+    """
+    return {
+        "ok": True,
+        "version": "neon-projects-contacts-telegram-v3",
+        "telegram": telegram_notify.diagnostics(),
+    }
+
+
+@app.post("/api/internal/telegram-test")
+def api_telegram_test(authorization: Optional[str] = Header(None, alias="Authorization")):
+    """
+    Ручной тест доставки в Telegram. Защита: TELEGRAM_DIAG_SECRET в env + заголовок
+    Authorization: Bearer <тот_же_секрет>.
+
+    Секрет задать временно в Cloud Run, вызвать curl, затем удалить секрет.
+    Если TELEGRAM_DIAG_SECRET не задан — 404 (эндпоинт «скрыт»).
+    """
+    secret = os.getenv("TELEGRAM_DIAG_SECRET", "").strip()
+    if not secret:
+        raise HTTPException(status_code=404, detail="Not Found")
+    expected = f"Bearer {secret}"
+    if (authorization or "").strip() != expected:
+        raise HTTPException(status_code=403, detail="Forbidden")
+    return telegram_notify.send_test_message()
 
 
 @app.websocket("/ws/chat")
