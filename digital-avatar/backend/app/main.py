@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import logging
+import asyncio
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -15,6 +16,7 @@ from typing import Optional, List, Dict, Any
 from dotenv import load_dotenv
 from app.services.rag_service import RAGService
 from app.db import get_db_connection
+from app import chat_log
 
 # Load environment variables
 load_dotenv()
@@ -58,12 +60,24 @@ async def root():
 @app.websocket("/ws/chat")
 async def chat_endpoint(websocket: WebSocket):
     await websocket.accept()
+    session_id: Optional[str] = None
     try:
+        client_ip = websocket.client.host if websocket.client else None
+        user_agent = websocket.headers.get("user-agent")
+        session_id = await asyncio.to_thread(
+            chat_log.create_session, client_ip, user_agent, None
+        )
+
         while True:
             # Receive message from client
             data = await websocket.receive_text()
             logger.info(f"Received message: {data}")
-            
+
+            if session_id:
+                await asyncio.to_thread(
+                    chat_log.append_message, session_id, "user", data, None
+                )
+
             # Use RAG service to generate response
             try:
                 response_text = await rag_service.generate_response(data)
@@ -73,15 +87,27 @@ async def chat_endpoint(websocket: WebSocket):
                     f.write(traceback.format_exc())
                 logger.error(f"Error generating response: {e}")
                 response_text = "Internal Error: Could not generate response."
-            
+
+            if session_id:
+                await asyncio.to_thread(
+                    chat_log.append_message,
+                    session_id,
+                    "assistant",
+                    response_text,
+                    None,
+                )
+
             # Send text back to UI
             await websocket.send_text(response_text)
-            
+
     except WebSocketDisconnect:
         logger.info("Client disconnected")
     except Exception as e:
         logger.error(f"Error: {e}")
         await websocket.close()
+    finally:
+        if session_id:
+            await asyncio.to_thread(chat_log.end_session, session_id)
 
 
 def _row_to_project_payload(row: Dict[str, Any]) -> Dict[str, Any]:

@@ -113,3 +113,24 @@ RuntimeError: NEON_DATABASE_URL is not set. Please configure it in the environme
 
 3. Только после этого пушить в `main` и запускать GitHub Actions деплой.
 
+### 6. Логи разговоров в Neon (`chat_sessions` / `chat_messages`)
+
+Backend пишет каждый ход WebSocket‑чата (`/ws/chat`) в PostgreSQL:
+
+- `chat_sessions` — одна строка на подключение (время старта/окончания, опционально IP и `User-Agent`).
+- `chat_messages` — пары «user» / «assistant» (текст сообщения).
+
+**Первичная настройка (один раз):**
+
+1. Открыть **Neon → SQL Editor**.
+2. Выполнить скрипт из репозитория: `digital-avatar/backend/sql/chat_logs.sql`.
+
+Если таблицы ещё не созданы, в логах Cloud Run могут появляться предупреждения вида `chat_log: create_session failed` — чат при этом продолжит работать, записи в БД просто не будут создаваться.
+
+**Проверка:**
+
+```sql
+SELECT id, started_at, ended_at FROM chat_sessions ORDER BY started_at DESC LIMIT 5;
+SELECT session_id, role, left(content, 80), created_at FROM chat_messages ORDER BY created_at DESC LIMIT 10;
+```
+
