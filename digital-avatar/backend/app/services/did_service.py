@@ -24,17 +24,12 @@ class DIDService:
             "Content-Type": "application/json"
         }
 
-    def _log_debug(self, msg):
-        with open("did_debug.log", "a") as f:
-            f.write(f"{msg}\n")
-
     async def create_stream(self, source_url: str):
         """
         Initialize a WebRTC stream with a source image.
         """
-        self._log_debug(f"Creating stream for {source_url}...")
+        logger.debug(f"Creating stream for {source_url}...")
         if not self.api_key:
-            self._log_debug("ERROR: D-ID API Key missing.")
             logger.error("D-ID API Key missing.")
             return None
             
@@ -48,10 +43,9 @@ class DIDService:
                 response = await client.post(url, json=payload, headers=self._get_headers())
                 response.raise_for_status()
                 data = response.json()
-                self._log_debug(f"Stream Created: {data}")
+                logger.debug(f"Stream Created: {data}")
                 return data
             except Exception as e:
-                self._log_debug(f"Failed to create stream: {e}")
                 logger.error(f"Failed to create stream: {e}")
                 return None
 

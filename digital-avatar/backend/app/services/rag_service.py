@@ -1,7 +1,6 @@
 import os
 import logging
 import re
-import random
 import io
 from pathlib import Path
 from google.oauth2 import service_account
@@ -107,7 +106,7 @@ class RAGService:
             downloader = MediaIoBaseDownload(text_buffer, request)
             done = False
             while not done:
-                status, done = downloader.next_chunk()
+                _, done = downloader.next_chunk()
             text_buffer.seek(0)
             return text_buffer.read().decode('utf-8', errors='ignore')
         
@@ -234,22 +233,31 @@ class RAGService:
                     except Exception as e:
                         logger.error(f"Error reading root file {file_path}: {e}")
 
+    def _select_context(self, query: str, top_n: int = 5) -> str:
+        """Select most relevant documents by keyword overlap with the query."""
+        if not self.knowledge_base:
+            return ""
+        query_words = set(re.findall(r'\w+', query.lower()))
+        if not query_words:
+            return "\n\n".join(self.knowledge_base[:top_n])
+        scored = []
+        for doc in self.knowledge_base:
+            doc_lower = doc.lower()
+            score = sum(1 for w in query_words if w in doc_lower)
+            scored.append((score, doc))
+        scored.sort(key=lambda x: x[0], reverse=True)
+        return "\n\n".join(doc for _, doc in scored[:top_n])
+
     async def generate_response(self, query: str) -> str:
         """Generate a response using Gemini or fallback."""
         try:
             if not self.model:
                 return self._keyword_search_fallback(query)
-            
+
             if not self.knowledge_base:
                 return "Knowledge base is empty. Please add documents to the knowledge_base folder or configure Google Drive."
-            
-            # Prepare context (Increase context window slightly or pick best chunks - simplified for now)
-            # We shuffle slightly or just take enough to fill context. 
-            # Given M-Shape is in root files, we want to ensure they are prioritized or definitely included.
-            # For this simple implementation, we append root files LAST in the list (see above), 
-            # so we should reverse or sample intelligently.
-            # Let's take a larger chunk if possible, or assume simple concatenation is fine for now.
-            context = "\n\n".join(self.knowledge_base[:5]) 
+
+            context = self._select_context(query)
             
             system_prompt = f"""You are Valerii Korobeinikov — Enterprise Architect, Launcher, and Troubleshooter.
 

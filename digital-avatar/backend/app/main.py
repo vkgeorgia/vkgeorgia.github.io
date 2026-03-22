@@ -37,9 +37,9 @@ app.add_middleware(
         "http://127.0.0.1:8000",
         "http://localhost:3000",  # For local development
     ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_credentials=False,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type", "Authorization"],
 )
 
 # Mount static files (Frontend)
@@ -102,7 +102,10 @@ async def chat_endpoint(websocket: WebSocket):
         while True:
             # Receive message from client
             data = await websocket.receive_text()
-            logger.info(f"Received message: {data}")
+            if len(data) > 2000:
+                await websocket.send_text("Your message is too long. Please keep it under 2000 characters.")
+                continue
+            logger.info(f"Received message (len={len(data)})")
 
             if session_id:
                 await asyncio.to_thread(
@@ -113,10 +116,7 @@ async def chat_endpoint(websocket: WebSocket):
             try:
                 response_text = await rag_service.generate_response(data)
             except Exception as e:
-                import traceback
-                with open("debug_log_main.txt", "w") as f:
-                    f.write(traceback.format_exc())
-                logger.error(f"Error generating response: {e}")
+                logger.error(f"Error generating response: {e}", exc_info=True)
                 response_text = "Internal Error: Could not generate response."
 
             if session_id:
