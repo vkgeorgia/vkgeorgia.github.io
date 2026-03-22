@@ -70,14 +70,16 @@
 
         let socket;
         let isOpen = false;
+        let reconnectAttempts = 0;
+        const MAX_RECONNECT_ATTEMPTS = 5;
+        const MAX_MESSAGE_LENGTH = 2000;
 
-        // Helper function to convert URLs to clickable links
-        function linkify(text) {
-            // Regular expression to match URLs
-            const urlRegex = /(https?:\/\/[^\s]+)/g;
-            return text.replace(urlRegex, function (url) {
-                return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: #4a9eff; text-decoration: underline;">${url}</a>`;
-            });
+        function escapeHtml(str) {
+            return str
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
         }
 
         // Toggle chat
@@ -104,6 +106,7 @@
 
             socket.onopen = () => {
                 console.log('Connected to AI Avatar');
+                reconnectAttempts = 0;
                 updateStatus('✅ AI Active', 'connected');
             };
 
@@ -121,8 +124,14 @@
 
             socket.onclose = () => {
                 console.log('Disconnected from AI Avatar');
-                updateStatus('❌ Disconnected', 'error');
-                setTimeout(connectWebSocket, 3000);
+                if (reconnectAttempts < MAX_RECONNECT_ATTEMPTS) {
+                    const delay = Math.min(1000 * Math.pow(2, reconnectAttempts), 30000);
+                    reconnectAttempts++;
+                    updateStatus(`🔄 Reconnecting (${reconnectAttempts}/${MAX_RECONNECT_ATTEMPTS})...`, 'connecting');
+                    setTimeout(connectWebSocket, delay);
+                } else {
+                    updateStatus('❌ Connection failed. Reload the page to retry.', 'error');
+                }
             };
 
             socket.onerror = (error) => {
@@ -137,16 +146,32 @@
         }
 
         function parseMarkdown(text) {
-            // First, convert plain URLs to clickable links
-            text = text.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: #4a9eff; text-decoration: underline;">$1</a>');
+            // Escape HTML first to prevent XSS
+            let t = escapeHtml(text);
 
-            // Then apply markdown formatting
-            return text
-                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" style="color: #4a9eff; text-decoration: underline;">$1</a>')
-                .replace(/^[\*\-] (.+)$/gm, '<li>$1</li>')
-                .replace(/(<li>.*<\/li>\s*)+/gs, '<ul>$&</ul>')
-                .replace(/\n/g, '<br>');
+            // Bold: **text**
+            t = t.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+            // Markdown links: [label](https://...)
+            t = t.replace(
+                /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+                '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:#4a9eff;text-decoration:underline">$1</a>'
+            );
+
+            // Plain URLs not already inside an href attribute
+            t = t.replace(
+                /(?<!href=")(https?:\/\/[^\s&<>"]+)/g,
+                '<a href="$1" target="_blank" rel="noopener noreferrer" style="color:#4a9eff;text-decoration:underline">$1</a>'
+            );
+
+            // List items
+            t = t.replace(/^[*\-] (.+)$/gm, '<li>$1</li>');
+            t = t.replace(/(<li>[\s\S]*?<\/li>)+/g, '<ul>$&</ul>');
+
+            // Newlines
+            t = t.replace(/\n/g, '<br>');
+
+            return t;
         }
 
         function addMessage(text, sender) {
@@ -166,6 +191,11 @@
         function sendMessage() {
             const text = input.value.trim();
             if (!text) return;
+
+            if (text.length > MAX_MESSAGE_LENGTH) {
+                addMessage(`Message is too long (max ${MAX_MESSAGE_LENGTH} characters).`, 'bot');
+                return;
+            }
 
             addMessage(text, 'user');
 
