@@ -37,6 +37,21 @@
       return;
     }
 
+    // Summary stats
+    const years = items.map((p) => p.year_start).filter(Boolean);
+    const minYear = years.length ? Math.min(...years) : null;
+    const maxYear = years.length ? Math.max(...years) : null;
+    const techs = [...new Set(items.flatMap((p) => p.technologies || []))];
+
+    const stats = document.createElement('div');
+    stats.className = 'projects-stats';
+    const yearRange = minYear ? (minYear === maxYear ? `${minYear}` : `${minYear}–${maxYear}`) : null;
+    const statParts = [`${items.length} project${items.length !== 1 ? 's' : ''}`];
+    if (yearRange) statParts.push(yearRange);
+    if (techs.length) statParts.push(techs.slice(0, 5).join(', ') + (techs.length > 5 ? '…' : ''));
+    stats.textContent = statParts.join(' · ');
+    container.appendChild(stats);
+
     const list = document.createElement('div');
     list.className = 'projects-list';
 
@@ -75,6 +90,7 @@
     });
 
     container.innerHTML = '';
+    container.appendChild(stats);
     container.appendChild(list);
   } catch (e) {
     console.error(e);

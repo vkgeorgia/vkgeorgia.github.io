@@ -55,8 +55,9 @@ title: "Digital Avatar & Knowledge Base Roadmap"
 - [x] Обновить layout `page` так, чтобы он пробрасывал в `<body>` тип страницы и ключ фильтра (`page_type`, `page_key`).
 - [x] Создать общий скрипт `assets/js/projects-dynamic.js`, который по `page_type/page_key` делает `fetch` к backend’у и рендерит список проектов.
 - [x] Перевести пилотную страницу `projects/retail.md` на динамическую модель (без захардкоженного списка проектов).
-- [ ] Масштабировать паттерн на все `industries/*.md` (7 отраслей), `domains/*.md` (11 доменов), `roles/*.md`.
-- [ ] Добавить на каждой странице блок "Суммарный опыт": кол-во проектов, диапазон лет, список ключевых технологий — формируется автоматически из `/api/projects?industry=...`.
+- [x] Масштабировать паттерн на все `industries/*.md` (8 отраслей) и `domains/*.md` (11 доменов) — выполнено Mar 2026.
+- [x] Добавить на каждой странице блок "Суммарный опыт": кол-во проектов, диапазон лет, список ключевых технологий — `assets/projects-dynamic.js` — выполнено Mar 2026.
+- [ ] Масштабировать паттерн на `roles/*.md`.
 
 ## 4. Перенос метаданных проектов и контактов в Neon
 
@@ -120,31 +121,33 @@ title: "Digital Avatar & Knowledge Base Roadmap"
 
 ## 10. Архитектурные улучшения backend (из код-ревью Mar 2026)
 
-### 10.1. Connection pooling для Neon
+### 10.1. Connection pooling для Neon — выполнено (Mar 2026)
 
 **Проблема:** каждый HTTP-запрос и шаг WebSocket открывает новое соединение с Neon (~100–300 ms cold-start на Serverless Postgres).
 
-- [ ] Заменить `get_db_connection()` в `app/db.py` на `psycopg_pool.ConnectionPool` (sync) или `AsyncConnectionPool` (async).
-- [ ] Настроить `min_size=1`, `max_size=5` — достаточно для текущей нагрузки.
-- [ ] Убедиться, что пул инициализируется при старте FastAPI (`lifespan`), а не при первом запросе.
+- [x] Заменить `get_db_connection()` в `app/db.py` на `psycopg_pool.ConnectionPool`.
+- [x] Настроить `min_size=1`, `max_size=5`.
+- [x] Пул инициализируется при старте FastAPI через `lifespan` context manager.
+- [x] `psycopg-pool` добавлен в `requirements.txt`.
 
-### 10.2. История разговора в контексте Gemini
+### 10.2. История разговора в контексте Gemini — выполнено (Mar 2026)
 
-**Проблема:** `generate_response(data)` получает только последнее сообщение. ИИ не помнит предыдущих ходов разговора в рамках одной сессии.
+**Проблема:** `generate_response(data)` получал только последнее сообщение. ИИ не помнил предыдущих ходов.
 
-- [ ] Накапливать историю сообщений per-session в памяти (список `{"role": "user/assistant", "content": ...}`) в `chat_endpoint` WebSocket-хэндлере.
-- [ ] Передавать историю в `generate_response` и включать в промпт к Gemini (последние N сообщений, чтобы не превышать контекстное окно).
-- [ ] Ограничить глубину истории в контексте (например, последние 10 ходов).
+- [x] Накапливать историю per-session в памяти в `chat.py` WebSocket-хэндлере.
+- [x] Передавать историю в `generate_response(query, history=history)` и включать в промпт к Gemini.
+- [x] Глубина истории ограничена `MAX_HISTORY_TURNS=10` (последние 20 сообщений).
 
-### 10.3. Разбить `main.py` на FastAPI routers
+### 10.3. Разбить `main.py` на FastAPI routers — выполнено (Mar 2026)
 
-**Проблема:** один файл содержит WebSocket-чат, REST API проектов, REST API контактов и диагностические эндпоинты.
+**Проблема:** один файл содержал WebSocket-чат, REST API проектов, REST API контактов и диагностические эндпоинты.
 
-- [ ] Выделить `app/routers/chat.py` — `/ws/chat`.
-- [ ] Выделить `app/routers/projects.py` — `/api/projects`, `/api/projects/{code}`.
-- [ ] Выделить `app/routers/contacts.py` — `/api/contacts`, `/api/contacts/{contact_id}`.
-- [ ] Выделить `app/routers/health.py` — `/api/health`, `/api/internal/telegram-test`, `/`.
-- [ ] Зарегистрировать роутеры в `main.py` через `app.include_router(...)`.
+- [x] Выделен `app/routers/chat.py` — `/ws/chat`.
+- [x] Выделен `app/routers/projects.py` — `/api/projects`, `/api/projects/{code}`.
+- [x] Выделен `app/routers/contacts.py` — `/api/contacts`, `/api/contacts/{contact_id}`.
+- [x] Выделен `app/routers/health.py` — `/api/health`, `/api/internal/telegram-test`, `/`.
+- [x] Добавлен `app/deps.py` — singleton `RAGService`.
+- [x] Роутеры зарегистрированы в `main.py` через `app.include_router(...)`.
 
 ### 10.4. Векторный поиск (pgvector) для RAG
 
