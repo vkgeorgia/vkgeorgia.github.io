@@ -3,19 +3,16 @@ layout: page
 title: "Product Management"
 description: "Projects in Product Management"
 permalink: /domains/product-management/
+page_type: "domain"
+page_key: "Product Management"
 ---
 
 ## Product Management
 
-Projects involving product strategy, portfolio management, and product lifecycle management.
-
-### Projects
-
-This page will be populated with relevant projects. Currently being mapped from the knowledge base.
-
----
+<div id="projects-list">Loading projects...</div>
 
 <p align="center" style="font-size: 14px;">
-  For a business overview, visit my consulting page:<br>
-  <a href="https://vkconsulting.crd.co/" target="_blank">vkconsulting.crd.co</a>
+  📧 <a href="mailto:vkgeorgia@icloud.com">vkgeorgia@icloud.com</a> |
+  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> |
+  📅 <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
 </p>

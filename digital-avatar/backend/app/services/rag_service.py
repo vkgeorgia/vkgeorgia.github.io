@@ -3,6 +3,7 @@ import logging
 import re
 import io
 from pathlib import Path
+from typing import Dict, List, Optional
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
@@ -248,8 +249,16 @@ class RAGService:
         scored.sort(key=lambda x: x[0], reverse=True)
         return "\n\n".join(doc for _, doc in scored[:top_n])
 
-    async def generate_response(self, query: str) -> str:
-        """Generate a response using Gemini or fallback."""
+    async def generate_response(
+        self, query: str, history: Optional[List[Dict[str, str]]] = None
+    ) -> str:
+        """Generate a response using Gemini or fallback.
+
+        Args:
+            query: The current user message.
+            history: Full conversation so far, including the current user message as last item.
+                     Each entry: {"role": "user"|"assistant", "content": "..."}
+        """
         try:
             if not self.model:
                 return self._keyword_search_fallback(query)
@@ -258,7 +267,16 @@ class RAGService:
                 return "Knowledge base is empty. Please add documents to the knowledge_base folder or configure Google Drive."
 
             context = self._select_context(query)
-            
+
+            # Build conversation history section (exclude current message — it's in query)
+            history_section = ""
+            if history and len(history) > 1:
+                lines = []
+                for msg in history[:-1]:
+                    label = "User" if msg["role"] == "user" else "Assistant"
+                    lines.append(f"{label}: {msg['content']}")
+                history_section = "\nConversation so far:\n" + "\n".join(lines) + "\n"
+
             system_prompt = f"""You are Valerii Korobeinikov — Enterprise Architect, Launcher, and Troubleshooter.
 
 YOUR OPERATING PRINCIPLES:
@@ -317,7 +335,7 @@ Remember: You are Valerii. You reduce entropy."""
 
             # Use old SDK
             response = await self.model.generate_content_async(
-                f"{system_prompt}\n\nUser: {query}\nAssistant:"
+                f"{system_prompt}{history_section}\nUser: {query}\nAssistant:"
             )
             
             return response.text

@@ -1,24 +1,45 @@
 import os
-from typing import Any
+import logging
+from typing import Optional
 
-import psycopg
 from psycopg.rows import dict_row
+from psycopg_pool import ConnectionPool
 from dotenv import load_dotenv
 
-
-# Load environment variables (NEON_DATABASE_URL, etc.)
 load_dotenv()
 
-DATABASE_URL = os.getenv("NEON_DATABASE_URL")
+logger = logging.getLogger(__name__)
 
+DATABASE_URL = os.getenv("NEON_DATABASE_URL")
 if not DATABASE_URL:
     raise RuntimeError("NEON_DATABASE_URL is not set. Please configure it in the environment.")
 
+_pool: Optional[ConnectionPool] = None
 
-def get_db_connection() -> psycopg.Connection:
-    """
-    Returns a new Postgres connection to the Neon database.
-    Uses dict_row so rows can be accessed by column name.
-    """
-    return psycopg.connect(DATABASE_URL, row_factory=dict_row)
 
+def init_pool() -> None:
+    """Open the connection pool. Call once at application startup (lifespan)."""
+    global _pool
+    _pool = ConnectionPool(
+        DATABASE_URL,
+        min_size=1,
+        max_size=5,
+        kwargs={"row_factory": dict_row},
+    )
+    logger.info("DB connection pool opened (min=1, max=5)")
+
+
+def close_pool() -> None:
+    """Close the pool gracefully. Call at application shutdown."""
+    global _pool
+    if _pool is not None:
+        _pool.close()
+        _pool = None
+        logger.info("DB connection pool closed")
+
+
+def get_pool() -> ConnectionPool:
+    """Return the active pool. Raises if init_pool() was not called."""
+    if _pool is None:
+        raise RuntimeError("DB pool is not initialized. Call db.init_pool() first.")
+    return _pool
