@@ -7,6 +7,11 @@ from app import db
 router = APIRouter(prefix="/api")
 
 
+def _to_slug(value: str) -> str:
+    """Convert a human-readable filter value to a slug ('Card Processing' → 'card-processing')."""
+    return value.strip().lower().replace(" ", "-")
+
+
 def _row_to_project(row: Dict[str, Any]) -> Dict[str, Any]:
     return {
         "id": row.get("id"),
@@ -42,17 +47,17 @@ def api_projects(
     params: List[Any] = []
 
     if industry:
-        where.append("LOWER(industry) = LOWER(%s)")
-        params.append(industry)
+        where.append("""id IN (SELECT project_id FROM project_industries WHERE slug = LOWER(%s))""")
+        params.append(_to_slug(industry))
     if domain:
-        where.append("LOWER(domain) = LOWER(%s)")
-        params.append(domain)
+        where.append("""id IN (SELECT project_id FROM project_domains WHERE slug = LOWER(%s))""")
+        params.append(_to_slug(domain))
     if employer:
         where.append("LOWER(employer) = LOWER(%s)")
         params.append(employer)
     if role:
-        where.append('LOWER("role") = LOWER(%s)')
-        params.append(role)
+        where.append("""id IN (SELECT project_id FROM project_roles WHERE slug = LOWER(%s))""")
+        params.append(_to_slug(role))
     if code:
         where.append("code = %s")
         params.append(code)

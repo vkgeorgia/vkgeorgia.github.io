@@ -3,19 +3,16 @@ layout: page
 title: "Project Manager"
 description: "Projects where I worked as Project Manager"
 permalink: /roles/project-manager/
+page_type: "role"
+page_key: "project-manager"
 ---
 
 ## Project Manager
 
-Projects where I served in the role of Project Manager, leading teams and delivering complex IT initiatives.
-
-### Projects
-
-This page will be populated with relevant projects. Currently, role metadata is being added to the knowledge base.
-
----
+<div id="projects-list">Loading projects...</div>
 
 <p align="center" style="font-size: 14px;">
-  For a business overview, visit my consulting page:<br>
-  <a href="https://vkconsulting.crd.co/" target="_blank">vkconsulting.crd.co</a>
+  📧 <a href="mailto:vkgeorgia@icloud.com">vkgeorgia@icloud.com</a> |
+  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> |
+  📅 <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
 </p>

@@ -1,7 +1,6 @@
-# Enterprise Architect — Projects by Role
+# All Projects — Full Index
 
-Role tag: `enterprise-architect`  
-Projects: 26
+Total: 44 projects
 
 ### Private Blockchain POC – National Stablecoin (EPM-AST)
 - **Period:** 2025
@@ -169,6 +168,39 @@ A solution blueprint, capability map, and prioritized roadmap were established, 
 ## Lessons Learned
 Business model shifts are rarely blocked by technology alone; they are blocked by unclear responsibility boundaries. A good blueprint makes those boundaries explicit before the organization starts buying or building.
 
+### Product Domain Transformation (BTC-ARCO (2))
+- **Period:** 2024–2025
+- **Role:** Product Domain Architect
+- **Employer:** EPAM
+- **Client:** BTC
+- **Industry:** Telecom
+- **Domain:** Product Management
+- **Domain tags:** architecture
+- **Industry tags:** telecom, consulting
+- **Role tags:** product-domain-architect
+
+**Key Result:** Reorganized product domain, created plan, initiated vendor selection
+
+# Product domain restructuring for a digital marketplace direction
+
+## Context
+BTC continued its transformation toward a digital services marketplace, but its product domain remained shaped around traditional telecom offerings. The catalog was cluttered, concepts of product and offer were mixed, partner onboarding was not supported, and both configuration and pricing were inflexible.
+
+## The Decision Challenge
+The decision challenge was how to redesign the product domain so that it supports marketplace behaviors (partner products, bundling, flexible configuration and pricing) without destabilizing existing operations. A wrong direction would either preserve telecom-era constraints or introduce a complex model the organization could not operate.
+
+## Constraints and Trade-offs
+The organization had low domain maturity, and immediate pain required pragmatic near-term improvements alongside a longer-term direction. Flexibility increases model complexity and governance requirements. Partner enablement introduces new responsibilities for onboarding, quality control, and lifecycle management.
+
+## Architectural / Strategic Perspective
+The work structured the domain around clear concepts and responsibilities and compared solution options through a capability model. The emphasis was on how the organization would reason about products, offers, configurations, bundles, and pricing rules—so that both technology choices and operating processes align with marketplace strategy.
+
+## Outcome and Impact
+A product domain concept and a change plan were established, and vendor selection activities for catalog and marketplace solutions were initiated. The organization gained a clearer, strategy-aligned direction for improving product manageability and enabling ecosystem growth.
+
+## Lessons Learned
+Product domain transformations succeed when the organization stops treating the catalog as a list and starts treating it as a model of decisions—where governance and definitions matter as much as systems.
+
 ### Architecture Analysis for Fuel Retail (ADNO-BCP)
 - **Period:** 2024–2025
 - **Role:** Enterprise Architect
@@ -234,6 +266,39 @@ A target-state information architecture and transformation roadmap were establis
 
 ## Lessons Learned
 Marketplace transformations succeed when information architecture is treated as a coordination mechanism across domains—so teams can move quickly without diverging on definitions.
+
+### Autorisation Cockpit (DANF-ACO)
+- **Period:** 2023–2024
+- **Role:** Solution Architect
+- **Employer:** EPAM
+- **Client:** Danfoss
+- **Industry:** Manufacturing
+- **Domain:** AAA
+- **Domain tags:** architecture
+- **Industry tags:** manufacturing, consulting
+- **Role tags:** business-analyst, solution-architect, product-manager
+
+**Key Result:** A clear implementation roadmap and a capability map were developed, enabling the client to select the right vendor and launch development with a clear, cost-effective plan that met business needs.
+
+# Authorization cockpit planning under MVP time pressure
+
+## Context
+Danfoss needed a new authorization management application for users and partners, with an MVP expected within the year. The initiative required clarity on scope, priorities, and how the solution fits the broader identity and access landscape.
+
+## The Decision Challenge
+The decision challenge was to define an MVP that is meaningful and safe: enough capability to support partner authorization needs, but not so much that it becomes a multi-year program. Vendor choice also depended on an explicit view of required capabilities and the organization’s constraints.
+
+## Constraints and Trade-offs
+Time-to-MVP limited how much could be built or standardized in the first iteration. Reuse of existing UI components reduced delivery risk but constrained design flexibility. Centralization improves governance, but it increases dependency on shared services and decision-making speed.
+
+## Architectural / Strategic Perspective
+The work focused on capability-based reasoning: what authorization decisions must be supported, what context is required, and how policy governance should work over time. A prioritized backlog and roadmap were used to make trade-offs explicit for both vendor selection and internal planning.
+
+## Outcome and Impact
+A capability map, prioritized scope, and implementation roadmap were established, supporting a cost-effective vendor selection and enabling the transition from uncertainty to a controlled build plan.
+
+## Lessons Learned
+Identity initiatives fail when MVP scope is defined by features; they succeed when MVP is defined by the minimum decision set the organization must control safely.
 
 ### Single Profile Concept (EPM-SPC)
 - **Period:** 2022
@@ -746,6 +811,72 @@ A new subdivision was created with analysts, project managers, and technical spe
 ## Lessons Learned
 Data organizations succeed when they are designed as product functions—with clear outcomes and decision rights—rather than as a collection of tools and experiments.
 
+### B2B Mailing Automation (RTK-B2B)
+- **Period:** 2017–2019
+- **Role:** Business Analyst
+- **Employer:** Rostelecom
+- **Client:** Rostelecom
+- **Industry:** Telecom
+- **Domain:** Data Analytics, Digital Marketing
+- **Domain tags:** marketing-automation, omni-channel
+- **Industry tags:** telecom, telecom
+- **Role tags:** business-analyst, solution-architect
+
+**Key Result:** Architecture for a multi-channel communication system for B2B interaction was developed. Documentation was handed over for implementation, which led to increased additional sales and customer satisfaction.
+
+# B2B multichannel communications capability for targeted outreach
+
+## Context
+Rostelecom’s communication with client organizations lacked a consistent mechanism for segmentation and targeted outreach. Without a managed approach, outreach was either broad and noisy or slow and manual, limiting cross-sell and retention opportunities.
+
+## The Decision Challenge
+The decision was whether to treat B2B communications as campaign-by-campaign work or to establish a reusable capability with clear segmentation rules and controlled distribution. A poor decision would either increase operational burden (if overly manual) or introduce communication risk (if automated without governance).
+
+## Constraints and Trade-offs
+B2B communications require careful audience definition, approvals, and traceability to avoid damaging relationships. Scaling outreach depends on standardizing rules for recipient selection, content approval, and channel execution, but standardization can reduce flexibility for unique account situations.
+
+## Architectural / Strategic Perspective
+The solution was structured around a governed communication pipeline: how segments are defined, where recipient data is sourced, how approvals are recorded, and how distribution is run across channels. Documentation was treated as a risk-reduction mechanism—making rules explicit so implementation effort and misinterpretation risk drop.
+
+## Outcome and Impact
+An architecture and documentation package for a multichannel B2B communication system clarified how targeted mailings could be run safely. After implementation, the organization gained the ability to run segmented outreach that supported additional sales and improved customer experience.
+
+## Lessons Learned
+Communication automation only scales when the organization is willing to formalize its rules—especially approvals and recipient logic—so that speed does not come at the cost of trust.
+
+### Informing clients about the debt on their account (SPDZ) (RTK-SPDZ)
+- **Period:** 2017–2019
+- **Role:** Solution Architect
+- **Employer:** Rostelecom
+- **Client:** Rostelecom
+- **Industry:** Telecom
+- **Domain:** Account Management
+- **Domain tags:** finance, omni-channel, process-automation
+- **Industry tags:** telecom, telecom
+- **Role tags:** business-analyst, solution-architect
+
+**Key Result:** A unified approach for managing client notifications was proposed. A solution architecture was created, and documentation was handed over for implementation, which significantly reduced accounts receivable (by three times) and brought significant economic benefits.
+
+# Debtor notifications as a lever to reduce accounts receivable
+
+## Context
+Rostelecom faced growing accounts receivable, reducing operational flexibility and tying up funds. The existing debtor-informing practice relied on manual reconciliation statements and email correspondence, which was slow, inconsistent, and expensive to run.
+
+## The Decision Challenge
+The decision challenge was whether to treat receivables as a purely financial control problem or to address it as a communication and behavioral problem: timely, accurate notifications that change client behavior. If approached incorrectly, automation could increase disputes and dissatisfaction, while manual processes could not scale to the needed coverage.
+
+## Constraints and Trade-offs
+Accuracy and timing were both critical: wrong or late notifications undermine trust and can increase operational load. The organization needed a consistent set of notification rules without building a fragile web of exceptions. The solution also had to reduce manual effort in reconciliation and paperwork, not shift it elsewhere.
+
+## Architectural / Strategic Perspective
+The approach framed notifications as a governed service: clear event triggers (debt conditions), standardized content rules, and traceability from notification back to financial facts. This reduced ambiguity in how debt is determined and ensured the communication process remained auditable.
+
+## Outcome and Impact
+A unified notification approach and solution architecture were established and used for implementation. Accounts receivable decreased threefold, and the organization reduced time spent on reconciliation and paper/email handling, producing a material economic effect.
+
+## Lessons Learned
+Receivables reduction is often achieved not by stronger collections, but by making the organization’s expectations legible and timely—so that paying becomes the default, not a negotiation.
+
 ### O2O Interaction (RTK-O2O)
 - **Period:** 2017–2019
 - **Role:** Solution Architect
@@ -778,6 +909,209 @@ A concept and agreed direction for inter-operator interaction architecture were 
 
 ## Lessons Learned
 Multi-party settlements improve when reconciliation is treated as a shared model—with explicit events, obligations, and traceability across parties—rather than as endless exception handling.
+
+### Data Management Platform (DMP) (RTK-DMP)
+- **Period:** 2017–2019
+- **Role:** Enterprise Architect, Solution Architect
+- **Employer:** Rostelecom
+- **Client:** Rostelecom
+- **Industry:** Telecom
+- **Domain:** Data Management, Digital Marketing
+- **Technologies:** Big Data, Hadoop
+- **Domain tags:** adtech-dataplatforms, analytics, marketing-automation
+- **Industry tags:** telecom, telecom
+- **Role tags:** business-analyst, solution-architect
+
+**Key Result:** Architecture for a DMP was created and a business-driving implementation was proposed, which allowed the company to launch several new profitable businesses and get a foundation for building a business for years to come.
+
+# Data management platform architecture to productize telecom data
+
+## Context
+Rostelecom generated large volumes of data through core telecom services. The organization saw the opportunity to turn that data into internal decision support and external products, but that required a coherent infrastructure and operating model beyond ad-hoc analytics.
+
+## The Decision Challenge
+The decision was whether to scale data usage through a platform approach or through isolated solutions for each use case. Isolated solutions can produce quick wins, but they accumulate duplicated onboarding work, inconsistent definitions, and growing governance risk. A platform approach requires higher upfront clarity and prioritization.
+
+## Constraints and Trade-offs
+Different consumers demand different SLAs and governance controls. A generic platform without prioritization risks becoming an expensive “warehouse of everything”; a narrow platform risks constraining future product ideas. The platform also needed to align with the operating reality of the Data Lab function.
+
+## Architectural / Strategic Perspective
+The work structured the future platform across business architecture, information concepts, and the data layer—explicitly connecting data suppliers, processing responsibilities, and consumption patterns. The emphasis was on making the roadmap practical: what must be standardized early, and what can evolve as products prove demand.
+
+## Outcome and Impact
+An architectural package for a DMP and a business-driven implementation direction were established and handed over for implementation, enabling the organization to pursue multiple data-based products and build a longer-term foundation for monetizing insights.
+
+## Lessons Learned
+The most valuable data platform outcome is not a repository; it is a repeatable way to onboard data and turn it into governed products without reinventing definitions every time.
+
+### Proteus - Data Management System (Traffic analyser, segmentation, targeting, recommendation) (RTK-PROTEUS)
+- **Period:** 2016–2018
+- **Role:** Business Analyst
+- **Employer:** Rostelecom.Restream
+- **Client:** Rostelecom.Restream
+- **Industry:** Telecom
+- **Domain:** Data Analytics, Digital Marketing
+- **Technologies:** Web, Cisco, Java
+- **Domain tags:** adtech-dataplatforms, analytics, marketing-automation, omni-channel
+- **Industry tags:** telecom, telecom
+- **Role tags:** business-analyst
+
+**Key Result:** The system was launched and as a result allowed the creation of a new business within the company, generating additional profit, and provided capabilities for targeted advertising messages and a recommendation system.
+
+# Traffic analytics and targeting capability for new revenue streams
+
+## Context
+Rostelecom.Restream sought profit growth and considered targeted advertising on owned resources as a viable path. That direction required turning user traffic and interest signals into segments and actionable targeting decisions, not just collecting logs.
+
+## The Decision Challenge
+The decision was how to structure a capability that is commercially useful while remaining defensible: segmenting users and inferring interests can create business value, but it also amplifies risks around data quality, explainability, and operational governance. A weak foundation would produce targeting that cannot be trusted and a business model that does not scale.
+
+## Constraints and Trade-offs
+Multiple analytical steps (identity resolution, segmentation, interest graph) introduce compounding error. Increasing sophistication improves potential uplift but raises operational and reputational risk if the logic is opaque. The system needed to support both business needs (targeting and recommendations) and the organization’s ability to govern and evolve the capability.
+
+## Architectural / Strategic Perspective
+The work framed the solution as a decision pipeline: from traffic signals to identity to segment membership to targeting actions. The focus was on clear module boundaries, explicit requirements for data inputs/outputs, and traceability—so commercial decisions remain explainable even as models and rules evolve.
+
+## Outcome and Impact
+A traffic analysis and targeting system went live, enabling a new targeted advertising business line and supporting recommendation capabilities. The organization gained a scalable foundation for monetizing owned traffic through segmented communication.
+
+## Lessons Learned
+Monetization of user data is less about algorithms than about governance: when the organization can explain, control, and iterate the logic safely, revenue becomes repeatable rather than opportunistic.
+
+### Interface layer
+(information presentation system, data marts) (RTK-DASH)
+- **Period:** 2016–2018
+- **Role:** Business Analyst
+- **Employer:** Rostelecom.Restream
+- **Client:** Rostelecom.Restream
+- **Industry:** Telecom
+- **Domain:** Analytics
+- **Technologies:** Big Data, BI, DWH
+- **Domain tags:** analytics
+- **Industry tags:** telecom, telecom
+- **Role tags:** business-analyst
+
+**Key Result:** Analysis and audit of the existing solution were performed, and documentation for changes to the information presentation system and data marts was prepared.
+
+# Audit of reporting interface layer and data marts
+
+## Context
+Rostelecom.Restream depended on an interface layer and data marts to make operational and analytical data usable for business teams. The existing solution required review: misalignment with business needs, performance issues, or unclear ownership patterns can turn reporting into a bottleneck.
+
+## The Decision Challenge
+The decision was how to stabilize information access: whether to keep extending the existing layer with tactical fixes or to re-establish a coherent model of what data products exist, who owns them, and how they are consumed. A poor approach would prolong ambiguity and raise the cost of every new report or change request.
+
+## Constraints and Trade-offs
+Business units depend on reporting while the underlying data landscape continues to evolve. Increasing rigor in data marts improves quality and performance, but it also requires tighter governance and a clearer data lifecycle. The work had to produce actionable documentation that engineering teams could use, not just observations.
+
+## Architectural / Strategic Perspective
+The audit focused on system boundaries, data flows, and the mapping between business questions and data products. The goal was to reduce “unknowns”: clarify bottlenecks, document dependencies, and establish requirements for change that align business intent with technical feasibility.
+
+## Outcome and Impact
+A comprehensive analysis of the current solution and a documentation package for required changes were prepared, creating a stable basis for improving data accessibility and reducing risk in subsequent enhancements.
+
+## Lessons Learned
+Reporting platforms fail quietly: not by crashing, but by making every new decision slower. Clear data product boundaries and ownership are often the highest-leverage fix.
+
+### Data Lake (Presale) (RTK-LAKE)
+- **Period:** 2016–2018
+- **Role:** Business Analyst
+- **Employer:** Rostelecom.Restream
+- **Client:** Gazprom Neft
+- **Industry:** Oil & Gas
+- **Domain:** Data Management
+- **Domain tags:** analytics
+- **Industry tags:** oil-gas, telecom
+- **Role tags:** business-analyst
+
+**Key Result:** Successfully conducted a presale for a large oil and gas enterprise, including analyzing customer requirements, proposing and presenting a solution, and defending it in a competition.
+
+# Data lake presale and solution defense for an oil & gas enterprise
+
+## Context
+Gazprom Neft needed to work with large, heterogeneous datasets across fuel supply and sales and related products. Existing approaches struggled with scale and variety, limiting the organization’s ability to extract insights and identify new profit opportunities.
+
+## The Decision Challenge
+The decision challenge was to frame a “data lake” not as a technology trend but as a coherent capability with clear business cases, costs, and implementation risks. Presale success depended on translating data ambitions into a defendable architecture and a credible delivery path under competitive scrutiny.
+
+## Constraints and Trade-offs
+Large data initiatives fail when they promise universal value without prioritization. The proposal needed to balance platform generality with concrete use cases and to set expectations around governance, data onboarding effort, and time-to-value. Competitive tender conditions raised the bar for clarity and justification.
+
+## Architectural / Strategic Perspective
+The solution was structured around sources, ingestion patterns, storage and processing responsibilities, and consumption paths for analytics. Emphasis was placed on explaining how the platform would be governed and how it would enable business units to move from data capture to repeatable insight generation.
+
+## Outcome and Impact
+Customer requirements were analyzed, a competitive solution concept and proposal were prepared and presented, and the solution was successfully defended in a tender process. The presale work established a strong basis for subsequent implementation discussions.
+
+## Lessons Learned
+In presale for data platforms, credibility comes from acknowledging constraints up front—especially governance and onboarding effort—and showing how value emerges in stages rather than all at once.
+
+### Project 'Storage' (RTK-SDS)
+- **Period:** 2016
+- **Role:** Enterprise Architect, Business Analyst
+- **Employer:** Rostelecom.Restream
+- **Client:** Rostelecom.Restream
+- **Industry:** Telecom
+- **Domain:** SDS, Data Storage
+- **Domain tags:** analytics, architecture
+- **Industry tags:** telecom, telecom
+- **Role tags:** business-analyst
+
+**Key Result:** Customer requirements were analysed, and a balanced solution for enterprise data storage (SDS - Software Defined Storage) was proposed, which allowed the organisation to make the right choice, enhance data reliability, availability, and processing speed, and save significant funds.
+
+# Enterprise storage option selection under mixed data needs
+
+## Context
+Rostelecom.Restream worked with growing data volumes and a mix of structured and unstructured datasets. Different departments had different views on storage and processing needs, which created fragmentation risk and made “one-size-fits-all” decisions hard to justify.
+
+## The Decision Challenge
+The decision was how to select an enterprise storage direction that balanced reliability, accessibility, and performance without overpaying or locking the organization into a mismatched approach. The risk of getting it wrong was both financial (unjustified spend) and operational (slow processing, reduced availability, inconsistent practices across teams).
+
+## Constraints and Trade-offs
+Data types had different lifecycles and access patterns, which implied different storage strategies. Centralization improves governance and efficiency, but it can reduce team autonomy if it forces a single model onto all workloads. The selection needed to remain explainable to an architectural committee and actionable for implementation.
+
+## Architectural / Strategic Perspective
+The work organized the problem around data categories and lifecycles, then translated those into requirements and constraints for storage capabilities. Options were evaluated by explicitly comparing advantages and disadvantages, focusing on controllability and fit rather than claiming a universally “best” choice.
+
+## Outcome and Impact
+Balanced storage options were presented with clear trade-offs, enabling a defensible selection. The organization improved expectations around reliability and availability and avoided unjustified costs by aligning storage choices with actual data lifecycles.
+
+## Lessons Learned
+Storage decisions are rarely about capacity; they are about making lifecycle assumptions explicit so that the organization can govern data consistently as volumes and use cases evolve.
+
+### Fleet Management (GAM-CAR5)
+- **Period:** 2015–2017
+- **Role:** Solution Architect, PM
+- **Employer:** Gamma
+- **Client:** CAR5
+- **Industry:** Transport
+- **Domain:** Fleet Management, AWS, Cloud
+- **Technologies:** PHP, Web, 1C, AWS Cloud
+- **Domain tags:** mobility
+- **Industry tags:** transport, consulting, it-services
+- **Role tags:** solution-architect, project-manager
+
+**Key Result:** Delivered an integrated carsharing management system from scratch, including infrastructure migration to AWS Cloud, significantly improving transparency and system reliability.
+
+# Carsharing service launch with cloud-based fleet operations
+
+## Context
+CAR5 planned a carsharing launch from zero, requiring an operational backbone for fleet availability, customer interaction, and integration with in-car devices and external service providers. The viability of the business depended on reliability and the ability to scale with growth in users and vehicles.
+
+## The Decision Challenge
+The central decision was how to design for reliability and scalability before real-world load patterns were known. A minimal build risked rework and fragility under growth; a heavy upfront design risked overinvestment and slow time-to-market.
+
+## Constraints and Trade-offs
+The solution needed dependable signals from vehicles and predictable behavior across multiple external dependencies. Operational transparency mattered as much as features: the business needed to understand what the fleet was doing and why. Moving to a cloud environment improved resilience but introduced new operational disciplines and cost controls.
+
+## Architectural / Strategic Perspective
+The work treated the platform as a coordination system: clear domain boundaries (customer actions, fleet state, payments, device telemetry), explicit integration contracts, and an operating model that anticipates partial failures. The architecture emphasized observability and fault containment so incidents stay localized and operational decisions remain possible during disruptions.
+
+## Outcome and Impact
+A carsharing service went live with web and mobile channels and an integrated fleet management backbone. Cloud-based infrastructure increased reliability and improved operational transparency, creating a scalable base for growth.
+
+## Lessons Learned
+Early-stage platforms succeed when reliability is designed as a business capability—so that the organization can keep making decisions even when parts of the ecosystem misbehave.
 
 ### IoT + Big Data for the Retail Chain (GAM-X5)
 - **Period:** 2015
@@ -813,6 +1147,40 @@ Two architectural options, a vendor evaluation approach, and a phased roadmap we
 ## Lessons Learned
 Predictive maintenance programs are won or lost in the operating model: if stores cannot trust and act on signals consistently, analytics never turns into savings.
 
+### Omnichannel Communications (GAM-VTB)
+- **Period:** 2015–2018
+- **Role:** Business Analyst, Project Manager
+- **Employer:** Gamma
+- **Client:** VTB Pension Fund
+- **Industry:** Finance
+- **Domain:** Digital Marketing
+- **Technologies:** Web, PHP
+- **Domain tags:** omni-channel
+- **Industry tags:** finance, consulting, it-services
+- **Role tags:** business-analyst, project-manager
+
+**Key Result:** The system successfully sent hundreds of thousands of messages per week, reduced message preparation time by 10 times, and enabled event-based mailings to be completed in one day, significantly enhancing communication efficiency and quality.
+
+# Omnichannel client notifications under compliance and volume constraints
+
+## Context
+VTB Pension Fund needed to communicate with clients reliably and at scale. Communication processes were fragmented: no unified recipient lists, limited segmentation, and inconsistent scenarios, which made timely and accurate notifications difficult.
+
+## The Decision Challenge
+The decision was whether to keep operating as a set of ad-hoc mailings or to establish a managed communication capability across channels. The cost of getting it wrong was both operational (missed or late messages at scale) and reputational, especially when clients depend on timely information about their accounts.
+
+## Constraints and Trade-offs
+Multiple channels introduced compliance, deliverability, and consistency constraints. Higher automation improved speed but required strict governance around templates, approvals, and segmentation rules to prevent errors. The organization needed a process that remained understandable to business owners, not only to IT.
+
+## Architectural / Strategic Perspective
+The work approached communication as a governed pipeline: audience definition, scenario design, message templating, approvals, and controlled execution across channels. The goal was predictable behavior—traceable rules, repeatable campaigns, and clear ownership—so volume could increase without increasing failure rates.
+
+## Outcome and Impact
+The system supported hundreds of thousands of messages per week. Message preparation time decreased tenfold, and event-based mailings that previously took up to two weeks were completed in one day, improving communication quality and reducing process confusion.
+
+## Lessons Learned
+At scale, “messaging” is not content production; it is a decision system where governance, segmentation rules, and operational discipline determine whether automation is safe.
+
 ### Fuel Station Management System (GAM-ZG)
 - **Period:** 2015–2019
 - **Role:** Solution Architect, Project Manager
@@ -846,6 +1214,244 @@ A fuel station management system was put in place with the required integrations
 
 ## Lessons Learned
 In retail operations, modernization succeeds when migration is designed as a business continuity plan—with explicit risk containment and verifiable data integrity at each step.
+
+### B2B Fuel Payment System (OILPC-KSBR)
+- **Period:** 2012–2015
+- **Role:** Project Manager, Business Analyst, Solution Architect
+- **Employer:** OilPC
+- **Client:** Gazprom Neft
+- **Industry:** Oil & Gas
+- **Domain:** Card Processing, Retail, Fuel Retail
+- **Technologies:** Java, PHP, Oracle DB
+- **Domain tags:** loyalty
+- **Industry tags:** oil-gas, retail, it-services, finance
+- **Role tags:** business-analyst, solution-architect, project-manager
+
+**Key Result:** Created a platform for cashless settlement. Reduced fraud by replacing paper fuel coupons with cards. Automated cashless settlements with 70,000 legal entities; reduced reconciliation time 6x, cut fraud losses 10x; received a client commendation.
+
+# Corporate cashless fuel payments with fraud reduction
+
+## Context
+Gazprom Neft managed cashless fuel payments for a very large base of corporate customers (70,000+ legal entities). Paper fuel coupons and manual reconciliation created operational drag and opened space for fraud, producing direct losses and slow settlement cycles.
+
+## The Decision Challenge
+The core decision was whether to keep improving controls around a paper-based model or to move the settlement mechanism onto an instrument that supports traceability and enforceable rules. A wrong choice risked continued fraud exposure and an ever-growing reconciliation effort that would not scale with the customer base.
+
+## Constraints and Trade-offs
+A change in payment instrument affected security, customer experience, and operational processes (issuance, blocking, accounting, dispute handling). Anti-fraud measures had to improve materially without turning the solution into a high-friction process for legitimate customers. Scale meant that edge cases could not be handled manually.
+
+## Architectural / Strategic Perspective
+The platform was framed as a control system: clear lifecycle management for the payment instrument, enforceable rules around transactions, and reconciliation as a repeatable process rather than an investigation. Interfaces to adjacent enterprise systems needed to preserve auditability so that operational decisions and financial outcomes stayed explainable.
+
+## Outcome and Impact
+A cashless settlement platform replaced paper coupons with cards, enabling automated settlements with 70,000+ legal entities. Reconciliation time was reduced sixfold, fraud-related losses fell tenfold, and the client formally recognized the business impact.
+
+## Lessons Learned
+Fraud reduction at scale is rarely a single “security feature”; it comes from designing the operating model so that traceability and control are built into how the business runs.
+
+### Loyalty Program for Fuel Retail (OILPC-LOY)
+- **Period:** 2012–2015
+- **Role:** Business Analyst, Project Manager, Solution Architect
+- **Employer:** OilPC
+- **Client:** Gazprom Neft
+- **Industry:** Oil & Gas
+- **Domain:** Card Processing, Retail, Fuel Retail
+- **Technologies:** Java, PHP, Oracle DB
+- **Domain tags:** analytics, loyalty, retail-technologies
+- **Industry tags:** oil-gas, retail, it-services, finance
+- **Role tags:** business-analyst, solution-architect, project-manager
+
+**Key Result:** Designed and launched a loyalty system for the fuel retail chain. Implemented a comprehensive loyalty program platform. Participants grew from 1M to 4.5M; marketing effectiveness significantly improved.
+
+# Loyalty platform for a fuel retail network
+
+## Context
+Gazprom Neft’s fuel retail network needed loyalty to function as a business lever rather than a simple points accumulator. Without a coherent platform, personalization, measurement of campaign impact, and consistent customer experience were limited.
+
+## The Decision Challenge
+The decision was whether to keep loyalty as a lightweight marketing tool or treat it as a customer and revenue management capability with enterprise-grade data and operational discipline. Getting it wrong would either cap growth (if too simplistic) or create a costly program that cannot be operated consistently across channels (if too complex too early).
+
+## Constraints and Trade-offs
+The platform had to work across many retail locations and integrate into daily point-of-sale operations without adding friction. More personalization and analytics increased complexity and data demands, while a simpler design reduced the ability to learn and adapt. The program needed rules that could be explained to customers and staff, not only to engineers.
+
+## Architectural / Strategic Perspective
+The work treated loyalty as a system of decisions: how customers are identified, how benefits are earned and redeemed, and how campaigns are evaluated. That required consistent customer/account definitions, clear rule governance, and reliable feedback loops from transaction data to marketing decisions.
+
+## Outcome and Impact
+A comprehensive loyalty system was established for the retail chain. Participation grew from 1M to 4.5M, and marketing effectiveness improved through better segmentation and measurable campaign execution.
+
+## Lessons Learned
+Loyalty becomes valuable when it shifts from “points accounting” to a disciplined learning loop—where customer behavior, offers, and outcomes connect in a way the organization can trust.
+
+### Medical Information System (MIAS) (FMBA-MIAS)
+- **Period:** 2012–2015
+- **Role:** Project Manager, Business Analyst
+- **Employer:** FMBA
+- **Client:** The Federal Medical-Biological Agency (FMBA)
+- **Industry:** Healthcare
+- **Domain:** Workflow Automation
+- **Technologies:** Mongo DB, Ruby, Rabbit MQ
+- **Domain tags:** analytics, patient-examination-system
+- **Industry tags:** healthcare, consulting, it-services
+- **Role tags:** solution-architect, project-manager
+
+**Key Result:** Delivered a medical analytics system for FMBA to forecast athletes' performance and support training plans based on health assessments.
+
+# Medical analytics for athlete health assessment and planning
+
+## Context
+The Federal Medical-Biological Agency needed a more systematic way to collect and use medical data related to athletes’ health assessments. Without a consolidated analytical view, forecasting performance trends and adjusting training plans relied too heavily on fragmented information and individual interpretation.
+
+## The Decision Challenge
+The decision was how to turn medical assessments into actionable planning input without overstating certainty. A system that only stores data does not change outcomes; a system that claims predictive power without disciplined assumptions creates false confidence. The challenge was to support informed judgment under medical and performance constraints.
+
+## Constraints and Trade-offs
+Medical data sources and assessment methods vary, and adoption depends on usability for clinicians and coaches. The solution needed to support analytical insights while maintaining traceability back to assessments. Speed and breadth of data coverage had to be balanced against consistent interpretation and reporting.
+
+## Architectural / Strategic Perspective
+The work emphasized an information architecture where assessments, indicators, and planning outputs are explicitly related. Analytical components were treated as decision support: transparent inputs, clear outputs, and repeatable reporting rather than opaque “predictions”. Integration of sources was approached as an operating discipline—consistent capture and curation before analytics.
+
+## Outcome and Impact
+FMBA gained a medical information and analytical system that supports forecasting and provides structured input into training planning based on health assessments. The organization’s ability to work with athlete medical data became more consistent and repeatable.
+
+## Lessons Learned
+In health-related analytics, the most important outcome is not a forecast—it is a shared, traceable basis for decisions that remain accountable to the underlying assessments.
+
+### Fuel Retail Management System (GAM-NAMOS)
+- **Period:** 2012–2015
+- **Role:** System Analyst
+- **Employer:** Gamma
+- **Client:** Wincor Nixdorf
+- **Industry:** Oil & Gas
+- **Domain:** Business Analysis
+- **Technologies:** Confluence
+- **Domain tags:** architecture, erp, retail-technologies
+- **Industry tags:** retail, oil-gas, consulting, consulting, it-services
+- **Role tags:** business-analyst, solution-architect, system-analyst
+
+**Key Result:** An architecture audit of the existing, already implemented fuel retail management system (Namos) at petrol stations was performed. Documentation for the existing software was created in accordance with local and European standards.
+
+# Architecture audit and standards-aligned documentation for PSMS software
+
+## Context
+Wincor Nixdorf had an operational petrol station management system in the field, but the architectural knowledge and documentation were not sufficiently current or standardized. This created support and evolution risk and complicated alignment with local and European expectations for documentation quality.
+
+## The Decision Challenge
+The decision was whether to treat documentation as a compliance artifact or as a control mechanism that reduces operational and delivery risk. In mature, already-running software, gaps in architectural understanding translate into slower incident resolution, fragile integrations, and costly change.
+
+## Constraints and Trade-offs
+The work had to describe an existing reality rather than a greenfield design. Over-documentation would be expensive and quickly stale; under-documentation would fail to support compliance and change. The emphasis needed to be on system boundaries, responsibilities, integrations, and operational characteristics.
+
+## Architectural / Strategic Perspective
+The audit focused on making implicit decisions explicit: how the system is decomposed, where data moves, and where constraints and risks accumulate. Documentation was structured to support both engineering work (change planning, integration safety) and organizational needs (common vocabulary, repeatable reviews, standards alignment).
+
+## Outcome and Impact
+An architectural audit clarified the current state and risks of the PSMS software, and a complete documentation set was established in a standards-aligned form. As a result, the system became easier to support and evolve, and the organization reduced the risk associated with undocumented dependencies.
+
+## Lessons Learned
+In long-lived systems, documentation is not a narrative of work—it is a mechanism for preserving decision intent so that future change does not turn into accidental redesign.
+
+### Financial Monitoring (SKY-BARS)
+- **Period:** 2008–2010
+- **Role:** Business Analyst, Project Manager
+- **Employer:** Rostelecom.SkyLink
+- **Client:** Rostelecom.SkyLink
+- **Industry:** Telecom
+- **Domain:** Finance
+- **Technologies:** Microsoft C#, MS SQL Server, MS SQL Analysis Services, MS SQL Reporting Services.
+- **Domain tags:** finance
+- **Industry tags:** telecom, retail, telecom, retail
+- **Role tags:** business-analyst, project-manager
+
+**Key Result:** Automated internal financial control system. Implemented a budgeting and control process that reduced the budget preparation cycle from 6 months to 2 and improved financial transparency.
+
+# Internal budgeting and financial control
+
+## Context
+Rostelecom.SkyLink relied on budgeting and internal financial control processes that were slow and opaque. Budget preparation could take up to six months, which limited the organization’s ability to respond to change and reduced confidence in management reporting.
+
+## The Decision Challenge
+The central question was whether budgeting should remain a periodic administrative exercise or become a management control loop supported by consistent data and rules. Getting it wrong risked locking the company into long planning cycles, weak cost discipline, and decisions driven by incomplete or late information.
+
+## Constraints and Trade-offs
+The work had to reconcile different expectations across finance and management while keeping day-to-day operations running. Standardization improved comparability and control, but it reduced local flexibility and forced explicit choices about definitions, approval flows, and reporting granularity.
+
+## Architectural / Strategic Perspective
+The problem was framed as an end-to-end decision system: how plans are created, approved, monitored, and corrected. That required a shared information model for budget items and financial facts, clear ownership of rules, and a consistent path from operational inputs to management views. The emphasis was on making the logic auditable and repeatable rather than relying on individual expertise and manual reconciliation.
+
+## Outcome and Impact
+Budget preparation time was reduced from six months to two months. Financial transparency improved, enabling more reliable monitoring of financial flows and stronger internal control without increasing the manual reporting burden.
+
+## Lessons Learned
+This case illustrates that “automation” only matters after the organization agrees on what it wants to control and why; clarity of definitions and decision rights is what makes speed and transparency sustainable.
+
+### 1С: Accounting + Trade & Warehouse (SKY-ACC-TRD)
+- **Period:** 2008–2010
+- **Role:** Business Analyst, Project Manager
+- **Employer:** Rostelecom.SkyLink
+- **Client:** Rostelecom.SkyLink
+- **Industry:** Telecom
+- **Domain:** Accounting, Retail
+- **Technologies:** 1C:Accounting, 1C:Trade&Warehouse
+- **Domain tags:** erp, finance
+- **Industry tags:** telecom, retail, telecom, retail
+- **Role tags:** business-analyst, project-manager
+
+**Key Result:** Deployed and configured integrated accounting. Unified accounting and inventory management across all legal entities, enabling transparent reporting and integration with planning systems.
+
+# Consolidated accounting and inventory across legal entities
+
+## Context
+Rostelecom.SkyLink operated through multiple legal entities with fragmented accounting and inventory practices. Disparate data made consolidated reporting slow and unreliable and weakened integration with planning and control functions.
+
+## The Decision Challenge
+The core decision was how far to push unification: whether to accept “local truth” in each entity and stitch reports together later, or to enforce shared definitions and workflows so that consolidation becomes routine. A poor choice would either stall adoption (if overly rigid) or preserve the same transparency problems under a new label (if overly permissive).
+
+## Constraints and Trade-offs
+Unification required aligning accounting policies and inventory rules while respecting legal-entity differences. Faster rollout favored minimal change, but long-term transparency depended on disciplined data standards and consistent operating procedures. Integration with existing planning processes added pressure to define stable interfaces and ownership.
+
+## Architectural / Strategic Perspective
+The work treated accounting and inventory as enterprise data products: a single set of definitions, controlled master data, and predictable aggregation paths to consolidated views. The emphasis was on reducing reconciliation surfaces—fewer handoffs, fewer transformations, and fewer “special cases” that only exist in spreadsheets.
+
+## Outcome and Impact
+Accounting and inventory management were unified across legal entities, enabling transparent consolidated reporting and making integration with planning systems feasible. Operational effort shifted away from manual consolidation toward routine, repeatable controls.
+
+## Lessons Learned
+For multi-entity organizations, the hardest part is not the system choice but agreeing on what “consistent data” means in practice—and being explicit about where differences are legitimate and where they are just inherited noise.
+
+### 1С: Payroll & HR (SKY-ZUP)
+- **Period:** 2008–2010
+- **Role:** Business Analyst, Project Manager
+- **Employer:** Rostelecom.SkyLink
+- **Client:** Rostelecom.SkyLink
+- **Industry:** Telecom
+- **Domain:** C&B, HR
+- **Technologies:** 1C:Salary and HR Management, integrated with the BARS budgeting system.
+- **Domain tags:** erp, hr-tech
+- **Industry tags:** telecom, retail, telecom, retail
+- **Role tags:** business-analyst, project-manager
+
+**Key Result:** Introduced a single payroll and motivation system across all branches, integrated with the budgeting system. Launched HR system for 50+ users.
+
+# Unified payroll and HR operating model across branches
+
+## Context
+Rostelecom.SkyLink’s distributed branch network relied on non-uniform payroll and HR practices. Differences in accrual logic and incentive schemes created inconsistencies, increased manual checks, and made personnel costs difficult to plan and control.
+
+## The Decision Challenge
+The decision was whether to prioritize local autonomy or enterprise consistency in payroll and HR accounting. Fragmentation reduced comparability and increased error risk; strict standardization risked friction where incentive schemes and operational realities differed by branch.
+
+## Constraints and Trade-offs
+A unified approach needed to support existing compensation logic while making the rules explicit and auditable. Integration with budgeting meant that HR data could no longer be treated as “back office”; it became an input into financial decisions. Adoption required keeping the experience workable for a broad user base (50+ users) without building exceptions into the core logic.
+
+## Architectural / Strategic Perspective
+The work focused on defining stable “rules of record” for payroll, incentives, and personnel events, and on connecting those rules to financial planning. The emphasis was on reducing ambiguity through common definitions, consistent approval paths, and predictable outputs for budgeting and reporting.
+
+## Outcome and Impact
+A single payroll and motivation system was put in place across branches and connected to the budgeting system, improving transparency of personnel costs and reducing discrepancies in accruals. An HR system went into use for 50+ users, stabilizing day-to-day HR operations.
+
+## Lessons Learned
+When payroll becomes a planning input, consistency is a governance decision—not an IT feature. The “system” succeeds only when the organization is willing to make its compensation logic explicit.
 
 ### ERP Implementation (Microsoft Dynamics AX) (SKY-DAX)
 - **Period:** 2008–2010

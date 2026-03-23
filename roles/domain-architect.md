@@ -1,21 +1,18 @@
 ---
 layout: page
-title: "Domain Architect"
-description: "Projects where I worked as Domain Architect"
+title: "Product Domain Architect"
+description: "Projects where I worked as Product Domain Architect"
 permalink: /roles/domain-architect/
+page_type: "role"
+page_key: "product-domain-architect"
 ---
 
-## Domain Architect
+## Product Domain Architect
 
-Projects where I served in the role of Domain Architect, specializing in specific business domains and solution design.
-
-### Projects
-
-This page will be populated with relevant projects. Currently, role metadata is being added to the knowledge base.
-
----
+<div id="projects-list">Loading projects...</div>
 
 <p align="center" style="font-size: 14px;">
-  For a business overview, visit my consulting page:<br>
-  <a href="https://vkconsulting.crd.co/" target="_blank">vkconsulting.crd.co</a>
+  📧 <a href="mailto:vkgeorgia@icloud.com">vkgeorgia@icloud.com</a> |
+  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> |
+  📅 <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
 </p>
