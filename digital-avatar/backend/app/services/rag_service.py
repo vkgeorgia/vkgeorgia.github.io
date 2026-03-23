@@ -365,13 +365,13 @@ class RAGService:
         try:
             import psycopg as _psycopg
 
-            # Call Gemini embedding REST API directly (v1, supports text-embedding-004)
+            _embed_model = "embedding-001"
             embed_url = (
                 "https://generativelanguage.googleapis.com/v1beta/models/"
-                f"text-embedding-004:embedContent?key={api_key}"
+                f"{_embed_model}:embedContent?key={api_key}"
             )
             payload = json.dumps({
-                "model": "models/text-embedding-004",
+                "model": f"models/{_embed_model}",
                 "content": {"parts": [{"text": query}]},
                 "taskType": "RETRIEVAL_QUERY",
             }).encode()
