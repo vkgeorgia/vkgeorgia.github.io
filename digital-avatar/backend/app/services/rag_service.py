@@ -67,12 +67,14 @@ class RAGService:
             self.drive_service = None
     
     def load_knowledge_base(self):
-        """Load documents from local knowledge base directories."""
+        """Load documents from local knowledge base directories and DB."""
         logger.info("Loading knowledge base...")
 
         self._load_from_local()
+        db_docs = self._load_from_db()
+        self.knowledge_base.extend(db_docs)
         total_chars = sum(len(doc) for doc in self.knowledge_base)
-        logger.info(f"Loaded {len(self.knowledge_base)} documents from local. Total characters: {total_chars}")
+        logger.info(f"Loaded {len(self.knowledge_base)} documents total. Total characters: {total_chars}")
     
     def _load_from_drive(self):
         """Load files from Google Drive folder."""
@@ -234,6 +236,99 @@ class RAGService:
                     except Exception as e:
                         logger.error(f"Error reading root file {file_path}: {e}")
 
+    def _load_from_db(self) -> list:
+        """Load all projects from Neon DB and format as rich-text documents."""
+        db_url = os.getenv("NEON_DATABASE_URL")
+        if not db_url:
+            logger.warning("NEON_DATABASE_URL not set — skipping DB knowledge load")
+            return []
+
+        try:
+            import psycopg  # psycopg3
+        except ImportError:
+            try:
+                import psycopg2 as psycopg  # type: ignore
+            except ImportError:
+                logger.warning("psycopg / psycopg2 not installed — skipping DB knowledge load")
+                return []
+
+        docs = []
+        try:
+            conn = psycopg.connect(db_url)
+            cur = conn.cursor()
+
+            # Load all projects
+            cur.execute("""
+                SELECT
+                    p.id, p.code, p.title, p.employer, p.client,
+                    p.industry, p.domain, p.role,
+                    p.year_start, p.year_end,
+                    p.technology,
+                    p.star_situation, p.star_task, p.star_action, p.star_result,
+                    p.key_result, p.executive_md
+                FROM projects p
+                ORDER BY p.year_start DESC NULLS LAST, p.id
+            """)
+            cols = [d[0] for d in cur.description]
+            rows = cur.fetchall()
+
+            # Load domain/industry/role tags per project
+            cur.execute("SELECT project_id, slug FROM project_domains")
+            domain_map: dict = {}
+            for pid, slug in cur.fetchall():
+                domain_map.setdefault(pid, []).append(slug)
+
+            cur.execute("SELECT project_id, slug FROM project_industries")
+            industry_map: dict = {}
+            for pid, slug in cur.fetchall():
+                industry_map.setdefault(pid, []).append(slug)
+
+            cur.execute("SELECT project_id, slug FROM project_roles")
+            role_map: dict = {}
+            for pid, slug in cur.fetchall():
+                role_map.setdefault(pid, []).append(slug)
+
+            conn.close()
+
+            for row in rows:
+                p = dict(zip(cols, row))
+                pid = p["id"]
+                parts = []
+                period = f"{p['year_start'] or '?'}"
+                if p.get("year_end") and p["year_end"] != p["year_start"]:
+                    period += f"–{p['year_end']}"
+                parts.append(f"## Project: {p['title']} ({p['code']})")
+                parts.append(f"Period: {period} | Role: {p.get('role') or '—'}")
+                parts.append(f"Employer: {p.get('employer') or '—'} | Client: {p.get('client') or '—'}")
+                parts.append(f"Industry: {p.get('industry') or '—'} | Domain: {p.get('domain') or '—'}")
+                if domain_map.get(pid):
+                    parts.append(f"Domain tags: {', '.join(domain_map[pid])}")
+                if industry_map.get(pid):
+                    parts.append(f"Industry tags: {', '.join(industry_map[pid])}")
+                if role_map.get(pid):
+                    parts.append(f"Role tags: {', '.join(role_map[pid])}")
+                if p.get("technology"):
+                    parts.append(f"Technologies: {p['technology']}")
+                if p.get("star_situation"):
+                    parts.append(f"\nSituation: {p['star_situation']}")
+                if p.get("star_task"):
+                    parts.append(f"Task: {p['star_task']}")
+                if p.get("star_action"):
+                    parts.append(f"Action: {p['star_action']}")
+                if p.get("star_result"):
+                    parts.append(f"Result: {p['star_result']}")
+                if p.get("key_result"):
+                    parts.append(f"Key Result: {p['key_result']}")
+                if p.get("executive_md"):
+                    parts.append(f"\n{p['executive_md']}")
+                docs.append("\n".join(parts))
+
+            logger.info(f"Loaded {len(docs)} projects from DB")
+        except Exception as e:
+            logger.error(f"Failed to load projects from DB: {e}", exc_info=True)
+
+        return docs
+
     def _select_context(self, query: str, top_n: int = 5) -> str:
         """Select most relevant documents by keyword overlap with the query."""
         if not self.knowledge_base:
@@ -244,7 +339,11 @@ class RAGService:
         scored = []
         for doc in self.knowledge_base:
             doc_lower = doc.lower()
-            score = sum(1 for w in query_words if w in doc_lower)
+            # Use word-boundary matching to avoid "ai" matching "email"/"training"
+            score = sum(
+                1 for w in query_words
+                if re.search(r'\b' + re.escape(w) + r'\b', doc_lower)
+            )
             scored.append((score, doc))
         scored.sort(key=lambda x: x[0], reverse=True)
         return "\n\n".join(doc for _, doc in scored[:top_n])

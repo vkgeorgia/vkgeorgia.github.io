@@ -4,7 +4,7 @@ title: "Human Resources"
 description: "Projects in Human Resources"
 permalink: /domains/hr/
 page_type: "domain"
-page_key: "HR"
+page_key: "hr-tech"
 ---
 
 ## Human Resources

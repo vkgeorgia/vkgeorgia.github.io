@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Enterprise Architect"
-description: "Projects where I worked as Enterprise Architect"
-permalink: /roles/enterprise-architect/
+title: "Product Manager"
+description: "Projects where I worked as Product Manager"
+permalink: /roles/product-manager/
 page_type: "role"
-page_key: "enterprise-architect"
+page_key: "product-manager"
 ---
 
-## Enterprise Architect
+## Product Manager
 
 <div id="projects-list">Loading projects...</div>
 

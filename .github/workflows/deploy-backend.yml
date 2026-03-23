@@ -18,6 +18,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
+      - name: Regenerate knowledge base from DB
+        env:
+          NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+        run: |
+          pip install "psycopg[binary]" --quiet
+          python scripts/generate_kb.py
+
       - name: Sync knowledge base to backend
         run: |
           rm -rf digital-avatar/backend/knowledge_base

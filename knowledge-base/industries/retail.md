@@ -1,109 +1,74 @@
-# Project Manager — Projects by Role
+# Retail — Projects by Industry
 
-Role tag: `project-manager`  
-Projects: 11
+Industry tag: `retail`  
+Projects: 14
 
-### Data Lab (RTK-DL)
-- **Period:** 2017–2019
-- **Role:** Business Architect
-- **Employer:** Rostelecom
-- **Client:** Rostelecom
-- **Industry:** Telecom
-- **Domain:** Data Analytics, Digital Marketing
-- **Technologies:** Hadoop, Data Lake
-- **Domain tags:** adtech-dataplatforms, analytics, marketing-automation
-- **Industry tags:** telecom, telecom
-- **Role tags:** business-analyst, enterprise-architect, project-manager, business-architect
+### Retail Digital Transformation (DELB-CRP)
+- **Period:** 2022–2023
+- **Role:** Enterprise Architect
+- **Employer:** EPAM
+- **Client:** Ahold Delhaize
+- **Industry:** Retail
+- **Domain:** Digital Transformation
+- **Domain tags:** architecture
+- **Industry tags:** retail, consulting
+- **Role tags:** enterprise-architect
 
-**Key Result:** A new subdivision was created to handle data for the marketing department. The data includes consumer behavior. Tools for behavior analysis, segmentation, omnichannel communication, and a recommendation system were created.
+**Key Result:** A strategic roadmap for the core retail platform was developed, enabling the client to make informed decisions, optimize investments by avoiding functional duplication, and leverage underutilized technologies for further business impact.
 
-# Establishing a marketing data analytics subdivision
+# Core retail platform roadmap under M&A-driven complexity
 
 ## Context
-Rostelecom needed to use large-scale behavioral data (visited sites, interests, web activity) to strengthen marketing outcomes: more precise targeting, timely churn response, and new data-driven products. The gap was not only technical—there was no dedicated operating model for turning this data into repeatable business capability.
+Ahold Delhaize underwent multiple transformations and acquisitions, creating a complex retail and IT landscape with duplicated functions and unclear platform ownership. Omnichannel growth depended on deciding what to standardize and what to allow to remain local.
 
 ## The Decision Challenge
-The decision was whether to treat behavioral data as a byproduct of telecom services or as a strategic asset that justifies a dedicated organization, tools, and governance. Creating a new subdivision is costly and politically sensitive; failing to do so risks leaving valuable data unused and limiting the company’s marketing competitiveness.
+The decision challenge was how to define a core retail platform direction that optimizes investment without stalling delivery. Choosing “one platform for everything” can be unrealistic in post-merger environments; choosing to keep everything local preserves duplication and cost.
 
 ## Constraints and Trade-offs
-The subdivision needed a clear mandate and measurable outcomes, otherwise it would become an “analytics lab” without business pull. Using previously ignored data required agreement on ownership and quality expectations. Building a broad platform too early risked wasted effort; focusing too narrowly risked missing future product opportunities.
+Different banners and regions often have legitimate differences, but duplicated capabilities create ongoing spend and inconsistent customer experience. A roadmap had to be credible: specific enough to drive choices, but flexible enough to account for organizational realities and sequencing constraints.
 
 ## Architectural / Strategic Perspective
-The work framed the subdivision as a capability portfolio: behavior analysis, segmentation, omnichannel activation, and recommendations as connected decision loops. The emphasis was on defining responsibilities, interfaces to data suppliers/consumers, and metrics that let leadership assess whether the function is producing business value.
+The work centered on discovery and capability-based reasoning: mapping application functions to business capabilities to identify overlaps, gaps, and opportunities for consolidation. The roadmap was structured to support incremental convergence—reducing duplication while maintaining delivery momentum.
 
 ## Outcome and Impact
-A new subdivision was created with analysts, project managers, and technical specialists, enabling systematic use of previously untapped behavioral data. The capability became a foundation for multiple data-driven products, including targeted advertising and recommendation-driven initiatives.
+A strategic roadmap for the core retail platform was established, enabling more informed decisions about which systems to retain, rationalize, or replace. The client gained a clearer basis for avoiding functional duplication and optimizing investments.
 
 ## Lessons Learned
-Data organizations succeed when they are designed as product functions—with clear outcomes and decision rights—rather than as a collection of tools and experiments.
+In post-M&A landscapes, roadmaps matter because they make trade-offs explicit so stakeholders can align on what will converge, when, and why.
 
-### Fleet Management (GAM-CAR5)
-- **Period:** 2015–2017
-- **Role:** Solution Architect, PM
+### IoT + Big Data for the Retail Chain (GAM-X5)
+- **Period:** 2015
+- **Role:** Enterprise Architect
 - **Employer:** Gamma
-- **Client:** CAR5
-- **Industry:** Transport
-- **Domain:** Fleet Management, AWS, Cloud
-- **Technologies:** PHP, Web, 1C, AWS Cloud
-- **Domain tags:** mobility
-- **Industry tags:** transport, consulting, it-services
-- **Role tags:** solution-architect, project-manager
+- **Client:** X5
+- **Industry:** Retail
+- **Domain:** IoT, Food Retail
+- **Technologies:** IoT, Big Data, BI
+- **Domain tags:** architecture, industrial-iot-bim
+- **Industry tags:** retail, consulting, it-services
+- **Role tags:** business-analyst, enterprise-architect, solution-architect
 
-**Key Result:** Delivered an integrated carsharing management system from scratch, including infrastructure migration to AWS Cloud, significantly improving transparency and system reliability.
+**Key Result:** The client received a chosen architectural solution and a clear roadmap, laying the foundation for significant savings.
 
-# Carsharing service launch with cloud-based fleet operations
-
-## Context
-CAR5 planned a carsharing launch from zero, requiring an operational backbone for fleet availability, customer interaction, and integration with in-car devices and external service providers. The viability of the business depended on reliability and the ability to scale with growth in users and vehicles.
-
-## The Decision Challenge
-The central decision was how to design for reliability and scalability before real-world load patterns were known. A minimal build risked rework and fragility under growth; a heavy upfront design risked overinvestment and slow time-to-market.
-
-## Constraints and Trade-offs
-The solution needed dependable signals from vehicles and predictable behavior across multiple external dependencies. Operational transparency mattered as much as features: the business needed to understand what the fleet was doing and why. Moving to a cloud environment improved resilience but introduced new operational disciplines and cost controls.
-
-## Architectural / Strategic Perspective
-The work treated the platform as a coordination system: clear domain boundaries (customer actions, fleet state, payments, device telemetry), explicit integration contracts, and an operating model that anticipates partial failures. The architecture emphasized observability and fault containment so incidents stay localized and operational decisions remain possible during disruptions.
-
-## Outcome and Impact
-A carsharing service went live with web and mobile channels and an integrated fleet management backbone. Cloud-based infrastructure increased reliability and improved operational transparency, creating a scalable base for growth.
-
-## Lessons Learned
-Early-stage platforms succeed when reliability is designed as a business capability—so that the organization can keep making decisions even when parts of the ecosystem misbehave.
-
-### Omnichannel Communications (GAM-VTB)
-- **Period:** 2015–2018
-- **Role:** Business Analyst, Project Manager
-- **Employer:** Gamma
-- **Client:** VTB Pension Fund
-- **Industry:** Finance
-- **Domain:** Digital Marketing
-- **Technologies:** Web, PHP
-- **Domain tags:** omni-channel
-- **Industry tags:** finance, consulting, it-services
-- **Role tags:** business-analyst, project-manager
-
-**Key Result:** The system successfully sent hundreds of thousands of messages per week, reduced message preparation time by 10 times, and enabled event-based mailings to be completed in one day, significantly enhancing communication efficiency and quality.
-
-# Omnichannel client notifications under compliance and volume constraints
+# Monitoring and predictive maintenance concept for retail climate equipment
 
 ## Context
-VTB Pension Fund needed to communicate with clients reliably and at scale. Communication processes were fragmented: no unified recipient lists, limited segmentation, and inconsistent scenarios, which made timely and accurate notifications difficult.
+X5 Retail Group faced product losses and elevated electricity costs due to inconsistent temperature control in stores. Equipment failures were handled reactively, with limited ability to plan maintenance or understand systemic drivers of downtime and spoilage.
 
 ## The Decision Challenge
-The decision was whether to keep operating as a set of ad-hoc mailings or to establish a managed communication capability across channels. The cost of getting it wrong was both operational (missed or late messages at scale) and reputational, especially when clients depend on timely information about their accounts.
+The decision was how to structure an investment in monitoring and predictive maintenance so that it produces measurable impact (including a 10% electricity cost reduction target) without creating a solution that stores cannot operate consistently. The risk of choosing poorly was high: either continued losses from downtime/spoilage or a costly initiative with unclear economics.
 
 ## Constraints and Trade-offs
-Multiple channels introduced compliance, deliverability, and consistency constraints. Higher automation improved speed but required strict governance around templates, approvals, and segmentation rules to prevent errors. The organization needed a process that remained understandable to business owners, not only to IT.
+Retail environments impose practical constraints: diverse store formats, existing equipment heterogeneity, and limited tolerance for operational disruption. Vendor selection and architecture needed to balance speed to rollout against long-term flexibility and data ownership. Predictive capabilities depend on data quality and consistent instrumentation, which are costly to standardize.
 
 ## Architectural / Strategic Perspective
-The work approached communication as a governed pipeline: audience definition, scenario design, message templating, approvals, and controlled execution across channels. The goal was predictable behavior—traceable rules, repeatable campaigns, and clear ownership—so volume could increase without increasing failure rates.
+The work compared credible architectural paths and made the economic logic explicit: what data is needed, where it is captured, how it is governed, and how insights become operational decisions (alerts, maintenance planning, reporting). Options were evaluated as different trade-offs between implementation complexity, controllability, and expected value.
 
 ## Outcome and Impact
-The system supported hundreds of thousands of messages per week. Message preparation time decreased tenfold, and event-based mailings that previously took up to two weeks were completed in one day, improving communication quality and reducing process confusion.
+Two architectural options, a vendor evaluation approach, and a phased roadmap were prepared to support a tender decision. The organization gained a clear basis for selecting a path toward reduced losses, more predictable maintenance, and measurable energy efficiency improvements.
 
 ## Lessons Learned
-At scale, “messaging” is not content production; it is a decision system where governance, segmentation rules, and operational discipline determine whether automation is safe.
+Predictive maintenance programs are won or lost in the operating model: if stores cannot trust and act on signals consistently, analytics never turns into savings.
 
 ### Fuel Station Management System (GAM-ZG)
 - **Period:** 2015–2019
@@ -207,39 +172,73 @@ A comprehensive loyalty system was established for the retail chain. Participati
 ## Lessons Learned
 Loyalty becomes valuable when it shifts from “points accounting” to a disciplined learning loop—where customer behavior, offers, and outcomes connect in a way the organization can trust.
 
-### Medical Information System (MIAS) (FMBA-MIAS)
+### Fuel Retail Management System (GAM-NAMOS)
 - **Period:** 2012–2015
-- **Role:** Project Manager, Business Analyst
-- **Employer:** FMBA
-- **Client:** The Federal Medical-Biological Agency (FMBA)
-- **Industry:** Healthcare
-- **Domain:** Workflow Automation
-- **Technologies:** Mongo DB, Ruby, Rabbit MQ
-- **Domain tags:** analytics, patient-examination-system
-- **Industry tags:** healthcare, consulting, it-services
-- **Role tags:** solution-architect, project-manager
+- **Role:** System Analyst
+- **Employer:** Gamma
+- **Client:** Wincor Nixdorf
+- **Industry:** Oil & Gas
+- **Domain:** Business Analysis
+- **Technologies:** Confluence
+- **Domain tags:** architecture, erp, retail-technologies
+- **Industry tags:** retail, oil-gas, consulting, consulting, it-services
+- **Role tags:** business-analyst, solution-architect, system-analyst
 
-**Key Result:** Delivered a medical analytics system for FMBA to forecast athletes' performance and support training plans based on health assessments.
+**Key Result:** An architecture audit of the existing, already implemented fuel retail management system (Namos) at petrol stations was performed. Documentation for the existing software was created in accordance with local and European standards.
 
-# Medical analytics for athlete health assessment and planning
+# Architecture audit and standards-aligned documentation for PSMS software
 
 ## Context
-The Federal Medical-Biological Agency needed a more systematic way to collect and use medical data related to athletes’ health assessments. Without a consolidated analytical view, forecasting performance trends and adjusting training plans relied too heavily on fragmented information and individual interpretation.
+Wincor Nixdorf had an operational petrol station management system in the field, but the architectural knowledge and documentation were not sufficiently current or standardized. This created support and evolution risk and complicated alignment with local and European expectations for documentation quality.
 
 ## The Decision Challenge
-The decision was how to turn medical assessments into actionable planning input without overstating certainty. A system that only stores data does not change outcomes; a system that claims predictive power without disciplined assumptions creates false confidence. The challenge was to support informed judgment under medical and performance constraints.
+The decision was whether to treat documentation as a compliance artifact or as a control mechanism that reduces operational and delivery risk. In mature, already-running software, gaps in architectural understanding translate into slower incident resolution, fragile integrations, and costly change.
 
 ## Constraints and Trade-offs
-Medical data sources and assessment methods vary, and adoption depends on usability for clinicians and coaches. The solution needed to support analytical insights while maintaining traceability back to assessments. Speed and breadth of data coverage had to be balanced against consistent interpretation and reporting.
+The work had to describe an existing reality rather than a greenfield design. Over-documentation would be expensive and quickly stale; under-documentation would fail to support compliance and change. The emphasis needed to be on system boundaries, responsibilities, integrations, and operational characteristics.
 
 ## Architectural / Strategic Perspective
-The work emphasized an information architecture where assessments, indicators, and planning outputs are explicitly related. Analytical components were treated as decision support: transparent inputs, clear outputs, and repeatable reporting rather than opaque “predictions”. Integration of sources was approached as an operating discipline—consistent capture and curation before analytics.
+The audit focused on making implicit decisions explicit: how the system is decomposed, where data moves, and where constraints and risks accumulate. Documentation was structured to support both engineering work (change planning, integration safety) and organizational needs (common vocabulary, repeatable reviews, standards alignment).
 
 ## Outcome and Impact
-FMBA gained a medical information and analytical system that supports forecasting and provides structured input into training planning based on health assessments. The organization’s ability to work with athlete medical data became more consistent and repeatable.
+An architectural audit clarified the current state and risks of the PSMS software, and a complete documentation set was established in a standards-aligned form. As a result, the system became easier to support and evolve, and the organization reduced the risk associated with undocumented dependencies.
 
 ## Lessons Learned
-In health-related analytics, the most important outcome is not a forecast—it is a shared, traceable basis for decisions that remain accountable to the underlying assessments.
+In long-lived systems, documentation is not a narrative of work—it is a mechanism for preserving decision intent so that future change does not turn into accidental redesign.
+
+### Financial Monitoring (SKY-BARS)
+- **Period:** 2008–2010
+- **Role:** Business Analyst, Project Manager
+- **Employer:** Rostelecom.SkyLink
+- **Client:** Rostelecom.SkyLink
+- **Industry:** Telecom
+- **Domain:** Finance
+- **Technologies:** Microsoft C#, MS SQL Server, MS SQL Analysis Services, MS SQL Reporting Services.
+- **Domain tags:** finance
+- **Industry tags:** telecom, retail, telecom, retail
+- **Role tags:** business-analyst, project-manager
+
+**Key Result:** Automated internal financial control system. Implemented a budgeting and control process that reduced the budget preparation cycle from 6 months to 2 and improved financial transparency.
+
+# Internal budgeting and financial control
+
+## Context
+Rostelecom.SkyLink relied on budgeting and internal financial control processes that were slow and opaque. Budget preparation could take up to six months, which limited the organization’s ability to respond to change and reduced confidence in management reporting.
+
+## The Decision Challenge
+The central question was whether budgeting should remain a periodic administrative exercise or become a management control loop supported by consistent data and rules. Getting it wrong risked locking the company into long planning cycles, weak cost discipline, and decisions driven by incomplete or late information.
+
+## Constraints and Trade-offs
+The work had to reconcile different expectations across finance and management while keeping day-to-day operations running. Standardization improved comparability and control, but it reduced local flexibility and forced explicit choices about definitions, approval flows, and reporting granularity.
+
+## Architectural / Strategic Perspective
+The problem was framed as an end-to-end decision system: how plans are created, approved, monitored, and corrected. That required a shared information model for budget items and financial facts, clear ownership of rules, and a consistent path from operational inputs to management views. The emphasis was on making the logic auditable and repeatable rather than relying on individual expertise and manual reconciliation.
+
+## Outcome and Impact
+Budget preparation time was reduced from six months to two months. Financial transparency improved, enabling more reliable monitoring of financial flows and stronger internal control without increasing the manual reporting burden.
+
+## Lessons Learned
+This case illustrates that “automation” only matters after the organization agrees on what it wants to control and why; clarity of definitions and decision rights is what makes speed and transparency sustainable.
 
 ### Financial Monitoring (SKY-BARS)
 - **Period:** 2008–2010
@@ -309,6 +308,40 @@ Accounting and inventory management were unified across legal entities, enabling
 ## Lessons Learned
 For multi-entity organizations, the hardest part is not the system choice but agreeing on what “consistent data” means in practice—and being explicit about where differences are legitimate and where they are just inherited noise.
 
+### 1С: Accounting + Trade & Warehouse (SKY-ACC-TRD)
+- **Period:** 2008–2010
+- **Role:** Business Analyst, Project Manager
+- **Employer:** Rostelecom.SkyLink
+- **Client:** Rostelecom.SkyLink
+- **Industry:** Telecom
+- **Domain:** Accounting, Retail
+- **Technologies:** 1C:Accounting, 1C:Trade&Warehouse
+- **Domain tags:** erp, finance
+- **Industry tags:** telecom, retail, telecom, retail
+- **Role tags:** business-analyst, project-manager
+
+**Key Result:** Deployed and configured integrated accounting. Unified accounting and inventory management across all legal entities, enabling transparent reporting and integration with planning systems.
+
+# Consolidated accounting and inventory across legal entities
+
+## Context
+Rostelecom.SkyLink operated through multiple legal entities with fragmented accounting and inventory practices. Disparate data made consolidated reporting slow and unreliable and weakened integration with planning and control functions.
+
+## The Decision Challenge
+The core decision was how far to push unification: whether to accept “local truth” in each entity and stitch reports together later, or to enforce shared definitions and workflows so that consolidation becomes routine. A poor choice would either stall adoption (if overly rigid) or preserve the same transparency problems under a new label (if overly permissive).
+
+## Constraints and Trade-offs
+Unification required aligning accounting policies and inventory rules while respecting legal-entity differences. Faster rollout favored minimal change, but long-term transparency depended on disciplined data standards and consistent operating procedures. Integration with existing planning processes added pressure to define stable interfaces and ownership.
+
+## Architectural / Strategic Perspective
+The work treated accounting and inventory as enterprise data products: a single set of definitions, controlled master data, and predictable aggregation paths to consolidated views. The emphasis was on reducing reconciliation surfaces—fewer handoffs, fewer transformations, and fewer “special cases” that only exist in spreadsheets.
+
+## Outcome and Impact
+Accounting and inventory management were unified across legal entities, enabling transparent consolidated reporting and making integration with planning systems feasible. Operational effort shifted away from manual consolidation toward routine, repeatable controls.
+
+## Lessons Learned
+For multi-entity organizations, the hardest part is not the system choice but agreeing on what “consistent data” means in practice—and being explicit about where differences are legitimate and where they are just inherited noise.
+
 ### 1С: Payroll & HR (SKY-ZUP)
 - **Period:** 2008–2010
 - **Role:** Business Analyst, Project Manager
@@ -342,6 +375,74 @@ A single payroll and motivation system was put in place across branches and conn
 
 ## Lessons Learned
 When payroll becomes a planning input, consistency is a governance decision—not an IT feature. The “system” succeeds only when the organization is willing to make its compensation logic explicit.
+
+### 1С: Payroll & HR (SKY-ZUP)
+- **Period:** 2008–2010
+- **Role:** Business Analyst, Project Manager
+- **Employer:** Rostelecom.SkyLink
+- **Client:** Rostelecom.SkyLink
+- **Industry:** Telecom
+- **Domain:** C&B, HR
+- **Technologies:** 1C:Salary and HR Management, integrated with the BARS budgeting system.
+- **Domain tags:** erp, hr-tech
+- **Industry tags:** telecom, retail, telecom, retail
+- **Role tags:** business-analyst, project-manager
+
+**Key Result:** Introduced a single payroll and motivation system across all branches, integrated with the budgeting system. Launched HR system for 50+ users.
+
+# Unified payroll and HR operating model across branches
+
+## Context
+Rostelecom.SkyLink’s distributed branch network relied on non-uniform payroll and HR practices. Differences in accrual logic and incentive schemes created inconsistencies, increased manual checks, and made personnel costs difficult to plan and control.
+
+## The Decision Challenge
+The decision was whether to prioritize local autonomy or enterprise consistency in payroll and HR accounting. Fragmentation reduced comparability and increased error risk; strict standardization risked friction where incentive schemes and operational realities differed by branch.
+
+## Constraints and Trade-offs
+A unified approach needed to support existing compensation logic while making the rules explicit and auditable. Integration with budgeting meant that HR data could no longer be treated as “back office”; it became an input into financial decisions. Adoption required keeping the experience workable for a broad user base (50+ users) without building exceptions into the core logic.
+
+## Architectural / Strategic Perspective
+The work focused on defining stable “rules of record” for payroll, incentives, and personnel events, and on connecting those rules to financial planning. The emphasis was on reducing ambiguity through common definitions, consistent approval paths, and predictable outputs for budgeting and reporting.
+
+## Outcome and Impact
+A single payroll and motivation system was put in place across branches and connected to the budgeting system, improving transparency of personnel costs and reducing discrepancies in accruals. An HR system went into use for 50+ users, stabilizing day-to-day HR operations.
+
+## Lessons Learned
+When payroll becomes a planning input, consistency is a governance decision—not an IT feature. The “system” succeeds only when the organization is willing to make its compensation logic explicit.
+
+### ERP Implementation (Microsoft Dynamics AX) (SKY-DAX)
+- **Period:** 2008–2010
+- **Role:** Solution Architect, Project Manager, MS Dynamics Administrator
+- **Employer:** Rostelecom.SkyLink
+- **Client:** Rostelecom.SkyLink
+- **Industry:** Telecom
+- **Domain:** ERP
+- **Technologies:** MS Dynamics AX + Integration + HelpDesk
+- **Domain tags:** erp, integration
+- **Industry tags:** telecom, retail, telecom, retail
+- **Role tags:** enterprise-architect, solution-architect, project-manager, dynamics-administrator
+
+**Key Result:** The company gained transparency and timely access to operational data through a unified ERP system. ERP Integrated with Billing and launched a Helpdesk. Standardised landscape and organised transparent reporting, increasing business manageability during the company's pre-sale phase.
+
+# ERP standardization for operational transparency in a pre-sale period
+
+## Context
+Rostelecom.SkyLink entered a pre-sale phase where manageability and transparency mattered as much as operational performance. Fragmented operational data and non-standard reporting slowed decision-making and made it harder to demonstrate control over the business.
+
+## The Decision Challenge
+The key decision was whether to invest in standardization and a unified operational backbone under time pressure. A conservative path (minor fixes around legacy tools) preserved short-term comfort but risked leaving the organization with the same opacity at the worst moment. A more ambitious path improved transparency but required coordinated change and disciplined scope control.
+
+## Constraints and Trade-offs
+The work had to stabilize reporting and data access without disrupting ongoing operations. Integration with billing and support processes increased complexity: the system needed consistent boundaries between operational transactions, customer-facing billing, and user support. The pre-sale context favored predictability and auditability over customization.
+
+## Architectural / Strategic Perspective
+The approach centered on a single operational “source of truth” with clear integrations to adjacent systems. Reporting was treated as a management product: consistent definitions, traceability back to operational facts, and repeatable generation. Supportability was addressed as part of the operating model by establishing a clear path for issues and changes.
+
+## Outcome and Impact
+The organization gained timely access to operational data through a unified ERP backbone, with integration to billing and an established user support channel. Standardized reporting increased transparency and improved business manageability during the pre-sale period.
+
+## Lessons Learned
+In pre-sale environments, enterprise systems are less about features and more about trust: the ability to explain the business with consistent data, repeatable reports, and controlled change.
 
 ### ERP Implementation (Microsoft Dynamics AX) (SKY-DAX)
 - **Period:** 2008–2010

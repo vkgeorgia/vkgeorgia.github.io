@@ -4,7 +4,7 @@ title: "Data Analytics"
 description: "Projects in Data Analytics"
 permalink: /domains/data-analytics/
 page_type: "domain"
-page_key: "Data Analytics"
+page_key: "analytics"
 ---
 
 ## Data Analytics
