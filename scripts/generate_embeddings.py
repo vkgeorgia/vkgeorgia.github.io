@@ -55,7 +55,7 @@ except ImportError:
     sys.exit(1)
 
 _BASE = "https://generativelanguage.googleapis.com/v1beta"
-_EMBED_MODEL = "embedding-001"
+_EMBED_MODEL = "gemini-embedding-001"
 
 
 def _list_embedding_models() -> list:
@@ -212,6 +212,7 @@ def _embed_one(text: str) -> List[float]:
         "model": f"models/{_EMBED_MODEL}",
         "content": {"parts": [{"text": text}]},
         "taskType": "RETRIEVAL_DOCUMENT",
+        "outputDimensionality": 768,
     }).encode()
     for attempt in range(3):
         try:
