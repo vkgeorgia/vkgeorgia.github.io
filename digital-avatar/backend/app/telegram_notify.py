@@ -156,6 +156,29 @@ def _parse_chat_id(raw: str):
     return s
 
 
+def _send_text(text: str, chat_id, token: str) -> None:
+    """Low-level: send an HTML message to Telegram. Best-effort, logs on failure."""
+    url = f"{TELEGRAM_API}/bot{token}/sendMessage"
+    try:
+        with httpx.Client(timeout=15.0) as client:
+            r = client.post(
+                url,
+                json={
+                    "chat_id": chat_id,
+                    "text": text,
+                    "parse_mode": "HTML",
+                    "disable_web_page_preview": True,
+                },
+            )
+            body = r.json() if r.content else {}
+            if r.status_code != 200 or (isinstance(body, dict) and body.get("ok") is False):
+                logger.warning("telegram_notify: send failed HTTP %s: %s", r.status_code, str(body)[:300])
+            else:
+                logger.warning("telegram_notify: sent OK chat_id=%s", chat_id)
+    except Exception as e:
+        logger.warning("telegram_notify: request failed: %s", e, exc_info=True)
+
+
 def notify_session_ended(session_id: str) -> None:
     """Best-effort: send one message to Telegram after a chat session closes."""
     if not session_id:
@@ -208,70 +231,60 @@ def notify_session_ended(session_id: str) -> None:
                 href = _telegram_href(u)
                 text += f'{i}. <a href="{href}">{html.escape(u)}</a>\n'
 
-    url = f"{TELEGRAM_API}/bot{token}/sendMessage"
-    try:
-        with httpx.Client(timeout=15.0) as client:
-            r = client.post(
-                url,
-                json={
-                    "chat_id": chat_id,
-                    "text": text,
-                    "parse_mode": "HTML",
-                    "disable_web_page_preview": True,
-                },
-            )
-            try:
-                body = r.json()
-            except Exception:
-                body = None
-            if r.status_code != 200:
-                logger.warning(
-                    "telegram_notify: sendMessage HTTP %s %s",
-                    r.status_code,
-                    r.text[:800],
-                )
-            elif isinstance(body, dict) and body.get("ok") is False:
-                logger.warning(
-                    "telegram_notify: Telegram API ok=false: %s",
-                    body.get("description", body),
-                )
-            else:
-                logger.warning(
-                    "telegram_notify: OK — отправлено уведомление, session=%s chat_id=%s",
-                    session_id,
-                    chat_id,
-                )
-    except Exception as e:
-        logger.warning("telegram_notify: request failed: %s", e, exc_info=True)
+    _send_text(text, chat_id, token)
+
+
+def notify_url_shared(
+    shared_url: str,
+    session_id: Optional[str],
+    client_ip: Optional[str],
+    context: Optional[str] = None,
+) -> None:
+    """Best-effort: notify Valerii when a visitor shares a link in chat."""
+    if not _enabled():
+        return
+    token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    chat_id_raw = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    if not token or not chat_id_raw:
+        return
+    chat_id = _parse_chat_id(chat_id_raw)
+
+    safe_url = html.escape(shared_url)
+    href = _telegram_href(shared_url)
+    ip_str = html.escape(str(client_ip or "—"))
+    sid_str = html.escape(str(session_id or "—"))
+    ctx_str = html.escape((context or "")[:300])
+
+    text = (
+        "🔗 <b>Новая ссылка от посетителя</b>\n\n"
+        f'URL: <a href="{href}">{safe_url}</a>\n'
+        f"IP: {ip_str}\n"
+        f"session: <code>{sid_str}</code>"
+    )
+    if ctx_str:
+        text += f"\n\nКонтекст:\n{ctx_str}"
+
+    _send_text(text, chat_id, token)
 
 
 def send_test_message() -> Dict[str, Any]:
-    """
-    Одно тестовое сообщение в Telegram (для диагностики).
-    Вызывать только если защищённый эндпоинт проверил секрет.
-    """
+    """Одно тестовое сообщение в Telegram (для диагностики)."""
     if not _enabled():
         return {"ok": False, "error": "telegram not configured or disabled"}
     token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
     chat_id_raw = os.getenv("TELEGRAM_CHAT_ID", "").strip()
     chat_id = _parse_chat_id(chat_id_raw)
-    url = f"{TELEGRAM_API}/bot{token}/sendMessage"
+    tg_url = f"{TELEGRAM_API}/bot{token}/sendMessage"
     try:
         with httpx.Client(timeout=15.0) as client:
-            r = client.post(
-                url,
-                json={
-                    "chat_id": chat_id,
-                    "text": "AI Avatar: тестовое сообщение (диагностика Cloud Run → Telegram).",
-                },
-            )
+            r = client.post(tg_url, json={
+                "chat_id": chat_id,
+                "text": "AI Avatar: тестовое сообщение (диагностика Cloud Run → Telegram).",
+            })
             body = r.json() if r.content else {}
             if r.status_code == 200 and isinstance(body, dict) and body.get("ok"):
                 return {"ok": True, "telegram": body}
-            return {
-                "ok": False,
-                "http_status": r.status_code,
-                "telegram": body if isinstance(body, dict) else r.text[:500],
-            }
+            return {"ok": False, "http_status": r.status_code,
+                    "telegram": body if isinstance(body, dict) else r.text[:500]}
     except Exception as e:
         return {"ok": False, "error": str(e)}

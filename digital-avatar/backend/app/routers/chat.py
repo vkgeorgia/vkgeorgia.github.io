@@ -1,5 +1,7 @@
 import asyncio
+import ipaddress
 import logging
+import re
 from typing import Dict, List, Optional
 
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
@@ -14,6 +16,54 @@ router = APIRouter()
 MAX_MESSAGE_LENGTH = 8000   # raised to allow full vacancy texts
 MAX_HISTORY_TURNS = 10      # keep last N user+assistant pairs in Gemini context
 VACANCY_MIN_LENGTH = 400    # shorter messages are never standalone vacancies
+MAX_URLS_PER_SESSION = 3    # rate-limit: max shared links per session
+URL_MAX_LENGTH = 500
+
+_RAW_URL_RE = re.compile(r'https?://[^\s<>"\']{4,}', re.IGNORECASE)
+
+# Private/loopback hostnames and IP prefixes to block
+_BLOCKED_HOSTS = re.compile(
+    r'^(localhost|.*\.local|.*\.internal|.*\.localdomain)$', re.IGNORECASE
+)
+_PRIVATE_IP_NETS = [
+    ipaddress.ip_network(n) for n in (
+        "127.0.0.0/8", "10.0.0.0/8", "172.16.0.0/12",
+        "192.168.0.0/16", "169.254.0.0/16", "::1/128", "fc00::/7",
+    )
+]
+
+
+def _validate_url(raw: str) -> Optional[str]:
+    """Return cleaned URL if safe, None otherwise."""
+    url = raw.rstrip(".,;)>\"'")
+    if len(url) > URL_MAX_LENGTH:
+        return None
+    if not re.match(r'^https?://', url, re.IGNORECASE):
+        return None
+    # Extract hostname
+    m = re.match(r'^https?://([^/:?#\s]+)', url, re.IGNORECASE)
+    if not m:
+        return None
+    host = m.group(1).lower()
+    if _BLOCKED_HOSTS.match(host):
+        return None
+    try:
+        addr = ipaddress.ip_address(host)
+        if any(addr in net for net in _PRIVATE_IP_NETS):
+            return None
+    except ValueError:
+        pass  # not an IP literal — hostname is fine
+    return url
+
+
+def _extract_urls(text: str) -> List[str]:
+    """Return list of valid URLs found in text."""
+    found = []
+    for m in _RAW_URL_RE.finditer(text):
+        url = _validate_url(m.group(0))
+        if url and url not in found:
+            found.append(url)
+    return found
 
 # Keywords that signal a job vacancy (2+ hits = vacancy text)
 _VACANCY_KW = [
@@ -202,11 +252,46 @@ async def _handle_resume_intent(
 # WebSocket endpoint
 # ---------------------------------------------------------------------------
 
+async def _handle_url_share(
+    urls: List[str],
+    data: str,
+    session_id: Optional[str],
+    client_ip: Optional[str],
+    url_count: int,
+) -> str:
+    """Forward shared URLs to Valerii via Telegram and return bot reply."""
+    ru = _is_russian(data)
+
+    if url_count >= MAX_URLS_PER_SESSION:
+        return (
+            "Вы уже поделились несколькими ссылками в этом разговоре — я передал их Валерию."
+            if ru else
+            "You've already shared several links this session — Valerii has been notified."
+        )
+
+    for url in urls:
+        await asyncio.to_thread(
+            telegram_notify.notify_url_shared,
+            url, session_id, client_ip, data,
+        )
+
+    if ru:
+        return (
+            "Спасибо — ссылка передана Валерию, он свяжется с вами. "
+            "Если хотите, можем продолжить разговор или я подготовлю резюме под вашу позицию."
+        )
+    return (
+        "Thanks — the link has been forwarded to Valerii, he'll be in touch. "
+        "Feel free to keep chatting, or share a vacancy and I'll prepare a tailored resume."
+    )
+
+
 @router.websocket("/ws/chat")
 async def chat_endpoint(websocket: WebSocket):
     await websocket.accept()
     session_id: Optional[str] = None
     history: List[Dict[str, str]] = []
+    url_count: int = 0
 
     try:
         client_ip = websocket.client.host if websocket.client else None
@@ -234,7 +319,14 @@ async def chat_endpoint(websocket: WebSocket):
             history.append({"role": "user", "content": data})
 
             try:
-                if _is_vacancy_text(data):
+                urls = _extract_urls(data)
+                if urls and not _is_vacancy_text(data):
+                    # Pattern 0: user shared a link — forward to Valerii
+                    response_text = await _handle_url_share(
+                        urls, data, session_id, client_ip, url_count
+                    )
+                    url_count += len(urls)
+                elif _is_vacancy_text(data):
                     # Pattern 1: user pasted a full vacancy text
                     response_text = await _handle_vacancy(data, session_id, websocket)
                 elif _has_resume_intent(data):
