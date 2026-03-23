@@ -43,7 +43,8 @@
                             Hi! I'm Valerii's AI assistant. Here's what I can do:<br><br>
                             <strong>1. Experience &amp; approach</strong> — projects, industries, domains, professional philosophy.<br>
                             <strong>2. Schedule a meeting</strong> — book a call directly in Valerii's calendar.<br>
-                            <strong>3. Tailored resume</strong> — share a vacancy and I'll generate a resume focused on what matters for that role.<br><br>
+                            <strong>3. Tailored resume</strong> — share a vacancy and I'll generate a resume focused on what matters for that role.<br>
+                            <strong>4. Forward a link</strong> — drop a vacancy URL or your company site and I'll pass it to Valerii directly.<br><br>
                             What brings you here?
                         </div>
                     </div>
