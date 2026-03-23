@@ -23,6 +23,7 @@
     left: 20px;
 }
 
+/* Toggle button — hidden when chat is open */
 .ai-widget-toggle {
     width: 60px;
     height: 60px;
@@ -32,7 +33,7 @@
     color: white;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,12 +44,18 @@
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
+.ai-widget-toggle-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Chat panel — fixed, full viewport height with margins */
 .ai-widget-chat {
-    position: absolute;
-    bottom: 80px;
-    right: 0;
+    position: fixed;
+    top: 20px;
+    bottom: 20px;
+    right: 20px;
     width: 380px;
-    height: calc(100vh - 120px);
     background-color: var(--ai-widget-card);
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
@@ -64,66 +71,62 @@
     pointer-events: none;
 }
 
+/* Header */
 .ai-widget-header {
+    position: relative;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    padding: 14px 48px 14px 16px; /* right padding reserves space for close btn */
 }
 
 .ai-widget-header h3 {
-    margin: 0;
-    font-size: 16px;
+    margin: 0 0 6px 0;
+    font-size: 15px;
     font-weight: 600;
-    flex: 1;
+    line-height: 1.3;
 }
 
+/* Status row: AI indicator + DB indicator side by side */
 .ai-widget-status {
-    font-size: 9px;
-    margin-top: 4px;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 11px;
     opacity: 0.9;
 }
 
-.ai-widget-status-connected {
-    color: #10b981;
-}
+.ai-widget-status-connected { color: #10b981; }
+.ai-widget-status-offline    { color: #f59e0b; }
+.ai-widget-status-error      { color: #ef4444; }
+.ai-widget-status-connecting { color: #94a3b8; }
 
-.ai-widget-status-offline {
-    color: #f59e0b;
-}
-
-.ai-widget-status-error {
-    color: #ef4444;
-}
-
-.ai-widget-status-connecting {
-    color: #94a3b8;
-}
-
+/* Close button — top-right corner of header */
 .ai-widget-close-btn {
-    background: none;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.15);
     border: none;
     color: white;
-    font-size: 28px;
+    font-size: 20px;
+    line-height: 1;
     cursor: pointer;
-    padding: 0;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.8;
-    transition: opacity 0.2s;
+    opacity: 0.85;
+    transition: opacity 0.2s, background 0.2s;
 }
 
 .ai-widget-close-btn:hover {
     opacity: 1;
+    background: rgba(255, 255, 255, 0.25);
 }
 
+/* Messages */
 .ai-widget-messages {
     flex: 1;
     overflow-y: auto;
@@ -180,6 +183,7 @@
     margin: 2px 0;
 }
 
+/* Input area */
 .ai-widget-input-area {
     display: flex;
     gap: 8px;
@@ -216,18 +220,20 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.2s;
+    flex-shrink: 0;
 }
 
 .ai-widget-send-btn:hover {
     transform: scale(1.05);
 }
 
-/* Mobile responsive */
+/* Mobile */
 @media (max-width: 480px) {
     .ai-widget-chat {
-        width: calc(100vw - 40px);
-        height: calc(100vh - 120px);
-        bottom: 80px;
-        right: 20px;
+        top: 10px;
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        width: auto;
     }
 }

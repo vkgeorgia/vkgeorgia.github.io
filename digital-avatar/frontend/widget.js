@@ -25,14 +25,15 @@
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
                 </button>
-                
+
                 <div id="ai-widget-chat" class="ai-widget-chat ai-widget-hidden">
                     <div class="ai-widget-header">
+                        <button id="ai-widget-close" class="ai-widget-close-btn" aria-label="Close chat">×</button>
                         <h3>Valerii Korobeinikov's AI Avatar</h3>
                         <div class="ai-widget-status">
-                            <span id="ai-widget-status-text">🔄 Connecting...</span>
+                            <span id="ai-widget-status-text" class="ai-widget-status-connecting">🔄 Connecting...</span>
+                            <span id="ai-widget-db-status-text" class="ai-widget-status-connecting">● DB...</span>
                         </div>
-                        <button id="ai-widget-close" class="ai-widget-close-btn" aria-label="Close chat">×</button>
                     </div>
                     
                     <div id="ai-widget-messages" class="ai-widget-messages">
@@ -67,6 +68,7 @@
         const sendBtn = document.getElementById('ai-widget-send');
         const messagesArea = document.getElementById('ai-widget-messages');
         const statusText = document.getElementById('ai-widget-status-text');
+        const dbStatusText = document.getElementById('ai-widget-db-status-text');
 
         let socket;
         let isOpen = false;
@@ -82,18 +84,21 @@
                 .replace(/"/g, '&quot;');
         }
 
-        // Toggle chat
+        // Toggle chat — hide/show the round button when chat opens/closes
         toggle.addEventListener('click', () => {
             isOpen = !isOpen;
             chat.classList.toggle('ai-widget-hidden');
+            toggle.classList.toggle('ai-widget-toggle-hidden', isOpen);
             if (isOpen && !socket) {
                 connectWebSocket();
+                checkDbStatus();
             }
         });
 
         close.addEventListener('click', () => {
             isOpen = false;
             chat.classList.add('ai-widget-hidden');
+            toggle.classList.remove('ai-widget-toggle-hidden');
         });
 
         // WebSocket connection
@@ -143,6 +148,23 @@
         function updateStatus(text, type) {
             statusText.textContent = text;
             statusText.className = 'ai-widget-status-' + type;
+        }
+
+        async function checkDbStatus() {
+            try {
+                const resp = await fetch(WIDGET_CONFIG.backendUrl + '/api/health');
+                const data = await resp.json();
+                if (data.db && data.db.ok) {
+                    dbStatusText.textContent = '● DB';
+                    dbStatusText.className = 'ai-widget-status-connected';
+                } else {
+                    dbStatusText.textContent = '● DB';
+                    dbStatusText.className = 'ai-widget-status-error';
+                }
+            } catch (_) {
+                dbStatusText.textContent = '● DB';
+                dbStatusText.className = 'ai-widget-status-error';
+            }
         }
 
         function parseMarkdown(text) {
