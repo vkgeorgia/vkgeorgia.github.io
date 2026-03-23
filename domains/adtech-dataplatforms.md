@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Payment Systems"
-description: "Projects in Payment Systems"
-permalink: /domains/payment-systems/
+title: "AdTech & Data Platforms"
+description: "Projects in AdTech and Data Platforms"
+permalink: /domains/adtech-dataplatforms/
 page_type: "domain"
-page_key: "Payment Systems"
+page_key: "adtech-dataplatforms"
 ---
 
-## Payment Systems
+## AdTech & Data Platforms
 
 <div id="projects-list">Loading projects...</div>
 

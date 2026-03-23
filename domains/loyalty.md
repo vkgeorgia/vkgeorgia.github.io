@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Supply Chain Management"
-description: "Projects in Supply Chain Management"
-permalink: /domains/scm/
+title: "Loyalty"
+description: "Projects in Loyalty Programs"
+permalink: /domains/loyalty/
 page_type: "domain"
-page_key: "SCM"
+page_key: "loyalty"
 ---
 
-## Supply Chain Management
+## Loyalty
 
 <div id="projects-list">Loading projects...</div>
 

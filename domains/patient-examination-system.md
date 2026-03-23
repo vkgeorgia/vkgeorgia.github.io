@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Product Management"
-description: "Projects in Product Management"
-permalink: /domains/product-management/
+title: "Patient Examination Systems"
+description: "Projects in Patient Examination Systems"
+permalink: /domains/patient-examination-system/
 page_type: "domain"
-page_key: "Product Management"
+page_key: "patient-examination-system"
 ---
 
-## Product Management
+## Patient Examination Systems
 
 <div id="projects-list">Loading projects...</div>
 
