@@ -54,11 +54,24 @@ except ImportError:
     print("ERROR: psycopg not installed. Run: pip install psycopg psycopg[binary]", file=sys.stderr)
     sys.exit(1)
 
+_BASE = "https://generativelanguage.googleapis.com/v1beta"
 _EMBED_MODEL = "embedding-001"
-_EMBED_URL = (
-    f"https://generativelanguage.googleapis.com/v1beta/models/"
-    f"{_EMBED_MODEL}:batchEmbedContents?key={GEMINI_KEY}"
-)
+
+
+def _list_embedding_models() -> list:
+    """Return names of models that support embedContent, for diagnostics."""
+    try:
+        url = f"{_BASE}/models?key={GEMINI_KEY}&pageSize=50"
+        with urllib.request.urlopen(url, timeout=10) as resp:
+            data = json.loads(resp.read())
+        names = [
+            m["name"]
+            for m in data.get("models", [])
+            if "embedContent" in m.get("supportedGenerationMethods", [])
+        ]
+        return names
+    except Exception as e:
+        return [f"(list failed: {e})"]
 
 # ---------------------------------------------------------------------------
 # Chunking
@@ -192,41 +205,43 @@ BATCH_SIZE = 100  # Gemini allows up to 100 texts per batch call
 RETRY_DELAY = 5   # seconds between retries on rate limit
 
 
-def embed_batch(texts: List[str]) -> List[List[float]]:
-    """Embed a batch of texts via Gemini REST API (v1). Returns list of 768-dim vectors."""
+def _embed_one(text: str) -> List[float]:
+    """Embed a single text via embedContent REST endpoint."""
+    url = f"{_BASE}/models/{_EMBED_MODEL}:embedContent?key={GEMINI_KEY}"
     payload = json.dumps({
-        "requests": [
-            {
-                "model": f"models/{_EMBED_MODEL}",
-                "content": {"parts": [{"text": t}]},
-                "taskType": "RETRIEVAL_DOCUMENT",
-            }
-            for t in texts
-        ]
+        "model": f"models/{_EMBED_MODEL}",
+        "content": {"parts": [{"text": text}]},
+        "taskType": "RETRIEVAL_DOCUMENT",
     }).encode()
     for attempt in range(3):
         try:
             req = urllib.request.Request(
-                _EMBED_URL,
-                data=payload,
-                headers={"Content-Type": "application/json"},
+                url, data=payload, headers={"Content-Type": "application/json"}
             )
-            with urllib.request.urlopen(req, timeout=60) as resp:
+            with urllib.request.urlopen(req, timeout=30) as resp:
                 data = json.loads(resp.read())
-            return [e["values"] for e in data["embeddings"]]
+            return data["embedding"]["values"]
         except urllib.error.HTTPError as e:
             body = e.read().decode(errors="replace")
-            print(f"  HTTP {e.code} from {_EMBED_URL[:80]}...\n  Response: {body[:300]}")
+            print(f"  HTTP {e.code}: {body[:300]}")
             if attempt < 2:
                 time.sleep(RETRY_DELAY * (attempt + 1))
             else:
                 raise
         except Exception as e:
             if attempt < 2:
-                print(f"  Embedding error (attempt {attempt+1}): {e}. Retrying in {RETRY_DELAY}s...")
                 time.sleep(RETRY_DELAY * (attempt + 1))
             else:
                 raise
+
+
+def embed_batch(texts: List[str]) -> List[List[float]]:
+    """Embed texts one-by-one via embedContent (batchEmbedContents unavailable)."""
+    results = []
+    for text in texts:
+        results.append(_embed_one(text))
+        time.sleep(0.1)  # gentle rate-limit
+    return results
 
 
 # ---------------------------------------------------------------------------
@@ -270,6 +285,9 @@ def delete_stale_chunks(conn, current_sources: set):
 # ---------------------------------------------------------------------------
 
 def main():
+    print(f"Using model: {_EMBED_MODEL}")
+    print(f"Available embedding models: {_list_embedding_models()}")
+
     print("Connecting to DB...")
     conn = psycopg.connect(DB_URL)
 
