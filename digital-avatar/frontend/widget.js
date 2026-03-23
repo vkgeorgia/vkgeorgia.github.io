@@ -40,7 +40,11 @@
                     
                     <div id="ai-widget-messages" class="ai-widget-messages">
                         <div class="ai-widget-message ai-widget-message-bot">
-                            Hello! I'm Valerii's AI assistant. I can tell you about his professional experience, consulting services, and help schedule a meeting. How can I assist you?
+                            Hi! I'm Valerii's AI assistant. Here's what I can do:<br><br>
+                            <strong>1. Experience &amp; approach</strong> — projects, industries, domains, professional philosophy.<br>
+                            <strong>2. Schedule a meeting</strong> — book a call directly in Valerii's calendar.<br>
+                            <strong>3. Tailored resume</strong> — share a vacancy and I'll generate a resume focused on what matters for that role.<br><br>
+                            What brings you here?
                         </div>
                     </div>
                     
