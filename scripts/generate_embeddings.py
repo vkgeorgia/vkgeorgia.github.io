@@ -54,9 +54,10 @@ except ImportError:
     print("ERROR: psycopg not installed. Run: pip install psycopg psycopg[binary]", file=sys.stderr)
     sys.exit(1)
 
+_EMBED_MODEL = "embedding-001"
 _EMBED_URL = (
     f"https://generativelanguage.googleapis.com/v1beta/models/"
-    f"text-embedding-004:batchEmbedContents?key={GEMINI_KEY}"
+    f"{_EMBED_MODEL}:batchEmbedContents?key={GEMINI_KEY}"
 )
 
 # ---------------------------------------------------------------------------
@@ -196,7 +197,7 @@ def embed_batch(texts: List[str]) -> List[List[float]]:
     payload = json.dumps({
         "requests": [
             {
-                "model": "models/text-embedding-004",
+                "model": f"models/{_EMBED_MODEL}",
                 "content": {"parts": [{"text": t}]},
                 "taskType": "RETRIEVAL_DOCUMENT",
             }
