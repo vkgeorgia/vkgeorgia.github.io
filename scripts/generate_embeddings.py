@@ -45,19 +45,19 @@ if not GEMINI_KEY:
     print("ERROR: GEMINI_API_KEY not set", file=sys.stderr)
     sys.exit(1)
 
+import json
+import urllib.request
+
 try:
     import psycopg
 except ImportError:
     print("ERROR: psycopg not installed. Run: pip install psycopg psycopg[binary]", file=sys.stderr)
     sys.exit(1)
 
-try:
-    import google.generativeai as genai
-except ImportError:
-    print("ERROR: google-generativeai not installed. Run: pip install google-generativeai", file=sys.stderr)
-    sys.exit(1)
-
-genai.configure(api_key=GEMINI_KEY)
+_EMBED_URL = (
+    f"https://generativelanguage.googleapis.com/v1/models/"
+    f"text-embedding-004:batchEmbedContents?key={GEMINI_KEY}"
+)
 
 # ---------------------------------------------------------------------------
 # Chunking
@@ -192,15 +192,27 @@ RETRY_DELAY = 5   # seconds between retries on rate limit
 
 
 def embed_batch(texts: List[str]) -> List[List[float]]:
-    """Embed a batch of texts. Returns list of 768-dim vectors."""
+    """Embed a batch of texts via Gemini REST API (v1). Returns list of 768-dim vectors."""
+    payload = json.dumps({
+        "requests": [
+            {
+                "model": "models/text-embedding-004",
+                "content": {"parts": [{"text": t}]},
+                "taskType": "RETRIEVAL_DOCUMENT",
+            }
+            for t in texts
+        ]
+    }).encode()
     for attempt in range(3):
         try:
-            result = genai.embed_content(
-                model="models/text-embedding-004",
-                content=texts,
-                task_type="RETRIEVAL_DOCUMENT",
+            req = urllib.request.Request(
+                _EMBED_URL,
+                data=payload,
+                headers={"Content-Type": "application/json"},
             )
-            return result["embedding"]
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                data = json.loads(resp.read())
+            return [e["values"] for e in data["embeddings"]]
         except Exception as e:
             if attempt < 2:
                 print(f"  Embedding error (attempt {attempt+1}): {e}. Retrying in {RETRY_DELAY}s...")

@@ -30,7 +30,6 @@ jobs:
           NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          pip install "google-generativeai" --quiet
           python scripts/generate_embeddings.py
 
       - name: Sync knowledge base to backend

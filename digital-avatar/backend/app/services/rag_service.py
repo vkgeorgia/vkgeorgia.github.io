@@ -356,20 +356,37 @@ class RAGService:
     async def _vector_select_context(self, query: str, top_n: int = 8) -> Optional[str]:
         """Embed the query and retrieve top-N chunks via cosine similarity."""
         import asyncio
+        import json
+        import urllib.request as _urllib
         db_url = os.getenv("NEON_DATABASE_URL")
-        if not db_url or not genai:
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not db_url or not api_key:
             return None
         try:
             import psycopg as _psycopg
 
-            # Old SDK (google-generativeai) embed_content is sync — run in thread
-            result = await asyncio.to_thread(
-                genai.embed_content,
-                model="models/text-embedding-004",
-                content=query,
-                task_type="RETRIEVAL_QUERY",
+            # Call Gemini embedding REST API directly (v1, supports text-embedding-004)
+            embed_url = (
+                "https://generativelanguage.googleapis.com/v1/models/"
+                f"text-embedding-004:embedContent?key={api_key}"
             )
-            query_vec = result["embedding"]
+            payload = json.dumps({
+                "model": "models/text-embedding-004",
+                "content": {"parts": [{"text": query}]},
+                "taskType": "RETRIEVAL_QUERY",
+            }).encode()
+
+            def _embed():
+                req = _urllib.Request(
+                    embed_url,
+                    data=payload,
+                    headers={"Content-Type": "application/json"},
+                )
+                with _urllib.urlopen(req, timeout=10) as resp:
+                    data = json.loads(resp.read())
+                return data["embedding"]["values"]
+
+            query_vec = await asyncio.to_thread(_embed)
 
             conn = _psycopg.connect(db_url)
             cur = conn.cursor()
