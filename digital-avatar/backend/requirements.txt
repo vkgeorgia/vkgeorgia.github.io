@@ -14,3 +14,4 @@ google-auth-oauthlib
 google-auth-httplib2
 psycopg[binary]
 psycopg-pool
+anthropic>=0.25.0
