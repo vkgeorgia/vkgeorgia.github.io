@@ -55,7 +55,7 @@ except ImportError:
     sys.exit(1)
 
 _EMBED_URL = (
-    f"https://generativelanguage.googleapis.com/v1/models/"
+    f"https://generativelanguage.googleapis.com/v1beta/models/"
     f"text-embedding-004:batchEmbedContents?key={GEMINI_KEY}"
 )
 
