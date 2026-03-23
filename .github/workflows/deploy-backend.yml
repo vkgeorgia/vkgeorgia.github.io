@@ -26,6 +26,7 @@ jobs:
           python scripts/generate_kb.py
 
       - name: Generate embeddings (pgvector)
+        continue-on-error: true
         env:
           NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
