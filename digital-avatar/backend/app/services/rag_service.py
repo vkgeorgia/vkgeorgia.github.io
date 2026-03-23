@@ -31,7 +31,8 @@ class RAGService:
         self.model = None
         self.drive_service = None
         self.drive_folder_id = None
-        
+        self._vector_search_available = False
+
         # Gemini Setup (Old SDK)
         api_key = os.getenv("GEMINI_API_KEY")
         if api_key and genai:
@@ -45,7 +46,10 @@ class RAGService:
         else:
             logger.warning("GEMINI_API_KEY not found or google.generativeai not installed.")
             self.model = None
-        
+
+        # Check if vector search is available (pgvector + knowledge_chunks populated)
+        self._check_vector_search()
+
         # Load knowledge base
         self.load_knowledge_base()
     
@@ -329,6 +333,63 @@ class RAGService:
 
         return docs
 
+    def _check_vector_search(self) -> None:
+        """Check whether pgvector + knowledge_chunks are usable."""
+        db_url = os.getenv("NEON_DATABASE_URL")
+        if not db_url:
+            return
+        try:
+            import psycopg as _psycopg
+            conn = _psycopg.connect(db_url)
+            cur = conn.cursor()
+            cur.execute("SELECT COUNT(*) FROM knowledge_chunks")
+            count = cur.fetchone()[0]
+            conn.close()
+            if count > 0:
+                self._vector_search_available = True
+                logger.info(f"Vector search enabled ({count} chunks in knowledge_chunks)")
+            else:
+                logger.info("Vector search disabled: knowledge_chunks is empty")
+        except Exception as e:
+            logger.info(f"Vector search not available: {e}")
+
+    async def _vector_select_context(self, query: str, top_n: int = 8) -> Optional[str]:
+        """Embed the query and retrieve top-N chunks via cosine similarity."""
+        import asyncio
+        db_url = os.getenv("NEON_DATABASE_URL")
+        if not db_url or not genai:
+            return None
+        try:
+            import psycopg as _psycopg
+
+            # Old SDK (google-generativeai) embed_content is sync — run in thread
+            result = await asyncio.to_thread(
+                genai.embed_content,
+                model="models/text-embedding-004",
+                content=query,
+                task_type="RETRIEVAL_QUERY",
+            )
+            query_vec = result["embedding"]
+
+            conn = _psycopg.connect(db_url)
+            cur = conn.cursor()
+            cur.execute(
+                """
+                SELECT content
+                FROM knowledge_chunks
+                ORDER BY embedding <=> %s::vector
+                LIMIT %s
+                """,
+                (str(query_vec), top_n),
+            )
+            rows = cur.fetchall()
+            conn.close()
+            if rows:
+                return "\n\n".join(r[0] for r in rows)
+        except Exception as e:
+            logger.warning(f"Vector search failed, falling back to keyword: {e}")
+        return None
+
     def _select_context(self, query: str, top_n: int = 5) -> str:
         """Select most relevant documents by keyword overlap with the query."""
         if not self.knowledge_base:
@@ -362,10 +423,15 @@ class RAGService:
             if not self.model:
                 return self._keyword_search_fallback(query)
 
-            if not self.knowledge_base:
+            if not self.knowledge_base and not self._vector_search_available:
                 return "Knowledge base is empty. Please add documents to the knowledge_base folder or configure Google Drive."
 
-            context = self._select_context(query)
+            # Try vector search first; fall back to keyword matching
+            context = None
+            if self._vector_search_available:
+                context = await self._vector_select_context(query)
+            if not context:
+                context = self._select_context(query)
 
             # Build conversation history section (exclude current message — it's in query)
             history_section = ""
