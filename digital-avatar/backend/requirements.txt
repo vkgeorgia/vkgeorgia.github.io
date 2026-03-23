@@ -6,12 +6,6 @@ websockets
 jinja2
 python-multipart
 google-generativeai
-pdfplumber
-python-docx
-google-api-python-client
-google-auth
-google-auth-oauthlib
-google-auth-httplib2
 psycopg[binary]
 psycopg-pool
 anthropic>=0.25.0
