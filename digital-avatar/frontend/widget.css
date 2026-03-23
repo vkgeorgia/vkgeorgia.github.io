@@ -107,6 +107,11 @@
 .ai-widget-status-error      { color: #ef4444; }
 .ai-widget-status-connecting { color: #94a3b8; }
 
+.ai-widget-status-divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
 /* Close button — top-right corner of header */
 .ai-widget-close-btn {
     position: absolute;

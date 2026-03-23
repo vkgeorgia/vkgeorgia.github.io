@@ -32,8 +32,9 @@
                         <h3>Ask Valerii</h3>
                         <p class="ai-widget-subtitle">AI-powered assistant</p>
                         <div class="ai-widget-status">
-                            <span id="ai-widget-status-text" class="ai-widget-status-connecting">🔄 Connecting...</span>
-                            <span id="ai-widget-db-status-text" class="ai-widget-status-connecting">● DB...</span>
+                            <span id="ai-widget-status-text" class="ai-widget-status-connecting">● AI</span>
+                            <span class="ai-widget-status-divider">|</span>
+                            <span id="ai-widget-db-status-text" class="ai-widget-status-connecting">● DB</span>
                         </div>
                     </div>
                     
@@ -111,38 +112,30 @@
             socket = new WebSocket(wsUrl);
 
             socket.onopen = () => {
-                console.log('Connected to AI Avatar');
                 reconnectAttempts = 0;
-                updateStatus('✅ AI Active', 'connected');
+                updateStatus('● AI', 'connected');
             };
 
             socket.onmessage = (event) => {
                 const message = event.data;
-
-                if (message.includes('[Offline')) {
-                    updateStatus('⚠️ Offline Mode', 'offline');
-                } else {
-                    updateStatus('✅ AI Active', 'connected');
-                }
-
+                updateStatus(message.includes('[Offline') ? '● AI' : '● AI',
+                             message.includes('[Offline') ? 'offline' : 'connected');
                 addMessage(message, 'bot');
             };
 
             socket.onclose = () => {
-                console.log('Disconnected from AI Avatar');
                 if (reconnectAttempts < MAX_RECONNECT_ATTEMPTS) {
                     const delay = Math.min(1000 * Math.pow(2, reconnectAttempts), 30000);
                     reconnectAttempts++;
-                    updateStatus(`🔄 Reconnecting (${reconnectAttempts}/${MAX_RECONNECT_ATTEMPTS})...`, 'connecting');
+                    updateStatus('● AI', 'connecting');
                     setTimeout(connectWebSocket, delay);
                 } else {
-                    updateStatus('❌ Connection failed. Reload the page to retry.', 'error');
+                    updateStatus('● AI', 'error');
                 }
             };
 
-            socket.onerror = (error) => {
-                console.error('WebSocket error:', error);
-                updateStatus('❌ Connection Error', 'error');
+            socket.onerror = () => {
+                updateStatus('● AI', 'error');
             };
         }
 
