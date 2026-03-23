@@ -3,7 +3,7 @@ from typing import Optional
 
 from fastapi import APIRouter, Header, HTTPException
 
-from app import telegram_notify
+from app import db, telegram_notify
 
 router = APIRouter()
 
@@ -17,9 +17,19 @@ async def root():
 
 @router.get("/api/health")
 def api_health():
+    db_ok = False
+    try:
+        with db.get_pool().connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT 1")
+        db_ok = True
+    except Exception:
+        pass
+
     return {
         "ok": True,
         "version": VERSION,
+        "db": {"ok": db_ok},
         "telegram": telegram_notify.diagnostics(),
     }
 
