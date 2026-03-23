@@ -213,6 +213,13 @@ def embed_batch(texts: List[str]) -> List[List[float]]:
             with urllib.request.urlopen(req, timeout=60) as resp:
                 data = json.loads(resp.read())
             return [e["values"] for e in data["embeddings"]]
+        except urllib.error.HTTPError as e:
+            body = e.read().decode(errors="replace")
+            print(f"  HTTP {e.code} from {_EMBED_URL[:80]}...\n  Response: {body[:300]}")
+            if attempt < 2:
+                time.sleep(RETRY_DELAY * (attempt + 1))
+            else:
+                raise
         except Exception as e:
             if attempt < 2:
                 print(f"  Embedding error (attempt {attempt+1}): {e}. Retrying in {RETRY_DELAY}s...")
