@@ -11,7 +11,7 @@ import logging
 import uuid
 from typing import Any, Dict, Optional
 
-from app.db import get_db_connection
+from app.db import get_pool
 
 logger = logging.getLogger(__name__)
 
@@ -24,8 +24,7 @@ def create_session(
     """Create a chat_sessions row; returns session UUID string or None on failure."""
     sid = str(uuid.uuid4())
     try:
-        conn = get_db_connection()
-        try:
+        with get_pool().connection() as conn:
             with conn.cursor() as cur:
                 cur.execute(
                     """
@@ -34,9 +33,6 @@ def create_session(
                     """,
                     (sid, client_ip, user_agent, json.dumps(meta or {})),
                 )
-            conn.commit()
-        finally:
-            conn.close()
         return sid
     except Exception as e:
         logger.warning("chat_log: create_session failed: %s", e, exc_info=True)
@@ -53,8 +49,7 @@ def append_message(
     if role not in ("user", "assistant", "system"):
         role = "user"
     try:
-        conn = get_db_connection()
-        try:
+        with get_pool().connection() as conn:
             with conn.cursor() as cur:
                 cur.execute(
                     """
@@ -63,9 +58,6 @@ def append_message(
                     """,
                     (session_id, role, content, json.dumps(meta or {})),
                 )
-            conn.commit()
-        finally:
-            conn.close()
     except Exception as e:
         logger.warning("chat_log: append_message failed: %s", e, exc_info=True)
 
@@ -75,8 +67,7 @@ def end_session(session_id: Optional[str]) -> None:
     if not session_id:
         return
     try:
-        conn = get_db_connection()
-        try:
+        with get_pool().connection() as conn:
             with conn.cursor() as cur:
                 cur.execute(
                     """
@@ -86,8 +77,5 @@ def end_session(session_id: Optional[str]) -> None:
                     """,
                     (session_id,),
                 )
-            conn.commit()
-        finally:
-            conn.close()
     except Exception as e:
         logger.warning("chat_log: end_session failed: %s", e, exc_info=True)

@@ -18,7 +18,7 @@ from typing import Any, Dict, List, Optional
 
 import httpx
 
-from app.db import get_db_connection
+from app.db import get_pool
 
 logger = logging.getLogger(__name__)
 
@@ -79,8 +79,7 @@ def _enabled() -> bool:
 
 def _session_summary(session_id: str) -> Optional[Dict[str, Any]]:
     try:
-        conn = get_db_connection()
-        try:
+        with get_pool().connection() as conn:
             with conn.cursor() as cur:
                 cur.execute(
                     """
@@ -136,8 +135,6 @@ def _session_summary(session_id: str) -> Optional[Dict[str, Any]]:
                 calendar_urls = _extract_calendar_urls_from_texts(assistant_texts)
                 if calendar_urls:
                     calendar_hint = True
-        finally:
-            conn.close()
         return {
             "started_at": row.get("started_at"),
             "ended_at": row.get("ended_at"),
