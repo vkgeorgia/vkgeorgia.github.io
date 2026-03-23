@@ -25,6 +25,14 @@ jobs:
           pip install "psycopg[binary]" --quiet
           python scripts/generate_kb.py
 
+      - name: Generate embeddings (pgvector)
+        env:
+          NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          pip install "google-generativeai" --quiet
+          python scripts/generate_embeddings.py
+
       - name: Sync knowledge base to backend
         run: |
           rm -rf digital-avatar/backend/knowledge_base
