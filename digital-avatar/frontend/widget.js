@@ -72,7 +72,7 @@
         let isOpen = false;
         let reconnectAttempts = 0;
         const MAX_RECONNECT_ATTEMPTS = 5;
-        const MAX_MESSAGE_LENGTH = 2000;
+        const MAX_MESSAGE_LENGTH = 8000; // raised to allow job vacancy texts for resume generation
 
         function escapeHtml(str) {
             return str
