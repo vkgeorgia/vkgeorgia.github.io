@@ -367,7 +367,7 @@ class RAGService:
 
             # Call Gemini embedding REST API directly (v1, supports text-embedding-004)
             embed_url = (
-                "https://generativelanguage.googleapis.com/v1/models/"
+                "https://generativelanguage.googleapis.com/v1beta/models/"
                 f"text-embedding-004:embedContent?key={api_key}"
             )
             payload = json.dumps({
