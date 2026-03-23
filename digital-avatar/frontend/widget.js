@@ -29,7 +29,8 @@
                 <div id="ai-widget-chat" class="ai-widget-chat ai-widget-hidden">
                     <div class="ai-widget-header">
                         <button id="ai-widget-close" class="ai-widget-close-btn" aria-label="Close chat">×</button>
-                        <h3>Valerii Korobeinikov's AI Avatar</h3>
+                        <h3>Ask Valerii</h3>
+                        <p class="ai-widget-subtitle">AI-powered assistant</p>
                         <div class="ai-widget-status">
                             <span id="ai-widget-status-text" class="ai-widget-status-connecting">🔄 Connecting...</span>
                             <span id="ai-widget-db-status-text" class="ai-widget-status-connecting">● DB...</span>
