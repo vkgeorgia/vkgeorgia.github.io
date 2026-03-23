@@ -365,7 +365,7 @@ class RAGService:
         try:
             import psycopg as _psycopg
 
-            _embed_model = "embedding-001"
+            _embed_model = "gemini-embedding-001"
             embed_url = (
                 "https://generativelanguage.googleapis.com/v1beta/models/"
                 f"{_embed_model}:embedContent?key={api_key}"
@@ -374,6 +374,7 @@ class RAGService:
                 "model": f"models/{_embed_model}",
                 "content": {"parts": [{"text": query}]},
                 "taskType": "RETRIEVAL_QUERY",
+                "outputDimensionality": 768,
             }).encode()
 
             def _embed():
