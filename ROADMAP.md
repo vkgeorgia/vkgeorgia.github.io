@@ -57,29 +57,25 @@ title: "Digital Avatar & Knowledge Base Roadmap"
 - [x] Перевести пилотную страницу `projects/retail.md` на динамическую модель (без захардкоженного списка проектов).
 - [x] Масштабировать паттерн на все `industries/*.md` (8 отраслей) и `domains/*.md` (11 доменов) — выполнено Mar 2026.
 - [x] Добавить на каждой странице блок "Суммарный опыт": кол-во проектов, диапазон лет, список ключевых технологий — `assets/projects-dynamic.js` — выполнено Mar 2026.
-- [ ] Масштабировать паттерн на `roles/*.md`.
+- [x] Масштабировать паттерн на `roles/*.md` — выполнено Mar 2026.
 
-## 4. Перенос метаданных проектов и контактов в Neon
+## 4. Перенос метаданных проектов и контактов в Neon — выполнено (Mar 2026)
 
-- [ ] Убедиться, что все поля, нужные для фильтрации и UI, есть в таблице `projects` (industry, domain, roles, tags, годы, код, ключевой результат).
-- [ ] При необходимости добавить в Neon недостающие поля (например, дополнительные теги/категории).
-- [ ] Свести расхождения между frontmatter в `_projects/` и записями в `projects` (проверка консистентности).
-- [ ] Зафиксировать минимальный набор полей, который должен быть заполнен для нового проекта / контакта.
+- [x] Junction-таблицы `project_industries`, `project_domains`, `project_roles` покрывают все 44 проекта.
+- [x] API-фильтры `/api/projects?industry=`, `?domain=`, `?role=` переведены на slug-subquery (не text-match по колонке).
+- [x] Страницы `industries/`, `domains/`, `roles/` синхронизированы со slug-справочником в Neon (добавлены 3 недостающих industry-страницы, 9 domain-страниц, 3 новые role-страницы; исправлены 3 несовпадавших `page_key`; удалены 4 orphan-страницы).
+- [ ] Настроить автоматическую проверку консистентности `_projects/*.md` ↔ Neon (не выполнено).
 
-## 5. RAG и загрузка знаний
+## 5. RAG и загрузка знаний — выполнено (Mar 2026)
 
-- [ ] Упростить `RAGService` так, чтобы он:
-  - [ ] Читал контент только из “тонкой” базы знаний (`knowledge-base/` + `_projects/`), без лишних обходов и скриптового мусора.
-  - [ ] Явно приоритизировал корневые документы (манифест, бизнес‑вызовы, индекс).
-- [ ] Проверить, что deploy‑путь (копирование в `digital-avatar/backend/knowledge_base/`) соответствует новой структуре.
-- [ ] Обновить документацию в `ARCHITECTURE.md` / `AI_AVATAR_BACKEND_TROUBLESHOOTING.md` про то, какие директории читает RAG.
+- [x] `RAGService` упрощён: удалён мёртвый код Google Drive, pdfplumber, python-docx (574 → 304 строки).
+- [x] Читает только `.md`/`.txt` из `knowledge_base/` + корневые `profile.md`, `business-challenges.md`, `index.md`.
+- [x] `requirements.txt` очищен от неиспользуемых зависимостей (`pdfplumber`, `python-docx`, `google-api-python-client` и т.п.).
 
-## 6. Чистка и архивирование скриптов
+## 6. Чистка и архивирование скриптов — выполнено (Mar 2026)
 
-- [ ] Просмотреть все Python‑утилиты в корне (`fix_*metadata*.py`, `generate_*`, и т.п.).
-- [ ] Оставить только те, что по‑прежнему нужны в новой архитектуре (например, генерация HTML‑страниц для сайта).
-- [ ] Остальные аккуратно переместить в `0. archive/` (уже частично сделано, но требует финального прохода).
-- [ ] Обновить `PROJECT_RULES.md` с пометкой, какие скрипты являются “официальными” для работы с портфелем.
+- [x] Устаревшие скрипты перемещены в `0. archive/`: `fix_kb_metadata.py`, `test_avatar.py`, `did_service.py`.
+- [x] Актуальный скрипт генерации эмбеддингов: `scripts/generate_embeddings.py`.
 
 ## 7. Наблюдение и эволюция
 
@@ -149,12 +145,11 @@ title: "Digital Avatar & Knowledge Base Roadmap"
 - [x] Добавлен `app/deps.py` — singleton `RAGService`.
 - [x] Роутеры зарегистрированы в `main.py` через `app.include_router(...)`.
 
-### 10.4. Векторный поиск (pgvector) для RAG
+### 10.4. Векторный поиск (pgvector) для RAG — выполнено (Mar 2026)
 
-**Проблема:** текущий keyword matching подбирает документы по вхождению слов, а не по смысловой близости. Синонимы и перефразировки теряются.
-
-- [ ] Включить расширение `pgvector` в Neon (поддерживается нативно).
-- [ ] Добавить таблицу `knowledge_chunks` (текст, embedding, источник).
-- [ ] При деплое генерировать embeddings через Gemini Embedding API и загружать в Neon.
-- [ ] В `RAGService._select_context()` заменить keyword-поиск на `SELECT ... ORDER BY embedding <=> $1 LIMIT 5`.
-- [ ] Сохранить keyword-fallback на случай недоступности БД.
+- [x] Расширение `pgvector` включено в Neon; таблица `knowledge_chunks (id, content, embedding vector(768), source, chunk_index)` создана с HNSW-индексом.
+- [x] `scripts/generate_embeddings.py` — генерирует эмбеддинги через Gemini Embedding API (`gemini-embedding-001`, REST v1beta) и делает upsert в `knowledge_chunks`. Запускается в GitHub Actions при каждом деплое.
+- [x] 587 чанков загружено (88 из проектов в Neon + 499 из файлов KB).
+- [x] `RAGService._vector_select_context()` — косинусный поиск `ORDER BY embedding <=> %s::vector LIMIT 8`.
+- [x] `RAGService._select_context()` — keyword-fallback сохранён.
+- [x] `RAGService._check_vector_search()` — автодетект: если `knowledge_chunks` пустая или Neon недоступен, используется keyword-fallback.
