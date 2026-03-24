@@ -15,10 +15,17 @@ This document serves as the operational manual for the `vkgeorgia.github.io` pro
 *   **Роль**: нарративный архив — длинные тексты кейсов для RAG и резервный источник. Не источник правды для метаданных.
 *   **Structure**: Each project is a separate `.md` file.
 *   **Project Codes**:
+    *   **One project = one code. Codes must be unique across all projects.**
     *   Codes (e.g., `RTK-PROTEUS`, `SKY-BARS`) must **NEVER** appear in the visible Title or Content Header.
     *   Codes must **ONLY** be stored in the `project_code` field in the frontmatter.
+    *   If a project historically had a second code, store it in the `notes` field: `notes: "Legacy secondary code: EPM-ECO"`.
     *   *Correct*: `title: "Traffic analytics system"`
     *   *Incorrect*: `title: "Traffic analytics system (RTK-PROTEUS)"`
+    *   *Incorrect*: `project_code: [EPM-PSR, EPM-ECO]` — multiple codes in one field are not allowed.
+*   **Notes** (`notes`):
+    *   Free-text field for internal remarks (legacy codes, context, caveats).
+    *   Stored in Neon DB as `notes TEXT` and in frontmatter as `notes: "..."`.
+    *   Not shown publicly.
 *   **Client visibility** (`client_name_visibility`):
     *   `[public]` — имя клиента можно показывать публично.
     *   `[hidden]` — имя клиента конфиденциально; на сайте и в боте отображать как «Confidential client».

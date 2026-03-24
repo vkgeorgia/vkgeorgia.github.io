@@ -25,7 +25,6 @@ WHERE code IN (
   'EPM-HRMS',
   'EPM-SPC',
   'EPM-PSR',
-  'EPM-ECO',
   'DELB-CRP',
   'DANF-ACO',
   'DANF-L2C',
