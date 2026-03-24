@@ -173,20 +173,20 @@ title: "Digital Avatar & Knowledge Base Roadmap"
 #### Размер образа
 - [x] `Dockerfile`: убрать `gcc` — не нужен при `psycopg[binary]`
 
-### 11.2. Волна 2 — Безопасность и надёжность
+### 11.2. Волна 2 — Безопасность и надёжность — выполнено (Mar 2026)
 
 #### Безопасность
-- [ ] `contacts.py`: `/api/contacts` публичный — отдаёт всю базу контактов без аутентификации; добавить `x-api-key` как в `resume.py`
-- [ ] `rag_service.py`: user query вставляется в промпт plain string — возможен prompt injection; перейти на структурированный `contents=[{"role": "user", "content": query}]`
-- [ ] `chat.py`: URL-валидация не блокирует Unicode homograph атаки (`gооgle.com` с кириллицей); добавить IDNA-нормализацию домена
+- [x] `contacts.py`: добавлен `x-api-key` (env `CONTACTS_API_KEY`, `hmac.compare_digest`) на оба эндпоинта
+- [x] `rag_service.py`: system prompt вынесен в `system_instruction` (отдельное поле SDK) — user query больше не может из него вырваться
+- [x] `chat.py`: IDNA-нормализация хоста в `_validate_url` — homograph-атаки отклоняются или трансформируются в punycode
 
 #### Надёжность
-- [ ] `rag_service.py`: добавить timeout на вызов Gemini API — сейчас WebSocket зависает при медленном ответе
-- [ ] `telegram_notify.py`: добавить exponential backoff retry (до 3 попыток) при временной недоступности Telegram API
-- [ ] `resume_service.py`: при невалидном JSON от LLM — silent fallback без уведомления пользователя; добавить явную обработку
+- [x] `rag_service.py`: `asyncio.wait_for(..., timeout=30.0)` на вызов Gemini
+- [x] `telegram_notify.py`: exponential backoff retry (3 попытки: 0s, 1s, 2s); 4xx не ретраятся
+- [x] `resume_service.py`: явный `json.JSONDecodeError` с выводом сырого LLM-ответа в лог
 
 #### Зависимости
-- [ ] `requirements.txt`: добавить верхние границы версий (`>=X,<X+1`) — сейчас мажорный апгрейд может сломать прод-билд
+- [x] `requirements.txt`: верхние границы `<X+1` для всех пакетов
 
 ### 11.3. Волна 3 — Качество кода
 

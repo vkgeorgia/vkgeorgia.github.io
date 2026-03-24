@@ -157,26 +157,30 @@ def _parse_chat_id(raw: str):
 
 
 def _send_text(text: str, chat_id, token: str) -> None:
-    """Low-level: send an HTML message to Telegram. Best-effort, logs on failure."""
+    """Low-level: send an HTML message to Telegram. Best-effort with exponential backoff."""
+    import time
     url = f"{TELEGRAM_API}/bot{token}/sendMessage"
-    try:
-        with httpx.Client(timeout=15.0) as client:
-            r = client.post(
-                url,
-                json={
-                    "chat_id": chat_id,
-                    "text": text,
-                    "parse_mode": "HTML",
-                    "disable_web_page_preview": True,
-                },
-            )
+    payload = {
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": True,
+    }
+    for attempt in range(3):
+        try:
+            with httpx.Client(timeout=15.0) as client:
+                r = client.post(url, json=payload)
             body = r.json() if r.content else {}
-            if r.status_code != 200 or (isinstance(body, dict) and body.get("ok") is False):
-                logger.warning("telegram_notify: send failed HTTP %s: %s", r.status_code, str(body)[:300])
-            else:
+            if r.status_code == 200 and not (isinstance(body, dict) and body.get("ok") is False):
                 logger.warning("telegram_notify: sent OK chat_id=%s", chat_id)
-    except Exception as e:
-        logger.warning("telegram_notify: request failed: %s", e, exc_info=True)
+                return
+            logger.warning("telegram_notify: send failed HTTP %s: %s", r.status_code, str(body)[:300])
+            if r.status_code < 500:
+                return  # 4xx errors won't be fixed by retry
+        except Exception as e:
+            logger.warning("telegram_notify: request failed (attempt %d/3): %s", attempt + 1, e)
+        if attempt < 2:
+            time.sleep(2 ** attempt)  # 1s, 2s
 
 
 def notify_session_ended(session_id: str) -> None:
