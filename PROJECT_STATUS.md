@@ -1,6 +1,6 @@
 # Project Status: vkgeorgia.github.io
 
-**Last Updated:** 2026-03-13  
+**Last Updated:** 2026-03-24
 **Site URL:** https://vkgeorgia.github.io
 
 ---
@@ -69,6 +69,17 @@ Personal portfolio and consulting website for Valerii Korobeinikov, positioned a
 - **Security/cleanup**: Removed temporary `/debug/routes` endpoint after production diagnostics were completed
 - **Frontend pilot**: `projects/retail/` now renders projects dynamically from backend API (Neon-backed)
 
+### 7. Dynamic Pages + pgvector RAG (Mar 2026)
+- **Dynamic industries/domains/roles pages**: All pages translated to thin Jekyll shell + JS fetch. Added 3 missing industry pages, 9 domain pages, 3 new role pages; fixed 3 `page_key` mismatches; removed 4 orphan pages.
+- **API filter fix**: `/api/projects?domain=&role=` switched from text-column match to slug-based junction table subqueries (`project_domains`, `project_roles`).
+- **pgvector semantic search**: `knowledge_chunks` table (768-dim, HNSW), 587 chunks from projects + KB files. `RAGService` now uses cosine similarity search with keyword fallback.
+- **Embeddings pipeline**: `scripts/generate_embeddings.py` runs in GitHub Actions on every backend deploy (Gemini `gemini-embedding-001` REST API).
+- **RAGService cleanup**: Removed dead code — Google Drive, pdfplumber, python-docx (574 → 304 lines). `requirements.txt` cleaned up accordingly.
+- **Project codes rule**: Bot system prompt §8 added — never expose internal project codes (RTK-PROTEUS etc.) in responses. Rule documented in `PROJECT_RULES.md`.
+- **FastAPI routers**: `main.py` split into `routers/chat.py`, `projects.py`, `contacts.py`, `health.py`.
+- **Connection pooling**: `psycopg_pool.ConnectionPool` (min=1, max=5) initialized via FastAPI lifespan.
+- **Conversation history**: RAGService receives last N messages; Gemini sees full conversation context.
+
 ---
 
 ## Technical Configuration
@@ -80,15 +91,14 @@ Personal portfolio and consulting website for Valerii Korobeinikov, positioned a
 - **Plugins**: `jekyll-feed`, `jekyll-sitemap`
 
 ### AI Avatar (Digital Assistant)
-- **Backend**: FastAPI (Python) + Google Gemini API
-- **Deployment**: Google Cloud Run (Docker, linux/amd64)
-- **Knowledge Base**: Auto-synced from `_projects` and `knowledge-base` via `deploy.sh`
-- **Persona**: M-Shape Architect (same as website)
+- **Backend**: FastAPI (Python) + Google Gemini 2.5 Flash
+- **Deployment**: Google Cloud Run (Docker, linux/amd64), automated via GitHub Actions
+- **RAG**: pgvector semantic search (primary) + keyword fallback; 587 chunks in Neon
+- **Persona**: M-Shape Architect — Enterprise Architect, Launcher, Troubleshooter
 
 ### Deployment
-- **Platform**: GitHub Pages
-- **Build Time**: 2-3 minutes after push
-- **Deploy Script**: `digital-avatar/backend/deploy.sh` (for AI backend)
+- **Frontend**: GitHub Pages — auto on push to `main`
+- **Backend**: GitHub Actions (`.github/workflows/deploy-backend.yml`) — generates KB + embeddings → builds Docker → pushes to Artifact Registry → deploys to Cloud Run
 
 ---
 
