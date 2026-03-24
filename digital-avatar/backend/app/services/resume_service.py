@@ -125,6 +125,14 @@ VACANCY TEXT:
         if not result.get("target_industry") and industry_hint:
             result["target_industry"] = industry_hint
         return result
+    except json.JSONDecodeError as e:
+        logger.warning(f"Vacancy pre-pass: LLM returned invalid JSON ({e}). Raw: {raw[:300]!r}")
+        return {
+            "target_role": role_hint or "consultant",
+            "target_company": None,
+            "target_industry": industry_hint,
+            "target_domains": [],
+        }
     except Exception as e:
         logger.warning(f"Vacancy pre-pass failed ({e}), using hints/defaults")
         return {

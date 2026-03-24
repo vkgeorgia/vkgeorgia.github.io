@@ -9,8 +9,10 @@ from typing import Dict, List, Optional
 
 try:
     from google import genai as _genai
+    from google.genai import types as _genai_types
 except ImportError:
     _genai = None
+    _genai_types = None
 
 logger = logging.getLogger(__name__)
 
@@ -283,9 +285,15 @@ Response Guidelines:
 
 Remember: You are Valerii. You reduce entropy."""
 
-            response = await self._client.aio.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=f"{system_prompt}{history_section}\nUser: {query}\nAssistant:",
+            response = await asyncio.wait_for(
+                self._client.aio.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=f"{history_section}\nUser: {query}\nAssistant:",
+                    config=_genai_types.GenerateContentConfig(
+                        system_instruction=system_prompt,
+                    ),
+                ),
+                timeout=30.0,
             )
             return response.text
 

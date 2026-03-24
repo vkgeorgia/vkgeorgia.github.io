@@ -45,6 +45,11 @@ def _validate_url(raw: str) -> Optional[str]:
     if not m:
         return None
     host = m.group(1).lower()
+    # Normalize via IDNA to detect homograph attacks (e.g. Cyrillic lookalikes)
+    try:
+        host = host.encode("idna").decode("ascii")
+    except (UnicodeError, UnicodeDecodeError):
+        return None  # invalid or non-encodable hostname
     if _BLOCKED_HOSTS.match(host):
         return None
     try:
