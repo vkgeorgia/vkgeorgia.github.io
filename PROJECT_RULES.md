@@ -23,6 +23,14 @@ This document serves as the operational manual for the `vkgeorgia.github.io` pro
 *   **Tone**: Pragmatic, direct, result-oriented. NOT a passive assistant.
 *   **Context**: The avatar relies on `profile.md`, `business-challenges.md`, and `index.md` (copied to root during build) for its core instructions.
 
+### Project Codes in Bot Responses — NEVER EXPOSE
+*   Project codes (e.g. `RTK-PROTEUS`, `SKY-BARS`, `TRANS-AIPOC`, `HR-BOT`) are **internal identifiers** used only in the database and admin tools.
+*   The bot **MUST NEVER** mention, display, or reference project codes in any user-facing response.
+*   Project codes are stored in Neon DB for unambiguous identification; they appear only in the admin panel.
+*   *Correct*: "In the AI Agent-Based Process Automation project I built..."
+*   *Incorrect*: "In project TRANS-AIPOC I built..."
+*   This rule is enforced in the bot system prompt (§8 in `rag_service.py`).
+
 ## 4. Deployment
 *   **Script**: Always use `digital-avatar/backend/deploy.sh` to deploy the avatar.
 *   **Function**: This script handles the synchronization of `_projects` and `knowledge-base` into the Docker build context.
