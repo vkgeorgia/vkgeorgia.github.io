@@ -8,9 +8,9 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 try:
-    import google.generativeai as genai
+    from google import genai as _genai
 except ImportError:
-    genai = None
+    _genai = None
 
 logger = logging.getLogger(__name__)
 
@@ -18,16 +18,15 @@ logger = logging.getLogger(__name__)
 class RAGService:
     def __init__(self):
         self.knowledge_base: List[str] = []
-        self.model = None
+        self._client = None
         self._vector_search_available = False
 
         # Gemini setup
         api_key = os.getenv("GEMINI_API_KEY")
-        if api_key and genai:
+        if api_key and _genai:
             try:
-                genai.configure(api_key=api_key)
-                self.model = genai.GenerativeModel("gemini-2.5-flash")
-                logger.info("Gemini configured with gemini-2.5-flash")
+                self._client = _genai.Client(api_key=api_key)
+                logger.info("Gemini configured with gemini-2.5-flash (google-genai)")
             except Exception as e:
                 logger.error(f"Failed to configure Gemini: {e}")
 
@@ -184,7 +183,7 @@ class RAGService:
     ) -> str:
         """Generate a response using Gemini with RAG context."""
         try:
-            if not self.model:
+            if not self._client:
                 return self._keyword_search_fallback(query)
 
             # Try vector search first; fall back to keyword
@@ -284,8 +283,9 @@ Response Guidelines:
 
 Remember: You are Valerii. You reduce entropy."""
 
-            response = await self.model.generate_content_async(
-                f"{system_prompt}{history_section}\nUser: {query}\nAssistant:"
+            response = await self._client.aio.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=f"{system_prompt}{history_section}\nUser: {query}\nAssistant:",
             )
             return response.text
 
