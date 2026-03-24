@@ -236,6 +236,19 @@ scripts/generate_embeddings.py
 
 ---
 
+## Cloud Resources
+
+| Resource | Value |
+|---|---|
+| GCP Project | `gen-lang-client-0202538697` |
+| Cloud Run service | `ai-avatar` / region `us-central1` |
+| Cloud Run URL | `https://ai-avatar-103512681014.us-central1.run.app` |
+| Gemini model | `gemini-2.5-flash` (responses), `gemini-embedding-001` (embeddings) |
+| Build storage | `gs://gen-lang-client-0202538697_cloudbuild/` |
+| Database | Neon PostgreSQL, db `neondb` |
+
+---
+
 ## Quick Reference
 
 ```bash
@@ -248,9 +261,58 @@ source .venv/bin/activate
 uvicorn app.main:app --reload
 
 # Manually regenerate embeddings
-cd /path/to/repo
 GEMINI_API_KEY=... NEON_DATABASE_URL=... python scripts/generate_embeddings.py
 
 # Force GitHub Pages rebuild
 git commit --allow-empty -m "Force rebuild" && git push
 ```
+
+---
+
+## Troubleshooting
+
+### Cloud Run revision не стартует
+
+1. **Cloud Run → ai-avatar → Revisions** — красный ERROR → смотреть логи.
+2. В логах найти `Traceback (most recent call last)`.
+
+Самый частый кейс — `NEON_DATABASE_URL is not set`:
+- Cloud Run → ai-avatar → **Edit & deploy new revision → Variables**.
+- Проверить/добавить `GEMINI_API_KEY` и `NEON_DATABASE_URL` (полный DSN без префикса `psql`).
+- Deploy → дождаться `Ready`.
+
+### Эндпоинты `/api/projects` или `/api/contacts` → 404
+
+- Убедиться, что в `app/main.py` зарегистрированы роутеры из `routers/`.
+- Перезапустить GitHub Actions workflow **Deploy AI Avatar Backend**.
+- Пока новая ревизия не работает — переключиться на предыдущую стабильную ревизию в Cloud Run.
+
+### Telegram уведомления не приходят
+
+Проверить `/api/health` → блок `telegram`:
+- `would_attempt_send: true` — переменные видны, проблема на стороне Telegram.
+- `false` — в Cloud Run нет `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`; перезапустить деплой после добавления секретов в GitHub.
+
+Ручной тест (нужна временная переменная `TELEGRAM_DIAG_SECRET` в Cloud Run):
+```bash
+curl -sS -X POST "https://ai-avatar-103512681014.us-central1.run.app/api/internal/telegram-test" \
+  -H "Authorization: Bearer <TELEGRAM_DIAG_SECRET>"
+```
+После проверки удалить `TELEGRAM_DIAG_SECRET`.
+
+Отключить без удаления секретов: `TELEGRAM_NOTIFY_ENABLED=false` в Cloud Run.
+
+### Чат-логи не пишутся в Neon
+
+Таблицы не созданы — выполнить `digital-avatar/backend/sql/chat_logs.sql` в Neon SQL Editor.
+Проверка:
+```sql
+SELECT id, started_at, ended_at FROM chat_sessions ORDER BY started_at DESC LIMIT 5;
+SELECT session_id, role, left(content, 80), created_at FROM chat_messages ORDER BY created_at DESC LIMIT 10;
+```
+
+### Чеклист перед пушем изменений в backend
+
+1. Локально: `uvicorn app.main:app --reload`
+2. Проверить `GET /`, `/api/projects`, `/api/contacts`
+3. Только после этого — push в `main`.
