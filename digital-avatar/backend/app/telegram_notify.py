@@ -24,6 +24,13 @@ logger = logging.getLogger(__name__)
 
 TELEGRAM_API = "https://api.telegram.org"
 
+_INTENT_LABELS = {
+    "employer": "🎯 Работодатель / Рекрутер",
+    "client":   "💼 Клиент (бизнес)",
+    "partner":  "🤝 Партнёр",
+    "general":  "❓ Общий интерес",
+}
+
 # https://… до пробела/скобки/кавычек (типичные хвосты markdown)
 _URL_RE = re.compile(r"https?://[^\s\)\]\"\'<>]+", re.IGNORECASE)
 
@@ -183,7 +190,7 @@ def _send_text(text: str, chat_id, token: str) -> None:
             time.sleep(2 ** attempt)  # 1s, 2s
 
 
-def notify_session_ended(session_id: str) -> None:
+def notify_session_ended(session_id: str, intent: str = "general") -> None:
     """Best-effort: send one message to Telegram after a chat session closes."""
     if not session_id:
         return
@@ -219,8 +226,10 @@ def notify_session_ended(session_id: str) -> None:
         ip = summary.get("client_ip") or "—"
         started = summary.get("started_at")
         ended = summary.get("ended_at")
+        intent_label = _INTENT_LABELS.get(intent, "❓ Неизвестно")
         text = (
             "🤖 <b>AI Avatar</b>: сессия чата завершена\n\n"
+            f"<b>Намерение: {intent_label}</b>\n\n"
             f"session_id: <code>{html.escape(session_id)}</code>\n"
             f"сообщений: user={n_user}, assistant={n_asst}\n"
             f"упоминание календаря в ответах: {cal}\n"

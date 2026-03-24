@@ -213,6 +213,33 @@ async def _parse_contact_reply(text: str) -> Dict[str, Any]:
     return {"name": None, "email": email_m.group(0) if email_m else None, "company": None}
 
 
+async def _detect_session_intent(history: List[Dict[str, str]]) -> str:
+    """Classify visitor intent from conversation history using LLM."""
+    if not history:
+        return "general"
+    conversation = "\n".join(
+        f"{'User' if m['role'] == 'user' else 'Assistant'}: {m['content'][:300]}"
+        for m in history[-20:]
+    )
+    system = (
+        "You are an intent classifier. Analyse the conversation and classify the visitor's primary intent.\n"
+        "Return ONLY one of these labels:\n"
+        "  employer  — recruiter or company looking to hire Valerii as employee or contractor\n"
+        "  client    — business looking for consulting, project, or contract work from Valerii\n"
+        "  partner   — potential business partner or collaborator\n"
+        "  general   — general curiosity, no clear business intent\n"
+        "Return exactly one word, nothing else."
+    )
+    try:
+        result = await _call_llm(system, f"Conversation:\n{conversation}\n\nIntent:")
+        label = result.strip().lower().split()[0]
+        if label in ("employer", "client", "partner", "general"):
+            return label
+    except Exception as e:
+        logger.warning(f"Intent detection failed: {e}")
+    return "general"
+
+
 async def _handle_contact_collection(
     data: str,
     session_state: Dict[str, Any],
@@ -615,5 +642,6 @@ async def chat_endpoint(websocket: WebSocket):
         await websocket.close()
     finally:
         if session_id:
+            intent = await _detect_session_intent(history) if history else "general"
             await asyncio.to_thread(chat_log.end_session, session_id)
-            await asyncio.to_thread(telegram_notify.notify_session_ended, session_id)
+            await asyncio.to_thread(telegram_notify.notify_session_ended, session_id, intent)
