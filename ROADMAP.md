@@ -153,3 +153,47 @@ title: "Digital Avatar & Knowledge Base Roadmap"
 - [x] `RAGService._vector_select_context()` — косинусный поиск `ORDER BY embedding <=> %s::vector LIMIT 8`.
 - [x] `RAGService._select_context()` — keyword-fallback сохранён.
 - [x] `RAGService._check_vector_search()` — автодетект: если `knowledge_chunks` пустая или Neon недоступен, используется keyword-fallback.
+
+---
+
+## 11. Code Review — Security & Quality Hardening (Mar 2026)
+
+Результат code review бэкенда. Три волны приоритетности.
+
+### 11.1. Волна 1 — Быстрые фиксы (критические + очевидные)
+
+#### Безопасность
+- [ ] `resume.py`: заменить `!=` на `hmac.compare_digest()` для сравнения API-ключа (timing attack)
+- [ ] `health.py`: то же для `TELEGRAM_DIAG_SECRET`
+
+#### Стабильность
+- [ ] `chat.py`: trim истории делать **до** `append`, а не после — иначе на одну итерацию больше лимита
+- [ ] `deploy-backend.yml`: добавить health check шаг после деплоя (curl `/api/health`) — сейчас сломанная ревизия идёт в прод без проверки
+
+#### Размер образа
+- [ ] `Dockerfile`: убрать `gcc` — он не нужен при использовании `psycopg[binary]` (precompiled wheels), лишние ~150 MB
+
+### 11.2. Волна 2 — Безопасность и надёжность
+
+#### Безопасность
+- [ ] `contacts.py`: `/api/contacts` публичный — отдаёт всю базу контактов без аутентификации; добавить `x-api-key` как в `resume.py`
+- [ ] `rag_service.py`: user query вставляется в промпт plain string — возможен prompt injection; перейти на структурированный `contents=[{"role": "user", "content": query}]`
+- [ ] `chat.py`: URL-валидация не блокирует Unicode homograph атаки (`gооgle.com` с кириллицей); добавить IDNA-нормализацию домена
+
+#### Надёжность
+- [ ] `rag_service.py`: добавить timeout на вызов Gemini API — сейчас WebSocket зависает при медленном ответе
+- [ ] `telegram_notify.py`: добавить exponential backoff retry (до 3 попыток) при временной недоступности Telegram API
+- [ ] `resume_service.py`: при невалидном JSON от LLM — silent fallback без уведомления пользователя; добавить явную обработку
+
+#### Зависимости
+- [ ] `requirements.txt`: добавить верхние границы версий (`>=X,<X+1`) — сейчас мажорный апгрейд может сломать прод-билд
+
+### 11.3. Волна 3 — Качество кода
+
+- [ ] `projects.py`: добавить пагинацию (`limit` + `offset`) — сейчас `/api/projects` отдаёт все записи без лимита
+- [ ] `projects.py`, `contacts.py`: добавить валидацию slug/search параметров (только `[a-z0-9-]`, max length)
+- [ ] `deps.py`: `RAGService` инициализируется при импорте до старта пула — перенести инициализацию в `lifespan`
+- [ ] `generate_embeddings.py`: добавить checkpoint/resume — при падении скрипт стартует с нуля
+- [ ] `generate_embeddings.py`: заменить линейный retry на exponential backoff
+- [ ] `Dockerfile`: заменить `python:3.12-slim` на конкретный патч-версию (`python:3.12.9-slim`) для воспроизводимых сборок
+- [ ] Вынести `"gemini-2.5-flash"` в константу — имя модели дублируется в `rag_service.py` и `resume_service.py`
