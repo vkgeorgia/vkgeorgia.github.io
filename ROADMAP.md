@@ -160,18 +160,18 @@ title: "Digital Avatar & Knowledge Base Roadmap"
 
 Результат code review бэкенда. Три волны приоритетности.
 
-### 11.1. Волна 1 — Быстрые фиксы (критические + очевидные)
+### 11.1. Волна 1 — Быстрые фиксы — выполнено (Mar 2026)
 
 #### Безопасность
-- [ ] `resume.py`: заменить `!=` на `hmac.compare_digest()` для сравнения API-ключа (timing attack)
-- [ ] `health.py`: то же для `TELEGRAM_DIAG_SECRET`
+- [x] `resume.py`: заменить `!=` на `hmac.compare_digest()` для сравнения API-ключа (timing attack)
+- [x] `health.py`: то же для `TELEGRAM_DIAG_SECRET`
 
 #### Стабильность
-- [ ] `chat.py`: trim истории делать **до** `append`, а не после — иначе на одну итерацию больше лимита
-- [ ] `deploy-backend.yml`: добавить health check шаг после деплоя (curl `/api/health`) — сейчас сломанная ревизия идёт в прод без проверки
+- [x] `chat.py`: trim истории делать **до** `append` — история теперь строго ≤ `MAX_HISTORY_TURNS * 2`
+- [x] `deploy-backend.yml`: добавить health check шаг после деплоя (5 попыток × 10s)
 
 #### Размер образа
-- [ ] `Dockerfile`: убрать `gcc` — он не нужен при использовании `psycopg[binary]` (precompiled wheels), лишние ~150 MB
+- [x] `Dockerfile`: убрать `gcc` — не нужен при `psycopg[binary]`
 
 ### 11.2. Волна 2 — Безопасность и надёжность
 

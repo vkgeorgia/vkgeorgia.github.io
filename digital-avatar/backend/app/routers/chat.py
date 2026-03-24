@@ -316,6 +316,8 @@ async def chat_endpoint(websocket: WebSocket):
                     chat_log.append_message, session_id, "user", data, None
                 )
 
+            if len(history) >= MAX_HISTORY_TURNS * 2:
+                history = history[-(MAX_HISTORY_TURNS * 2 - 2):]
             history.append({"role": "user", "content": data})
 
             try:
@@ -344,9 +346,6 @@ async def chat_endpoint(websocket: WebSocket):
 
             history.append({"role": "assistant", "content": response_text})
 
-            # Trim to last MAX_HISTORY_TURNS pairs
-            if len(history) > MAX_HISTORY_TURNS * 2:
-                history = history[-(MAX_HISTORY_TURNS * 2):]
 
             if session_id:
                 await asyncio.to_thread(

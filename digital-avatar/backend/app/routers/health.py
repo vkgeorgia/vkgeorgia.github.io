@@ -1,3 +1,4 @@
+import hmac
 import os
 from typing import Optional
 
@@ -44,6 +45,6 @@ def api_telegram_test(authorization: Optional[str] = Header(None, alias="Authori
     secret = os.getenv("TELEGRAM_DIAG_SECRET", "").strip()
     if not secret:
         raise HTTPException(status_code=404, detail="Not Found")
-    if (authorization or "").strip() != f"Bearer {secret}":
+    if not hmac.compare_digest((authorization or "").strip(), f"Bearer {secret}"):
         raise HTTPException(status_code=403, detail="Forbidden")
     return telegram_notify.send_test_message()

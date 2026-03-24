@@ -1,3 +1,4 @@
+import hmac
 import logging
 import os
 from typing import Optional
@@ -14,7 +15,7 @@ router = APIRouter()
 
 def _check_api_key(x_api_key: Optional[str]) -> None:
     key = os.getenv("RESUME_API_KEY", "")
-    if key and x_api_key != key:
+    if key and not hmac.compare_digest(x_api_key or "", key):
         raise HTTPException(status_code=401, detail="Unauthorized")
 
 
