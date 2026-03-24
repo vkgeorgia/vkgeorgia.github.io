@@ -19,6 +19,11 @@ This document serves as the operational manual for the `vkgeorgia.github.io` pro
     *   Codes must **ONLY** be stored in the `project_code` field in the frontmatter.
     *   *Correct*: `title: "Traffic analytics system"`
     *   *Incorrect*: `title: "Traffic analytics system (RTK-PROTEUS)"`
+*   **Client visibility** (`client_name_visibility`):
+    *   `[public]` — имя клиента можно показывать публично.
+    *   `[hidden]` — имя клиента конфиденциально; на сайте и в боте отображать как «Confidential client».
+    *   Поле должно присутствовать в каждом `.md` файле.
+    *   **В Neon DB**: колонка `client_public BOOLEAN` (миграция: `sql/add_client_public.sql`). Именно она управляет поведением API и бота — фронтматтер вторичен.
 
 ## 3. Knowledge Base Structure
 *   **`_projects/`**: нарративные тексты кейсов. Jekyll строит страницу Cases из этих файлов.
