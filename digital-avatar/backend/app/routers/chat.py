@@ -2,7 +2,7 @@ import asyncio
 import ipaddress
 import logging
 import re
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 
@@ -30,6 +30,13 @@ _CONTACT_KW = [
 
 _EMAIL_RE = re.compile(r'\b[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}\b')
 _PHONE_RE = re.compile(r'(?:\+?\d[\d\s\-\(\)]{7,}\d)')
+
+_PERSONAL_DOMAINS = {
+    "gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "live.com",
+    "msn.com", "mail.ru", "yandex.ru", "yandex.com", "icloud.com",
+    "proton.me", "protonmail.com", "inbox.ru", "bk.ru", "list.ru",
+    "rambler.ru", "ukr.net", "googlemail.com",
+}
 
 _RAW_URL_RE = re.compile(r'https?://[^\s<>"\']{4,}', re.IGNORECASE)
 
@@ -164,6 +171,103 @@ async def _extract_name_from_history(history, current_msg: str) -> str:
         return name.strip()[:100] or "Unknown"
     except Exception:
         return "Unknown"
+
+
+def _is_work_email(email: str) -> bool:
+    return email.split("@")[-1].lower() not in _PERSONAL_DOMAINS
+
+
+def _ask_for_contact(ru: bool) -> str:
+    if ru:
+        return (
+            "Прежде чем я подготовлю резюме — скажите, пожалуйста, ваше имя, "
+            "рабочий email и компанию? Валерий сможет связаться с вами напрямую."
+        )
+    return (
+        "Before I prepare the resume — could you share your name, "
+        "work email, and company? That way Valerii can follow up with you directly."
+    )
+
+
+async def _parse_contact_reply(text: str) -> Dict[str, Any]:
+    """Extract name, email, company from a free-text reply using LLM + regex fallback."""
+    import json as _json
+    system = (
+        "You are a data extractor. Extract contact information from text. "
+        "Return ONLY valid JSON with keys: name, email, company. "
+        "Use null for missing fields. No explanation, just JSON."
+    )
+    try:
+        raw = await _call_llm(system, f"Extract: {text}")
+        m = re.search(r'\{.*\}', raw, re.DOTALL)
+        if m:
+            data = _json.loads(m.group(0))
+            return {
+                "name": data.get("name"),
+                "email": data.get("email"),
+                "company": data.get("company"),
+            }
+    except Exception:
+        pass
+    email_m = _EMAIL_RE.search(text)
+    return {"name": None, "email": email_m.group(0) if email_m else None, "company": None}
+
+
+async def _handle_contact_collection(
+    data: str,
+    session_state: Dict[str, Any],
+    history: List[Dict[str, str]],
+    session_id: Optional[str],
+    client_ip: Optional[str],
+    websocket: WebSocket,
+) -> str:
+    """Parse contact reply, validate, save lead, then execute the pending pattern."""
+    ru = _is_russian(data)
+    contact = await _parse_contact_reply(data)
+    email = contact.get("email")
+    name = contact.get("name") or "Unknown"
+
+    if not email:
+        return (
+            "Не нашёл email в вашем сообщении. Пожалуйста, укажите рабочую почту."
+            if ru else
+            "I couldn't find an email address. Please share your work email."
+        )
+
+    if not _is_work_email(email):
+        return (
+            "Пожалуйста, укажите **рабочий** email (не Gmail/Yahoo/Яндекс и т.д.). "
+            "Это нужно чтобы Валерий понял, с какой организацией вы связаны."
+            if ru else
+            "Please share a **work** email (not Gmail/Yahoo etc.). "
+            "It helps Valerii know which organisation you're from."
+        )
+
+    session_state.update({
+        "contact_verified": True,
+        "awaiting_contact": False,
+        "name": name,
+        "email": email,
+        "company": contact.get("company"),
+    })
+
+    try:
+        await _handle_lead_capture(data, history, session_id, client_ip)
+    except Exception as e:
+        logger.error(f"Lead save after contact collection failed: {e}")
+
+    pending = session_state.get("pending_pattern")
+    pending_data = session_state.get("pending_data", data)
+
+    if pending == "vacancy":
+        return await _handle_vacancy(pending_data, session_id, websocket)
+    elif pending == "resume_intent":
+        return await _handle_resume_intent(pending_data, history, session_id, websocket)
+    return (
+        "Спасибо! Данные сохранены. Чем могу помочь?"
+        if ru else
+        "Thank you! Details saved. How can I help you?"
+    )
 
 
 async def _handle_lead_capture(
@@ -414,6 +518,12 @@ async def chat_endpoint(websocket: WebSocket):
     session_id: Optional[str] = None
     history: List[Dict[str, str]] = []
     url_count: int = 0
+    session_state: Dict[str, Any] = {
+        "contact_verified": False,
+        "awaiting_contact": False,
+        "pending_pattern": None,
+        "pending_data": None,
+    }
 
     try:
         client_ip = websocket.client.host if websocket.client else None
@@ -444,22 +554,39 @@ async def chat_endpoint(websocket: WebSocket):
 
             try:
                 urls = _extract_urls(data)
-                if urls and not _is_vacancy_text(data):
+                if session_state["awaiting_contact"]:
+                    # Collecting contact info before resume generation
+                    response_text = await _handle_contact_collection(
+                        data, session_state, history, session_id, client_ip, websocket
+                    )
+                elif urls and not _is_vacancy_text(data):
                     # Pattern 0: user shared a link — forward to Valerii
                     response_text = await _handle_url_share(
                         urls, data, session_id, client_ip, url_count
                     )
                     url_count += len(urls)
                 elif _is_vacancy_text(data):
-                    # Pattern 1: user pasted a full vacancy text
-                    response_text = await _handle_vacancy(data, session_id, websocket)
+                    # Pattern 1: vacancy text — require contact first
+                    if not session_state["contact_verified"]:
+                        session_state["awaiting_contact"] = True
+                        session_state["pending_pattern"] = "vacancy"
+                        session_state["pending_data"] = data
+                        response_text = _ask_for_contact(_is_russian(data))
+                    else:
+                        response_text = await _handle_vacancy(data, session_id, websocket)
                 elif _has_resume_intent(data):
-                    # Pattern 2: user asked for resume — check conversation history
-                    response_text = await _handle_resume_intent(
-                        data, history, session_id, websocket
-                    )
+                    # Pattern 2: resume intent — require contact first
+                    if not session_state["contact_verified"]:
+                        session_state["awaiting_contact"] = True
+                        session_state["pending_pattern"] = "resume_intent"
+                        session_state["pending_data"] = data
+                        response_text = _ask_for_contact(_is_russian(data))
+                    else:
+                        response_text = await _handle_resume_intent(
+                            data, history, session_id, websocket
+                        )
                 elif _has_contact_intent(data):
-                    # Pattern 3: user shared contact info → save as lead
+                    # Pattern 3: user shared contact info spontaneously → save as lead
                     response_text = await _handle_lead_capture(
                         data, history, session_id, client_ip
                     )
