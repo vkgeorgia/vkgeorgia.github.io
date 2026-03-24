@@ -19,6 +19,18 @@ VACANCY_MIN_LENGTH = 400    # shorter messages are never standalone vacancies
 MAX_URLS_PER_SESSION = 3    # rate-limit: max shared links per session
 URL_MAX_LENGTH = 500
 
+_CONTACT_KW = [
+    # Explicit contact sharing
+    "my email", "my phone", "contact me", "reach me", "you can reach",
+    "send me", "write to me", "call me",
+    # Russian
+    "мой email", "мой телефон", "мой e-mail", "напишите мне",
+    "свяжитесь", "мой контакт", "позвоните мне",
+]
+
+_EMAIL_RE = re.compile(r'\b[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}\b')
+_PHONE_RE = re.compile(r'(?:\+?\d[\d\s\-\(\)]{7,}\d)')
+
 _RAW_URL_RE = re.compile(r'https?://[^\s<>"\']{4,}', re.IGNORECASE)
 
 # Private/loopback hostnames and IP prefixes to block
@@ -111,6 +123,111 @@ def _has_resume_intent(text: str) -> bool:
 def _is_russian(text: str) -> bool:
     ru = sum(1 for c in text if "\u0400" <= c <= "\u04ff")
     return ru > len(text) * 0.1
+
+
+def _extract_contact_info(text: str):
+    """Returns (email, phone) found in text, or (None, None)."""
+    email = _EMAIL_RE.search(text)
+    phone = _PHONE_RE.search(text)
+    return (
+        email.group(0) if email else None,
+        phone.group(0).strip() if phone else None,
+    )
+
+
+def _has_contact_intent(text: str) -> bool:
+    """True if message contains actual contact data or contact-sharing keywords."""
+    tl = text.lower()
+    has_kw = any(kw in tl for kw in _CONTACT_KW)
+    email, phone = _extract_contact_info(text)
+    return bool(email or phone or has_kw)
+
+
+async def _extract_name_from_history(history, current_msg: str) -> str:
+    """Ask LLM to find the user's name from the conversation history."""
+    if not history:
+        return "Unknown"
+    conversation = "\n".join(
+        f"{'User' if m['role'] == 'user' else 'Assistant'}: {m['content']}"
+        for m in history[-10:]
+    )
+    system = (
+        "You are a data extractor. Find the person's name from the conversation. "
+        "Return ONLY the name as plain text, or 'Unknown' if not found."
+    )
+    prompt = (
+        f"Conversation:\n{conversation}\n\n"
+        f"Current message: {current_msg}\n\nWhat is the user's name?"
+    )
+    try:
+        name = await _call_llm(system, prompt)
+        return name.strip()[:100] or "Unknown"
+    except Exception:
+        return "Unknown"
+
+
+async def _handle_lead_capture(
+    data: str,
+    history,
+    session_id,
+    client_ip: str,
+) -> str:
+    """Pattern 3: user shared contact info → save as lead in DB."""
+    from app import db
+
+    ru = _is_russian(data)
+    email, phone = _extract_contact_info(data)
+    name = await _extract_name_from_history(history, data)
+
+    def _save_lead():
+        with db.get_pool().connection() as conn:
+            cur = conn.cursor()
+            if email:
+                cur.execute("SELECT id FROM contacts WHERE email = %s", (email,))
+                existing = cur.fetchone()
+                if existing:
+                    cur.execute(
+                        """
+                        UPDATE contacts SET
+                            chat_session_id = COALESCE(chat_session_id, %s::uuid),
+                            status = CASE WHEN status = 'contact' THEN 'lead' ELSE status END,
+                            updated_at = NOW()
+                        WHERE id = %s
+                        """,
+                        (session_id, existing["id"]),
+                    )
+                    conn.commit()
+                    return "updated"
+            cur.execute(
+                """
+                INSERT INTO contacts
+                  (full_name, email, phone, source, status, chat_session_id,
+                   lead_score, notes)
+                VALUES (%s, %s, %s, 'chatbot', 'lead', %s::uuid, 20, %s)
+                ON CONFLICT DO NOTHING
+                """,
+                (name, email, phone, session_id, f"First contact via chatbot. Message: {data[:300]}"),
+            )
+            conn.commit()
+            return "created"
+
+    try:
+        action = await asyncio.to_thread(_save_lead)
+        logger.info(f"Lead {action}: email={email}, phone={phone}, session={session_id}")
+    except Exception as e:
+        logger.error(f"Lead capture failed: {e}", exc_info=True)
+
+    if ru:
+        return (
+            "Спасибо! Я сохранил ваши контактные данные и передал их Валерию. "
+            "Он свяжется с вами в ближайшее время. Если хотите — могу также "
+            "подготовить резюме под вашу вакансию или ответить на другие вопросы."
+        )
+    return (
+        "Thank you! I've saved your contact details and notified Valerii. "
+        "He'll be in touch shortly. Feel free to ask more questions or share "
+        "a vacancy and I'll prepare a tailored resume."
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -340,6 +457,11 @@ async def chat_endpoint(websocket: WebSocket):
                     # Pattern 2: user asked for resume — check conversation history
                     response_text = await _handle_resume_intent(
                         data, history, session_id, websocket
+                    )
+                elif _has_contact_intent(data):
+                    # Pattern 3: user shared contact info → save as lead
+                    response_text = await _handle_lead_capture(
+                        data, history, session_id, client_ip
                     )
                 else:
                     response_text = await rag_service.generate_response(
