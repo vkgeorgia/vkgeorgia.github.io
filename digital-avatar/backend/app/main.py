@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from app import db
-from app.routers import chat, contacts, health, projects, resume
+from app.routers import chat, contacts, health, projects, proposals, resume
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -47,6 +47,7 @@ app.include_router(health.router)
 app.include_router(chat.router)
 app.include_router(projects.router)
 app.include_router(contacts.router)
+app.include_router(proposals.router)
 app.include_router(resume.router)
 
 if __name__ == "__main__":
