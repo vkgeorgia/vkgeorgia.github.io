@@ -32,6 +32,26 @@ This document serves as the operational manual for the `vkgeorgia.github.io` pro
 *   This rule is enforced in the bot system prompt (§8 in `rag_service.py`).
 
 ## 4. Deployment
-*   **Script**: Always use `digital-avatar/backend/deploy.sh` to deploy the avatar.
-*   **Function**: This script handles the synchronization of `_projects` and `knowledge-base` into the Docker build context.
-*   **Platform**: Deployment is targeted for `linux/amd64` on Google Cloud Run.
+*   **Trigger**: Push to `main` → GitHub Actions `.github/workflows/deploy-backend.yml` builds and deploys automatically.
+*   **Platform**: Google Cloud Run, `linux/amd64`, service `ai-avatar`, region `us-central1`.
+*   **Never commit secrets**: `GEMINI_API_KEY`, `NEON_DATABASE_URL`, `TELEGRAM_BOT_TOKEN` — only in GitHub Secrets / Cloud Run env vars.
+
+## 5. Data Sources & Source of Truth
+*   **Neon DB** — единственный источник правды для структурированных данных проектов. При расхождении с `_projects/*.md` — доверять Neon.
+*   **`_projects/*.md`** — нарративный архив (тексты кейсов для RAG). Только read-only для backend.
+*   **`knowledge-base/`** — биография, статьи, домены. Не для проектных данных.
+*   **`digital-avatar/backend/knowledge_base/`** — авто-генерируется при деплое. Не редактировать вручную.
+
+## 6. Agent Rules (что можно и нельзя)
+
+### Можно
+*   Добавлять новые эндпоинты и фильтры в `app/routers/`.
+*   Добавлять/изменять Jekyll-страницы и шаблоны.
+*   Добавлять новые таблицы в Neon через SQL-миграции (не трогая существующие столбцы без крайней необходимости).
+*   Обновлять документацию (`ARCHITECTURE.md`, `PROJECT_RULES.md`, `ROADMAP.md`).
+
+### Нельзя
+*   Коммитить реальные значения API-ключей, токенов, DSN в репозиторий.
+*   Ломать или удалять существующие API-маршруты: `/ws/chat`, `/api/projects`, `/api/contacts`.
+*   Изменять `digital-avatar/frontend/widget.js` в части WebSocket-контракта без согласования.
+*   "Исправлять" данные в Neon по данным из файлов — Neon всегда главнее.
