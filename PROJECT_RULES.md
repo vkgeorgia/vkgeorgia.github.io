@@ -35,7 +35,7 @@ This document serves as the operational manual for the `vkgeorgia.github.io` pro
 ## 3. Knowledge Base Structure
 *   **`_projects/`**: нарративные тексты кейсов. Jekyll строит страницу Cases из этих файлов.
 *   **`knowledge-base/`**: биография, статьи, домены. Не для проектных данных.
-*   **`digital-avatar/backend/knowledge_base/`**: авто-генерируется при деплое. **НЕ редактировать вручную.**
+*   Локального backend knowledge-base в этом репозитории больше нет. Backend knowledge ingestion управляется во внешнем проекте `vkgeorgia/Jeeves`.
 
 ## 4. AI Avatar Persona
 *   **Identity**: "M-Shape Architect", "Launcher", "Troubleshooter".
@@ -52,21 +52,21 @@ This document serves as the operational manual for the `vkgeorgia.github.io` pro
 *   This rule is enforced in the bot system prompt (§8 in `rag_service.py`).
 
 ## 5. Deployment
-*   **Trigger**: Push to `main` → GitHub Actions `.github/workflows/deploy-backend.yml` builds and deploys automatically.
-*   **Platform**: Google Cloud Run, `linux/amd64`, service `ai-avatar`, region `us-central1`.
-*   **Never commit secrets**: `GEMINI_API_KEY`, `NEON_DATABASE_URL`, `TELEGRAM_BOT_TOKEN` — only in GitHub Secrets / Cloud Run env vars.
+*   **This repository deploys website only** (GitHub Pages via push to `main`).
+*   **AI backend runtime/deploy is external**: `https://github.com/vkgeorgia/Jeeves`.
+*   **Never commit secrets** in this repo; backend secrets belong to the Jeeves deployment pipeline.
 
 
 ## 7. Agent Rules (что можно и нельзя)
 
 ### Можно
-*   Добавлять новые эндпоинты и фильтры в `app/routers/`.
 *   Добавлять/изменять Jekyll-страницы и шаблоны.
-*   Добавлять новые таблицы в Neon через SQL-миграции (не трогая существующие столбцы без крайней необходимости).
+*   Обновлять контент (`_projects/`, `knowledge-base/`), стили и ассеты.
 *   Обновлять документацию (`ARCHITECTURE.md`, `PROJECT_RULES.md`, `ROADMAP.md`).
+*   Предлагать backend-изменения, но реализовывать их в `vkgeorgia/Jeeves`.
 
 ### Нельзя
 *   Коммитить реальные значения API-ключей, токенов, DSN в репозиторий.
-*   Ломать или удалять существующие API-маршруты: `/ws/chat`, `/api/projects`, `/api/contacts`.
-*   Изменять `digital-avatar/frontend/widget.js` в части WebSocket-контракта без согласования.
+*   Добавлять в этот repo backend runtime/deploy логику, уже вынесенную в `vkgeorgia/Jeeves`.
+*   Изменять `digital-avatar/frontend/widget.js` в части API-контракта без согласования с backend в Jeeves.
 *   "Исправлять" данные в Neon по данным из файлов — Neon всегда главнее.

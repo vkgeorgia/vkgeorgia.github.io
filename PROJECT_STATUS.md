@@ -8,7 +8,7 @@
 ## Overview
 
 `vkgeorgia.github.io` is now the **website/content repository** (GitHub Pages).  
-The AI backend (chatbot, API, leads/contacts logic) was moved out to a separate project: **`vkgeorgia/sam`**.
+The AI backend (chatbot, API, leads/contacts logic) was moved out to a separate project: **`vkgeorgia/Jeeves`**.
 
 ---
 
@@ -32,7 +32,7 @@ The AI backend (chatbot, API, leads/contacts logic) was moved out to a separate 
 ## Recent Major Change (Mar 2026)
 
 ### Site + AI became parts of a larger multi-repo system
-- **Backend moved:** old chatbot backend removed from this repo and relocated to `vkgeorgia/sam`.
+- **Backend moved:** old chatbot backend removed from this repo and relocated to `vkgeorgia/Jeeves`.
 - **Old backend deploy workflow removed:** this repo no longer deploys backend to Cloud Run.
 - **Separation of concerns:** website/content stays here; runtime AI services evolve in external backend repo.
 
@@ -49,7 +49,7 @@ The AI backend (chatbot, API, leads/contacts logic) was moved out to a separate 
 
 ### AI Integration
 - Site embeds frontend widget/static assets.
-- Backend/API endpoints are provided by external project (`vkgeorgia/sam`) and configured there.
+- Backend/API endpoints are provided by external project (`vkgeorgia/Jeeves`) and configured there.
 
 ---
 

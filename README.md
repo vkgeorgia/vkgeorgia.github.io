@@ -20,12 +20,10 @@ Here I publish:
 
 This site features an **AI-powered digital avatar** that can answer questions about my professional experience, consulting services, and help schedule meetings. Click the chat icon in the bottom-right corner to start a conversation!
 
-The avatar uses:
-- Google Gemini AI for natural language understanding
-- RAG (Retrieval-Augmented Generation) with my professional knowledge base
-- Real-time WebSocket communication
+The backend for the avatar is maintained in a separate repository:
+- [`vkgeorgia/Jeeves`](https://github.com/vkgeorgia/Jeeves)
 
-[Learn more about the Digital Avatar project →](digital-avatar/)
+This repository contains the website/content side and frontend widget assets.
 
 </p>
 
@@ -43,10 +41,7 @@ To avoid confusion between website content and AI knowledge base:
     *   **Usage**: Used by the AI avatar for context.
     *   **Rule**: Do **NOT** put project files here (duplicate).
 
-3.  **`digital-avatar/backend/knowledge_base/`**
-    *   **Purpose**: The actual folder the AI reads at runtime.
-    *   **Usage**: This is **automatically populated** during deployment.
-    *   **Rule**: Do **NOT** edit files here manually; they will be overwritten by `deploy.sh`.
-
-### Data Flow
-`_projects` + `knowledge-base`  --> [deploy.sh] --> `digital-avatar/backend/knowledge_base` --> [Docker Image]
+3.  **External backend (`vkgeorgia/Jeeves`)**
+    *   **Purpose**: Runtime AI services (chat API, RAG, integrations).
+    *   **Usage**: This website consumes backend endpoints exposed by Jeeves.
+    *   **Rule**: Backend runtime changes are made in the Jeeves repository, not here.

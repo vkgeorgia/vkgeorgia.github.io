@@ -8,7 +8,7 @@ This roadmap now tracks only work for **this repository** (`vkgeorgia.github.io`
 
 - In scope here: Jekyll pages, `_projects`, `knowledge-base`, styles/assets, widget frontend.
 - Out of scope here: chatbot backend runtime, Cloud Run deployment, DB schema/migrations, Telegram automations.
-- Backend moved to: **`vkgeorgia/sam`**.
+- Backend moved to: **`vkgeorgia/Jeeves`**.
 
 ---
 
@@ -33,7 +33,7 @@ This roadmap now tracks only work for **this repository** (`vkgeorgia.github.io`
 
 ## 4. Documentation alignment (multi-repo)
 
-- [ ] Ensure all docs in this repo clearly state: backend is external (`vkgeorgia/sam`).
+- [ ] Ensure all docs in this repo clearly state: backend is external (`vkgeorgia/Jeeves`).
 - [ ] Remove stale instructions that reference local backend runtime/deploy scripts.
 - [ ] Add a short “integration contracts” section with links to backend API docs in external repo.
 
