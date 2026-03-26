@@ -1,4 +1,8 @@
-# Deploy to Google Cloud Run
+# Deploy to Google Cloud Run (Deprecated in this repo)
+
+> This document is archived for historical context.
+> Current backend deploy flow lives in:
+> **https://github.com/vkgeorgia/Jeeves**
 
 ## Prerequisites
 1. Install Google Cloud SDK: https://cloud.google.com/sdk/docs/install

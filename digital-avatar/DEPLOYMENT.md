@@ -1,4 +1,8 @@
-# Backend Deployment Guide
+# Backend Deployment Guide (Deprecated in this repo)
+
+> This document is kept for historical reference.
+> Active backend deployment instructions were moved to:
+> **https://github.com/vkgeorgia/Jeeves**
 
 ## Quick Deploy (Manual)
 
