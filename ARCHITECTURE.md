@@ -1,6 +1,11 @@
 # Architecture Documentation
 
-**Last Updated:** 2026-03-24
+**Last Updated:** 2026-03-26
+
+> **Important:** backend runtime ownership moved to **`vkgeorgia/Jeeves`**.
+> This document in `vkgeorgia.github.io` is kept as integration context and historical reference.
+> Source of truth for backend architecture/deployment:
+> **https://github.com/vkgeorgia/Jeeves**
 
 ---
 
@@ -181,16 +186,9 @@ chat_messages  (id, session_id, role, content, created_at)
 **Frontend (automatic):**
 - Push to `main` → GitHub Actions builds Jekyll → GitHub Pages
 
-**Backend (automatic via GitHub Actions `.github/workflows/deploy-backend.yml`):**
-1. Checkout repo
-2. Run `scripts/generate_kb.py` — sync knowledge base files into Docker context
-3. Run `scripts/generate_embeddings.py` — embed KB chunks into Neon via Gemini API (`continue-on-error: true`)
-4. Build Docker image (`linux/amd64`)
-5. Push to Google Artifact Registry
-6. Deploy to Cloud Run with env vars
-
-**Environment variables injected into Cloud Run from GitHub Secrets:**
-`GEMINI_API_KEY`, `NEON_DATABASE_URL`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
+**Backend deployment/runtime:**
+- Managed in external repository: **`vkgeorgia/Jeeves`**
+- See Jeeves docs/workflows for current CI/CD pipeline and env vars.
 
 ---
 

@@ -1,6 +1,9 @@
 # Contacts API — Integration Reference
 
-**Base URL:** `https://ai-avatar-103512681014.us-central1.run.app`
+> Runtime owner: **`vkgeorgia/Jeeves`** (external backend repository).
+> This file is integration-oriented for consumers of the API.
+
+**Base URL (production):** `https://ai-avatar-103512681014.us-central1.run.app`
 
 ## Authentication
 

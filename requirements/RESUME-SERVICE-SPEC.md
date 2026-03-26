@@ -6,6 +6,10 @@
 **Database:** Neon PostgreSQL — project `patient-bar-35637442`
 **Backend stack:** Python 3.11 + FastAPI + uvicorn, deployed on Google Cloud Run (`ai-avatar`, `us-central1`, project `gen-lang-client-0202538697`)
 
+> **Status:** Archived in this repository.
+> Active backend implementation ownership moved to:
+> **https://github.com/vkgeorgia/Jeeves**
+
 ---
 
 ## Overview
