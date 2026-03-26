@@ -2,198 +2,49 @@
 title: "Digital Avatar & Knowledge Base Roadmap"
 ---
 
-## 1. Аудит текущей базы знаний
+## 0. Scope (after migration)
 
-- [x] Зафиксировать актуальное состояние директорий `knowledge-base/`, `_projects/` и `digital-avatar/backend/knowledge_base/` (какие типы контента где лежат).
-- [x] Выписать все скрипты, которые читают/пишут файлы в этих директориях (RAG, deploy‑скрипты, утилиты).
-- [x] Определить, какие части текстовой базы реально используются аватаром и сайтом сейчас (по коду и по факту).
+This roadmap now tracks only work for **this repository** (`vkgeorgia.github.io`) as a website/content repo.
 
-**Фактический минимальный набор, который сейчас нужен:**
-
-- **Для сайта (Jekyll):**
-  - `_projects/*.md` — подробные проектные кейсы (источник для `cases.md` и портфеля).
-  - `knowledge-base/projects/*.md` — тематические страницы `projects/*.md` (aviation, retail и т.п.).
-  - `knowledge-base/domains/*.md`, `knowledge-base/roles/*.md`, `knowledge-base/1. bio/bio.md`, `knowledge-base/2. education/*.md`, `knowledge-base/experience/ai-ml-experience.md` — контент страниц “Profile / Services / Domains / Roles”.
-- **Для аватара (RAG):**
-  - Всё из `knowledge-base/` (через sync в `digital-avatar/backend/knowledge_base/`).
-  - `_projects/*.md` как длинные нарративы (через RAG и/или будущий импорт в Neon).
-  - Корневые файлы репозитория: `profile.md`, `business-challenges.md`, `index.md` (подтягиваются явно в `RAGService`).
-
-## 2. Разделение источников правды (SoT) — решение принято (Mar 2026)
-
-**Зафиксированная архитектура:**
-- **Neon — единственный источник истины для структурированных данных о проектах.** Все метаданные (industry, domain, role, employer, title, key_result, technology, даты, STAR-поля, executive_md) живут в таблице `projects`.
-- **`_projects/*.md` — нарративный архив.** Нужен для RAG (длинные тексты) и как резерв. При расхождении с Neon — Neon главнее.
-- **Нарративный контент сайта** (манифест, статьи, биография) живёт в markdown (`knowledge-base/`).
-
-- [ ] Описать в `PROJECT_RULES.md` финальные правила: куда добавлять новый проект (сначала Neon, потом опционально `.md`).
-- [ ] Настроить автоматическую синхронизацию: при пуше в `main` скрипт проверяет расхождения между frontmatter `_projects/*.md` и записями в Neon (консистентность).
-
-**Вытекающая архитектура динамических страниц:**
-
-Т.к. Neon — источник истины для проектов, страницы с описанием опыта по отраслям, доменам и ролям формируются автоматически из данных Neon и не требуют ручного обновления:
-
-- При добавлении нового проекта в Neon → страница `/industries/retail`, `/domains/analytics`, `/roles/enterprise-architect` и т.п. автоматически показывают его.
-- При изменении описания проекта → страницы пересчитываются сами.
-- Ручное поддержание отдельных `.md`-файлов для каждой страницы опыта не нужно.
-
-- [ ] Перевести все `industries/*.md`, `domains/*.md`, `roles/*.md` на паттерн из пилота `projects/retail.md`: тонкий Jekyll-шаблон + JS fetch к `/api/projects?industry=...` (или `domain=`, `role=`).
-- [ ] Добавить на каждую такую страницу секцию "Суммарный опыт" — автоматически считать кол-во проектов, диапазон лет, топ технологий из Neon.
-- [ ] Обеспечить, что поля `industry`, `domain`, `role` в Neon покрывают все существующие фильтры на `cases.md`.
-
-## 3. “Диета” для `knowledge-base/` и `_projects/`
-
-- [ ] Оставить в `knowledge-base/` только:
-  - [ ] Манифест / профиль (`profile.md`, `business-challenges.md`, ключевые страницы сайта).
-  - [ ] Тематические статьи и заметки (Field Notes / System Design).
-- [ ] В `_projects/` оставить проектные кейсы как длинные нарративы (Single Source of Truth для текстов).
-- [ ] Перенести в `0. archive` все устаревшие/дублирующие текстовые материалы, которые не используются ни сайтом, ни аватаром.
-
-## 3.1. Динамические страницы по индустриям / доменам / ролям
-
-- [x] Выбрать архитектуру: тонкие Jekyll‑страницы + фронтенд через JS, дергающий `/api/projects`.
-- [x] Обновить layout `page` так, чтобы он пробрасывал в `<body>` тип страницы и ключ фильтра (`page_type`, `page_key`).
-- [x] Создать общий скрипт `assets/js/projects-dynamic.js`, который по `page_type/page_key` делает `fetch` к backend’у и рендерит список проектов.
-- [x] Перевести пилотную страницу `projects/retail.md` на динамическую модель (без захардкоженного списка проектов).
-- [x] Масштабировать паттерн на все `industries/*.md` (8 отраслей) и `domains/*.md` (11 доменов) — выполнено Mar 2026.
-- [x] Добавить на каждой странице блок "Суммарный опыт": кол-во проектов, диапазон лет, список ключевых технологий — `assets/projects-dynamic.js` — выполнено Mar 2026.
-- [x] Масштабировать паттерн на `roles/*.md` — выполнено Mar 2026.
-
-## 4. Перенос метаданных проектов и контактов в Neon — выполнено (Mar 2026)
-
-- [x] Junction-таблицы `project_industries`, `project_domains`, `project_roles` покрывают все 44 проекта.
-- [x] API-фильтры `/api/projects?industry=`, `?domain=`, `?role=` переведены на slug-subquery (не text-match по колонке).
-- [x] Страницы `industries/`, `domains/`, `roles/` синхронизированы со slug-справочником в Neon (добавлены 3 недостающих industry-страницы, 9 domain-страниц, 3 новые role-страницы; исправлены 3 несовпадавших `page_key`; удалены 4 orphan-страницы).
-- [ ] Настроить автоматическую проверку консистентности `_projects/*.md` ↔ Neon (не выполнено).
-
-## 5. RAG и загрузка знаний — выполнено (Mar 2026)
-
-- [x] `RAGService` упрощён: удалён мёртвый код Google Drive, pdfplumber, python-docx (574 → 304 строки).
-- [x] Читает только `.md`/`.txt` из `knowledge_base/` + корневые `profile.md`, `business-challenges.md`, `index.md`.
-- [x] `requirements.txt` очищен от неиспользуемых зависимостей (`pdfplumber`, `python-docx`, `google-api-python-client` и т.п.).
-
-## 6. Чистка и архивирование скриптов — выполнено (Mar 2026)
-
-- [x] Устаревшие скрипты перемещены в `0. archive/`: `fix_kb_metadata.py`, `test_avatar.py`, `did_service.py`.
-- [x] Актуальный скрипт генерации эмбеддингов: `scripts/generate_embeddings.py`.
-
-## 7. Наблюдение и эволюция
-
-- [ ] Добавить короткий чек‑лист “перед изменениями backend’а и знания” (линк из `AI_AVATAR_BACKEND_TROUBLESHOOTING.md`).
-- [ ] Раз в квартал проводить мини‑аудит: какие новые типы данных появились и должны ли они жить в Neon или в markdown.
-- [ ] При необходимости добавить новые таблицы в Neon (например, `leads`, `offers`) и прописать их связь с текстовой базой.
-- [x] Сессии чата в Neon: таблицы `chat_sessions` / `chat_messages` (см. §9).
-
-## 8. Укрепление backend после код‑ревью (Mar 2026) — выполнено
-
-- [x] Исправить повреждённый YAML frontmatter в `assets/main.scss` (корректные `---` + `@import "minima";`).
-- [x] Сделать фильтры `GET /api/projects` регистронезависимыми для полей `industry`, `domain`, `employer`, `role` (`LOWER(...) = LOWER(%s)`).
-- [x] Удалить временный диагностический эндпоинт `/debug/routes` из production‑кода.
-- [x] Обновить `PROJECT_STATUS.md`: дата, блок про стабилизацию Neon/API/деплоя и исправление SCSS.
-
-## 9. Логи разговоров в БД и уведомления в Telegram
-
-### 9.1. Запись логов чата в Neon — выполнено (код + репозиторий)
-
-- [x] SQL‑схема: `digital-avatar/backend/sql/chat_logs.sql` — таблицы `chat_sessions`, `chat_messages`, индексы.
-- [x] Модуль `digital-avatar/backend/app/chat_log.py`: создание сессии, запись сообщений (`user` / `assistant`), закрытие сессии (`ended_at`).
-- [x] Интеграция в WebSocket `/ws/chat` в `app/main.py`: логирование каждого хода; вызовы БД через `asyncio.to_thread`, чтобы не блокировать event loop.
-- [x] При отсутствии таблиц в Neon — best‑effort: предупреждения в логах, чат продолжает работать.
-- [x] Документация: раздел **§6** в `AI_AVATAR_BACKEND_TROUBLESHOOTING.md` (как применить SQL и проверить данные).
-- [x] Docker: `COPY sql/ ./sql/` в `digital-avatar/backend/Dockerfile`, чтобы скрипт миграции был в образе для справки.
-
-### 9.2. Операционный шаг (один раз на окружение)
-
-- [x] Выполнить `sql/chat_logs.sql` в **Neon SQL Editor** для боевой БД.
-
-### 9.3. Telegram — уведомления о завершённой сессии
-
-- [x] Создать бота в Telegram, получить токен; задать секреты **`TELEGRAM_BOT_TOKEN`** и **`TELEGRAM_CHAT_ID`** в GitHub Actions (прокидываются в Cloud Run через `deploy-backend.yml`).
-- [x] После завершения сессии чата отправлять в Telegram **краткое уведомление**: `session_id`, счётчики user/assistant, IP, время начала/конца, признак упоминания ссылки календаря в ответах ассистента (без полного лога — приватность).
-- [x] Опционально отключать уведомления переменной **`TELEGRAM_NOTIFY_ENABLED=false`**.
-- [ ] **Встречи (продвинуто):** интеграция с **Google Calendar API** для фактически созданных слотов (сейчас только эвристика по тексту ответа).
+- In scope here: Jekyll pages, `_projects`, `knowledge-base`, styles/assets, widget frontend.
+- Out of scope here: chatbot backend runtime, Cloud Run deployment, DB schema/migrations, Telegram automations.
+- Backend moved to: **`vkgeorgia/sam`**.
 
 ---
 
-## 10. Архитектурные улучшения backend (из код-ревью Mar 2026)
+## 1. Website content quality
 
-### 10.1. Connection pooling для Neon — выполнено (Mar 2026)
+- [ ] Refresh homepage copy to plain business language (reduce niche jargon).
+- [ ] Align `services/`, `approach`, `articles` tone and CTA structure.
+- [ ] Audit internal links and eliminate dead/legacy references.
+- [ ] Continue improving case narratives in `_projects/`.
 
-**Проблема:** каждый HTTP-запрос и шаг WebSocket открывает новое соединение с Neon (~100–300 ms cold-start на Serverless Postgres).
+## 2. Dynamic experience pages (website side only)
 
-- [x] Заменить `get_db_connection()` в `app/db.py` на `psycopg_pool.ConnectionPool`.
-- [x] Настроить `min_size=1`, `max_size=5`.
-- [x] Пул инициализируется при старте FastAPI через `lifespan` context manager.
-- [x] `psycopg-pool` добавлен в `requirements.txt`.
+- [ ] Keep dynamic pages stable (`projects/`, `domains/`, `roles/`) against backend API changes.
+- [ ] Add graceful fallback UI when API is unavailable (user-friendly message + retry hint).
+- [ ] Add lightweight caching strategy for repeated API calls on same page.
 
-### 10.2. История разговора в контексте Gemini — выполнено (Mar 2026)
+## 3. Knowledge-base hygiene in this repo
 
-**Проблема:** `generate_response(data)` получал только последнее сообщение. ИИ не помнил предыдущих ходов.
+- [ ] Remove/archive duplicate markdown content that is not used by site pages.
+- [ ] Keep `knowledge-base/` focused on profile, domains, education, and editorial content.
+- [ ] Maintain `_projects/` as the narrative archive for case descriptions.
 
-- [x] Накапливать историю per-session в памяти в `chat.py` WebSocket-хэндлере.
-- [x] Передавать историю в `generate_response(query, history=history)` и включать в промпт к Gemini.
-- [x] Глубина истории ограничена `MAX_HISTORY_TURNS=10` (последние 20 сообщений).
+## 4. Documentation alignment (multi-repo)
 
-### 10.3. Разбить `main.py` на FastAPI routers — выполнено (Mar 2026)
+- [ ] Ensure all docs in this repo clearly state: backend is external (`vkgeorgia/sam`).
+- [ ] Remove stale instructions that reference local backend runtime/deploy scripts.
+- [ ] Add a short “integration contracts” section with links to backend API docs in external repo.
 
-**Проблема:** один файл содержал WebSocket-чат, REST API проектов, REST API контактов и диагностические эндпоинты.
+## 5. SEO and analytics
 
-- [x] Выделен `app/routers/chat.py` — `/ws/chat`.
-- [x] Выделен `app/routers/projects.py` — `/api/projects`, `/api/projects/{code}`.
-- [x] Выделен `app/routers/contacts.py` — `/api/contacts`, `/api/contacts/{contact_id}`.
-- [x] Выделен `app/routers/health.py` — `/api/health`, `/api/internal/telegram-test`, `/`.
-- [x] Добавлен `app/deps.py` — singleton `RAGService`.
-- [x] Роутеры зарегистрированы в `main.py` через `app.include_router(...)`.
+- [ ] Normalize `seo_title` and `description` quality across top pages.
+- [ ] Add analytics configuration and privacy-friendly event tracking for key CTA clicks.
+- [ ] Improve structured data consistency (person/service schema coverage).
 
-### 10.4. Векторный поиск (pgvector) для RAG — выполнено (Mar 2026)
+## 6. Operational discipline
 
-- [x] Расширение `pgvector` включено в Neon; таблица `knowledge_chunks (id, content, embedding vector(768), source, chunk_index)` создана с HNSW-индексом.
-- [x] `scripts/generate_embeddings.py` — генерирует эмбеддинги через Gemini Embedding API (`gemini-embedding-001`, REST v1beta) и делает upsert в `knowledge_chunks`. Запускается в GitHub Actions при каждом деплое.
-- [x] 587 чанков загружено (88 из проектов в Neon + 499 из файлов KB).
-- [x] `RAGService._vector_select_context()` — косинусный поиск `ORDER BY embedding <=> %s::vector LIMIT 8`.
-- [x] `RAGService._select_context()` — keyword-fallback сохранён.
-- [x] `RAGService._check_vector_search()` — автодетект: если `knowledge_chunks` пустая или Neon недоступен, используется keyword-fallback.
-
----
-
-## 11. Code Review — Security & Quality Hardening (Mar 2026)
-
-Результат code review бэкенда. Три волны приоритетности.
-
-### 11.1. Волна 1 — Быстрые фиксы — выполнено (Mar 2026)
-
-#### Безопасность
-- [x] `resume.py`: заменить `!=` на `hmac.compare_digest()` для сравнения API-ключа (timing attack)
-- [x] `health.py`: то же для `TELEGRAM_DIAG_SECRET`
-
-#### Стабильность
-- [x] `chat.py`: trim истории делать **до** `append` — история теперь строго ≤ `MAX_HISTORY_TURNS * 2`
-- [x] `deploy-backend.yml`: добавить health check шаг после деплоя (5 попыток × 10s)
-
-#### Размер образа
-- [x] `Dockerfile`: убрать `gcc` — не нужен при `psycopg[binary]`
-
-### 11.2. Волна 2 — Безопасность и надёжность — выполнено (Mar 2026)
-
-#### Безопасность
-- [x] `contacts.py`: добавлен `x-api-key` (env `CONTACTS_API_KEY`, `hmac.compare_digest`) на оба эндпоинта
-- [x] `rag_service.py`: system prompt вынесен в `system_instruction` (отдельное поле SDK) — user query больше не может из него вырваться
-- [x] `chat.py`: IDNA-нормализация хоста в `_validate_url` — homograph-атаки отклоняются или трансформируются в punycode
-
-#### Надёжность
-- [x] `rag_service.py`: `asyncio.wait_for(..., timeout=30.0)` на вызов Gemini
-- [x] `telegram_notify.py`: exponential backoff retry (3 попытки: 0s, 1s, 2s); 4xx не ретраятся
-- [x] `resume_service.py`: явный `json.JSONDecodeError` с выводом сырого LLM-ответа в лог
-
-#### Зависимости
-- [x] `requirements.txt`: верхние границы `<X+1` для всех пакетов
-
-### 11.3. Волна 3 — Качество кода
-
-- [ ] `projects.py`: добавить пагинацию (`limit` + `offset`) — сейчас `/api/projects` отдаёт все записи без лимита
-- [ ] `projects.py`, `contacts.py`: добавить валидацию slug/search параметров (только `[a-z0-9-]`, max length)
-- [ ] `deps.py`: `RAGService` инициализируется при импорте до старта пула — перенести инициализацию в `lifespan`
-- [ ] `generate_embeddings.py`: добавить checkpoint/resume — при падении скрипт стартует с нуля
-- [ ] `generate_embeddings.py`: заменить линейный retry на exponential backoff
-- [ ] `Dockerfile`: заменить `python:3.12-slim` на конкретный патч-версию (`python:3.12.9-slim`) для воспроизводимых сборок
-- [ ] Вынести `"gemini-2.5-flash"` в константу — имя модели дублируется в `rag_service.py` и `resume_service.py`
+- [ ] Keep quarterly content audit cadence (articles, cases, metadata freshness).
+- [ ] Track GitHub Pages build health and cache quirks.
+- [ ] Keep `PROJECT_STATUS.md` and this roadmap in sync after major architecture changes.
