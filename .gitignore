@@ -47,6 +47,9 @@ digital-avatar/backend/knowledge_base/
 # Local archive for deprecated scripts / content
 0. archive/
 
+# Ruby / Bundler — гемы только локально (`bundle install`), не в git
+vendor/
+
 # macOS system files
 .DS_Store
 .DS_Store?

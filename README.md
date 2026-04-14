@@ -27,21 +27,16 @@ This repository contains the website/content side and frontend widget assets.
 
 </p>
 
-## Project Structure & Data Sources
+## Project structure
 
-To avoid confusion between website content and AI knowledge base:
+1.  **`_projects/`** — портфолио: Jekyll строит страницу **Cases**; тексты проектов также использует бэкенд (Jeeves).
+2.  **`vkgeorgia/Jeeves`** — runtime (чат, RAG, интеграции); этот репозиторий — только сайт и виджет.
 
-1.  **`_projects/`**
-    *   **Purpose**: The **Single Source of Truth** for the project portfolio.
-    *   **Usage**: Jekyll reads this directory to generate the `Cases` page. The AI avatar also learns from these files.
-    *   **Rule**: Always edit project descriptions here.
+## Локальная сборка
 
-2.  **`knowledge-base/`**
-    *   **Purpose**: Stores general knowledge (bio, education, articles, domains).
-    *   **Usage**: Used by the AI avatar for context.
-    *   **Rule**: Do **NOT** put project files here (duplicate).
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-3.  **External backend (`vkgeorgia/Jeeves`)**
-    *   **Purpose**: Runtime AI services (chat API, RAG, integrations).
-    *   **Usage**: This website consumes backend endpoints exposed by Jeeves.
-    *   **Rule**: Backend runtime changes are made in the Jeeves repository, not here.
+Гемы ставятся в `vendor/` (каталог в `.gitignore`), в репозиторий они не коммитятся.
