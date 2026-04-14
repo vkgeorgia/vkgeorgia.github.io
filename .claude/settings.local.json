@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -h \"^domain:\" /Users/valerii/Documents/GitHub/vkgeorgia.github.io/_projects/*.md)",
+      "Bash(xargs ls:*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//Users/valerii/Documents/GitHub/vkgeorgia.github.io/domains/**)",
+      "Bash(done)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh run:*)",
+      "Bash(gcloud logging:*)",
+      "Bash(psql \"postgresql://neondb_owner:npg_naOgp5IWJ1my@ep-lingering-union-alcx9s9j-pooler.c-3.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require\" -c \"\\\\dt\")",
+      "Bash(pip3 show:*)",
+      "Bash(python3 -c \"import psycopg; print\\(psycopg.__version__\\)\")",
+      "Bash(pip3 install:*)",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 scripts/generate_kb.py)",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -c \":*)",
+      "Bash(curl -s https://ai-avatar-103512681014.us-central1.run.app/api/projects?page_size=100)",
+      "Bash(grep \"page_key\\\\|permalink\" /Users/valerii/Documents/GitHub/vkgeorgia.github.io/industries/*.md)",
+      "Bash(python3 -c \"import sys,json; [print\\(r[''''conclusion''''] or r[''''status''''], r[''''name''''][:60], r[''''databaseId'''']\\) for r in json.load\\(sys.stdin\\)]\")",
+      "Bash(python3 -c \"import sys,json; [print\\(r[''''conclusion''''] or r[''''status''''], r[''''databaseId'''']\\) for r in json.load\\(sys.stdin\\)]\")",
+      "Bash(gh workflow:*)"
+    ]
+  }
+}
