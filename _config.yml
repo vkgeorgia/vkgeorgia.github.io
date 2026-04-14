@@ -44,6 +44,11 @@ plugins:
 include:
   - digital-avatar/frontend
 
+# Публичный URL backend (Cloud Run / Jeeves). Используется в Liquid в
+# assets/projects-dynamic.js и digital-avatar/frontend/widget.js при сборке Jekyll.
+# Для локальной подмены без коммита: _config.local.yml + --config _config.yml,_config.local.yml
+backend_url: "https://ai-avatar-103512681014.us-central1.run.app"
+
 # Exclude from processing
 exclude:
   - README.md

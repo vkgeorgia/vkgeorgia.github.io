@@ -5,7 +5,7 @@ Generate knowledge-base summary files from Neon DB.
 Usage:
     python scripts/generate_kb.py
 
-Reads NEON_DATABASE_URL from environment (or .env file in backend/).
+Reads NEON_DATABASE_URL from environment (or `.env` in repo root, then `digital-avatar/backend/.env`).
 Writes/updates files in knowledge-base/domains/, knowledge-base/industries/,
 knowledge-base/roles/.
 
@@ -23,15 +23,19 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 BACKEND_DIR = REPO_ROOT / "digital-avatar" / "backend"
 KB_DIR = REPO_ROOT / "knowledge-base"
 
-# Load .env from backend if NEON_DATABASE_URL not already set
-if not os.getenv("NEON_DATABASE_URL"):
-    env_file = BACKEND_DIR / ".env"
-    if env_file.exists():
-        for line in env_file.read_text().splitlines():
-            line = line.strip()
-            if line and not line.startswith("#") and "=" in line:
-                k, _, v = line.partition("=")
-                os.environ.setdefault(k.strip(), v.strip())
+def _merge_dotenv(path: Path) -> None:
+    if not path.is_file():
+        return
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, _, v = line.partition("=")
+            os.environ.setdefault(k.strip(), v.strip().strip("'\""))
+
+
+# Корневой .env имеет приоритет над legacy backend/.env (setdefault: первый выигрывает)
+for _env_path in (REPO_ROOT / ".env", BACKEND_DIR / ".env"):
+    _merge_dotenv(_env_path)
 
 DB_URL = os.getenv("NEON_DATABASE_URL")
 if not DB_URL:

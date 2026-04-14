@@ -3,7 +3,7 @@
 > Runtime owner: **`vkgeorgia/Jeeves`** (external backend repository).
 > This file is integration-oriented for consumers of the API.
 
-**Base URL (production):** `https://ai-avatar-103512681014.us-central1.run.app`
+**Base URL (production):** тот же хост, что в **`backend_url`** в корневом `_config.yml` (сайт и виджет собираются с этим значением через Jekyll).
 
 ## Authentication
 
@@ -66,16 +66,19 @@ GET /api/contacts/{id}
 ## Examples
 
 ```bash
+# Подставьте базовый URL (как в _config.yml → backend_url), например:
+# export BACKEND_URL="https://your-service-xxxxx.us-central1.run.app"
+
 # List all contacts
-curl https://ai-avatar-103512681014.us-central1.run.app/api/contacts \
+curl "${BACKEND_URL}/api/contacts" \
   -H "x-api-key: $CONTACTS_API_KEY"
 
 # Search
-curl "https://ai-avatar-103512681014.us-central1.run.app/api/contacts?q=anna" \
+curl "${BACKEND_URL}/api/contacts?q=anna" \
   -H "x-api-key: $CONTACTS_API_KEY"
 
 # Get by ID
-curl https://ai-avatar-103512681014.us-central1.run.app/api/contacts/42 \
+curl "${BACKEND_URL}/api/contacts/42" \
   -H "x-api-key: $CONTACTS_API_KEY"
 ```
 

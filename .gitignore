@@ -26,6 +26,9 @@ knowledge-base/*/*/sources/
 .env.local
 .env.*.local
 
+# Локальные переопределения Jekyll (URL бэкенда и т.п.)
+_config.local.yml
+
 # Digital Avatar - credentials and sensitive files
 digital-avatar/.env
 digital-avatar/backend/.env

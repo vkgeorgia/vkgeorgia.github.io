@@ -80,13 +80,13 @@ Personal portfolio + AI Avatar assistant. Two main components:
 - `domains/*.md` — ~20 domain pages (e.g. `analytics`, `process-automation`)
 - `roles/*.md` — 6 role pages (e.g. `enterprise-architect`, `solution-architect`)
 
-Each page has `page_type` + `page_key` frontmatter. `assets/js/projects-dynamic.js` reads these and calls `/api/projects?industry=|domain=|role=<page_key>` to render projects dynamically.
+Each page has `page_type` + `page_key` frontmatter. `assets/projects-dynamic.js` reads these and calls `/api/projects?industry=|domain=|role=<page_key>` to render projects dynamically.
 
 **Key files:**
-- `_config.yml` — Jekyll configuration
+- `_config.yml` — Jekyll configuration (**`backend_url`** — единственное место для публичного URL Cloud Run в собранном фронте; локально можно переопределить через `_config.local.yml`, см. `_config.local.example.yml`)
 - `_layouts/` — custom layouts embedding AI widget
 - `assets/main.scss` — CSS overrides (must be `.scss`, not `.css`)
-- `assets/js/projects-dynamic.js` — shared dynamic rendering script
+- `assets/projects-dynamic.js` — shared dynamic rendering script (Liquid → `site.backend_url`)
 
 ---
 
@@ -236,14 +236,14 @@ scripts/generate_embeddings.py
 
 ## Cloud Resources
 
-| Resource | Value |
+Идентификаторы GCP (project id, bucket Cloud Build) и точный hostname Cloud Run **не дублируются в этом файле** — смотрите консоль Google Cloud и сервис Cloud Run для проекта, где развёрнут Jeeves.
+
+| Resource | Где смотреть |
 |---|---|
-| GCP Project | `gen-lang-client-0202538697` |
-| Cloud Run service | `ai-avatar` / region `us-central1` |
-| Cloud Run URL | `https://ai-avatar-103512681014.us-central1.run.app` |
+| Публичный URL бэкенда (страница + виджет) | **`backend_url`** в `_config.yml` (единственное место в репозитории для фронта) |
+| Cloud Run service | имя сервиса и регион — в GCP Console |
 | Gemini model | `gemini-2.5-flash` (responses), `gemini-embedding-001` (embeddings) |
-| Build storage | `gs://gen-lang-client-0202538697_cloudbuild/` |
-| Database | Neon PostgreSQL, db `neondb` |
+| Database | Neon PostgreSQL (pgvector); **строка подключения для локальных скриптов** — только **`NEON_DATABASE_URL`** в корневом **`.env`** (шаблон `.env.example`); на проде — переменные Cloud Run в репозитории Jeeves |
 
 ---
 
@@ -258,8 +258,8 @@ cd digital-avatar/backend
 source .venv/bin/activate
 uvicorn app.main:app --reload
 
-# Manually regenerate embeddings
-GEMINI_API_KEY=... NEON_DATABASE_URL=... python scripts/generate_embeddings.py
+# Manually regenerate embeddings (ключи из корневого .env или из окружения)
+python scripts/generate_embeddings.py
 
 # Force GitHub Pages rebuild
 git commit --allow-empty -m "Force rebuild" && git push
@@ -291,9 +291,10 @@ git commit --allow-empty -m "Force rebuild" && git push
 - `would_attempt_send: true` — переменные видны, проблема на стороне Telegram.
 - `false` — в Cloud Run нет `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID`; перезапустить деплой после добавления секретов в GitHub.
 
-Ручной тест (нужна временная переменная `TELEGRAM_DIAG_SECRET` в Cloud Run):
+Ручной тест (нужна временная переменная `TELEGRAM_DIAG_SECRET` в Cloud Run). Скопируйте хост из `backend_url` в `_config.yml`:
 ```bash
-curl -sS -X POST "https://ai-avatar-103512681014.us-central1.run.app/api/internal/telegram-test" \
+export BACKEND_URL='https://…'   # как в backend_url
+curl -sS -X POST "${BACKEND_URL}/api/internal/telegram-test" \
   -H "Authorization: Bearer <TELEGRAM_DIAG_SECRET>"
 ```
 После проверки удалить `TELEGRAM_DIAG_SECRET`.

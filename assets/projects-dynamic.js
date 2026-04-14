@@ -1,3 +1,5 @@
+---
+---
 ;(async function () {
   const container = document.getElementById('projects-list');
   if (!container) return;
@@ -10,7 +12,7 @@
     return;
   }
 
-  const baseUrl = 'https://ai-avatar-103512681014.us-central1.run.app';
+  const baseUrl = {{ site.backend_url | jsonify }};
   const params = new URLSearchParams();
 
   if (type === 'industry') {

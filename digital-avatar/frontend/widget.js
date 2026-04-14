@@ -1,3 +1,5 @@
+---
+---
 /**
  * Valerii Korobeinikov's AI Avatar Widget
  * Embeddable chat widget for GitHub Pages
@@ -8,10 +10,10 @@
 
     // Configuration
     const WIDGET_CONFIG = {
-        // Backend URL - Google Cloud Run
+        // Backend URL — из _config.yml (backend_url), см. _config.local.example.yml
         backendUrl: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
             ? 'http://127.0.0.1:8000'
-            : 'https://ai-avatar-103512681014.us-central1.run.app',
+            : {{ site.backend_url | jsonify }},
         position: 'bottom-right', // bottom-right, bottom-left
         theme: 'dark'
     };

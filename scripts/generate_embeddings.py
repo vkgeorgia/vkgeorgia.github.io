@@ -5,7 +5,7 @@ Generate embeddings for all knowledge chunks and store in Neon (pgvector).
 Usage:
     GEMINI_API_KEY=xxx NEON_DATABASE_URL=xxx python scripts/generate_embeddings.py
 
-Reads GEMINI_API_KEY and NEON_DATABASE_URL from environment (or backend/.env).
+Reads GEMINI_API_KEY and NEON_DATABASE_URL from environment (or `.env` in repo root, then `digital-avatar/backend/.env`).
 Chunks projects and knowledge-base files, generates embeddings via Gemini
 text-embedding-004 (768 dims), upserts into knowledge_chunks table.
 
@@ -23,17 +23,18 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 BACKEND_DIR = REPO_ROOT / "digital-avatar" / "backend"
 KB_DIR = REPO_ROOT / "knowledge-base"
 
-# Load .env from backend if keys not already set
-def _load_env():
-    env_file = BACKEND_DIR / ".env"
-    if env_file.exists():
-        for line in env_file.read_text().splitlines():
-            line = line.strip()
-            if line and not line.startswith("#") and "=" in line:
-                k, _, v = line.partition("=")
-                os.environ.setdefault(k.strip(), v.strip())
+def _merge_dotenv(path: Path) -> None:
+    if not path.is_file():
+        return
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, _, v = line.partition("=")
+            os.environ.setdefault(k.strip(), v.strip().strip("'\""))
 
-_load_env()
+
+for _env_path in (REPO_ROOT / ".env", BACKEND_DIR / ".env"):
+    _merge_dotenv(_env_path)
 
 DB_URL = os.getenv("NEON_DATABASE_URL")
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")

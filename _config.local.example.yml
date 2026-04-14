@@ -1,0 +1,8 @@
+# Скопируйте в `_config.local.yml` (в .gitignore) и подставьте свой URL.
+# Локальная сборка с подменой URL:
+#   bundle exec jekyll serve --config _config.yml,_config.local.yml
+#
+# GitHub Pages по умолчанию читает только `_config.yml`; публичный URL бэкенда
+# задан там в ключе `backend_url`.
+
+backend_url: "https://YOUR-SERVICE-xxxxx.us-central1.run.app"

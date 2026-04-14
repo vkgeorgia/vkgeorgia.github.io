@@ -31,7 +31,7 @@ Service URL: https://ai-avatar-xxxxx-uc.a.run.app
 ```
 
 ### 3. Update Widget Configuration
-Edit `frontend/widget.js` line 13 with your Cloud Run URL.
+В корневом сайте Jekyll задайте **`backend_url`** в `_config.yml` (или переопределение в `_config.local.yml`); виджет подставляет URL при сборке через Liquid.
 
 ### 4. Test the Deployment
 ```powershell
@@ -70,7 +70,7 @@ Set these in Cloud Run:
 
 ## Next Steps
 After deployment:
-1. Update `widget.js` with Cloud Run URL
+1. Обновите **`backend_url`** в корневом `_config.yml` сайта
 2. Test widget locally
 3. Add widget to GitHub Pages
 4. Monitor usage in Cloud Console
