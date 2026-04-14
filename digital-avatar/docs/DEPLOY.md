@@ -21,7 +21,7 @@ gcloud run deploy ai-avatar `
   --platform managed `
   --region us-central1 `
   --allow-unauthenticated `
-  --set-env-vars GEMINI_API_KEY=your_api_key_here,GOOGLE_DRIVE_FOLDER_ID=1QBvZWfU3rPfm93UuYqipTaDxu_-o8pOZ
+  --set-env-vars GEMINI_API_KEY=your_api_key_here,GOOGLE_DRIVE_FOLDER_ID=YOUR_GOOGLE_DRIVE_FOLDER_ID
 ```
 
 ### 2. Note Your Service URL

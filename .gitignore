@@ -18,8 +18,13 @@ _site/knowledge-base/
 knowledge-base/*/sources/
 knowledge-base/*/*/sources/
 
-# Claude Code — локальные разрешения (не коммитить: могут содержать DSN/секреты)
-.claude/settings.local.json
+# Claude Code — вся локальная папка (DSN, allowlist с секретами, абсолютные пути)
+.claude/
+
+# Корневые секреты (скрипты, локальные прогоны)
+.env
+.env.local
+.env.*.local
 
 # Digital Avatar - credentials and sensitive files
 digital-avatar/.env

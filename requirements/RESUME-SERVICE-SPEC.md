@@ -3,8 +3,8 @@
 **Version:** 1.1
 **Date:** 2026-03-23
 **For:** Claude Code (website backend implementation)
-**Database:** Neon PostgreSQL — project `patient-bar-35637442`
-**Backend stack:** Python 3.11 + FastAPI + uvicorn, deployed on Google Cloud Run (`ai-avatar`, `us-central1`, project `gen-lang-client-0202538697`)
+**Database:** Neon PostgreSQL (идентификатор проекта — только в консоли Neon, не в репозитории)
+**Backend stack:** Python 3.11 + FastAPI + uvicorn, deployed on Google Cloud Run (`ai-avatar`, `us-central1`; номер GCP-проекта — в консоли Google Cloud, не хардкодить в доке)
 
 > **Status:** Archived in this repository.
 > Active backend implementation ownership moved to:
