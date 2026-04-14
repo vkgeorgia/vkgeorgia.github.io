@@ -34,9 +34,14 @@ This repository contains the website/content side and frontend widget assets.
 
 ## Локальная сборка
 
+Нужен **Ruby 3.3.x** (цепочка `github-pages` / `commonmarker` пока не совместима с **Ruby 4**). Удобнее всего Homebrew:
+
 ```bash
+brew install ruby@3.3
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"   # в Intel Mac: /usr/local/opt/ruby@3.3/bin
+cd /path/to/vkgeorgia.github.io
 bundle install
 bundle exec jekyll serve
 ```
 
-Гемы ставятся в `vendor/` (каталог в `.gitignore`), в репозиторий они не коммитятся.
+В репозитории есть **`.ruby-version`** (для rbenv/chruby/asdf). Гемы ставятся в **`vendor/`** (в `.gitignore`).
