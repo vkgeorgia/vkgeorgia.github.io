@@ -33,8 +33,8 @@
             <div id="ai-widget-chat" class="ai-widget-chat">
                 <div class="ai-widget-header">
                     ${closeBtn}
-                    <h3>Ask Valerii</h3>
-                    <p class="ai-widget-subtitle">AI-powered assistant</p>
+                    <h3>Valerii's AI assistant</h3>
+                    <p class="ai-widget-subtitle">Experience · résumés · scheduling</p>
                     <div class="ai-widget-status">
                         <span id="ai-widget-status-text" class="ai-widget-status-connecting">● AI</span>
                         <span class="ai-widget-status-divider">|</span>
