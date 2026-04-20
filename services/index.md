@@ -16,7 +16,7 @@ My goal in every engagement is to build a system so clear and robust that **I am
 
 ---
 
-## Architecture Intervention & Crisis Management (FIX)
+## Executive Architecture Advisory (FIX)
 
 **Stabilizing chaotic IT landscapes and recovering failing initiatives.**
 
@@ -29,7 +29,7 @@ This is for situations where "business as usual" has broken down.
 
 ---
 
-## Enterprise Restructuring (FIX)
+## Enterprise Architecture Consulting (FIX)
 
 **Aligning organizational structure with technology strategy.**
 
@@ -42,7 +42,7 @@ Most often used during M&A, post-merger integration, or cost-cutting phases.
 
 ---
 
-## Tech Strategy & Investment Control (BUILD)
+## Technology Strategy Advisory (BUILD)
 
 **Ensuring technology choices drive ROI, not just technical debt.**
 
@@ -55,7 +55,7 @@ Focused on high-stakes choices: Build vs. Buy, Cloud Native vs. Hybrid, Monolith
 
 ---
 
-## Transformation Launch Control (BUILD)
+## Digital Transformation Advisory (BUILD)
 
 **Turning "Digital Transformation" buzzwords into shipping code and product.**
 
@@ -68,7 +68,7 @@ Helps organizations move from "slides" to "production" by enforcing strict scope
 
 ---
 
-## Application Portfolio Rationalization (FIX)
+## Application Portfolio Optimization (FIX)
 
 **Ruthlessly reducing run-costs and legacy drag.**
 
@@ -81,7 +81,7 @@ Used when the IT budget is consumed by "keeping the lights on."
 
 ---
 
-## AI Governance & Agent Frameworks (BUILD)
+## AI Readiness & Governance (BUILD)
 
 **Architecting the next generation of autonomous business systems.**
 
@@ -99,8 +99,8 @@ Preparing your environment for agentic workforces, not just chatbots.
 I filter for **fit**, not just budget.
 
 *   **Ideal Fit**: You want to fix a crisis, launch something new, or significantly reduce operational entropy. You are ready to make hard decisions.
-*   **Poor Fit**: you need "staff argumentation" or steady-state administration.
+*   **Poor Fit**: you need "staff augmentation" or steady-state administration.
 
 If you have a challenge, let's discuss if I am the right tool for the job.
 
-→ [Contact Me](/contact/)
+→ [Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)
