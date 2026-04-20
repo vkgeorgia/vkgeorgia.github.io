@@ -60,9 +60,7 @@ I am most useful when an organization is about to change direction. Less useful 
 
 ## Selected outcomes
 
-- **National top-2 aviation hub.** Product portfolio reduced from 4,600 to 1,200 items and time-to-market cut threefold — by rebuilding classification, lifecycle rules, and product governance.
-- **Fuel retail with 70,000+ B2B counterparties.** Reconciliation time cut 6× and fraud-related losses cut 10× — by replacing paper-coupon settlements with a cashless platform and architecting the surrounding governance.
-- **Global IT services firm, ~68,000 employees.** 80% of HR inquiries across 12 processes resolved without human intervention, 99% answer accuracy, response times from days to minutes — by architecting the HR assistant and its knowledge and integration layer.
+{% include highlights.html %}
 
 *(See the [Cases](/cases/) section for the full project list.)*
 

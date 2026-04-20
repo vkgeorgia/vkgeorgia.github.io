@@ -2,73 +2,98 @@
 layout: page
 title: "Technology Strategy Advisory"
 seo_title: "Technology Strategy Advisory | Aligning Business and Technology Decisions"
-description: "Advisory support for aligning technology strategy with business goals, growth, and investment priorities."
-keywords: "Technology Strategy, IT Strategy, Platform Strategy, Build vs Buy"
+description: "Advisory support for technology strategy decisions — platform, investment, build vs. buy — framed as trade-offs on cost, risk, speed, and long-term fit."
+keywords: "Technology Strategy, IT Strategy, Platform Strategy, Build vs Buy, Investment Decisions"
 lang: en
 permalink: /services/technology-strategy-advisory/
 ---
 
-# Technology Strategy Advisory
+Technology strategy is rarely about choosing technologies. It is about deciding where to invest, what to prioritize, and which trade-offs to accept — on cost, risk, speed, and long-term fit.
 
-Technology strategy is rarely about choosing technologies.  
-It is about **deciding where to invest, what to prioritize, and what trade-offs to accept**.
+This service helps leaders connect business intent with technology decisions, so that technology spending supports growth and resilience rather than accumulating as debt.
 
-I help leaders connect business intent with technology decisions in a way that supports growth, profitability, and long-term sustainability.
+**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
 
 ---
 
-## When this service is typically needed
+## When this service fits
 
-This advisory is most useful when:
+A technology strategy engagement is the right format when:
 
-- growth initiatives require platform or architectural decisions;
-- technology spending increases without clear business outcomes;
-- build vs buy decisions become recurring and contentious;
-- different teams push conflicting priorities.
+- a growth initiative requires a foundational platform or architectural decision;
+- technology spend is rising without a clear link to business outcomes;
+- build-vs-buy and platform-vs-point-solution decisions keep recurring and becoming contentious;
+- different parts of the organization are pushing conflicting technology priorities.
 
-In these moments, a clear technology strategy provides **direction, not control**.
+In these situations, a coherent strategy provides direction — not additional control.
 
 ---
 
 ## What I help leaders decide
 
-Typical decision areas include:
+Typical decision areas:
 
-- platform and ecosystem strategy;
-- investment priorities across products and capabilities;
-- trade-offs between speed, flexibility, and cost;
-- criteria for build, buy, or partner decisions.
+- platform and ecosystem strategy — what to own, what to rent, what to integrate;
+- investment priorities across products, platforms, and shared capabilities;
+- trade-offs between speed, flexibility, cost, and reversibility;
+- clear criteria for build, buy, or partner decisions at the business-case level.
 
-The goal is not a perfect strategy document, but **decision coherence over time**.
+The aim is decision coherence over time, not a one-off strategy document.
 
 ---
 
 ## How this advisory works
 
-The work focuses on:
+The work focuses on decision quality:
 
-- making implicit assumptions explicit;
-- structuring strategic options and their consequences;
-- stress-testing decisions against business goals and constraints;
-- supporting leadership alignment.
+1. Make the implicit assumptions behind each option explicit.
+2. Structure the strategic options and their downstream consequences.
+3. Stress-test each option against business goals, constraints, and realistic execution.
+4. Support leadership alignment so the resulting decision is owned, not imposed.
 
-Strategy emerges through **deliberate choices**, not prescriptions.
+Strategy emerges from deliberate choices, not prescriptions.
 
 ---
 
-## Typical outcomes
+## What this service is not
 
-Clients typically experience:
+- Vendor selection dressed up as strategy.
+- A technology roadmap produced without connection to the business case.
+- A slide deck that lists technologies the organization "should be using".
+- Solution architecture for a single product or project.
 
-- clearer rationale behind technology investments;
-- improved alignment between business and IT leadership;
-- fewer reactive decisions and course corrections;
-- stronger link between strategy and execution.
+It is a structured way to decide where technology should take the business, and what that choice costs.
+
+---
+
+## Outcomes clients tend to see
+
+- Clearer rationale behind technology investments, defensible to CFO and board.
+- Stronger alignment between business and IT leadership on priorities.
+- Fewer reactive decisions and course corrections.
+- A tighter link between strategy and the execution that follows.
+
+---
+
+## Related case
+
+**Global IT services firm, approximately 68,000 employees.** 80% of HR inquiries across 12 processes resolved without human intervention, with 99% answer accuracy, and response times from days to minutes — by architecting the HR assistant and its knowledge and integration layer as a strategic capability rather than a point-solution experiment.
+
+Full list in the [Cases](/cases/) section.
+
+---
+
+## Engagement format
+
+- **Fixed-scope project — 6 to 16 weeks.** Strategy on a specific decision: platform choice, investment allocation, build vs. buy, target architecture for a new business line.
+- **Fractional or embedded advisor — months.** Regular rhythm with CTO/CIO/CEO across a series of related strategic decisions.
 
 ---
 
 ## How to start
 
-The advisory usually starts with a strategic question or investment decision that lacks clarity.
+Most engagements begin with a specific strategic question or investment decision where the options are unclear or the trade-offs are contested. A short conversation is usually enough to see whether the question is ready to be worked on.
 
-Contact details are available in the site footer.
+**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+
+Email: vkgeorgia@icloud.com · LinkedIn: [Valerii Korobeinikov](https://www.linkedin.com/in/valeriikorobeinikov/)

@@ -1,32 +1,37 @@
 ---
 layout: page
 title: "Cases"
-seo_title: "Project Portfolio & Case Studies - Enterprise Architecture Projects"
-description: "Browse 44+ enterprise architecture projects across Retail, Finance, Healthcare, Telecom, and Oil & Gas industries. Explore detailed project descriptions, architecture approaches, and implementation outcomes."
-keywords: "Enterprise Architecture projects, TOGAF projects, ArchiMate diagrams, Business Transformation case studies, IT Strategy projects, Digital Transformation portfolio"
+seo_title: "Cases | Enterprise Architecture & Technology Advisory"
+description: "Selected engagements in enterprise architecture, technology strategy, and transformation — across aviation, energy, financial services, telecom, and IT services. Filter by industry, role, and functional domain."
+keywords: "Enterprise Architecture Cases, Transformation Case Studies, Reorganization, M&A Integration, Cost Optimization, AI Adoption, Digital Transformation Portfolio"
 lang: en
 permalink: /cases/
 ---
 
-Browse my project portfolio organized by industry, role, and functional domain. Each project includes detailed context, decision challenges, architectural perspectives, and measurable outcomes.
+Engagements from my practice, grouped around the kinds of decisions they involved — not the tools or frameworks used. Each card opens to a structured view: context, the decision challenge, constraints and trade-offs, the architectural or strategic perspective applied, and the outcome.
+
+Most cases fall into one of two patterns:
+
+- **BUILD** — launching a new business unit, product, or platform from zero, and designing the structure that lets it scale.
+- **FIX** — restoring order after M&A, reorganization, or accumulated complexity: cost, risk, legacy exposure, or operational drag.
+
+In practice, most engagements sit on the boundary between the two.
+
+Use the filters below to narrow by industry, role, or functional domain.
+
+**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
 
 ---
 
-## Operational Philosophy: Build & Fix
+## Highlights
 
-My portfolio is a history of **entropy reduction**.
+A few engagements that illustrate the type of outcomes this work tends to produce:
 
-I do not just "manage projects." I intervene to:
-1.  **BUILD**: Launch new systems, products, and capabilities from zero to one (The Launcher).
-2.  **FIX**: Stabilize chaotic environments, restructure failing processes, and stop bleeding (The Crisis Manager).
+{% include highlights.html %}
 
-In every case below, the outcome is the same: **order is established, and the system becomes capable of running without me.**
+The full list, with filters by industry, role, and functional domain, is below.
 
 ---
-
-## Project Portfolio
-
-Browse my portfolio of **entropy reduction**. 
 
 <style>
   /* Filter Container */

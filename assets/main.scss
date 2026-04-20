@@ -122,3 +122,42 @@ h6 {
     font-size: 0.9rem;
     color: #666;
 }
+
+/* Sticky site header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* "Book a call" CTA in header nav */
+.site-nav .page-link.site-cta {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-left: 12px;
+    background: #2a7ae2;
+    color: #fff !important;
+    border-radius: 6px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none !important;
+    transition: background 0.15s ease;
+}
+
+.site-nav .page-link.site-cta:hover,
+.site-nav .page-link.site-cta:focus {
+    background: #1756a9;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+/* Mobile: CTA sits below nav items inside the hamburger menu */
+@media screen and (max-width: 600px) {
+    .site-nav .page-link.site-cta {
+        display: block;
+        margin: 10px 0 0 0;
+        text-align: center;
+    }
+}
