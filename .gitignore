@@ -29,6 +29,20 @@ knowledge-base/*/*/sources/
 # Локальные переопределения Jekyll (URL бэкенда и т.п.)
 _config.local.yml
 
+# Документация и планы в корне (локально, не в репозитории)
+/00_*.md
+/BOT_*.md
+/CLAUDE.md
+/CONTENT_AUDIT*.md
+/FINAL_*.md
+/PHASE_*.md
+/PROJECT_DESCRIPTION*.md
+/WEBSITE_COPY*.md
+/*IMPLEMENTATION*PLAN*.md
+/*SUMMARY*NEXT*.md
+/new-proposed-format/
+/vkgeorgia.icloud.com/
+
 # Digital Avatar - credentials and sensitive files
 digital-avatar/.env
 digital-avatar/backend/.env
