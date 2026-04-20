@@ -2,7 +2,12 @@
 ---
 /**
  * Valerii Korobeinikov's AI Avatar Widget
- * Embeddable chat widget for GitHub Pages
+ *
+ * Two mount modes:
+ *   1. Inline — if an element `#ai-widget-inline-mount` exists on the page,
+ *      the chat panel is rendered inside it, always open, auto-connects.
+ *   2. Floating — otherwise, a round toggle button is added bottom-right;
+ *      chat panel opens on click, connects lazily.
  */
 
 (function () {
@@ -18,61 +23,86 @@
         theme: 'dark'
     };
 
-    // Create widget container
-    function createWidget() {
-        const widgetHTML = `
-            <div id="ai-avatar-widget" class="ai-widget-container ai-widget-${WIDGET_CONFIG.position}">
-                <button id="ai-widget-toggle" class="ai-widget-toggle" aria-label="Toggle AI Chat">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                </button>
+    // Shared chat-panel markup used by both modes.
+    // `includeClose` toggles the × button (only needed in floating mode).
+    function chatPanelHTML(includeClose) {
+        const closeBtn = includeClose
+            ? '<button id="ai-widget-close" class="ai-widget-close-btn" aria-label="Close chat">×</button>'
+            : '';
+        return `
+            <div id="ai-widget-chat" class="ai-widget-chat">
+                <div class="ai-widget-header">
+                    ${closeBtn}
+                    <h3>Ask Valerii</h3>
+                    <p class="ai-widget-subtitle">AI-powered assistant</p>
+                    <div class="ai-widget-status">
+                        <span id="ai-widget-status-text" class="ai-widget-status-connecting">● AI</span>
+                        <span class="ai-widget-status-divider">|</span>
+                        <span id="ai-widget-db-status-text" class="ai-widget-status-connecting">● DB</span>
+                    </div>
+                </div>
 
-                <div id="ai-widget-chat" class="ai-widget-chat ai-widget-hidden">
-                    <div class="ai-widget-header">
-                        <button id="ai-widget-close" class="ai-widget-close-btn" aria-label="Close chat">×</button>
-                        <h3>Ask Valerii</h3>
-                        <p class="ai-widget-subtitle">AI-powered assistant</p>
-                        <div class="ai-widget-status">
-                            <span id="ai-widget-status-text" class="ai-widget-status-connecting">● AI</span>
-                            <span class="ai-widget-status-divider">|</span>
-                            <span id="ai-widget-db-status-text" class="ai-widget-status-connecting">● DB</span>
-                        </div>
+                <div id="ai-widget-messages" class="ai-widget-messages">
+                    <div class="ai-widget-message ai-widget-message-bot">
+                        Hi! I'm Valerii's AI assistant. Here's what I can do:<br><br>
+                        <strong>1. Experience &amp; approach</strong> — projects, industries, domains, professional philosophy.<br>
+                        <strong>2. Schedule a meeting</strong> — book a call directly in Valerii's calendar.<br>
+                        <strong>3. Tailored resume</strong> — share a vacancy and I'll generate a resume focused on what matters for that role.<br>
+                        <strong>4. Forward a link</strong> — drop a vacancy URL or your company site and I'll pass it to Valerii directly.<br><br>
+                        What brings you here?
                     </div>
-                    
-                    <div id="ai-widget-messages" class="ai-widget-messages">
-                        <div class="ai-widget-message ai-widget-message-bot">
-                            Hi! I'm Valerii's AI assistant. Here's what I can do:<br><br>
-                            <strong>1. Experience &amp; approach</strong> — projects, industries, domains, professional philosophy.<br>
-                            <strong>2. Schedule a meeting</strong> — book a call directly in Valerii's calendar.<br>
-                            <strong>3. Tailored resume</strong> — share a vacancy and I'll generate a resume focused on what matters for that role.<br>
-                            <strong>4. Forward a link</strong> — drop a vacancy URL or your company site and I'll pass it to Valerii directly.<br><br>
-                            What brings you here?
-                        </div>
-                    </div>
-                    
-                    <div class="ai-widget-input-area">
-                        <input type="text" id="ai-widget-input" placeholder="Type your message..." autocomplete="off">
-                        <button id="ai-widget-send" class="ai-widget-send-btn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="22" y1="2" x2="11" y2="13"></line>
-                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                            </svg>
-                        </button>
-                    </div>
+                </div>
+
+                <div class="ai-widget-input-area">
+                    <input type="text" id="ai-widget-input" placeholder="Type your message..." autocomplete="off">
+                    <button id="ai-widget-send" class="ai-widget-send-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
                 </div>
             </div>
         `;
+    }
 
-        document.body.insertAdjacentHTML('beforeend', widgetHTML);
-        initializeWidget();
+    // Create widget in the right mode depending on whether the page
+    // has an inline mount point.
+    function createWidget() {
+        const inlineMount = document.getElementById('ai-widget-inline-mount');
+
+        if (inlineMount) {
+            // Inline mode — mounted in-flow, always open.
+            inlineMount.innerHTML = `
+                <div id="ai-avatar-widget" class="ai-widget-container ai-widget-inline">
+                    ${chatPanelHTML(false)}
+                </div>
+            `;
+            initializeWidget({ inline: true });
+        } else {
+            // Floating mode — classic bottom-right widget.
+            const chatMarkup = chatPanelHTML(true).replace(
+                'class="ai-widget-chat"',
+                'class="ai-widget-chat ai-widget-hidden"'
+            );
+            const widgetHTML = `
+                <div id="ai-avatar-widget" class="ai-widget-container ai-widget-${WIDGET_CONFIG.position}">
+                    <button id="ai-widget-toggle" class="ai-widget-toggle" aria-label="Toggle AI Chat">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </button>
+                    ${chatMarkup}
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', widgetHTML);
+            initializeWidget({ inline: false });
+        }
     }
 
     // Initialize widget functionality
-    function initializeWidget() {
-        const toggle = document.getElementById('ai-widget-toggle');
+    function initializeWidget(opts) {
         const chat = document.getElementById('ai-widget-chat');
-        const close = document.getElementById('ai-widget-close');
         const input = document.getElementById('ai-widget-input');
         const sendBtn = document.getElementById('ai-widget-send');
         const messagesArea = document.getElementById('ai-widget-messages');
@@ -80,7 +110,7 @@
         const dbStatusText = document.getElementById('ai-widget-db-status-text');
 
         let socket;
-        let isOpen = false;
+        let isOpen = opts.inline; // inline mode starts open
         let reconnectAttempts = 0;
         const MAX_RECONNECT_ATTEMPTS = 5;
         const MAX_MESSAGE_LENGTH = 8000; // raised to allow job vacancy texts for resume generation
@@ -93,22 +123,31 @@
                 .replace(/"/g, '&quot;');
         }
 
-        // Toggle chat — hide/show the round button when chat opens/closes
-        toggle.addEventListener('click', () => {
-            isOpen = !isOpen;
-            chat.classList.toggle('ai-widget-hidden');
-            toggle.classList.toggle('ai-widget-toggle-hidden', isOpen);
-            if (isOpen && !socket) {
-                connectWebSocket();
-                checkDbStatus();
-            }
-        });
+        // Floating-mode UI handlers (toggle + close)
+        if (!opts.inline) {
+            const toggle = document.getElementById('ai-widget-toggle');
+            const close = document.getElementById('ai-widget-close');
 
-        close.addEventListener('click', () => {
-            isOpen = false;
-            chat.classList.add('ai-widget-hidden');
-            toggle.classList.remove('ai-widget-toggle-hidden');
-        });
+            toggle.addEventListener('click', () => {
+                isOpen = !isOpen;
+                chat.classList.toggle('ai-widget-hidden');
+                toggle.classList.toggle('ai-widget-toggle-hidden', isOpen);
+                if (isOpen && !socket) {
+                    connectWebSocket();
+                    checkDbStatus();
+                }
+            });
+
+            close.addEventListener('click', () => {
+                isOpen = false;
+                chat.classList.add('ai-widget-hidden');
+                toggle.classList.remove('ai-widget-toggle-hidden');
+            });
+        } else {
+            // Inline mode — auto-connect on mount.
+            connectWebSocket();
+            checkDbStatus();
+        }
 
         // WebSocket connection
         function connectWebSocket() {
@@ -237,12 +276,6 @@
                 sendMessage();
             }
         });
-    }
-
-    // Load CSS
-    function loadStyles() {
-        // CSS is now loaded directly in the HTML layout
-        // This function is kept for backward compatibility
     }
 
     // Initialize when DOM is ready

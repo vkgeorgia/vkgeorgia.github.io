@@ -123,6 +123,31 @@ h6 {
     color: #666;
 }
 
+/* Breathing room around section dividers (---)
+   Markdown "---" renders as <hr>. Minima's default gives it little vertical
+   spacing, so headings end up visually glued to the rule. Bump the vertical
+   margin on the rule itself and add a touch of extra space above any heading
+   that immediately follows. */
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+hr + h1,
+hr + h2,
+hr + h3 {
+    margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
 /* Sticky site header */
 .site-header {
     position: sticky;

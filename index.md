@@ -74,6 +74,14 @@ I am most useful when an organization is about to change direction. Less useful 
 
 ---
 
+## Ask my assistant
+
+Before booking a call, you can ask a few questions directly. My AI assistant knows my track record, how I structure engagements, and the kinds of problems I typically work on. It can also generate a résumé tailored to a specific role, forward a vacancy or company link to me, or help you book a meeting.
+
+<div id="ai-widget-inline-mount"></div>
+
+---
+
 ## Let's talk
 
 If you are facing a complex technology decision — M&A integration, a scaling programme, cost restructuring, an AI adoption question, or a stalled transformation — a short conversation is usually the best way to see whether an architectural perspective would help.

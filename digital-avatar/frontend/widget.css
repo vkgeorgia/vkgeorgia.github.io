@@ -249,3 +249,38 @@
         width: auto;
     }
 }
+
+/* ------------------------------------------------------------------
+   Inline mode — widget mounted in-flow inside a page section.
+   Activated when widget.js finds #ai-widget-inline-mount on the page.
+   Overrides the fixed/floating positioning so the chat sits as a
+   normal block element (e.g. on the home page "Ask my assistant"
+   section), taking the full content width up to a reasonable cap.
+   ------------------------------------------------------------------ */
+.ai-widget-container.ai-widget-inline {
+    position: static;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ai-widget-container.ai-widget-inline .ai-widget-chat {
+    position: static;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    height: 560px;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 600px) {
+    .ai-widget-container.ai-widget-inline .ai-widget-chat {
+        height: 480px;
+    }
+}
