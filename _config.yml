@@ -27,7 +27,6 @@ header_pages:
   - business-challenges.md
   - services/index.md
   - cases.md
-  - approach.md
   - articles.md
 
 # Build settings
@@ -67,6 +66,17 @@ exclude:
   - digital-avatar/.env
   - digital-avatar/google_credentials.json
   - digital-avatar/README.md
+  # Локальные планы/доки в корне (см. .gitignore) — не обрабатывать как страницы Jekyll
+  - CLAUDE.md
+  - new-proposed-format
+  - vkgeorgia.icloud.com
+  - 00_SUMMARY_AND_NEXT_STEPS.md
+  - BOT_IMPLEMENTATION_PLAN.md
+  - FINAL_IMPLEMENTATION_PLAN.md
+  - PHASE_0_BUILD_FIX_CLASSIFICATION.md
+  - PROJECT_DESCRIPTION_STYLE_GUIDE.md
+  # Архив устаревшего контента — не собирается Jekyll
+  - "0. archive"
 
 # Collections
 collections:
