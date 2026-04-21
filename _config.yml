@@ -74,7 +74,7 @@ exclude:
   - BOT_IMPLEMENTATION_PLAN.md
   - FINAL_IMPLEMENTATION_PLAN.md
   - PHASE_0_BUILD_FIX_CLASSIFICATION.md
-  - PROJECT_DESCRIPTION_STYLE_GUIDE.md
+  - STYLE_GUIDE.md
   # Архив устаревшего контента — не собирается Jekyll
   - "0. archive"
 

@@ -37,6 +37,7 @@ _config.local.yml
 /FINAL_*.md
 /PHASE_*.md
 /PROJECT_DESCRIPTION*.md
+/STYLE_GUIDE.md
 /WEBSITE_COPY*.md
 /*IMPLEMENTATION*PLAN*.md
 /*SUMMARY*NEXT*.md
