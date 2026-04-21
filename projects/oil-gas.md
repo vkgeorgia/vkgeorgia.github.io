@@ -33,12 +33,3 @@ Resolved loyalty issues, gave future IT landscape improvement plan.
 **[Project 41](/downloads/41.pdf):** nabled Remuneration Process Transformation
 
 The organization received a ready-to-implement target process description and AI agent requirements, prepared for the deployment of a new AI-automated process.
-
----
-
-
-<p align="center" style="font-size: 14px;">
-  📧 <a href="mailto:vkgeorgia@icloud.com">vkgeorgia@icloud.com</a> | 
-  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> | 
-  📅 <a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7" target="_blank">Schedule a Meeting</a>
-</p>
