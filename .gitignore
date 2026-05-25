@@ -37,6 +37,8 @@ _config.local.yml
 /FINAL_*.md
 /PHASE_*.md
 /PROJECT_DESCRIPTION*.md
+/REDESIGN_ALIGNMENT_TO_STRATEGY.md
+/STRATEGIC_BRIEF.md
 /STYLE_GUIDE.md
 /WEBSITE_COPY*.md
 /*IMPLEMENTATION*PLAN*.md
@@ -61,6 +63,9 @@ digital-avatar/backend/knowledge_base/
 
 # Local archive for deprecated scripts / content
 0. archive/
+
+# Local tools (build scripts, not for publication)
+/tools/
 
 # Ruby / Bundler — гемы только локально (`bundle install`), не в git
 vendor/
