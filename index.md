@@ -15,7 +15,7 @@ permalink: /
 
 I work with CEOs, CIOs, and boards on high-stakes technology decisions — where the consequences are financial, operational, and strategic, not just technical.
 
-My job is to turn complex architecture and investment choices into clear trade-offs the business can act on: cost, risk, speed, and long-term fit.
+Starting from business priorities, I align IT strategy, project portfolio, and spend so that technology serves the business — and bring order when the path forward is unclear.
 
 **[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
 
@@ -51,7 +51,7 @@ I am most useful when an organization is about to change direction. Less useful 
 
 ## How I work
 
-1. **Frame the decision.** Most initiatives stall because the real decision is never clearly stated. My first contribution is usually to name it.
+1. **Frame the decision.** Most initiatives stall because the real decision is never clearly stated. My first contribution is usually to name it — which takes a grounded read of how the enterprise actually works.
 2. **Surface the trade-offs.** Cost, risk, speed, reversibility, strategic fit — made explicit so leadership can choose deliberately rather than default.
 3. **Design the target state.** A structured view of where the organization is going, and the minimum changes that get it there.
 4. **Stay close to execution.** I work directly with data, teams, and prototypes to make sure the decision holds up in reality.
