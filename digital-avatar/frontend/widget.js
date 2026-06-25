@@ -143,6 +143,25 @@
                 chat.classList.add('ai-widget-hidden');
                 toggle.classList.remove('ai-widget-toggle-hidden');
             });
+
+            // Public hook: open the floating panel and pre-fill a prompt.
+            // Used by preview-prompt cards (e.g. on the home page).
+            window.AIWidget = window.AIWidget || {};
+            window.AIWidget.openWith = function (promptText) {
+                if (!isOpen) {
+                    isOpen = true;
+                    chat.classList.remove('ai-widget-hidden');
+                    toggle.classList.add('ai-widget-toggle-hidden');
+                    if (!socket) {
+                        connectWebSocket();
+                        checkDbStatus();
+                    }
+                }
+                if (typeof promptText === 'string' && promptText) {
+                    input.value = promptText;
+                }
+                input.focus();
+            };
         } else {
             // Inline mode — auto-connect on mount.
             connectWebSocket();

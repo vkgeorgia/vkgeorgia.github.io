@@ -2,7 +2,7 @@
 layout: page
 title: "Executive Architecture Advisory"
 seo_title: "Executive Architecture Advisory | Ongoing Decision Support for Leaders"
-description: "Ongoing architecture and technology decision support for CEOs, CIOs, and boards navigating recurring, high-stakes choices."
+description: "Ongoing architecture and technology decision support for senior business and technology leaders navigating recurring, high-stakes choices."
 keywords: "Executive Advisory, Enterprise Architecture, Decision Support, Technology Strategy, CIO Advisory, Board Advisory"
 lang: en
 permalink: /services/executive-architecture-advisory/
