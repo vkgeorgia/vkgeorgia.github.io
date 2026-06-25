@@ -2,7 +2,7 @@
 layout: home
 title: "Home"
 seo_title: "Valerii Korobeinikov | Enterprise Architecture & Technology Advisory"
-description: "Enterprise architect and advisor helping CEOs, CIOs, and boards make high-stakes technology decisions in the language of the business — from reorganization and transformation to cost, risk, and AI adoption."
+description: "Enterprise architect and advisor helping senior business and technology leaders make high-stakes technology decisions in the language of the business — from reorganization and transformation to cost, risk, and AI adoption."
 keywords: "Enterprise Architecture Consulting, Technology Strategy Advisory, Digital Transformation, IT Strategy, Risk Reduction, Reorganization, M&A Integration"
 lang: en
 permalink: /
@@ -13,11 +13,21 @@ permalink: /
 
 # An Enterprise Architect who speaks business, not just tech
 
-I work with CEOs, CIOs, and boards on high-stakes technology decisions — where the consequences are financial, operational, and strategic, not just technical.
+I work with senior business and technology leaders on high-stakes technology decisions — where the consequences are financial, operational, and strategic, not just technical.
 
 Starting from business priorities, I align IT strategy, project portfolio, and spend so that technology serves the business — and bring order when the path forward is unclear.
 
 **[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+
+<div class="ask-card" markdown="0">
+  <p class="ask-card-title">Or ask my assistant</p>
+  <p class="ask-card-lead">It knows my track record, how I structure engagements, and the problems I typically work on — and can tailor a résumé or forward a vacancy.</p>
+  <div class="ask-card-prompts">
+    <button type="button" class="ask-prompt" onclick="window.AIWidget &amp;&amp; window.AIWidget.openWith('Show me a case from a similar industry')">Show me a case from a similar industry</button>
+    <button type="button" class="ask-prompt" onclick="window.AIWidget &amp;&amp; window.AIWidget.openWith('What does an engagement look like?')">What does an engagement look like?</button>
+    <button type="button" class="ask-prompt" onclick="window.AIWidget &amp;&amp; window.AIWidget.openWith('I have a vacancy to discuss')">I have a vacancy to discuss</button>
+  </div>
+</div>
 
 ---
 
@@ -68,17 +78,13 @@ I am most useful when an organization is about to change direction. Less useful 
 
 ## How we can work together
 
-- **Fixed-scope project — 6 to 16 weeks.** A bounded engagement: assessment, target operating model, portfolio rationalization, architecture audit, or a specific transformation decision.
-- **Fractional or embedded advisor — months.** Regular rhythm with CTO/CIO/CEO on a series of related decisions; typically a few days per week or per month.
-- **Expert due diligence or second opinion — days to weeks.** For boards, investors, and PE firms needing an independent read on a portfolio company or a specific technology decision.
+For a bounded decision, we work in a fixed-scope project of roughly 6 to 16 weeks — an assessment, a target operating model, a portfolio rationalization, an architecture audit, or a specific transformation call.
 
----
+When the decisions keep coming, a fractional or embedded arrangement makes more sense: a regular rhythm with the CTO, CIO, or CEO over a series of related choices, typically a few days per week or per month.
 
-## Ask my assistant
+And when a board, investor, or PE firm needs an independent read on a portfolio company or a single technology decision, I take on expert due diligence or a second opinion — a matter of days to weeks.
 
-Before booking a call, you can ask a few questions directly. My AI assistant knows my track record, how I structure engagements, and the kinds of problems I typically work on. It can also generate a résumé tailored to a specific role, forward a vacancy or company link to me, or help you book a meeting.
-
-<div id="ai-widget-inline-mount"></div>
+*Currently researching architecture-as-code; methodology and tooling open-sourced at [transitrix.com](https://transitrix.com).*
 
 ---
 
