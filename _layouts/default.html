@@ -49,6 +49,12 @@
     <link rel="stylesheet" href="{{ '/digital-avatar/frontend/widget.css' | relative_url }}">
     <script src="{{ '/digital-avatar/frontend/widget.js' | relative_url }}"></script>
 
+    {% if site.cloudflare_analytics_token %}
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cloudflare_analytics_token }}"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+    {% endif %}
+
 </body>
 
 </html>
