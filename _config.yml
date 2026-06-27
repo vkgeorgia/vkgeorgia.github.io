@@ -48,6 +48,10 @@ include:
 # Для локальной подмены без коммита: _config.local.yml + --config _config.yml,_config.local.yml
 backend_url: "https://ai-avatar-103512681014.us-central1.run.app"
 
+# Cloudflare Web Analytics token (JS beacon, public — visible in HTML source on live site, not a secret).
+# Referenced from _layouts/default.html. See strategy issue vkgeorgia/strategy#391.
+cloudflare_analytics_token: "c469758a75af452284beff013fcc9741"
+
 # Exclude from processing
 exclude:
   - README.md
