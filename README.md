@@ -1,47 +1,32 @@
 ---
 layout: page
-title: "Welcome"
-description: "Technical site of Valerii Korobeinikov, Enterprise Architect and Strategic Consultant."
+title: "About this repository"
+description: "Source of vkgeorgia.github.io — practitioner site of Valerii Korobeinikov, Enterprise Architect."
 lang: en
-permalink: /
 ---
 
-# Welcome
+# About this repository
 
-This is the technical site of **Valerii Korobeinikov**, Enterprise Architect and Strategic Consultant.
+This repository hosts the source of **[vkgeorgia.github.io](https://vkgeorgia.github.io/)** — the practitioner site of **Valerii Korobeinikov**, Enterprise Architect.
 
-Here I publish:
-- detailed project documentation,
-- architecture diagrams,
-- capability models,
-- notes on enterprise transformation and product management.
+The site is the public surface of the practice: positioning, engagement formats, selected outcomes, and an AI assistant. It is not a technical documentation site.
 
-## AI Avatar
+## AI assistant
 
-This site features an **AI-powered digital avatar** that can answer questions about my professional experience, consulting services, and help schedule meetings. Click the chat icon in the bottom-right corner to start a conversation!
+The site features an **AI assistant** that can answer questions about Valerii's professional experience, engagement formats, and help schedule a meeting. Open the chat from the icon at the bottom-right corner of any page.
 
-The backend for the avatar is maintained in a separate repository:
-- [`vkgeorgia/Jeeves`](https://github.com/vkgeorgia/Jeeves)
+The assistant backend lives in a separate repository (`vkgeorgia/Jeeves`); this repository contains the site frontend (Jekyll source, layouts, and the chat widget assets) only.
 
-This repository contains the website/content side and frontend widget assets.
+## Local build
 
-</p>
-
-## Project structure
-
-1.  **`_projects/`** — портфолио: Jekyll строит страницу **Cases**; тексты проектов также использует бэкенд (Jeeves).
-2.  **`vkgeorgia/Jeeves`** — runtime (чат, RAG, интеграции); этот репозиторий — только сайт и виджет.
-
-## Локальная сборка
-
-Нужен **Ruby 3.3.x** (цепочка `github-pages` / `commonmarker` пока не совместима с **Ruby 4**). Удобнее всего Homebrew:
+Requires **Ruby 3.3.x** (the `github-pages` / `commonmarker` chain is not yet compatible with Ruby 4). Easiest via Homebrew:
 
 ```bash
 brew install ruby@3.3
-export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"   # в Intel Mac: /usr/local/opt/ruby@3.3/bin
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"   # on Intel Mac: /usr/local/opt/ruby@3.3/bin
 cd /path/to/vkgeorgia.github.io
 bundle install
 bundle exec jekyll serve
 ```
 
-В репозитории есть **`.ruby-version`** (для rbenv/chruby/asdf). Гемы ставятся в **`vendor/`** (в `.gitignore`).
+A `.ruby-version` file is included (for rbenv / chruby / asdf). Gems install into `vendor/` (gitignored).
