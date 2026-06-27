@@ -12,6 +12,6 @@ Projects in Aviation
 ### Projects
 
 
-**[Project 25](/downloads/25.pdf):** Enterprise Strategy Development and Risk Management
+**Project 25:** Enterprise Strategy Development and Risk Management
 
 Increased the airport's resilience to potential threats. Provided valuable information for informed strategic decisions. Strategic directions were defined, and strategic initiatives to be undertaken in the next period were described.
