@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="post case-study">
+    <p class="case-back"><a href="{{ '/cases/' | relative_url }}">← All cases</a></p>
+
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+        {% if page.client_display %}<p class="case-client">{{ page.client_display }}</p>{% endif %}
+        <p class="case-meta">
+            {% if page.industry %}{{ page.industry }}{% endif %}
+            {% if page.role %}<span class="case-meta-sep">·</span> {{ page.role }}{% endif %}
+            {% if page.period %}<span class="case-meta-sep">·</span> {{ page.period }}{% endif %}
+        </p>
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <hr />
+
+    <p><strong><a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7">→ Book a 30-min intro call</a></strong> to talk through a similar decision in your organisation.</p>
+
+    <p class="case-back"><a href="{{ '/cases/' | relative_url }}">← Back to all cases</a></p>
+</article>

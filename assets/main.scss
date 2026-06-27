@@ -242,3 +242,60 @@ hr + h3 {
         text-align: left;
     }
 }
+
+/* Featured case-study teaser cards (cases index) */
+.featured-cases {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.featured-case {
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-left: 3px solid #2a7ae2;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.featured-case h3 {
+    margin: 0 0 0.25rem 0;
+}
+
+.featured-case-client {
+    margin: 0 0 0.6rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.featured-case-teaser {
+    margin: 0 0 0.6rem 0;
+}
+
+.featured-case-more {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Long-form case-study page */
+.case-study .case-back {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.case-study .case-client {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.25rem 0 0.15rem 0;
+}
+
+.case-study .case-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.case-study .case-meta-sep {
+    color: #bbb;
+}

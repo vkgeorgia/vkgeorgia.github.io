@@ -23,15 +23,27 @@ Use the filters below to narrow by industry, role, or functional domain.
 
 ---
 
-## Highlights
+## Featured case studies
 
-A few engagements that illustrate the type of outcomes this work tends to produce:
+A few engagements in depth — the decision, the trade-offs, and the outcome.
 
-{% include highlights.html %}
-
-The full list, with filters by industry, role, and functional domain, is below.
+<div class="featured-cases">
+{% assign featured = site.case_studies | sort: "order" %}
+{% for case in featured %}
+  <div class="featured-case">
+    <h3><a href="{{ case.url | relative_url }}">{{ case.title }}</a></h3>
+    {% if case.client_display %}<p class="featured-case-client">{{ case.client_display }}</p>{% endif %}
+    <p class="featured-case-teaser">{{ case.teaser }}</p>
+    <p class="featured-case-more"><a href="{{ case.url | relative_url }}">Read the case →</a></p>
+  </div>
+{% endfor %}
+</div>
 
 ---
+
+## Other engagements
+
+The full list, with filters by industry, role, and functional domain, is below.
 
 <style>
   /* Filter Container */

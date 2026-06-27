@@ -74,6 +74,8 @@ exclude:
   - CLAUDE.md
   - vkgeorgia.icloud.com
   - STRATEGIC_BRIEF.md
+  # Repo-internal architecture decision records — not built into the site
+  - docs/
   # Repo-internal notes for the SEO landing-page directories — not built
   - domains/README.md
   - industries/README.md
@@ -86,3 +88,8 @@ exclude:
 collections:
   projects:
     output: false
+  # Anchor case studies — long-form, individually addressable at /cases/<slug>/.
+  # Distinct from the `projects` collection (brief filterable cards on /cases/).
+  case_studies:
+    output: true
+    permalink: /cases/:name/
