@@ -30,6 +30,6 @@ Resolved loyalty issues, gave future IT landscape improvement plan.
 
 ---
 
-**Project 41:** nabled Remuneration Process Transformation
+**Project 41:** AI-Enabled Remuneration Process Transformation
 
 The organization received a ready-to-implement target process description and AI agent requirements, prepared for the deployment of a new AI-automated process.

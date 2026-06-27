@@ -74,6 +74,8 @@ exclude:
   - CLAUDE.md
   - vkgeorgia.icloud.com
   - STRATEGIC_BRIEF.md
+  # Local build scripts (gitignored; carry internal labels) — never copy into _site
+  - tools
   # Repo-internal notes for the SEO landing-page directories — not built
   - domains/README.md
   - industries/README.md
