@@ -84,7 +84,15 @@ When the decisions keep coming, a fractional or embedded arrangement makes more 
 
 And when a board, investor, or PE firm needs an independent read on a portfolio company or a single technology decision, I take on expert due diligence or a second opinion — a matter of days to weeks.
 
-*Currently researching architecture-as-code; methodology and tooling open-sourced at [transitrix.com](https://transitrix.com).*
+---
+
+## Architecture-as-code — an open methodology I build
+
+My practice treats enterprise architecture as a decision discipline, not documentation. **Transitrix** is where I take that conviction further, in the open: an architecture-as-code methodology that describes an enterprise as text — its goals, capabilities, processes, and roles. Because the model is text, it can be versioned in Git, reviewed like code, and read by both people and machines. It builds on open standards (ArchiMate, BPMN) and is MIT-licensed.
+
+Alongside the methodology I build **Transitrix Studio**, an editor extension and CLI that authors and previews these models directly in VS Code and other IDEs. It is a research initiative, not a product I am selling here — but it reflects how I think architecture should work: legible, current, and owned by the organisation rather than locked in a tool.
+
+More at [transitrix.com](https://transitrix.com).
 
 ---
 
