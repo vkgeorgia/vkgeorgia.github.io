@@ -36,13 +36,13 @@ A single profile concept was created and used as a foundation for four new proje
 
 ---
 
-**Project 32:** Central Permission Engine (CPE)
+**Project 32:** Central Permission Engine
 
 A concept for a centralized permission model was formulated, allowing for access rights to be assigned based on both role-based and resource-based models.
 
 ---
 
-**Project 33:** , EPM-ECO – Profile Storage (DMPL)
+**Project 33:** Profile Storage
 
 Client profile architecture was developed, profile storage prepared, and data migration successfully completed, accounting for dynamic system changes and format transformations, leading to active integration by consuming systems.
 
@@ -54,9 +54,9 @@ A strategic roadmap for the core retail platform was developed, enabling the cli
 
 ---
 
-**Project 35:** (1) – Digital Business Transformation
+**Project 35:** Digital Business Transformation
 
-BTC prepared its business transformation from a traditional telecom to a digital service marketplace; a target-state information architecture was prepared as a foundation for future changes, providing the client with a clear plan for system and information transformation.
+A national telecommunications operator prepared its business transformation from a traditional telecom to a digital service marketplace; a target-state information architecture was prepared as a foundation for future changes, providing the client with a clear plan for system and information transformation.
 
 ---
 
@@ -84,7 +84,7 @@ A solution designed to meet requirements and constraints, along with a roadmap f
 
 ---
 
-**Project 41:** nabled Remuneration Process Transformation
+**Project 41:** AI-Enabled Remuneration Process Transformation
 
 The organization received a ready-to-implement target process description and AI agent requirements, prepared for the deployment of a new AI-automated process.
 
@@ -102,6 +102,6 @@ Developed methodology and tooling for enterprise capability-based planning.
 
 ---
 
-**Project 44:** riven Assistant for HR Service Automation
+**Project 44:** AI-Driven Assistant for HR Service Automation
 
 Deployed an AI-driven HR assistant that cut response times to minutes and automated most routine inquiries.

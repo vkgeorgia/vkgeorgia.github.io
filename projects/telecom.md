@@ -108,6 +108,6 @@ A comprehensive approach and methodology were developed for evaluating the effec
 
 ---
 
-**Project 35:** (1) – Digital Business Transformation
+**Project 35:** Digital Business Transformation
 
-BTC prepared its business transformation from a traditional telecom to a digital service marketplace; a target-state information architecture was prepared as a foundation for future changes, providing the client with a clear plan for system and information transformation.
+A national telecommunications operator prepared its business transformation from a traditional telecom to a digital service marketplace; a target-state information architecture was prepared as a foundation for future changes, providing the client with a clear plan for system and information transformation.
