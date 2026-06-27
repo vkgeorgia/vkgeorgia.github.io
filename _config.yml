@@ -66,16 +66,16 @@ exclude:
   - digital-avatar/.env
   - digital-avatar/google_credentials.json
   - digital-avatar/README.md
-  # Локальные планы/доки в корне (см. .gitignore) — не обрабатывать как страницы Jekyll
+  # Local-only docs / private brief in root (see .gitignore) — never build as pages
   - CLAUDE.md
-  - new-proposed-format
   - vkgeorgia.icloud.com
-  - 00_SUMMARY_AND_NEXT_STEPS.md
-  - BOT_IMPLEMENTATION_PLAN.md
-  - FINAL_IMPLEMENTATION_PLAN.md
-  - PHASE_0_BUILD_FIX_CLASSIFICATION.md
-  - STYLE_GUIDE.md
-  # Архив устаревшего контента — не собирается Jekyll
+  - STRATEGIC_BRIEF.md
+  # Repo-internal notes for the SEO landing-page directories — not built
+  - domains/README.md
+  - industries/README.md
+  - projects/README.md
+  - roles/README.md
+  # Archived stale content (see .gitignore) — not built by Jekyll
   - "0. archive"
 
 # Collections

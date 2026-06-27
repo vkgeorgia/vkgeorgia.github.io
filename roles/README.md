@@ -1,0 +1,7 @@
+# `roles/`
+
+Role landing pages (one per role, e.g. project-manager, enterprise-architect). Each renders at `/roles/<key>/` and is indexed in `sitemap.xml`.
+
+These are **deep-linked SEO landing pages — intentionally not in the main navigation** (Home / Business Challenges / Services / Cases / Articles). They are reachable directly and via search engines.
+
+Repo-internal note only; excluded from the Jekyll build.
