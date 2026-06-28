@@ -21,21 +21,26 @@ In practice, most engagements sit on the boundary between the two.
 
 ---
 
+{% comment %} Featured anchor cases, by endeavour_id, in display order. {% endcomment %}
+{% assign featured_ids = "22.27,24.05,24.08" | split: "," %}
+
 ## Featured engagements
 
 Three studies that show how the work plays out end to end — the decision, the trade-offs, and the outcome.
 
 <div class="featured-cases">
-  {% assign featured = site.case_studies | sort: "order" %}
-  {% for case in featured %}
-  <a class="featured-card" href="{{ case.url | relative_url }}">
-    <span class="featured-tag">{{ case.engagement_type }}</span>
-    <h3>{{ case.title | escape }}</h3>
-    <p class="featured-client">{{ case.client_alt | escape }}</p>
-    <p class="featured-meta">{{ case.period | escape }}</p>
-    <p class="featured-teaser">{{ case.teaser | escape }}</p>
-    <span class="featured-link">Read the case →</span>
-  </a>
+  {% for id in featured_ids %}
+    {% assign case = site.projects | where: "endeavour_id", id | first %}
+    {% if case %}
+    {% assign kr = case.content | split: 'Key result</h2>' | last | strip_html | strip %}
+    <a class="featured-card" href="{{ case.url | relative_url }}">
+      <h3>{{ case.title | escape }}</h3>
+      <p class="featured-client">{{ case.client | escape }}</p>
+      <p class="featured-meta">{{ case.period | escape }}</p>
+      <p class="featured-teaser">{{ kr | truncate: 180 }}</p>
+      <span class="featured-link">Read the case →</span>
+    </a>
+    {% endif %}
   {% endfor %}
 </div>
 
@@ -45,21 +50,29 @@ Three studies that show how the work plays out end to end — the decision, the 
 
 A condensed view of the broader track record — one line each, most recent first.
 
+{% comment %} endeavour_id is zero-padded NN.NN, so a string sort is chronological. {% endcomment %}
+{% assign all_cases = site.projects | sort: "endeavour_id" | reverse %}
+{% assign others_count = 0 %}
+{% for case in all_cases %}{% unless featured_ids contains case.endeavour_id %}{% assign others_count = others_count | plus: 1 %}{% endunless %}{% endfor %}
+
 <details class="other-engagements">
-  <summary>Show the full list ({{ site.data.other_engagements | size }} engagements)</summary>
+  <summary>Show the full list ({{ others_count }} engagements)</summary>
   <ul class="engagement-list">
-    {% for e in site.data.other_engagements %}
+    {% for case in all_cases %}
+    {% unless featured_ids contains case.endeavour_id %}
+    {% assign kr = case.content | split: 'Key result</h2>' | last | strip_html | strip %}
     <li>
-      <span class="eng-period">{{ e.period }}</span>
-      <span class="eng-sector">{{ e.industry }} · {{ e.client }}</span>
-      <span class="eng-outcome">{{ e.outcome }}</span>
+      <span class="eng-period">{{ case.period | escape }}</span>
+      <span class="eng-sector">{{ case.client | escape }}</span>
+      <span class="eng-outcome"><a href="{{ case.url | relative_url }}">{{ case.title | escape }}</a> — {{ kr | truncate: 160 }}</span>
     </li>
+    {% endunless %}
     {% endfor %}
   </ul>
 </details>
 
 <p class="cases-note" markdown="1">
-Most engagements are rendered with neutral, industry-level descriptors rather than client names. Where you need specifics for a relevant decision, [ask my assistant](javascript:void(0)) or [book a call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7).
+Engagements are described with neutral, industry-level descriptors except where the client is named openly. Where you need specifics for a relevant decision, [ask my assistant](javascript:void(0)) or [book a call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7).
 </p>
 
 <style>
@@ -85,18 +98,6 @@ Most engagements are rendered with neutral, industry-level descriptors rather th
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     transform: translateY(-2px);
     border-color: #adb5bd;
-  }
-  .featured-tag {
-    align-self: flex-start;
-    font-size: 0.7em;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #007bff;
-    border: 1px solid #007bff;
-    border-radius: 4px;
-    padding: 2px 8px;
-    margin-bottom: 12px;
   }
   .featured-card h3 { margin: 0 0 6px; font-size: 1.15em; line-height: 1.3; color: #212529; }
   .featured-client { margin: 0 0 2px; font-weight: 600; color: #495057; font-size: 0.95em; }
@@ -127,13 +128,14 @@ Most engagements are rendered with neutral, industry-level descriptors rather th
     padding: 12px 0;
     border-top: 1px solid #e9ecef;
     display: grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 90px 1fr;
     gap: 2px 14px;
     align-items: baseline;
   }
   .eng-period { grid-row: span 2; font-size: 0.82em; color: #6c757d; font-weight: 600; }
   .eng-sector { font-weight: 600; color: #343a40; font-size: 0.9em; }
   .eng-outcome { grid-column: 2; color: #495057; font-size: 0.9em; line-height: 1.5; }
+  .eng-outcome a { font-weight: 600; }
   .cases-note { font-size: 0.88em; color: #6c757d; margin-top: 24px; }
 
   @media (max-width: 600px) {

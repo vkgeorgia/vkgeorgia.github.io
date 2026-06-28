@@ -7,9 +7,8 @@ layout: default
   <p class="case-back"><a href="/cases/">← All cases</a></p>
 
   <header class="case-header">
-    {% if page.engagement_type %}<span class="case-tag">{{ page.engagement_type }}</span>{% endif %}
     <h1 class="case-title">{{ page.title | escape }}</h1>
-    <p class="case-client">{{ page.client_alt | escape }}</p>
+    {% if page.client %}<p class="case-client">{{ page.client | escape }}</p>{% endif %}
     <dl class="case-facts">
       {% if page.period %}<div><dt>Period</dt><dd>{{ page.period | escape }}</dd></div>{% endif %}
       {% if page.role %}<div><dt>Role</dt><dd>{{ page.role | escape }}</dd></div>{% endif %}
@@ -21,6 +20,11 @@ layout: default
   </div>
 
   <footer class="case-footer">
+    {% assign pdf = '/downloads/' | append: page.endeavour_id | append: '.pdf' %}
+    {% assign pdf_file = site.static_files | where: "path", pdf | first %}
+    {% if pdf_file %}
+    <p class="case-pdf"><a href="{{ pdf | relative_url }}">⬇ Download this case as a PDF</a></p>
+    {% endif %}
     <p><a href="/cases/">← Back to all cases</a></p>
     <p class="case-cta"><a href="https://calendar.app.google/YwmXZytfSQ2qWX4Z7">→ Book a 30-min intro call</a> to talk through a similar decision.</p>
   </footer>
@@ -31,18 +35,6 @@ layout: default
   .case-study { max-width: 760px; }
   .case-back { font-size: 0.9em; margin-bottom: 10px; }
   .case-header { border-bottom: 2px solid #eee; padding-bottom: 18px; margin-bottom: 24px; }
-  .case-tag {
-    display: inline-block;
-    font-size: 0.72em;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #007bff;
-    border: 1px solid #007bff;
-    border-radius: 4px;
-    padding: 2px 8px;
-    margin-bottom: 12px;
-  }
   .case-title { margin: 6px 0 4px; font-size: 1.9em; line-height: 1.2; }
   .case-client { font-size: 1.05em; color: #495057; font-weight: 600; margin: 0 0 14px; }
   .case-facts { display: flex; flex-wrap: wrap; gap: 8px 32px; margin: 0; }
@@ -58,6 +50,7 @@ layout: default
   }
   .case-body p, .case-body li { line-height: 1.65; color: #333; }
   .case-footer { border-top: 1px solid #eee; margin-top: 36px; padding-top: 16px; }
+  .case-pdf { font-weight: 600; }
   .case-cta { font-weight: 600; }
 
   @media (max-width: 600px) {

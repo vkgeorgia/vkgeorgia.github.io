@@ -78,6 +78,10 @@ exclude:
   - docs/
   # Local build scripts (gitignored; carry internal labels) — never copy into _site
   - tools
+  # Build-time checkout of the private sanitized-cases repo — staged into _projects/,
+  # never served directly
+  - .cases-public-ready
+  - script
   # Repo-internal notes for the SEO landing-page directories — not built
   - domains/README.md
   - industries/README.md
@@ -88,10 +92,21 @@ exclude:
 
 # Collections
 collections:
-  # Featured anchor case studies — each gets its own URL at /cases/:name/.
-  # Source content is the sanitized projection of the private endeavours base
-  # (Layer 2). This public repo (Layer 3) carries descriptors only — no real
-  # client names, no internal project codes.
-  case_studies:
+  # Case content is NOT committed here. At build time the deploy workflow copies
+  # the sanitized projection from the private `cases-public-ready` repo (Layer 2)
+  # into `_projects/`. Locally, run `script/stage-cases.sh` first. Committed
+  # source carries no case bodies — single source of truth is the canon pipeline.
+  # Each case renders at /cases/<endeavour_id>/ (the file name, e.g. /cases/24.05/) —
+  # a structural numeric identifier, never a real name or internal code.
+  projects:
     output: true
     permalink: /cases/:name/
+
+# Apply the case layout to every staged case document (Layer-2 files carry no
+# layout: of their own).
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: case

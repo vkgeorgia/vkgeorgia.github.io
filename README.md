@@ -30,3 +30,21 @@ bundle exec jekyll serve
 ```
 
 A `.ruby-version` file is included (for rbenv / chruby / asdf). Gems install into `vendor/` (gitignored).
+
+## Case content & deployment
+
+Case studies are **not stored in this repo**. They are produced by a separate publication pipeline and copied in **at build time**:
+
+- The `projects` collection (`_projects/*.md`) and the case PDFs (`downloads/*.pdf`) are fetched from a private intermediate repo during the build. They are gitignored here and never committed.
+- Each case renders at `/cases/<id>/`; the `/cases/` index curates three featured studies plus a condensed list of the rest.
+
+**Deployment.** `.github/workflows/build-deploy.yml` fetches the case content (via a read-only deploy key in Actions secrets), runs `bundle exec jekyll build`, and publishes `_site/` to the `gh-pages` branch. GitHub Pages is configured to serve from `gh-pages` (not the default branch auto-build, which can't use the deploy key).
+
+**Local build with cases.** Clone the intermediate repo alongside this one, stage its content, then build:
+
+```bash
+script/stage-cases.sh ../cases-public-ready   # copies cases + PDFs in (gitignored)
+bundle exec jekyll build
+```
+
+Without staging, the site still builds — the `/cases/` page is simply empty. Public-only work needs no access to the intermediate repo.
