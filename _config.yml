@@ -74,8 +74,6 @@ exclude:
   - CLAUDE.md
   - vkgeorgia.icloud.com
   - STRATEGIC_BRIEF.md
-  # Repo-internal architecture decision records — not built into the site
-  - docs/
   # Local build scripts (gitignored; carry internal labels) — never copy into _site
   - tools
   # Build-time checkout of the private sanitized-cases repo — staged into _projects/,
