@@ -12,6 +12,6 @@ Projects in Healthcare
 ### Projects
 
 
-**Project 07:** Medical Information and Analytical System (MIAS)
+**Project 07:** Medical Information and Analytical System
 
-Delivered a medical analytics system for FMBA to forecast athletes' performance and support training plans based on health assessments.
+Delivered a medical analytics system for a federal healthcare and biomedical agency to forecast athletes' performance and support training plans based on health assessments.

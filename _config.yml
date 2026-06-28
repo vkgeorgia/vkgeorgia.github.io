@@ -76,6 +76,8 @@ exclude:
   - STRATEGIC_BRIEF.md
   # Repo-internal architecture decision records — not built into the site
   - docs/
+  # Local build scripts (gitignored; carry internal labels) — never copy into _site
+  - tools
   # Repo-internal notes for the SEO landing-page directories — not built
   - domains/README.md
   - industries/README.md
@@ -86,8 +88,6 @@ exclude:
 
 # Collections
 collections:
-  projects:
-    output: false
   # Featured anchor case studies — each gets its own URL at /cases/:name/.
   # Source content is the sanitized projection of the private endeavours base
   # (Layer 2). This public repo (Layer 3) carries descriptors only — no real
