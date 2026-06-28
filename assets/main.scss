@@ -195,6 +195,15 @@ hr + h3 {
     border-left: 3px solid #2a7ae2;
     border-radius: 8px;
     background: #fafafa;
+    /* Reserve layout space to prevent CLS (cf. strategy issue #408 — was 0.179 'Needs Improvement') */
+    min-height: 11rem;
+}
+
+@media screen and (max-width: 600px) {
+    .ask-card {
+        /* Wider min-height when prompt buttons stack vertically on narrow viewports */
+        min-height: 16rem;
+    }
 }
 
 .ask-card-title {
