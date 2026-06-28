@@ -86,8 +86,6 @@ exclude:
 
 # Collections
 collections:
-  projects:
-    output: false
   # Featured anchor case studies — each gets its own URL at /cases/:name/.
   # Source content is the sanitized projection of the private endeavours base
   # (Layer 2). This public repo (Layer 3) carries descriptors only — no real
