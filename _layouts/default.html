@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO Meta Tags -->
+    {% include seo-meta.html %}
+
+    <!-- Structured Data -->
+    {% include schema-person.html %}
+    {% if page.url == '/services/' or page.url == '/services' %}
+    {% include schema-service.html %}
+    {% endif %}
+
+    <title>{% if page.seo_title %}{{ page.seo_title | escape }} - {{ site.title | escape }}{% elsif page.title %}{{
+        page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description"
+        content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}"
+        href="{{ '/feed.xml' | relative_url }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
+</head>
+
+<body
+  {% if page.page_type %}data-page-type="{{ page.page_type | escape }}"{% endif %}
+  {% if page.page_key %}data-page-key="{{ page.page_key | escape }}"{% endif %}
+>
+
+    {% include header.html %}
+
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
+    </main>
+
+    {% include footer.html %}
+
+    <!-- AI Avatar Widget — floating on all pages (inline mode available via #ai-widget-inline-mount if a page mounts it) -->
+    <link rel="stylesheet" href="{{ '/digital-avatar/frontend/widget.css' | relative_url }}">
+    <script src="{{ '/digital-avatar/frontend/widget.js' | relative_url }}"></script>
+
+    {% if site.cloudflare_analytics_token %}
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cloudflare_analytics_token }}"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+    {% endif %}
+
+</body>
+
+</html>

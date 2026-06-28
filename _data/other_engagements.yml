@@ -1,0 +1,202 @@
+# Collapsed "Other engagements" list for /cases/.
+# One-line credibility summaries only — the three featured studies live as their
+# own pages in the _case_studies collection.
+#
+# Source: the sanitized projection of the private endeavours base. This public
+# repo carries descriptors only — no real client names, no internal project
+# codes. Ordered most-recent first.
+
+- period: "2025"
+  industry: "Oil & gas"
+  client: "Major oil & gas company in the Middle East"
+  outcome: "Compressed a compensation-planning cycle from 11 weeks to 1–2 weeks (10×) via an AI-enabled target operating model and ready-to-implement AI-agent specifications."
+
+- period: "2025"
+  industry: "Financial services"
+  client: "Bank and payment-systems integrator"
+  outcome: "Aligned the enterprise architecture for a national-scale payment system — prioritizing the initiative portfolio and fixing a technology direction so delivery could start without re-alignment."
+
+- period: "2025"
+  industry: "AI R&D"
+  client: "Internal AI proof-of-concept"
+  outcome: "Built a multi-agent + RAG proof-of-concept demonstrating 5× compression of enterprise-architecture cycles; demoed to a vertically integrated oil & gas company and progressed to implementation negotiation."
+
+- period: "2024–25"
+  industry: "Oil & gas"
+  client: "Major oil & gas company in the Middle East"
+  outcome: "Root-caused recurring loyalty-platform outages across a fuel-retail network and delivered a prioritized resilience roadmap that restored operational stability — in a three-month engagement."
+
+- period: "2024–25"
+  industry: "Telecom"
+  client: "National telecommunications operator"
+  outcome: "Restructured the product-domain architecture (Product / Offer / Bundle / Catalog separation, flexible capability model) — enabling the move from a telecom-only catalogue to a multi-service marketplace including partner products."
+
+- period: "2023–24"
+  industry: "Manufacturing"
+  client: "European industrial equipment manufacturer"
+  outcome: "Framed an MVP-scoped authorization-cockpit roadmap and capability map that enabled a cost-effective vendor selection and a controlled build plan under tight time pressure."
+
+- period: "2023"
+  industry: "Telecom"
+  client: "National telecommunications operator"
+  outcome: "Designed the target-state information architecture and phased roadmap for the transition from a single-service telecom operator to a multi-service digital marketplace (eHealth, FinTech, Cloud)."
+
+- period: "2022"
+  industry: "IT services"
+  client: "Global IT services and consulting firm"
+  outcome: "Structured a governed profile-storage capability and integrity-first migration that operationalized a unified-profile concept, giving consuming systems a single, stable profile contract."
+
+- period: "2022"
+  industry: "IT services"
+  client: "Global IT services and consulting firm"
+  outcome: "Defined a centralized permission engine for role- and resource-based access, replacing scattered per-system access logic with one auditable, governed capability."
+
+- period: "2022"
+  industry: "IT services"
+  client: "Global IT services and consulting firm"
+  outcome: "Framed a single enterprise contact-profile concept — a shared identity contract — that became the foundation for four downstream initiatives and cut duplicated rework."
+
+- period: "2021–22"
+  industry: "IT services"
+  client: "Global IT services and consulting firm"
+  outcome: "Structured the people-profile architecture for an internal HR-management initiative across 58 countries — saving hundreds of person-hours per month while ensuring data-privacy compliance."
+
+- period: "2021"
+  industry: "Aviation IT"
+  client: "IT subsidiary of a national aviation hub"
+  outcome: "Framed the enterprise IT strategy as Head of IT Strategy — a cohesive strategy replacing fragmented local plans, an EA framework for decisions, and vendor selections anchored on strategic fit rather than feature checklists."
+
+- period: "2021"
+  industry: "Aviation IT"
+  client: "National top-2 aviation hub"
+  outcome: "Led a seven-month, enterprise-architecture-driven reorganization of the IT subsidiary — TOGAF-based strategy, Agile delivery, and an external-revenue capability that broke dependence on a single internal customer."
+
+- period: "2019–21"
+  industry: "Aviation"
+  client: "National top-2 aviation hub"
+  outcome: "Restructured the annual enterprise strategy as a risk-management discipline — a comprehensive threat assessment and response plans that proved critical when 2020 pandemic scenarios activated."
+
+- period: "2019"
+  industry: "Aviation IT"
+  client: "IT subsidiary of a national aviation hub"
+  outcome: "Repositioned the IT subsidiary from an internal-only service provider into a dual-model business with external revenue — securing its sustainability through the pandemic-era aviation revenue collapse."
+
+- period: "2018"
+  industry: "Telecom"
+  client: "Large national telecommunications operator"
+  outcome: "Cut storage 15% and report-preparation time 4–5× by diagnosing a corporate data warehouse's organisational root causes and sequencing a phased recovery around named data owners."
+
+- period: "2017–19"
+  industry: "Telecom"
+  client: "Large national telecommunications operator"
+  outcome: "Established a closed-loop loyalty-effectiveness methodology that lets the program be managed on incremental impact rather than points issued."
+
+- period: "2017–19"
+  industry: "Telecom"
+  client: "Large national telecommunications operator"
+  outcome: "Designed a three-layer data-management-platform architecture giving the organization a repeatable way to onboard data and turn it into governed products."
+
+- period: "2017–19"
+  industry: "Telecom"
+  client: "Large national telecommunications operator"
+  outcome: "Designed an inter-operator settlement architecture on an explicit event-and-obligation model — projected to save thousands of man-hours a year and cut error-driven losses."
+
+- period: "2017–19"
+  industry: "Telecom"
+  client: "Large national telecommunications operator"
+  outcome: "Cut corporate accounts receivable ~3× by replacing manual debtor reconciliation with a governed, traceable, multi-channel notification service."
+
+- period: "2017–19"
+  industry: "Telecom"
+  client: "Large national telecommunications operator"
+  outcome: "Replaced broadcast B2B messaging with a governed, segment-based communications capability across 1M+ corporate clients — encoding approval gates and segmentation into the platform."
+
+- period: "2017–19"
+  industry: "Telecom"
+  client: "Large national telecommunications operator"
+  outcome: "Stood up a Data Lab as an outcome-accountable product function — turning underused behavioural data on 30M+ subscribers into a repeatable capability behind targeting, recommendations, and monetisation."
+
+- period: "2017–19"
+  industry: "Telecom & media"
+  client: "Large national company"
+  outcome: "Established an EA baseline (39+ documented components) and a TOGAF-based roadmap that converted a broad growth ambition into a sequenced, dependency-aware set of decisions."
+
+- period: "2016–18"
+  industry: "Oil & gas"
+  client: "Major national oil company"
+  outcome: "Won a competitive enterprise data-lake tender by reframing the platform as a governed, staged capability and proving it with a functional demo and a defendable architecture."
+
+- period: "2016"
+  industry: "Telecom & media"
+  client: "Large national company"
+  outcome: "Delivered a defensible storage decision via three lifecycle-aligned options with explicit trade-offs — avoiding over-provisioning while charting a phased path to independent analytics storage."
+
+- period: "2016–18"
+  industry: "Telecom & media"
+  client: "Large national company"
+  outcome: "Re-established data-product boundaries and ownership across the analytics layer — a target schema and documentation package that made every subsequent report and change request faster and lower-risk."
+
+- period: "2016–18"
+  industry: "Telecom & media"
+  client: "Large national company"
+  outcome: "Stood up a nationwide traffic-analytics and targeting platform that converted unmonetised behavioural data into a new advertising revenue line, with 95%+ subscriber-matching accuracy."
+
+- period: "2015–18"
+  industry: "Financial services"
+  client: "Major private pension fund"
+  outcome: "Structured a governed omnichannel communication system — hundreds of thousands of messages per week, tenfold faster preparation, and event mailings compressed from two weeks to one day."
+
+- period: "2015"
+  industry: "Retail"
+  client: "Major national retail group"
+  outcome: "Framed two tender-ready architecture options for retail climate-equipment monitoring with a quantified 10% electricity-cost reduction — moving from a vague aspiration to a ready-to-procure decision."
+
+- period: "2015–17"
+  industry: "Mobility"
+  client: "Car-sharing service"
+  outcome: "Led the greenfield build of a car-sharing platform from concept to production launch in 20 months — IoT-integrated fleet management on AWS with iOS and Android apps."
+
+- period: "2015–19"
+  industry: "Fuel retail"
+  client: "Gas station retail network"
+  outcome: "Architected and sequenced a fuel-station management platform replacement — full integration and a continuity-first migration that preserved revenue-generating operations throughout."
+
+- period: "2012–15"
+  industry: "Fuel-retail technology"
+  client: "Global technology supplier for banking and retail"
+  outcome: "Delivered an independent architecture audit and a complete, standards-aligned documentation set for a live fuel-retail management platform — converting undocumented dependencies into a defensible record."
+
+- period: "2012–15"
+  industry: "Healthcare & government"
+  client: "Federal healthcare and biomedical agency"
+  outcome: "Delivered a production medical analytics system consolidating heterogeneous health data into a single, traceable basis for performance forecasting and training decisions."
+
+- period: "2012–15"
+  industry: "Oil & gas retail"
+  client: "Major national oil company"
+  outcome: "Grew a retail loyalty program from 1M to 4.5M participants (4.5×) by designing a centralized platform that turned point accounting into a measurable, governed customer-engagement capability."
+
+- period: "2012–15"
+  industry: "Oil & gas retail"
+  client: "Major national oil company"
+  outcome: "Replaced paper fuel vouchers with a cashless corporate-card platform for 70,000+ clients — cutting reconciliation 6× and fraud losses 10× by building control and traceability into the payment lifecycle."
+
+- period: "2008–10"
+  industry: "Telecom"
+  client: "Subsidiary of a national telecommunications operator"
+  outcome: "Cut the budget-planning cycle from 6 months to 2 (3×) by standardizing financial definitions and replacing manual consolidation with an automated, auditable control system."
+
+- period: "2008–10"
+  industry: "Telecom"
+  client: "Subsidiary of a national telecommunications operator"
+  outcome: "Deployed integrated accounting and trade management across all legal entities — a unified, transparent reporting baseline for 50+ branches supporting the pre-sale transparency program."
+
+- period: "2008–10"
+  industry: "Telecom"
+  client: "Subsidiary of a national telecommunications operator"
+  outcome: "Introduced a single payroll and motivation system across 50+ branches, integrated with budgeting, and launched an HR platform for 50+ users as part of the enterprise-wide pre-sale transformation."
+
+- period: "2008–10"
+  industry: "Telecom"
+  client: "Subsidiary of a national telecommunications operator"
+  outcome: "Implemented an ERP consolidation layer for finance, trade, payroll, and budgeting — enabling transparent management reporting and stronger controllability ahead of acquisition."

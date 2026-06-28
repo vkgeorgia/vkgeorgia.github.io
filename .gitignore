@@ -1,0 +1,80 @@
+# Archived sources (for manual transfer)
+sources_archive.zip
+
+/en/domains/sources/
+/en/roles/sources/
+/en/projects/sources/
+
+# Jekyll generated files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Exclude knowledge-base from published site (used only for backend and page generation)
+_site/knowledge-base/
+
+# Knowledge base - exclude sources directories (raw documents for manual processing)
+knowledge-base/*/sources/
+knowledge-base/*/*/sources/
+
+# Claude Code — вся локальная папка (DSN, allowlist с секретами, абсолютные пути)
+.claude/
+
+# Корневые секреты (скрипты, локальные прогоны)
+.env
+.env.local
+.env.*.local
+
+# Локальные переопределения Jekyll (URL бэкенда и т.п.)
+_config.local.yml
+
+# Документация и планы в корне (локально, не в репозитории)
+/00_*.md
+/BOT_*.md
+/CLAUDE.md
+/CONTENT_AUDIT*.md
+/FINAL_*.md
+/PHASE_*.md
+/PROJECT_DESCRIPTION*.md
+/REDESIGN_ALIGNMENT_TO_STRATEGY.md
+/STRATEGIC_BRIEF.md
+/STYLE_GUIDE.md
+/WEBSITE_COPY*.md
+/*IMPLEMENTATION*PLAN*.md
+/*SUMMARY*NEXT*.md
+/new-proposed-format/
+/vkgeorgia.icloud.com/
+
+# Digital Avatar - credentials and sensitive files
+digital-avatar/.env
+digital-avatar/backend/.env
+digital-avatar/google_credentials.json
+
+# Digital Avatar - Python cache
+digital-avatar/backend/__pycache__/
+digital-avatar/backend/app/__pycache__/
+digital-avatar/backend/app/services/__pycache__/
+
+# Digital Avatar - Backend knowledge base (auto-generated from knowledge-base/)
+digital-avatar/backend/knowledge_base/
+
+# LinkedIn video materials (working folder, not for publication)
+
+# Local archive for deprecated scripts / content
+0. archive/
+
+# Local tools (build scripts, not for publication)
+/tools/
+
+# Ruby / Bundler — гемы только локально (`bundle install`), не в git
+vendor/
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

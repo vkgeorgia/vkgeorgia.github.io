@@ -1,0 +1,97 @@
+title: "Valerii Korobeinikov"
+description: "Enterprise Architect and IT Consultant"
+url: "https://vkgeorgia.github.io"
+baseurl: ""
+lang: en
+
+# Theme
+theme: minima
+
+# Author (Minima format)
+author: Valerii Korobeinikov
+email: vkgeorgia@icloud.com
+
+# Minima settings
+minima:
+  social_links:
+    - platform: linkedin
+      user_url: "https://www.linkedin.com/in/valeriikorobeinikov/"
+    - platform: github
+      user_url: "https://github.com/vkgeorgia"
+    - platform: google
+      user_url: "https://calendar.app.google/YwmXZytfSQ2qWX4Z7"
+
+# Header pages - only show these in navigation
+header_pages:
+  - index.md
+  - business-challenges.md
+  - services/index.md
+  - cases.md
+  - articles.md
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins (only GitHub Pages supported plugins)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Include digital-avatar frontend files
+include:
+  - digital-avatar/frontend
+
+# Публичный URL backend (Cloud Run / Jeeves). Используется в Liquid в
+# assets/projects-dynamic.js и digital-avatar/frontend/widget.js при сборке Jekyll.
+# Для локальной подмены без коммита: _config.local.yml + --config _config.yml,_config.local.yml
+backend_url: "https://ai-avatar-103512681014.us-central1.run.app"
+
+# Cloudflare Web Analytics token (JS beacon, public — visible in HTML source on live site, not a secret).
+# Referenced from _layouts/default.html. See strategy issue vkgeorgia/strategy#391.
+cloudflare_analytics_token: "c469758a75af452284beff013fcc9741"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - _site/
+  - sources/
+  - knowledge-base/*/sources/
+  - digital-avatar/backend
+  - digital-avatar/docs
+  - digital-avatar/.env
+  - digital-avatar/google_credentials.json
+  - digital-avatar/README.md
+  # Local-only docs / private brief in root (see .gitignore) — never build as pages
+  - CLAUDE.md
+  - vkgeorgia.icloud.com
+  - STRATEGIC_BRIEF.md
+  # Repo-internal architecture decision records — not built into the site
+  - docs/
+  # Local build scripts (gitignored; carry internal labels) — never copy into _site
+  - tools
+  # Repo-internal notes for the SEO landing-page directories — not built
+  - domains/README.md
+  - industries/README.md
+  - projects/README.md
+  - roles/README.md
+  # Archived stale content (see .gitignore) — not built by Jekyll
+  - "0. archive"
+
+# Collections
+collections:
+  # Featured anchor case studies — each gets its own URL at /cases/:name/.
+  # Source content is the sanitized projection of the private endeavours base
+  # (Layer 2). This public repo (Layer 3) carries descriptors only — no real
+  # client names, no internal project codes.
+  case_studies:
+    output: true
+    permalink: /cases/:name/
