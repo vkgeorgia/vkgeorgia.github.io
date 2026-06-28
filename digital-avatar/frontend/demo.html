@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Avatar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Valerii Korobeinikov's AI Avatar</h1>
+            <div id="status-bar" class="status-bar">
+                <span id="status-text">🔄 Connecting...</span>
+            </div>
+        </header>
+
+        <main class="widget-mode">
+            <div class="chat-container full-height">
+                <div id="chat-messages" class="messages-area">
+                    <div class="message bot">
+                        Hello! I'm Valerii Korobeinikov's AI assistant. I'm here to tell you about his professional
+                        experience, the consulting services he provides, and help you schedule a meeting if needed. How
+                        can I assist you today?
+                    </div>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                    <button id="send-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
