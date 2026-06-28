@@ -74,6 +74,8 @@ exclude:
   - CLAUDE.md
   - vkgeorgia.icloud.com
   - STRATEGIC_BRIEF.md
+  # Repo-internal architecture decision records — not built into the site
+  - docs/
   # Repo-internal notes for the SEO landing-page directories — not built
   - domains/README.md
   - industries/README.md
