@@ -12,7 +12,7 @@ Most digital transformations do not fail on technology. They fail on coherence �
 
 This service helps leaders reconnect transformation effort with business intent and architectural reality, so that change becomes manageable rather than cumulative.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 ---
 
@@ -92,6 +92,6 @@ Full list in the [Cases](/cases/) section.
 
 This advisory usually begins when leaders sense that transformation is happening, but direction is missing. A short conversation is enough to surface where momentum has drifted, and whether an outside perspective would help.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 Email: valerii@korobeinikov.consulting · LinkedIn: [Valerii Korobeinikov](https://www.linkedin.com/in/valeriikorobeinikov/)

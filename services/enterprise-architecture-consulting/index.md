@@ -12,7 +12,7 @@ Enterprise architecture is often reduced to either documentation or standardizat
 
 I use enterprise architecture as a decision framework — to help leaders see the organization as a system, and choose a coherent direction across strategy, structure, and execution.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 ---
 
@@ -94,6 +94,6 @@ Full list in the [Cases](/cases/) section.
 
 The best first step is a short conversation about the decision or change the organization is facing, and whether an architectural perspective would meaningfully improve decision quality.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 Email: valerii@korobeinikov.consulting · LinkedIn: [Valerii Korobeinikov](https://www.linkedin.com/in/valeriikorobeinikov/)

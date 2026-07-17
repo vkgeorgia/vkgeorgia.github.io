@@ -17,7 +17,7 @@ Most cases fall into one of two patterns:
 
 In practice, most engagements sit on the boundary between the two.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 ---
 
@@ -72,7 +72,7 @@ A condensed view of the broader track record — one line each, most recent firs
 </details>
 
 <p class="cases-note" markdown="1">
-Engagements are described with neutral, industry-level descriptors except where the client is named openly. Where you need specifics for a relevant decision, [ask my assistant](javascript:void(0)) or [book a call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7).
+Engagements are described with neutral, industry-level descriptors except where the client is named openly. Where you need specifics for a relevant decision, [ask my assistant](javascript:void(0)) or [book a call]({{ site.booking_url }}).
 </p>
 
 <style>

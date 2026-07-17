@@ -12,7 +12,7 @@ Some technology and architecture decisions cannot be handled as a one-off analys
 
 This service is designed for leaders who need continuity of senior judgment on those decisions — not episodic consulting.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 ---
 
@@ -96,6 +96,6 @@ See the [Cases](/cases/) section for examples of decisions and programmes suppor
 
 If you are facing recurring or high-stakes decisions and want to improve how they are made, a short conversation is usually the best first step — we clarify the decisions ahead, the context and constraints, and whether an advisory format makes sense.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 Email: valerii@korobeinikov.consulting · LinkedIn: [Valerii Korobeinikov](https://www.linkedin.com/in/valeriikorobeinikov/)

@@ -12,7 +12,7 @@ My services are organized around the decisions leaders typically face, not aroun
 
 Three of them are usually triggered when something needs to be repaired or restructured (**FIX**). Three are usually triggered when something new is being built (**BUILD**). In most real engagements, the two sides overlap.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 ---
 
@@ -113,6 +113,6 @@ Engagement formats usually take one of three shapes:
 - **Fractional or embedded advisor — months.** Regular rhythm with CTO/CIO/CEO on a series of related decisions; typically a few days per week or per month.
 - **Expert due diligence or second opinion — days to weeks.** Independent read on a portfolio company or a specific technology decision, for boards, investors, and PE firms.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 Email: valerii@korobeinikov.consulting · LinkedIn: [Valerii Korobeinikov](https://www.linkedin.com/in/valeriikorobeinikov/)
