@@ -34,7 +34,7 @@
                 <div class="ai-widget-header">
                     ${closeBtn}
                     <h3>Valerii's AI assistant</h3>
-                    <p class="ai-widget-subtitle">Experience · résumés · scheduling</p>
+                    <p class="ai-widget-subtitle">Experience · engagements · scheduling</p>
                     <div class="ai-widget-status">
                         <span id="ai-widget-status-text" class="ai-widget-status-connecting">● AI</span>
                         <span class="ai-widget-status-divider">|</span>
@@ -47,8 +47,7 @@
                         Hi! I'm Valerii's AI assistant. Here's what I can do:<br><br>
                         <strong>1. Experience &amp; approach</strong> — projects, industries, domains, professional philosophy.<br>
                         <strong>2. Schedule a meeting</strong> — book a call directly in Valerii's calendar.<br>
-                        <strong>3. Tailored resume</strong> — share a vacancy and I'll generate a resume focused on what matters for that role.<br>
-                        <strong>4. Forward a link</strong> — drop a vacancy URL or your company site and I'll pass it to Valerii directly.<br><br>
+                        <strong>3. Forward a link</strong> — drop a vacancy URL or your company site and I'll pass it to Valerii directly.<br><br>
                         What brings you here?
                     </div>
                 </div>
@@ -113,7 +112,7 @@
         let isOpen = opts.inline; // inline mode starts open
         let reconnectAttempts = 0;
         const MAX_RECONNECT_ATTEMPTS = 5;
-        const MAX_MESSAGE_LENGTH = 8000; // raised to allow job vacancy texts for resume generation
+        const MAX_MESSAGE_LENGTH = 8000; // generous cap so long pasted context isn't truncated
 
         function escapeHtml(str) {
             return str

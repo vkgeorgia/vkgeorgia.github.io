@@ -21,7 +21,7 @@ Starting from business priorities, I align IT strategy, project portfolio, and s
 
 <div class="ask-card" markdown="0">
   <p class="ask-card-title">Or ask my assistant</p>
-  <p class="ask-card-lead">It knows my track record, how I structure engagements, and the problems I typically work on — and can tailor a résumé or forward a vacancy.</p>
+  <p class="ask-card-lead">It knows my track record, how I structure engagements, and the problems I typically work on — and can forward a vacancy or link straight to me.</p>
   <div class="ask-card-prompts">
     <button type="button" class="ask-prompt" onclick="window.AIWidget &amp;&amp; window.AIWidget.openWith('Show me a case from a similar industry')">Show me a case from a similar industry</button>
     <button type="button" class="ask-prompt" onclick="window.AIWidget &amp;&amp; window.AIWidget.openWith('What does an engagement look like?')">What does an engagement look like?</button>
