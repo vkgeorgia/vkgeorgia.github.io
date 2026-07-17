@@ -1,13 +1,13 @@
 ---
 layout: page
 title: "About this repository"
-description: "Source of vkgeorgia.github.io — practitioner site of Valerii Korobeinikov, Enterprise Architect."
+description: "Source of korobeinikov.consulting — practitioner site of Valerii Korobeinikov, Enterprise Architect."
 lang: en
 ---
 
 # About this repository
 
-This repository hosts the source of **[vkgeorgia.github.io](https://vkgeorgia.github.io/)** — the practitioner site of **Valerii Korobeinikov**, Enterprise Architect.
+This repository hosts the source of **[korobeinikov.consulting](https://korobeinikov.consulting/)** — the practitioner site of **Valerii Korobeinikov**, Enterprise Architect. The repository name is the historical GitHub Pages host, which now serves a permanent redirect to the custom domain.
 
 The site is the public surface of the practice: positioning, engagement formats, selected outcomes, and an AI assistant. It is not a technical documentation site.
 
