@@ -17,7 +17,7 @@ I work with senior business and technology leaders on high-stakes technology dec
 
 Starting from business priorities, I align IT strategy, project portfolio, and spend so that technology serves the business — and bring order when the path forward is unclear.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min intro call]({{ site.booking_url }})**
 
 <div class="ask-card" markdown="0">
   <p class="ask-card-title">Or ask my assistant</p>
@@ -100,7 +100,7 @@ More at [transitrix.com](https://transitrix.com).
 
 If you are facing a complex technology decision — M&A integration, a scaling programme, cost restructuring, an AI adoption question, or a stalled transformation — a short conversation is usually the best way to see whether an architectural perspective would help.
 
-**[→ Book a 30-min intro call](https://calendar.app.google/YwmXZytfSQ2qWX4Z7)**
+**[→ Book a 30-min intro call]({{ site.booking_url }})**
 
 Email: valerii@korobeinikov.consulting · LinkedIn: [Valerii Korobeinikov](https://www.linkedin.com/in/valeriikorobeinikov/)
 

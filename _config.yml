@@ -19,7 +19,9 @@ minima:
     - platform: github
       user_url: "https://github.com/vkgeorgia"
     - platform: google
-      user_url: "https://calendar.app.google/YwmXZytfSQ2qWX4Z7"
+      # Keep in sync with booking_url below — YAML cannot reference another key,
+      # so this is the one place the booking link is repeated.
+      user_url: "https://calendar.app.google/yUQbbP2nkVaJgsvg9"
 
 # Header pages - only show these in navigation
 header_pages:
@@ -47,6 +49,12 @@ include:
 # assets/projects-dynamic.js и digital-avatar/frontend/widget.js при сборке Jekyll.
 # Для локальной подмены без коммита: _config.local.yml + --config _config.yml,_config.local.yml
 backend_url: "https://ai-avatar-103512681014.us-central1.run.app"
+
+# Google Calendar appointment schedule (Workspace account). Referenced as
+# {{ site.booking_url }} from every "book a call" CTA — layouts, includes and
+# page content alike. Change it here only; grep for a literal calendar.app.google
+# URL outside this file before assuming a CTA is up to date.
+booking_url: "https://calendar.app.google/yUQbbP2nkVaJgsvg9"
 
 # Cloudflare Web Analytics token (JS beacon, public — visible in HTML source on live site, not a secret).
 # Referenced from _layouts/default.html. See strategy issue vkgeorgia/strategy#391.
