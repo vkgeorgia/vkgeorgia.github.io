@@ -14,7 +14,7 @@ The strategy is usually reasonable. What breaks is the link between intent and t
 
 Below are the four situations where an architectural perspective tends to pay off. In each, the underlying work is the same: reconnect decisions to structure, and structure to execution.
 
-**[→ Book a 30-min intro call]({{ site.booking_url }})**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 ---
 
@@ -138,6 +138,6 @@ The common thread across these situations is the same question: *what is the rea
 
 If one of these matches your current situation, a short conversation is usually the fastest way to see whether an architectural perspective would help.
 
-**[→ Book a 30-min intro call]({{ site.booking_url }})**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 Email: valerii@korobeinikov.consulting · LinkedIn: [Valerii Korobeinikov](https://www.linkedin.com/in/valeriikorobeinikov/)

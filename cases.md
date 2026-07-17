@@ -17,7 +17,7 @@ Most cases fall into one of two patterns:
 
 In practice, most engagements sit on the boundary between the two.
 
-**[→ Book a 30-min intro call]({{ site.booking_url }})**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 ---
 

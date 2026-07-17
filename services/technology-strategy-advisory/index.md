@@ -12,7 +12,7 @@ Technology strategy is rarely about choosing technologies. It is about deciding 
 
 This service helps leaders connect business intent with technology decisions, so that technology spending supports growth and resilience rather than accumulating as debt.
 
-**[→ Book a 30-min intro call]({{ site.booking_url }})**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 ---
 
@@ -94,6 +94,6 @@ Full list in the [Cases](/cases/) section.
 
 Most engagements begin with a specific strategic question or investment decision where the options are unclear or the trade-offs are contested. A short conversation is usually enough to see whether the question is ready to be worked on.
 
-**[→ Book a 30-min intro call]({{ site.booking_url }})**
+**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
 
 Email: valerii@korobeinikov.consulting · LinkedIn: [Valerii Korobeinikov](https://www.linkedin.com/in/valeriikorobeinikov/)
