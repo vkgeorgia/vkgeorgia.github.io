@@ -1,6 +1,6 @@
 title: "Valerii Korobeinikov"
 description: "Enterprise Architect and IT Consultant"
-url: "https://vkgeorgia.github.io"
+url: "https://korobeinikov.consulting"
 baseurl: ""
 lang: en
 
@@ -9,7 +9,7 @@ theme: minima
 
 # Author (Minima format)
 author: Valerii Korobeinikov
-email: vkgeorgia@icloud.com
+email: valerii@korobeinikov.consulting
 
 # Minima settings
 minima:
