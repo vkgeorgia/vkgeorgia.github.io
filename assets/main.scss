@@ -1,6 +1,23 @@
 ---
 ---
+// Brand typeface — repoint from minima's system-ui default to the brand face.
+// Values are the brand contract `typography.sans` / `typography.mono` tokens
+// (canonized 2026-07-21); set before @import so minima's !default keeps ours.
+// Webfont is loaded in _layouts/default.html — naming without loading = fallback.
+$brand-font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+$base-font-family: 'IBM Plex Sans', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+
 @import "minima";
+
+/* Code / notation samples render the brand mono face.
+   minima leaves pre/code without a family, so they fall to the UA monospace. */
+pre,
+code,
+kbd,
+samp,
+tt {
+    font-family: $brand-font-mono;
+}
 
 /* Custom styles - wider page width */
 .wrapper {
