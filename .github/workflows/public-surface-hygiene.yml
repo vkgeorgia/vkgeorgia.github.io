@@ -1,0 +1,60 @@
+name: public-surface-hygiene
+
+# Blocks pointers into the private strategy hub from leaking onto this public repo's
+# surfaces — PR title/body, commit messages, and added diff lines. It matches the
+# LEAK forms (repo-qualified cross-ref + browser URL), NOT the operational
+# `gh ... -R vkgeorgia/strategy` command form, which is legitimate. The matched text
+# is deliberately never printed, so this log cannot itself become the leak.
+# Mirrors the methodology repo's check of the same name. See CLAUDE.md §"Metadata hygiene".
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan PR metadata + diff for private-hub pointers
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          # ERE. The `gh -R vkgeorgia/strategy` command form is intentionally NOT matched.
+          PATTERN='strategy#[0-9]|vkgeorgia/strategy#|github\.com/vkgeorgia/strategy'
+          fail=0
+
+          # $1 = location label, $2 = text. Only the location is ever echoed, never the match.
+          check() {
+            if printf '%s' "${2:-}" | grep -Eiq "$PATTERN"; then
+              echo "::error::Private-hub pointer found in $1. Reference the hub task by a bare number or by name — never strategy#N, vkgeorgia/strategy#N, or a hub URL. See CLAUDE.md §\"Metadata hygiene\"."
+              fail=1
+            fi
+          }
+
+          check "the PR title" "$PR_TITLE"
+          check "the PR body" "$PR_BODY"
+
+          # Added diff lines, excluding this workflow (it necessarily names the patterns).
+          ADDED="$(git diff "$BASE_SHA...$HEAD_SHA" -- . ':(exclude).github/workflows/public-surface-hygiene.yml' | grep -E '^\+' || true)"
+          check "an added diff line" "$ADDED"
+
+          # Commit messages introduced by this PR.
+          MSGS="$(git log --format='%s%n%b' "$BASE_SHA..$HEAD_SHA" || true)"
+          check "a commit message" "$MSGS"
+
+          if [ "$fail" -ne 0 ]; then
+            echo "::error::public-surface-hygiene failed. Fix the reference(s) and push again. (The matched text is not printed on purpose.)"
+            exit 1
+          fi
+          echo "public-surface-hygiene: clean."
