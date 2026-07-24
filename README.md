@@ -15,7 +15,7 @@ The site is the public surface of the practice: positioning, engagement formats,
 
 The site features an **AI assistant** that can answer questions about Valerii's professional experience, engagement formats, and help schedule a meeting. Open the chat from the icon at the bottom-right corner of any page.
 
-The assistant backend lives in a separate repository (`vkgeorgia/Jeeves`); this repository contains the site frontend (Jekyll source, layouts, and the chat widget assets) only.
+The assistant backend lives in a separate, private repository; this repository contains the site frontend (Jekyll source, layouts, and the chat widget assets) only.
 
 ## Local build
 
