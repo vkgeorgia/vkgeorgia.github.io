@@ -1,60 +1,104 @@
 name: public-surface-hygiene
 
-# Blocks pointers into the private strategy hub from leaking onto this public repo's
-# surfaces — PR title/body, commit messages, and added diff lines. It matches the
-# LEAK forms (repo-qualified cross-ref + browser URL), NOT the operational
-# `gh ... -R vkgeorgia/strategy` command form, which is legitimate. The matched text
-# is deliberately never printed, so this log cannot itself become the leak.
-# Mirrors the methodology repo's check of the same name. See CLAUDE.md §"Metadata hygiene".
+# Two steps on every PR:
+#   1. autofix  — rewrite hub pointers out of the PR TITLE/BODY. Non-blocking.
+#   2. verify   — BLOCKING. Re-read the PR (post-autofix) + scan commit messages
+#                 and the diff; fail if any pointer remains. Catches what autofix
+#                 cannot touch: commit messages and committed file content.
+# The private hub slug is held in the HYGIENE_HUB_SLUG repo secret, never in this
+# file — so this public workflow does not itself name the hub, and its own diff
+# does not trip the scan. Matched text is never printed. See CLAUDE.md §"Metadata hygiene".
 
 on:
-  pull_request:
-    types: [opened, edited, synchronize, reopened]
+  pull_request_target:
+    types: [opened, edited, reopened, synchronize]
 
 permissions:
+  pull-requests: write
   contents: read
 
+# Serialize per PR (no cancel): autofix's own edit fires one extra no-op run.
+concurrency:
+  group: hygiene-${{ github.event.pull_request.number }}
+
 jobs:
-  scan:
+  autofix:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Scan PR metadata + diff for private-hub pointers
+      - name: Rewrite hub pointers in PR title/body
         env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
           PR_TITLE: ${{ github.event.pull_request.title }}
           PR_BODY: ${{ github.event.pull_request.body }}
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          REPO: ${{ github.repository }}
+          HUB: ${{ secrets.HYGIENE_HUB_SLUG }}
         run: |
           set -euo pipefail
-          # ERE. The `gh -R vkgeorgia/strategy` command form is intentionally NOT matched.
-          PATTERN='strategy#[0-9]|vkgeorgia/strategy#|github\.com/vkgeorgia/strategy'
-          fail=0
+          if [ -z "${HUB:-}" ]; then echo "slug not configured; skipping."; exit 0; fi
+          # Slug comes only from $ENV{HUB}; no literal appears in this file.
+          # Order: consume the #N and URL forms before the bare-name catch-all.
+          fix() {
+            perl -0777 -pe '
+              BEGIN { $h = quotemeta($ENV{HUB}); }
+              s{\[(?:$h|strategy)\x23(\d+)\]\([^)]*\)}{hub task $1}g;
+              s{https?://github\.com/$h[^\s)]*}{the strategy hub}g;
+              s{$h\x23(\d+)}{hub task $1}g;
+              s{strategy\x23(\d+)}{hub task $1}g;
+              s{$h}{the strategy hub}g;
+            '
+          }
+          NEW_TITLE="$(printf '%s' "${PR_TITLE:-}" | fix)"
+          printf '%s' "${PR_BODY:-}" | fix > /tmp/new_body.md
+          changed=0
+          [ "$NEW_TITLE" != "${PR_TITLE:-}" ] && changed=1
+          cmp -s <(printf '%s' "${PR_BODY:-}") /tmp/new_body.md || changed=1
+          if [ "$changed" -eq 0 ]; then echo "nothing to rewrite."; exit 0; fi
+          gh pr edit "$PR_NUMBER" -R "$REPO" --title "$NEW_TITLE" --body-file /tmp/new_body.md
+          echo "::notice::Rewrote the PR title/body."
 
-          # $1 = location label, $2 = text. Only the location is ever echoed, never the match.
+  verify:
+    needs: autofix
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify no hub pointer remains (blocking)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          HUB: ${{ secrets.HYGIENE_HUB_SLUG }}
+        run: |
+          set -euo pipefail
+          # Slug from the secret; the un-prefixed cross-ref stays literal (does not name the hub).
+          if [ -z "${HUB:-}" ]; then
+            echo "::warning::slug not configured; scanning the cross-ref form only."
+            PATTERN='strategy#[0-9]'
+          else
+            PATTERN="${HUB}|strategy#[0-9]"
+          fi
+          fail=0
+          # $1 = location label, $2 = text. Only the location is echoed, never the match.
           check() {
             if printf '%s' "${2:-}" | grep -Eiq "$PATTERN"; then
-              echo "::error::Private-hub pointer found in $1. Reference the hub task by a bare number or by name — never strategy#N, vkgeorgia/strategy#N, or a hub URL. See CLAUDE.md §\"Metadata hygiene\"."
+              echo "::error::Private-hub pointer remains in $1. Reference the hub by a bare number or by name. Autofix covers the PR title/body; fix commit messages and committed content by hand. See CLAUDE.md metadata-hygiene section."
               fail=1
             fi
           }
-
-          check "the PR title" "$PR_TITLE"
-          check "the PR body" "$PR_BODY"
-
-          # Added diff lines, excluding this workflow (it necessarily names the patterns).
-          ADDED="$(git diff "$BASE_SHA...$HEAD_SHA" -- . ':(exclude).github/workflows/public-surface-hygiene.yml' | grep -E '^\+' || true)"
-          check "an added diff line" "$ADDED"
-
-          # Commit messages introduced by this PR.
-          MSGS="$(git log --format='%s%n%b' "$BASE_SHA..$HEAD_SHA" || true)"
-          check "a commit message" "$MSGS"
-
+          TITLE="$(gh pr view "$PR_NUMBER" -R "$REPO" --json title --jq '.title')"
+          BODY="$(gh pr view "$PR_NUMBER" -R "$REPO" --json body --jq '.body // ""')"
+          COMMITS="$(gh pr view "$PR_NUMBER" -R "$REPO" --json commits --jq '.commits[] | .messageHeadline + "\n" + (.messageBody // "")')"
+          # Exclude this workflow file from the diff scan (belt-and-suspenders).
+          DIFF="$(gh pr diff "$PR_NUMBER" -R "$REPO" | awk '
+            /^diff --git / { skip = ($0 ~ /public-surface-hygiene\.yml/) }
+            skip { next }
+            { print }
+          ' | grep -E '^\+' | grep -Ev '^\+\+\+' || true)"
+          check "the PR title" "$TITLE"
+          check "the PR body" "$BODY"
+          check "a commit message" "$COMMITS"
+          check "an added diff line" "$DIFF"
           if [ "$fail" -ne 0 ]; then
-            echo "::error::public-surface-hygiene failed. Fix the reference(s) and push again. (The matched text is not printed on purpose.)"
+            echo "::error::public-surface-hygiene: blocking check failed. Fix the reference(s) and push again."
             exit 1
           fi
           echo "public-surface-hygiene: clean."
