@@ -5,6 +5,18 @@
     --ai-widget-card: #0f172a;
     --ai-widget-text: #e2e8f0;
     --ai-widget-border: #334155;
+
+    /* Connection-state affordance for the message input (hub task 553).
+       Derived from the Transitrix *functional* palette — brand and functional
+       palettes are kept separate, so connection status uses functional
+       success/warning/error, never a brand hue. The widget panel is always
+       dark (on both light and dark pages), so these are tuned lighter than the
+       canonical functional tokens to keep ≥3:1 non-text contrast against the
+       dark input background (#1e293b). Petrol is the ready-pulse accent only. */
+    --ai-state-ready:      #23a668; /* fn success  #1f7a3f, lightened for dark panel */
+    --ai-state-connecting: #d0951f; /* fn warning  #a76b00 (amber-neutral), lightened */
+    --ai-state-error:      #e0574f; /* fn error    #b3261e, lightened for dark panel */
+    --ai-petrol:           #0a6f8c; /* brand petrol #004d67, lightened — ready accent */
 }
 
 .ai-widget-container {
@@ -213,11 +225,94 @@
     color: var(--ai-widget-text);
     font-size: 14px;
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .ai-widget-input-area input:focus {
     border-color: var(--ai-widget-primary);
+}
+
+/* ------------------------------------------------------------------
+   Connection-state border on the message input (hub task 553).
+   The border colour + placeholder + disabled state mirror the live
+   WebSocket lifecycle, so a not-yet-connected widget cannot be
+   mistaken for a broken one. State is driven from JS via `data-conn`.
+   Colour is never the only signal — it is paired with the animation,
+   the placeholder text, and aria-disabled / an aria-live announcement.
+   ------------------------------------------------------------------ */
+.ai-widget-input-area input[data-conn="ready"] {
+    border-color: var(--ai-state-ready);
+}
+
+.ai-widget-input-area input[data-conn="ready"]:focus {
+    border-color: var(--ai-state-ready);
+    box-shadow: 0 0 0 3px rgba(10, 111, 140, 0.35); /* petrol focus ring */
+}
+
+.ai-widget-input-area input[data-conn="connecting"] {
+    border-color: var(--ai-state-connecting);
+    animation: ai-widget-conn-pulse 1.2s ease-in-out infinite;
+}
+
+.ai-widget-input-area input[data-conn="error"] {
+    border-color: var(--ai-state-error);
+    animation: ai-widget-err-pulse 1.6s ease-in-out infinite;
+}
+
+/* One subtle pulse when the input becomes typable, to draw the eye. */
+.ai-widget-input-area input.ai-widget-conn-ready-flash {
+    animation: ai-widget-ready-flash 0.7s ease-out 1;
+}
+
+.ai-widget-input-area input:disabled {
+    cursor: not-allowed;
+    opacity: 0.85; /* keep the placeholder + state border legible */
+}
+
+.ai-widget-send-btn:disabled,
+.ai-widget-send-btn:disabled:hover {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@keyframes ai-widget-conn-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(208, 149, 31, 0);    border-color: var(--ai-state-connecting); }
+    50%      { box-shadow: 0 0 0 3px rgba(208, 149, 31, 0.28); border-color: #e6ad3d; }
+}
+
+@keyframes ai-widget-err-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(224, 87, 79, 0); }
+    50%      { box-shadow: 0 0 0 3px rgba(224, 87, 79, 0.25); }
+}
+
+@keyframes ai-widget-ready-flash {
+    0%   { box-shadow: 0 0 0 0 rgba(35, 166, 104, 0.55); }
+    100% { box-shadow: 0 0 0 7px rgba(35, 166, 104, 0); }
+}
+
+/* Respect reduced-motion — colour + placeholder + disabled still
+   distinguish every state without any animation. */
+@media (prefers-reduced-motion: reduce) {
+    .ai-widget-input-area input[data-conn="connecting"],
+    .ai-widget-input-area input[data-conn="error"],
+    .ai-widget-input-area input.ai-widget-conn-ready-flash {
+        animation: none;
+    }
+}
+
+/* Visually-hidden live region that announces connection state to
+   screen readers (placeholder changes are not reliably announced). */
+.ai-widget-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .ai-widget-send-btn {
