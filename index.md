@@ -80,7 +80,7 @@ I am most useful when an organization is about to change direction. Less useful 
 
 For a bounded decision, we work in a fixed-scope project of roughly 6 to 16 weeks — an assessment, a target operating model, a portfolio rationalization, an architecture audit, or a specific transformation call.
 
-When the decisions keep coming, a fractional or embedded arrangement makes more sense: a regular rhythm with the CTO, CIO, or CEO over a series of related choices, typically a few days per week or per month.
+When the decisions keep coming, a fractional or embedded arrangement makes more sense: a regular rhythm with the chief information, technology, or digital officer over a series of related choices, typically a few days per week or per month.
 
 And when a board, investor, or PE firm needs an independent read on a portfolio company or a single technology decision, I take on expert due diligence or a second opinion — a matter of days to weeks.
 
