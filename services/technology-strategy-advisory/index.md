@@ -86,7 +86,7 @@ Full list in the [Cases](/cases/) section.
 ## Engagement format
 
 - **Fixed-scope project — 6 to 16 weeks.** Strategy on a specific decision: platform choice, investment allocation, build vs. buy, target architecture for a new business line.
-- **Fractional or embedded advisor — months.** Regular rhythm with CTO/CIO/CEO across a series of related strategic decisions.
+- **Fractional or embedded advisor — months.** Regular rhythm with the chief information, technology, or digital officer across a series of related strategic decisions.
 
 ---
 

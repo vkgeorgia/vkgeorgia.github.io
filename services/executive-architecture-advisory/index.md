@@ -51,7 +51,7 @@ The shape of the engagement adapts to the decision rhythm of the client, but usu
 - a regular cadence of one-to-one conversations around upcoming and ongoing decisions;
 - targeted reviews of initiatives, architectures, vendor proposals, or business cases;
 - on-call support during critical moments — reorganization, transformation, escalation, board preparation;
-- acting as a thinking partner to CTOs, CIOs, CEOs, and their direct reports.
+- acting as a thinking partner to senior business and technology leaders and their direct reports.
 
 The value comes from continuity of context across decisions, not isolated opinions on each.
 
@@ -83,7 +83,7 @@ A significant part of the value is often in what does *not* happen — costly mi
 
 Two patterns work well:
 
-- **Fractional or embedded advisor — months.** A regular rhythm with the CEO/CIO/CTO on a series of related decisions. Typically a few days per week or per month.
+- **Fractional or embedded advisor — months.** A regular rhythm with the chief information, technology, or digital officer on a series of related decisions. Typically a few days per week or per month.
 - **Short advisory period — days to weeks.** Focused support around a specific critical decision or event.
 
 Exact scope and rhythm are shaped around the client's situation.
