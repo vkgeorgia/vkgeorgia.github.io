@@ -33,6 +33,7 @@ _config.local.yml
 /00_*.md
 /BOT_*.md
 /CLAUDE.md
+/AGENTS.md
 /CONTENT_AUDIT*.md
 /FINAL_*.md
 /PHASE_*.md
