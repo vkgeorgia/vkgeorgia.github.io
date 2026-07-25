@@ -12,7 +12,7 @@ Application landscapes tend to grow quietly — another system, another contract
 
 This service makes the application portfolio visible, understandable, and actionable, so that rationalization is driven by evidence rather than pressure.
 
-**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
+**[→ Book a 30-min architecture conversation]({{ site.cta_url }})**
 
 ---
 
@@ -92,6 +92,6 @@ Full list in the [Cases](/cases/) section.
 
 This service usually begins with a clear question — "where is the cost actually coming from, and what can we safely remove?" A short conversation is often enough to see whether an architectural approach would produce better answers than another round of spreadsheet analysis.
 
-**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
+**[→ Book a 30-min architecture conversation]({{ site.cta_url }})**
 
 Email: valerii@korobeinikov.consulting · LinkedIn: [Valerii Korobeinikov](https://www.linkedin.com/in/valeriikorobeinikov/)

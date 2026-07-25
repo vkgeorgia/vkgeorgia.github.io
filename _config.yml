@@ -50,10 +50,18 @@ include:
 # Для локальной подмены без коммита: _config.local.yml + --config _config.yml,_config.local.yml
 backend_url: "https://ai-avatar-103512681014.us-central1.run.app"
 
-# Google Calendar appointment schedule (Workspace account). Referenced as
-# {{ site.booking_url }} from every "book a call" CTA — layouts, includes and
-# page content alike. Change it here only; grep for a literal calendar.app.google
-# URL outside this file before assuming a CTA is up to date.
+# On-site "book a call" CTA target. Every book-a-call link in layouts, includes
+# and page content points here — an internal interstitial — NOT straight at the
+# calendar, so Cloudflare Web Analytics logs a channel-stamped /book/ pageview
+# (book-intent) before the redirect. The booking tool strips query params, so
+# /book/ is the one attributable chokepoint. See hub task 217.
+cta_url: "/book/"
+
+# Google Calendar appointment schedule (Workspace account). The final booking
+# destination — now referenced ONLY from /book/ (the interstitial redirects
+# here) and the minima google social link above. On-site CTAs use cta_url.
+# Change it here only; grep for a literal calendar.app.google URL outside this
+# file before assuming a link is up to date.
 booking_url: "https://calendar.app.google/yUQbbP2nkVaJgsvg9"
 
 # Cloudflare Web Analytics token (JS beacon, public — visible in HTML source on live site, not a secret).
