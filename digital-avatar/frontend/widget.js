@@ -53,14 +53,16 @@
                 </div>
 
                 <div class="ai-widget-input-area">
-                    <input type="text" id="ai-widget-input" placeholder="Type your message..." autocomplete="off">
-                    <button id="ai-widget-send" class="ai-widget-send-btn">
+                    <input type="text" id="ai-widget-input" placeholder="Connecting…" autocomplete="off" data-conn="connecting" aria-disabled="true" disabled>
+                    <button id="ai-widget-send" class="ai-widget-send-btn" disabled>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                         </svg>
                     </button>
                 </div>
+
+                <span id="ai-widget-conn-announce" class="ai-widget-visually-hidden" role="status" aria-live="polite"></span>
             </div>
         `;
     }
@@ -107,12 +109,41 @@
         const messagesArea = document.getElementById('ai-widget-messages');
         const statusText = document.getElementById('ai-widget-status-text');
         const dbStatusText = document.getElementById('ai-widget-db-status-text');
+        const connAnnounce = document.getElementById('ai-widget-conn-announce');
 
         let socket;
         let isOpen = opts.inline; // inline mode starts open
         let reconnectAttempts = 0;
         const MAX_RECONNECT_ATTEMPTS = 5;
         const MAX_MESSAGE_LENGTH = 8000; // generous cap so long pasted context isn't truncated
+
+        // Connection-state affordance on the message input (hub task 553).
+        // The border, placeholder and disabled state track the live WS lifecycle
+        // so a not-yet-connected widget can't be mistaken for a broken one. Each
+        // state pairs colour (via `data-conn` → CSS) with an animation, honest
+        // placeholder copy, aria-disabled, and an aria-live announcement.
+        const CONN_STATES = {
+            connecting: { dom: 'connecting', placeholder: 'Connecting…',                        enabled: false, announce: 'Assistant is connecting' },
+            ready:      { dom: 'ready',      placeholder: "Ask about Valerii's experience…",     enabled: true,  announce: 'Assistant is ready' },
+            error:      { dom: 'error',      placeholder: 'Reconnecting…',                       enabled: false, announce: 'Assistant is reconnecting' },
+            lost:       { dom: 'error',      placeholder: 'Connection lost — refresh to retry',  enabled: false, announce: 'Assistant connection lost' }
+        };
+
+        function setInputState(state) {
+            const cfg = CONN_STATES[state] || CONN_STATES.connecting;
+            input.setAttribute('data-conn', cfg.dom);
+            input.placeholder = cfg.placeholder;
+            input.disabled = !cfg.enabled;
+            input.setAttribute('aria-disabled', String(!cfg.enabled));
+            sendBtn.disabled = !cfg.enabled;
+            if (connAnnounce) connAnnounce.textContent = cfg.announce;
+            if (state === 'ready') {
+                // One subtle pulse to draw the eye now that typing is invited.
+                input.classList.remove('ai-widget-conn-ready-flash');
+                void input.offsetWidth; // reflow so the animation restarts
+                input.classList.add('ai-widget-conn-ready-flash');
+            }
+        }
 
         function escapeHtml(str) {
             return str
@@ -173,11 +204,13 @@
             const wsUrl = WIDGET_CONFIG.backendUrl.replace(/^https?:/, wsProto) + '/ws/chat';
 
             updateStatus('🔄 Connecting...', 'connecting');
+            setInputState('connecting');
             socket = new WebSocket(wsUrl);
 
             socket.onopen = () => {
                 reconnectAttempts = 0;
                 updateStatus('● AI', 'connected');
+                setInputState('ready');
             };
 
             socket.onmessage = (event) => {
@@ -192,14 +225,17 @@
                     const delay = Math.min(1000 * Math.pow(2, reconnectAttempts), 30000);
                     reconnectAttempts++;
                     updateStatus('● AI', 'connecting');
+                    setInputState('error'); // "Reconnecting…" during backoff; next attempt flips to connecting
                     setTimeout(connectWebSocket, delay);
                 } else {
                     updateStatus('● AI', 'error');
+                    setInputState('lost');
                 }
             };
 
             socket.onerror = () => {
                 updateStatus('● AI', 'error');
+                setInputState('error');
             };
         }
 
