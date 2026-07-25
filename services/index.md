@@ -110,7 +110,7 @@ I work best with leaders who want to make a specific decision or resolve a speci
 Engagement formats usually take one of three shapes:
 
 - **Fixed-scope project — 6 to 16 weeks.** Assessment, target operating model, portfolio rationalization, architecture audit, or a specific transformation decision.
-- **Fractional or embedded advisor — months.** Regular rhythm with CTO/CIO/CEO on a series of related decisions; typically a few days per week or per month.
+- **Fractional or embedded advisor — months.** Regular rhythm with the chief information, technology, or digital officer on a series of related decisions; typically a few days per week or per month.
 - **Expert due diligence or second opinion — days to weeks.** Independent read on a portfolio company or a specific technology decision, for boards, investors, and PE firms.
 
 **[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
