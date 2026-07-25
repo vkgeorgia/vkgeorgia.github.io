@@ -4,10 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Redirect to the canonical booking page (single-sourced from _config.yml) -->
-    <meta http-equiv="refresh" content="0; url=https://calendar.app.google/yUQbbP2nkVaJgsvg9">
+    <!-- /book/ is an attribution interstitial (hub task 217): it logs a
+         channel-stamped Cloudflare pageview (e.g. /book/?utm_source=linkedin)
+         before handing off to the calendar, which strips query params itself.
+         The redirect is briefly delayed so the analytics beacon can fire; the
+         meta-refresh + manual link below are no-JS / impatient-user fallbacks. -->
+    <meta http-equiv="refresh" content="3; url=https://calendar.app.google/yUQbbP2nkVaJgsvg9">
     <link rel="canonical" href="https://calendar.app.google/yUQbbP2nkVaJgsvg9">
     <meta name="robots" content="noindex, follow">
+
+    
+    <!-- Cloudflare Web Analytics — loaded eagerly (not deferred) so the
+         book-intent pageview is recorded before the redirect. -->
+    <script src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c469758a75af452284beff013fcc9741"}'></script>
+    
 
     <title>Book a 30-min architecture conversation - Valerii Korobeinikov</title>
     <meta name="description" content="Schedule a 30-minute architecture conversation with Valerii Korobeinikov." />
@@ -44,8 +54,12 @@
         a { color: #0b5cad; }
     </style>
 
-    <!-- JS fallback in case meta-refresh is blocked -->
-    <script>window.location.replace("https://calendar.app.google/yUQbbP2nkVaJgsvg9");</script>
+    <!-- Redirect after a short delay so the analytics beacon fires first. -->
+    <script>
+        setTimeout(function () {
+            window.location.replace("https://calendar.app.google/yUQbbP2nkVaJgsvg9");
+        }, 800);
+    </script>
 </head>
 <body>
     <p>Redirecting to booking&hellip;</p>

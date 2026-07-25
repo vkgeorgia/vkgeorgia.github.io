@@ -130,7 +130,7 @@
         </span>
       </label>
 
-      <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/business-challenges/">Business Challenges</a><a class="page-link" href="/services/">Services</a><a class="page-link" href="/cases/">Cases</a><a class="page-link" href="/articles/">Articles</a><a class="page-link site-cta" href="https://calendar.app.google/yUQbbP2nkVaJgsvg9">Book a call</a>
+      <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/business-challenges/">Business Challenges</a><a class="page-link" href="/services/">Services</a><a class="page-link" href="/cases/">Cases</a><a class="page-link" href="/articles/">Articles</a><a class="page-link site-cta" href="/book/">Book a call</a>
       </div>
     </nav>
 
@@ -158,7 +158,7 @@
 
 <p>In practice, most engagements sit on the boundary between the two.</p>
 
-<p><strong><a href="https://calendar.app.google/yUQbbP2nkVaJgsvg9">→ Book a 30-min architecture conversation</a></strong></p>
+<p><strong><a href="/book/">→ Book a 30-min architecture conversation</a></strong></p>
 
 <hr />
 
@@ -577,7 +577,7 @@
 </details>
 
 <p class="cases-note">
-Engagements are described with neutral, industry-level descriptors except where the client is named openly. Where you need specifics for a relevant decision, <a href="javascript:void(0)">ask my assistant</a> or <a href="https://calendar.app.google/yUQbbP2nkVaJgsvg9">book a call</a>.
+Engagements are described with neutral, industry-level descriptors except where the client is named openly. Where you need specifics for a relevant decision, <a href="javascript:void(0)">ask my assistant</a> or <a href="/book/">book a call</a>.
 </p>
 
 <style>
@@ -675,11 +675,46 @@ Engagements are described with neutral, industry-level descriptors except where 
             <p style="margin-top: 0;">
                 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> |
                 <a href="https://github.com/vkgeorgia" target="_blank">GitHub</a> |
-                <a href="https://calendar.app.google/yUQbbP2nkVaJgsvg9" target="_blank">Book a conversation</a>
+                <a href="/book/" target="_blank">Book a conversation</a>
             </p>
         </div>
     </div>
 </footer>
+
+    <!-- Inbound channel capture + book-CTA decoration (hub task 217).
+         First-touch source (a utm_source on the landing URL, or a LinkedIn
+         referrer) is kept for the session and stamped onto the internal /book/
+         links, so Cloudflare Web Analytics logs each book-intent pageview with
+         its channel. The booking tool strips query params, so /book/ is the
+         attributable chokepoint. Best-effort — never breaks the page. -->
+    <script>
+    (function () {
+        try {
+            var KEY = 'inbound_src';
+            var src = new URLSearchParams(window.location.search).get('utm_source');
+            if (!src && document.referrer) {
+                var host = '';
+                try { host = new URL(document.referrer).hostname; } catch (e) {}
+                if (host && host.indexOf('linkedin.') > -1) { src = 'linkedin'; }
+            }
+            if (src && !sessionStorage.getItem(KEY)) {
+                sessionStorage.setItem(KEY, src); // first-touch within the session
+            }
+            var channel = sessionStorage.getItem(KEY) || 'vkgeorgia_io';
+            document.addEventListener('DOMContentLoaded', function () {
+                var links = document.querySelectorAll('a[href^="/book/"], a[href="/book"]');
+                Array.prototype.forEach.call(links, function (a) {
+                    var u = new URL(a.getAttribute('href'), window.location.origin);
+                    if (!u.searchParams.get('utm_source')) {
+                        u.searchParams.set('utm_source', channel);
+                        u.searchParams.set('utm_medium', 'site_cta');
+                    }
+                    a.setAttribute('href', u.pathname + u.search);
+                });
+            });
+        } catch (e) { /* attribution is best-effort; never break the page */ }
+    })();
+    </script>
 
     <!-- AI Avatar Widget — floating on all pages (inline mode available via #ai-widget-inline-mount if a page mounts it) -->
     <link rel="stylesheet" href="/digital-avatar/frontend/widget.css">
