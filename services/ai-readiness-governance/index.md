@@ -12,7 +12,7 @@ AI initiatives often start as isolated experiments and quietly turn into enterpr
 
 This service helps organizations prepare for AI adoption as a managed capability: aligned with the business, grounded in architecture and data, and governed well enough to be defended to boards and regulators.
 
-**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
+**[→ Book a 30-min architecture conversation]({{ site.cta_url }})**
 
 ---
 
@@ -88,6 +88,6 @@ Full list in the [Cases](/cases/) section.
 
 This advisory usually begins with a direct question: "are we actually ready to use AI responsibly at scale, and where are the biggest gaps?" A short conversation is usually enough to see where to start.
 
-**[→ Book a 30-min architecture conversation]({{ site.booking_url }})**
+**[→ Book a 30-min architecture conversation]({{ site.cta_url }})**
 
 Email: valerii@korobeinikov.consulting · LinkedIn: [Valerii Korobeinikov](https://www.linkedin.com/in/valeriikorobeinikov/)

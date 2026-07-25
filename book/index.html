@@ -8,10 +8,20 @@ sitemap: false
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Redirect to the canonical booking page (single-sourced from _config.yml) -->
-    <meta http-equiv="refresh" content="0; url={{ site.booking_url }}">
+    <!-- /book/ is an attribution interstitial (hub task 217): it logs a
+         channel-stamped Cloudflare pageview (e.g. /book/?utm_source=linkedin)
+         before handing off to the calendar, which strips query params itself.
+         The redirect is briefly delayed so the analytics beacon can fire; the
+         meta-refresh + manual link below are no-JS / impatient-user fallbacks. -->
+    <meta http-equiv="refresh" content="3; url={{ site.booking_url }}">
     <link rel="canonical" href="{{ site.booking_url }}">
     <meta name="robots" content="noindex, follow">
+
+    {% if site.cloudflare_analytics_token %}
+    <!-- Cloudflare Web Analytics — loaded eagerly (not deferred) so the
+         book-intent pageview is recorded before the redirect. -->
+    <script src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cloudflare_analytics_token }}"}'></script>
+    {% endif %}
 
     <title>Book a 30-min architecture conversation - {{ site.title }}</title>
     <meta name="description" content="Schedule a 30-minute architecture conversation with Valerii Korobeinikov." />
@@ -48,8 +58,12 @@ sitemap: false
         a { color: #0b5cad; }
     </style>
 
-    <!-- JS fallback in case meta-refresh is blocked -->
-    <script>window.location.replace("{{ site.booking_url }}");</script>
+    <!-- Redirect after a short delay so the analytics beacon fires first. -->
+    <script>
+        setTimeout(function () {
+            window.location.replace("{{ site.booking_url }}");
+        }, 800);
+    </script>
 </head>
 <body>
     <p>Redirecting to booking&hellip;</p>

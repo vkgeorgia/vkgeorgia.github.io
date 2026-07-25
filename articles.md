@@ -46,5 +46,5 @@ Whether you're planning a reorganization, facing operational inefficiencies, or 
 <p align="center" style="font-size: 14px;">
   📧 <a href="mailto:valerii@korobeinikov.consulting">valerii@korobeinikov.consulting</a> | 
   💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> | 
-  📅 <a href="{{ site.booking_url }}" target="_blank">Book a conversation</a>
+  📅 <a href="{{ site.cta_url }}" target="_blank">Book a conversation</a>
 </p>
