@@ -4,8 +4,7 @@
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
 <!-- Open Graph Meta Tags -->
-<meta property="og:title"
-    content="{% if page.seo_title %}{{ page.seo_title }} - {{ site.title }}{% elsif page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+<meta property="og:title" content="{% include page-title.html %}" />
 <meta property="og:description"
     content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
@@ -24,8 +23,7 @@
 
 <!-- Twitter Card Meta Tags -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title"
-    content="{% if page.seo_title %}{{ page.seo_title }} - {{ site.title }}{% elsif page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+<meta name="twitter:title" content="{% include page-title.html %}" />
 <meta name="twitter:description"
     content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 {% if page.image %}
