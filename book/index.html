@@ -10,8 +10,14 @@
          The redirect is briefly delayed so the analytics beacon can fire; the
          meta-refresh + manual link below are no-JS / impatient-user fallbacks. -->
     <meta http-equiv="refresh" content="3; url=https://calendar.app.google/yUQbbP2nkVaJgsvg9">
-    <link rel="canonical" href="https://calendar.app.google/yUQbbP2nkVaJgsvg9">
-    <meta name="robots" content="noindex, follow">
+    <!-- canonical points at THIS page, not at the calendar: a cross-domain
+         canonical made LinkedIn's Featured validator follow the link through to
+         calendar.app.google (no OG there) and reject it as invalid — which
+         defeated the whole point of the OG block below. Same reason the page is
+         indexable: a noindex interstitial is a second rejection signal. It stays
+         out of the sitemap via `sitemap: false` in the front matter. -->
+    <link rel="canonical" href="https://korobeinikov.consulting/book/">
+    <meta name="robots" content="index, follow">
 
     
     <!-- Cloudflare Web Analytics — loaded eagerly (not deferred) so the
