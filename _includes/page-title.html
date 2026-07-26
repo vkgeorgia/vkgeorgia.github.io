@@ -1,0 +1,14 @@
+{%- comment -%}
+Assembles the page title used by <title>, og:title and twitter:title.
+
+The suffix " - {{ site.title }}" is appended ONLY when the page's own title
+does not already contain it. The home page's seo_title is
+"Valerii Korobeinikov | Enterprise Architecture & Technology Advisory", which
+already carries the name — blind concatenation produced
+"… Advisory - Valerii Korobeinikov", a duplicate visible in Google results and
+in every LinkedIn/Twitter share card.
+{%- endcomment -%}
+{%- assign page_title = page.seo_title | default: page.title -%}
+{%- if page_title -%}
+{%- if page_title contains site.title -%}{{ page_title | escape }}{%- else -%}{{ page_title | escape }} - {{ site.title | escape }}{%- endif -%}
+{%- else -%}{{ site.title | escape }}{%- endif -%}
