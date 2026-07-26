@@ -27,7 +27,15 @@ knowledge-base/*/*/sources/
 .env.*.local
 
 # Локальные переопределения Jekyll (URL бэкенда и т.п.)
-_config.local.yml
+# Keep the committed example; ignore real local overrides only.
+_config.local*.yml
+!_config.local.example.yml
+
+# Key material — never commit
+*.pem
+*.key
+*.p12
+*.pfx
 
 # Документация и планы в корне (локально, не в репозитории)
 /00_*.md
