@@ -41,10 +41,10 @@ jobs:
           fix() {
             perl -0777 -pe '
               BEGIN { $h = quotemeta($ENV{HUB}); }
-              s{\[(?:$h|strategy)\x23(\d+)\]\([^)]*\)}{hub task $1}g;
+              s{\[(?:$h|strategy)\x23(\d+)\]\([^)]*\)}{HUB-$1}g;
               s{https?://github\.com/$h[^\s)]*}{the strategy hub}g;
-              s{$h\x23(\d+)}{hub task $1}g;
-              s{strategy\x23(\d+)}{hub task $1}g;
+              s{$h\x23(\d+)}{HUB-$1}g;
+              s{strategy\x23(\d+)}{HUB-$1}g;
               s{$h}{the strategy hub}g;
             '
           }
@@ -56,6 +56,47 @@ jobs:
           if [ "$changed" -eq 0 ]; then echo "nothing to rewrite."; exit 0; fi
           gh pr edit "$PR_NUMBER" -R "$REPO" --title "$NEW_TITLE" --body-file /tmp/new_body.md
           echo "::notice::Rewrote the PR title/body."
+
+  tree:
+    runs-on: ubuntu-latest
+    name: Full-tree scan
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Scan every tracked file (blocking)
+        env:
+          HUB: ${{ secrets.HYGIENE_HUB_SLUG }}
+        run: |
+          set -euo pipefail
+
+          # The diff scan sees only what a PR adds, so a pointer that landed
+          # before the guard existed stays invisible to it forever. This pass
+          # reads every tracked text file instead.
+          if [ -z "${HUB:-}" ]; then
+            echo "::warning::slug not configured; scanning the cross-ref form only."
+            PATTERN='strategy#[0-9]'
+          else
+            PATTERN="${HUB}|strategy#[0-9]"
+          fi
+
+          fail=0
+          while IFS= read -r f; do
+            [ -f "$f" ] || continue
+            case "$f" in .github/workflows/public-surface-hygiene.yml) continue ;; esac
+            if grep -Iqi -E "$PATTERN" "$f" 2>/dev/null; then
+              echo "::error file=$f::Private-hub pointer in a tracked file. Reference the hub as HUB-<number>."
+              fail=1
+            fi
+          done < <(git ls-files)
+
+          if [ "$fail" -ne 0 ]; then
+            echo "::error::public-surface-hygiene: full-tree scan failed. Matched terms are deliberately not printed - see the file paths above."
+            exit 1
+          fi
+          echo "public-surface-hygiene: full-tree clean."
 
   verify:
     needs: autofix
