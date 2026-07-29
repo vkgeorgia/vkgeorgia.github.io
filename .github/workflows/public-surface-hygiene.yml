@@ -12,6 +12,13 @@ name: public-surface-hygiene
 on:
   pull_request_target:
     types: [opened, edited, reopened, synchronize]
+  # A guard that only fires on pull requests is one merge path away from being
+  # bypassed: a direct commit to main never faces it. The tree scan is the pass
+  # that makes sense there (there is no PR to autofix or re-read), so the two
+  # PR-only jobs are gated below.
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   pull-requests: write
@@ -24,6 +31,7 @@ concurrency:
 jobs:
   autofix:
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request_target'
     steps:
       - name: Rewrite hub pointers in PR title/body
         env:
@@ -64,7 +72,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          # On a pull_request_target run this must be the PR head, not the base;
+          # on push and manual runs the default checkout is what we want.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Scan every tracked file (blocking)
         env:
@@ -101,6 +111,7 @@ jobs:
   verify:
     needs: autofix
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request_target'
     steps:
       - name: Verify no hub pointer remains (blocking)
         env:
