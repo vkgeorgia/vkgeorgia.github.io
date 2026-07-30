@@ -108,6 +108,34 @@ jobs:
           fi
           echo "public-surface-hygiene: full-tree clean."
 
+      - name: Work-item references in tracked files (blocking)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Committed content carries no work-item reference at all - see the
+          # rationale in the verify job. The pattern names nothing confidential,
+          # so the matched token IS printed; this workflow file is excluded, and
+          # that exclusion doubles as the escape hatch for a doc that must
+          # legitimately show the form.
+          WORKITEM='(\bHUB-[0-9]+|\b(task|epic|hub)s?[[:space:]:]+#[0-9]+)'
+
+          fail=0
+          while IFS= read -r f; do
+            [ -f "$f" ] || continue
+            case "$f" in .github/workflows/public-surface-hygiene.yml) continue ;; esac
+            hits="$(grep -oIiE "$WORKITEM" "$f" 2>/dev/null | sort -u | tr '\n' ' ' || true)"
+            [ -n "$hits" ] || continue
+            echo "::error file=$f::work-item reference in a tracked file ( ${hits}) - keep the reason and drop the number, or cite the decision by name and date"
+            fail=1
+          done < <(git ls-files)
+
+          if [ "$fail" -ne 0 ]; then
+            echo "::error::public-surface-hygiene: work-item references in committed content."
+            exit 1
+          fi
+          echo "public-surface-hygiene: no work-item references in tracked files."
+
   verify:
     needs: autofix
     runs-on: ubuntu-latest
@@ -149,6 +177,41 @@ jobs:
           check "the PR body" "$BODY"
           check "a commit message" "$COMMITS"
           check "an added diff line" "$DIFF"
+
+          # Work-item references - two rules, two surfaces.
+          #
+          # Committed content (an added diff line, a commit message) carries no
+          # work-item reference at all: neither `HUB-<number>` nor a bare
+          # hash-number. Of roughly 110 such references swept out of the sibling
+          # repositories, not one held information a reader could use - the prose
+          # beside them carried the reason, and the number resolved only for
+          # someone with private access. Keep the reason, drop the number; where
+          # the reason is a decision, cite it by name and date.
+          #
+          # A PR title or body may cite a work item, and there `HUB-<number>` is
+          # the form - a pull request is a transient coordination surface. The
+          # bare hash-number is rejected there too: it auto-links to the item of
+          # that number IN THIS REPOSITORY, a working link to something
+          # unrelated.
+          #
+          # This repository's own issues and PRs are untouched - a plain
+          # hash-number, and `closes` / `fixes`, mean what they say. These
+          # patterns name nothing confidential, so the matched token IS printed.
+          WORKITEM='(\bHUB-[0-9]+|\b(task|epic|hub)s?[[:space:]:]+#[0-9]+)'
+          HASHREF='\b(task|epic|hub)s?[[:space:]:]+#[0-9]+'
+          COMMITTED_ADVICE="committed content carries no work-item reference; keep the reason and drop the number, or cite the decision by name and date"
+          METADATA_ADVICE="write HUB-<number>; a bare #NNN auto-links to this repository's own item of that number"
+          wi() {  # $1 = label, $2 = text, $3 = pattern, $4 = advice
+            local hits
+            hits="$(printf '%s' "${2:-}" | grep -oiE "$3" | sort -u | tr '\n' ' ' || true)"
+            [ -n "$hits" ] || return 0
+            echo "::error::work-item reference in $1 ( $hits) - $4"
+            fail=1
+          }
+          wi "the PR title" "$TITLE" "$HASHREF" "$METADATA_ADVICE"
+          wi "the PR body" "$BODY" "$HASHREF" "$METADATA_ADVICE"
+          wi "a commit message" "$COMMITS" "$WORKITEM" "$COMMITTED_ADVICE"
+          wi "an added diff line" "$DIFF" "$WORKITEM" "$COMMITTED_ADVICE"
           if [ "$fail" -ne 0 ]; then
             echo "::error::public-surface-hygiene: blocking check failed. Fix the reference(s) and push again."
             exit 1
