@@ -113,11 +113,11 @@ jobs:
         run: |
           set -euo pipefail
 
-          # Committed content carries no work-item reference at all - see the
-          # rationale in the verify job. The pattern names nothing confidential,
-          # so the matched token IS printed; this workflow file is excluded, and
-          # that exclusion doubles as the escape hatch for a doc that must
-          # legitimately show the form.
+          # Committed content carries no work-item reference - see the verify
+          # job for the rule. The pattern names nothing confidential, so the
+          # matched token is printed; this workflow file is excluded, which
+          # doubles as the escape hatch for a doc that must legitimately show the
+          # form.
           WORKITEM='(\bHUB-[0-9]+|\b(task|epic|hub)s?[[:space:]:]+#[0-9]+)'
 
           fail=0
@@ -178,29 +178,24 @@ jobs:
           check "a commit message" "$COMMITS"
           check "an added diff line" "$DIFF"
 
-          # Work-item references - two rules, two surfaces.
+          # A work-item reference does not go on a public surface: not in an
+          # added diff line, not in a commit message, not in a PR title or body.
+          # It lives in the hub issue, which already links to the pull request.
           #
-          # Committed content (an added diff line, a commit message) carries no
-          # work-item reference at all: neither `HUB-<number>` nor a bare
-          # hash-number. Of roughly 110 such references swept out of the sibling
-          # repositories, not one held information a reader could use - the prose
-          # beside them carried the reason, and the number resolved only for
-          # someone with private access. Keep the reason, drop the number; where
-          # the reason is a decision, cite it by name and date.
+          # Two operative reasons, both about how the text reads later: a number
+          # is not a reason (what a line needs is why it is the way it is, and the
+          # durable form for that is a decision cited by name and date), and PR
+          # metadata is committed content with a delay - this repository squashes
+          # with COMMIT_OR_PR_TITLE and merges with PR_TITLE, so a PR title
+          # becomes a commit subject on the default branch.
           #
-          # A PR title or body may cite a work item, and there `HUB-<number>` is
-          # the form - a pull request is a transient coordination surface. The
-          # bare hash-number is rejected there too: it auto-links to the item of
-          # that number IN THIS REPOSITORY, a working link to something
-          # unrelated.
-          #
-          # This repository's own issues and PRs are untouched - a plain
-          # hash-number, and `closes` / `fixes`, mean what they say. These
-          # patterns name nothing confidential, so the matched token IS printed.
+          # This repository's own issues and PRs are untouched: a plain
+          # hash-number, and `closes` / `fixes`, mean what they say. The bare
+          # hash-number dressed as hub work is the worst form - it auto-links to
+          # the item of that number in THIS repository. These patterns name
+          # nothing confidential, so the matched token is printed.
           WORKITEM='(\bHUB-[0-9]+|\b(task|epic|hub)s?[[:space:]:]+#[0-9]+)'
-          HASHREF='\b(task|epic|hub)s?[[:space:]:]+#[0-9]+'
-          COMMITTED_ADVICE="committed content carries no work-item reference; keep the reason and drop the number, or cite the decision by name and date"
-          METADATA_ADVICE="write HUB-<number>; a bare #NNN auto-links to this repository's own item of that number"
+          ADVICE="a work-item reference does not go on a public surface - keep the reason and drop the number, cite the decision by name and date, and leave the work-item trail in the hub issue"
           wi() {  # $1 = label, $2 = text, $3 = pattern, $4 = advice
             local hits
             hits="$(printf '%s' "${2:-}" | grep -oiE "$3" | sort -u | tr '\n' ' ' || true)"
@@ -208,10 +203,10 @@ jobs:
             echo "::error::work-item reference in $1 ( $hits) - $4"
             fail=1
           }
-          wi "the PR title" "$TITLE" "$HASHREF" "$METADATA_ADVICE"
-          wi "the PR body" "$BODY" "$HASHREF" "$METADATA_ADVICE"
-          wi "a commit message" "$COMMITS" "$WORKITEM" "$COMMITTED_ADVICE"
-          wi "an added diff line" "$DIFF" "$WORKITEM" "$COMMITTED_ADVICE"
+          wi "the PR title" "$TITLE" "$WORKITEM" "$ADVICE"
+          wi "the PR body" "$BODY" "$WORKITEM" "$ADVICE"
+          wi "a commit message" "$COMMITS" "$WORKITEM" "$ADVICE"
+          wi "an added diff line" "$DIFF" "$WORKITEM" "$ADVICE"
           if [ "$fail" -ne 0 ]; then
             echo "::error::public-surface-hygiene: blocking check failed. Fix the reference(s) and push again."
             exit 1
