@@ -1,0 +1,24 @@
+# Dependabot — continuous dependency updates for this repo.
+# Weekly cadence; patch/minor only (majors are ignored here and handled in the
+# periodic upgrade wave). Security advisories are unaffected by the ignore rules
+# and still flow through. Merges stay human-gated behind public-surface-hygiene —
+# there is deliberately no auto-merge here.
+version: 2
+updates:
+  # Jekyll / GitHub Pages toolchain (root Gemfile).
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  # GitHub Actions used by the workflows in .github/workflows.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
