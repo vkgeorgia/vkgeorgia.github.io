@@ -6,7 +6,7 @@
     --ai-widget-text: #e2e8f0;
     --ai-widget-border: #334155;
 
-    /* Connection-state affordance for the message input (hub task 553).
+    /* Connection-state affordance for the message input.
        Derived from the Transitrix *functional* palette — brand and functional
        palettes are kept separate, so connection status uses functional
        success/warning/error, never a brand hue. The widget panel is always
@@ -233,7 +233,7 @@
 }
 
 /* ------------------------------------------------------------------
-   Connection-state border on the message input (hub task 553).
+   Connection-state border on the message input.
    The border colour + placeholder + disabled state mirror the live
    WebSocket lifecycle, so a not-yet-connected widget cannot be
    mistaken for a broken one. State is driven from JS via `data-conn`.

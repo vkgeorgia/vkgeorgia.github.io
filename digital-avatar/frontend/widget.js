@@ -117,7 +117,7 @@
         const MAX_RECONNECT_ATTEMPTS = 5;
         const MAX_MESSAGE_LENGTH = 8000; // generous cap so long pasted context isn't truncated
 
-        // Connection-state affordance on the message input (hub task 553).
+        // Connection-state affordance on the message input.
         // The border, placeholder and disabled state track the live WS lifecycle
         // so a not-yet-connected widget can't be mistaken for a broken one. Each
         // state pairs colour (via `data-conn` → CSS) with an animation, honest

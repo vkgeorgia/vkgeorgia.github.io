@@ -118,7 +118,13 @@ jobs:
           # matched token is printed; this workflow file is excluded, which
           # doubles as the escape hatch for a doc that must legitimately show the
           # form.
-          WORKITEM='(\bHUB-[0-9]+|\b(task|epic|hub)s?[[:space:]:]+#[0-9]+)'
+          #
+          # Three branches: HUB-<n>; the hub-qualified unpunctuated form
+          # (`hub task <n>` / `hub epic <n>` / `hub issue <n>`), where the
+          # leading `hub` is what marks the number as an id; and the punctuated
+          # `task|epic|hub #<n>`. Bare prose like "task 3 of the pipeline" has no
+          # `hub` qualifier and no `#`, so it is not a reference and passes.
+          WORKITEM='(\bHUB-[0-9]+|\bhub[[:space:]]+(task|epic|issue)s?[[:space:]:]+#?[0-9]+|\b(task|epic|hub)s?[[:space:]:]+#[0-9]+)'
 
           fail=0
           while IFS= read -r f; do
@@ -194,7 +200,12 @@ jobs:
           # hash-number dressed as hub work is the worst form - it auto-links to
           # the item of that number in THIS repository. These patterns name
           # nothing confidential, so the matched token is printed.
-          WORKITEM='(\bHUB-[0-9]+|\b(task|epic|hub)s?[[:space:]:]+#[0-9]+)'
+          #
+          # Kept in sync with the tree job's WORKITEM: HUB-<n>, the hub-qualified
+          # unpunctuated form (`hub task|epic|issue <n>`), and the punctuated
+          # `task|epic|hub #<n>`. Bare "task 3 of the pipeline" is prose, not a
+          # reference, and passes.
+          WORKITEM='(\bHUB-[0-9]+|\bhub[[:space:]]+(task|epic|issue)s?[[:space:]:]+#?[0-9]+|\b(task|epic|hub)s?[[:space:]:]+#[0-9]+)'
           ADVICE="a work-item reference does not go on a public surface - keep the reason and drop the number, cite the decision by name and date, and leave the work-item trail in the hub issue"
           wi() {  # $1 = label, $2 = text, $3 = pattern, $4 = advice
             local hits
