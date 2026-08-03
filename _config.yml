@@ -54,7 +54,7 @@ backend_url: "https://ai-avatar-103512681014.us-central1.run.app"
 # and page content points here — an internal interstitial — NOT straight at the
 # calendar, so Cloudflare Web Analytics logs a channel-stamped /book/ pageview
 # (book-intent) before the redirect. The booking tool strips query params, so
-# /book/ is the one attributable chokepoint. See hub task 217.
+# /book/ is the one attributable chokepoint.
 cta_url: "/book/"
 
 # Google Calendar appointment schedule (Workspace account). The final booking
@@ -65,7 +65,7 @@ cta_url: "/book/"
 booking_url: "https://calendar.app.google/yUQbbP2nkVaJgsvg9"
 
 # Cloudflare Web Analytics token (JS beacon, public — visible in HTML source on live site, not a secret).
-# Referenced from _layouts/default.html. See the strategy hub, hub task 391.
+# Referenced from _layouts/default.html.
 cloudflare_analytics_token: "c469758a75af452284beff013fcc9741"
 
 # Exclude from processing
