@@ -1,0 +1,82 @@
+# Auto-merge Dependabot patch/minor/security pull requests on green.
+#
+# This repo publishes a public surface, so the risk split is the conservative
+# one: a low-risk bump merges without a human hand, but only once every required
+# check is green — the public-surface-hygiene gate among them. Auto-merge here
+# replaces the human click, not the gate.
+#
+# Bundler carries a lockfile in this repo, so `dependabot/fetch-metadata` always
+# emits a concrete semver update-type — there is no range-only/null case to
+# reason about (unlike a manifest pinned by range with no lockfile). The
+# classification is therefore just:
+#   - semver patch / minor, or a non-major security advisory -> auto-merge on green
+#   - semver major                                            -> declined, left for the coordinated upgrade wave
+#   - anything else                                           -> declined, needs a human
+# A declined pull request gets a comment stating why, so the outcome is readable
+# on the PR without opening the run log.
+#
+# `gh pr merge --auto` only queues the merge; it fires when the branch's required
+# status checks pass. Two settings outside this file make that gating real and
+# must both be in place for the workflow to do anything: the repo-level
+# allow-auto-merge setting, and branch protection on the default branch that
+# marks the public-surface-hygiene checks as required. This workflow is the
+# trigger; those settings are the gate.
+#
+# Rationale: the 2026-07-31 three-layer dependency-maintenance decision
+# (Layer 1 — continuous and mechanical), amended 2026-08-02.
+name: Dependabot auto-merge
+
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    # Never fire on a human-authored PR.
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: Fetch Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      # Inputs arrive via env and are never interpolated into the script, so a
+      # crafted value cannot inject shell.
+      - name: Classify update
+        id: classify
+        env:
+          UPDATE_TYPE: ${{ steps.metadata.outputs.update-type }}
+          GHSA: ${{ steps.metadata.outputs.ghsa-id }}
+        run: |
+          if [ "$UPDATE_TYPE" = "version-update:semver-patch" ] || [ "$UPDATE_TYPE" = "version-update:semver-minor" ]; then
+            echo "safe=true" >> "$GITHUB_OUTPUT"; echo "reason=dependabot metadata: $UPDATE_TYPE" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if [ -n "$GHSA" ] && [ "$UPDATE_TYPE" != "version-update:semver-major" ]; then
+            echo "safe=true" >> "$GITHUB_OUTPUT"; echo "reason=security advisory $GHSA, non-major" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if [ "$UPDATE_TYPE" = "version-update:semver-major" ]; then
+            echo "safe=false" >> "$GITHUB_OUTPUT"; echo "reason=semver-major update - left for the coordinated upgrade wave" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "safe=false" >> "$GITHUB_OUTPUT"; echo "reason=unrecognised update-type '$UPDATE_TYPE' - needs human review" >> "$GITHUB_OUTPUT"
+
+      - name: Enable auto-merge
+        if: steps.classify.outputs.safe == 'true'
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Make the decline visible on the PR itself — the reason must be readable
+      # without opening the run log.
+      - name: Record decline reason
+        if: steps.classify.outputs.safe != 'true'
+        run: |
+          gh pr comment "$PR_URL" --body "Auto-merge declined: $REASON"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          REASON: ${{ steps.classify.outputs.reason }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
