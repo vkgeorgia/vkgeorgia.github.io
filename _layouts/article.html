@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<article class="article-post">
+
+  <p class="article-back"><a href="/articles/">← All articles</a></p>
+
+  <header class="article-header">
+    <h1 class="article-title">{{ page.title | escape }}</h1>
+    <p class="article-date">{{ page.date | date: "%B %-d, %Y" }}</p>
+  </header>
+
+  <div class="article-body">
+    {{ content }}
+  </div>
+
+  <footer class="article-footer">
+    <p><a href="/articles/">← Back to all articles</a></p>
+    <p class="article-cta"><a href="{{ site.cta_url }}">→ Book a 30-min conversation</a> to talk through this.</p>
+  </footer>
+
+</article>
+
+<style>
+  .article-post { max-width: 760px; }
+  .article-back { font-size: 0.9em; margin-bottom: 10px; }
+  .article-header { border-bottom: 2px solid #eee; padding-bottom: 18px; margin-bottom: 24px; }
+  .article-title { margin: 6px 0 4px; font-size: 1.9em; line-height: 1.2; }
+  .article-date { font-size: 0.85em; color: #6c757d; margin: 0; font-weight: 600; }
+  .article-body p, .article-body li { line-height: 1.65; color: #333; }
+  .article-footer { border-top: 1px solid #eee; margin-top: 36px; padding-top: 16px; }
+  .article-cta { font-weight: 600; }
+
+  @media (max-width: 600px) {
+    .article-title { font-size: 1.5em; }
+  }
+</style>

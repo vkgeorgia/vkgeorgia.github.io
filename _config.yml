@@ -124,3 +124,8 @@ defaults:
       type: projects
     values:
       layout: case
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article

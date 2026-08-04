@@ -15,27 +15,37 @@ No academic theory—just observations from the trenches of Enterprise Architect
 
 ---
 
-### 2026
+<ul class="article-list">
+  {% for post in site.posts %}
+  <li class="article-item">
+    <span class="article-item-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+    <span class="article-item-body">
+      <a class="article-item-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <p class="article-item-standfirst">{{ post.standfirst | escape }}</p>
+    </span>
+  </li>
+  {% endfor %}
+</ul>
 
-**January 3, 2026**
+<style>
+  .article-list { list-style: none; margin: 24px 0; padding: 0; }
+  .article-item {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 4px 20px;
+    padding: 16px 0;
+    border-top: 1px solid #e9ecef;
+    align-items: baseline;
+  }
+  .article-item:first-child { border-top: none; }
+  .article-item-date { font-size: 0.82em; color: #6c757d; font-weight: 600; }
+  .article-item-title { font-weight: 600; font-size: 1.05em; }
+  .article-item-standfirst { margin: 4px 0 0; color: #495057; font-size: 0.92em; line-height: 1.5; }
 
-#### Why Industry Experience Isn't Always the Key
-
-Many companies look for consultants who have deep experience in their specific industry. It's understandable — it feels safer to work with someone who already "speaks the language." However, the real value lies elsewhere in business consulting, especially in enterprise architecture.
-
-I work with organizations across various industries — from energy and manufacturing to retail and IT. How is that possible? Because I rely on universal architectural methods and tools that allow me to:
-
-**Abstract from industry specifics** and focus on goals, processes, and capabilities of the organization;
-
-**Build a business model** that prioritizes structure, logic, and interconnections over sector-specific terminology.
-
-**Objectively assess the current state** of your enterprise, whether you produce fuel or develop mobile apps.
-
-**Offer solutions based on strategic goals**, not recycled patterns from within your industry.
-
-Industry experience is helpful — no doubt about it. However, it can also be limiting if a consultant is stuck in the habits and assumptions of a particular niche. I bring a fresh perspective and a structured approach that works across sectors.
-
-**My goal is not to copy what others are doing but to help your company find its own sustainable and effective path forward.**
+  @media (max-width: 600px) {
+    .article-item { grid-template-columns: 1fr; }
+  }
+</style>
 
 ---
 
