@@ -3,6 +3,7 @@ title: "Dynamic State Architecture — One Model, Three Dates, Nothing Redrawn"
 standfirst: "Gartner named the term. The question it leaves is whether your target state is a drawn picture or a projection of a model."
 description: "Current State and Target State as two projections of one temporal model: move the date and the view is regenerated from text instead of being redrawn by hand."
 lang: en
+image: /assets/og/dynamic-state-architecture-one-model-three-dates.png
 ---
 
 I recently saw Gartner's new term, Dynamic State Architecture — the dynamic adaptation of architecture to strategy. Gartner is already talking about this, but why do most architects still present their work as Current State and Target State?
@@ -15,7 +16,7 @@ In my world architecture is text: a textual description of your business, stored
 
 This is not a dream and not a theory. The dynamic approach is built into the methodology itself, and a tool that works this way already exists — DSM. Look at the screenshots: enterprise capabilities appear, mature and retire over time, and the date can be set to any day — the view is regenerated. These are not drawn pictures: they are generated from the textual representation of the model. The data here is constructed; it is not anyone's real model.
 
-![One model, three dates — the same capability map projected at 2024-06-30, 2026-08-04 and 2028-06-30](/assets/one-model-three-dates.png)
+![One model, three dates — the same capability map projected at 2024-06-30, 2026-08-04 and 2028-06-30](/assets/articles/one-model-three-dates.png)
 
 In the same way you will be able to see your whole enterprise landscape changing over time. Picture it: a functional diagram of your landscape on which new systems appear and obsolete ones retire, and new integrations and enterprise capabilities arrive.
 
