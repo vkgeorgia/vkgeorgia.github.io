@@ -3,9 +3,12 @@ title: "RACI as Text You Can't Break Silently"
 standfirst: "A spreadsheet cannot tell you the matrix is broken. A rule can — and it fails the check the moment a row has two Accountables."
 description: "Why RACI matrices rot six months into a project, and what changes when the matrix is a YAML file with a one-Accountable-per-row rule enforced by a validator in a git hook or CI."
 lang: en
+image: /assets/og/raci-as-text-you-cant-break-silently.png
 ---
 
 You start a project, full of enthusiasm, and, as usual, create a set of project documents. You gather stakeholder information and create a RACI matrix. Time passes, the project progresses, stakeholders change — and six months later you look at the matrix, trying to find who is accountable for a particular stage, and you see two Accountables in one row. After numerous edits by different people the matrix is broken: everyone edits their own part, and no one looks at the whole row. Or worse — there is no one accountable at all: the only one moved on to another role. The matrix is completely out of touch with reality, useless, and rotten.
+
+![A four-row RACI matrix across Product, Lead Architect, Security and Board: the Assess impact row carries two Accountables, circled in red — a spreadsheet will never tell you](/assets/articles/raci-two-accountables-in-one-row.png)
 
 The most valuable thing you get from such a matrix is knowing who is accountable for each decision. The progress, and the entire outcome of the project, depend on it. It's terrible when there are two or three Accountables for a stage, and even worse when there are none.
 

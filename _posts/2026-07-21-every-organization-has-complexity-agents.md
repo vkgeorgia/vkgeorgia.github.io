@@ -3,9 +3,12 @@ title: "Every Organization Has Complexity Agents. Almost None Has a Simplificati
 standfirst: "Every role is paid to elaborate what it owns — locally justified, cumulatively fatal. Almost no one is mandated to cut."
 description: "Why organizations accumulate complexity by design, what Tainter's collapse thesis says about it, and what an explicit simplification role does that no amount of process discipline can."
 lang: en
+image: /assets/og/every-organization-has-complexity-agents.jpg
 ---
 
 Every organization has complexity agents. Almost none has a simplification agent.
+
+![A pair of scales: one pan piled high with systems, rules and integrations, each marked with a plus; the other holding a single dashed outline labelled simplification](/assets/articles/everyone-adds-no-one-subtracts.jpg)
 
 Imagine a business that invents its own rules. The owner loves it when the business runs by the book. It feels like a clean, money-printing assembly line. It feels safe: everything under control.
 
