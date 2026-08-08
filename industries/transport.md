@@ -1,12 +1,5 @@
 ---
-layout: page
-title: "Transport"
-description: "Projects in Transport industry"
 permalink: /industries/transport/
-page_type: "industry"
-page_key: "Transport"
+redirect_to: /projects/transport/
+sitemap: false
 ---
-
-## Transport
-
-<div id="projects-list">Loading projects...</div>

@@ -1,12 +1,5 @@
 ---
-layout: page
-title: "Retail"
-description: "Projects in Retail industry"
 permalink: /industries/retail/
-page_type: "industry"
-page_key: "Retail"
+redirect_to: /projects/retail/
+sitemap: false
 ---
-
-## Retail
-
-<div id="projects-list">Loading projects...</div>

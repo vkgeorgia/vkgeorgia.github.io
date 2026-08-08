@@ -1,12 +1,5 @@
 ---
-layout: page
-title: "Finance & Payments"
-description: "Projects in Finance & Payments"
 permalink: /domains/finance/
-page_type: "domain"
-page_key: "Finance"
+redirect_to: /cases/
+sitemap: false
 ---
-
-## Finance & Payments
-
-<div id="projects-list">Loading projects...</div>

@@ -1,12 +1,11 @@
 ---
 layout: page
 title: "Enterprise Architect"
-description: "Projects where I worked as Enterprise Architect"
+description: "Selected engagements where I worked as Enterprise Architect"
 permalink: /roles/enterprise-architect/
-page_type: "role"
-page_key: "enterprise-architect"
+role_name: "Enterprise Architect"
 ---
 
-## Enterprise Architect
+Selected engagements where I worked as **Enterprise Architect**.
 
-<div id="projects-list">Loading projects...</div>
+{% include role-projects.html role=page.role_name %}

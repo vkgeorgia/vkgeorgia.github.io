@@ -1,12 +1,5 @@
 ---
-layout: page
-title: "ERP Systems"
-description: "Projects in ERP Systems"
 permalink: /domains/erp/
-page_type: "domain"
-page_key: "ERP"
+redirect_to: /cases/
+sitemap: false
 ---
-
-## ERP Systems
-
-<div id="projects-list">Loading projects...</div>

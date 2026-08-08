@@ -1,12 +1,11 @@
 ---
 layout: page
 title: "Project Manager"
-description: "Projects where I worked as Project Manager"
+description: "Selected engagements where I worked as Project Manager"
 permalink: /roles/project-manager/
-page_type: "role"
-page_key: "project-manager"
+role_name: "Project Manager"
 ---
 
-## Project Manager
+Selected engagements where I worked as **Project Manager**.
 
-<div id="projects-list">Loading projects...</div>
+{% include role-projects.html role=page.role_name %}

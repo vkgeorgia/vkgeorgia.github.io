@@ -1,12 +1,5 @@
 ---
-layout: page
-title: "Telecommunications"
-description: "Projects in Telecommunications industry"
 permalink: /industries/telecom/
-page_type: "industry"
-page_key: "Telecom"
+redirect_to: /projects/telecom/
+sitemap: false
 ---
-
-## Telecommunications
-
-<div id="projects-list">Loading projects...</div>

@@ -40,6 +40,10 @@ permalink: pretty
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  # Emits meta-refresh redirect stubs for pages carrying `redirect_to` — used to
+  # send retired taxonomy URLs to their surviving counterparts. Loaded explicitly
+  # because the build runs `jekyll build` (not the github-pages command).
+  - jekyll-redirect-from
 
 # Include digital-avatar frontend files
 include:
@@ -129,3 +133,15 @@ defaults:
       type: posts
     values:
       layout: article
+  # Binary downloads and the digital-avatar demo stay served and linked, but
+  # leave the sitemap — nothing meant for indexing points at a PDF or the demo.
+  # jekyll-sitemap honours `sitemap: false` supplied through defaults for static
+  # files.
+  - scope:
+      path: "downloads"
+    values:
+      sitemap: false
+  - scope:
+      path: "digital-avatar"
+    values:
+      sitemap: false
