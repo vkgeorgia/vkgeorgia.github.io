@@ -1,8 +1,10 @@
 # Dependabot — continuous dependency updates for this repo.
 # Weekly cadence; patch/minor only (majors are ignored here and handled in the
 # periodic upgrade wave). Security advisories are unaffected by the ignore rules
-# and still flow through. Merges stay human-gated behind public-surface-hygiene —
-# there is deliberately no auto-merge here.
+# and still flow through. Patch/minor and non-major security updates auto-merge
+# on green (see dependabot-auto-merge.yml); the public-surface-hygiene gate among
+# the required checks stands in for the human click. Majors are always declined
+# to the wave.
 version: 2
 updates:
   # Jekyll / GitHub Pages toolchain (root Gemfile).

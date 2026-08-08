@@ -1,8 +1,3 @@
-# ⚠️ ACTIVATION: rename this file to .github/workflows/build-deploy.yml to enable it.
-# It was committed here (not under workflows/) because the authoring OAuth token
-# lacked the `workflow` scope. Move it via a session with workflow scope, e.g.:
-#   git mv .github/build-deploy.yml .github/workflows/build-deploy.yml
-#
 name: Build and deploy
 
 # Builds the site with case content fetched from the private cases-public-ready
