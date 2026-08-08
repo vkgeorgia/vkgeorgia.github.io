@@ -76,6 +76,9 @@ digital-avatar/backend/knowledge_base/
 # Local tools (build scripts, not for publication)
 /tools/
 
+# Bastion agent run logs (local orchestration output, not for publication)
+/logs/
+
 # Ruby / Bundler — гемы только локально (`bundle install`), не в git
 vendor/
 
