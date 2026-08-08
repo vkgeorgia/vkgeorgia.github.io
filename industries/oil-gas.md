@@ -1,12 +1,5 @@
 ---
-layout: page
-title: "Oil & Gas"
-description: "Projects in Oil & Gas industry"
 permalink: /industries/oil-gas/
-page_type: "industry"
-page_key: "Oil-Gas"
+redirect_to: /projects/oil-gas/
+sitemap: false
 ---
-
-## Oil & Gas
-
-<div id="projects-list">Loading projects...</div>

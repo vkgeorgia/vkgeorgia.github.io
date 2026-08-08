@@ -1,12 +1,5 @@
 ---
-layout: page
-title: "Aviation"
-description: "Projects in Aviation industry"
 permalink: /industries/aviation/
-page_type: "industry"
-page_key: "Aviation"
+redirect_to: /projects/aviation/
+sitemap: false
 ---
-
-## Aviation
-
-<div id="projects-list">Loading projects...</div>

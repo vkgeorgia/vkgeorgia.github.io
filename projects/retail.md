@@ -3,16 +3,10 @@ layout: page
 title: "Retail"
 description: "Projects in Retail"
 permalink: /projects/retail/
-page_type: "industry"
-page_key: "Retail"
 ---
 
 ## Retail
 
-Projects in Retail
-
-### Projects
-
-<div id="projects-list">
-  Loading projects...
-</div>
+Selected retail and consumer-facing engagements — loyalty, omni-channel, and
+core platform strategy. See the full set of engagements on the
+[Cases](/cases/) page.

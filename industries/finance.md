@@ -1,12 +1,5 @@
 ---
-layout: page
-title: "Finance"
-description: "Projects in Finance industry"
 permalink: /industries/finance/
-page_type: "industry"
-page_key: "Finance"
+redirect_to: /projects/finance/
+sitemap: false
 ---
-
-## Finance
-
-<div id="projects-list">Loading projects...</div>

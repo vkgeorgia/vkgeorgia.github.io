@@ -1,12 +1,11 @@
 ---
 layout: page
 title: "Solution Architect"
-description: "Projects where I worked as Solution Architect"
+description: "Selected engagements where I worked as Solution Architect"
 permalink: /roles/solution-architect/
-page_type: "role"
-page_key: "solution-architect"
+role_name: "Solution Architect"
 ---
 
-## Solution Architect
+Selected engagements where I worked as **Solution Architect**.
 
-<div id="projects-list">Loading projects...</div>
+{% include role-projects.html role=page.role_name %}

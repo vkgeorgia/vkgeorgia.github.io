@@ -7,11 +7,8 @@ permalink: /projects/education/
 
 ## Education & Training
 
-Projects involving educational systems, training programs, and knowledge management.
-
-### Projects
-
-This page will be populated with relevant projects. Currently being mapped from the knowledge base.
+Projects involving educational systems, training programs, and knowledge
+management. See the full set of engagements on the [Cases](/cases/) page.
 
 ---
 

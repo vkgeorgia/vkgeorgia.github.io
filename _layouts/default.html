@@ -33,10 +33,7 @@
     {% include favicons.html %}
 </head>
 
-<body
-  {% if page.page_type %}data-page-type="{{ page.page_type | escape }}"{% endif %}
-  {% if page.page_key %}data-page-key="{{ page.page_key | escape }}"{% endif %}
->
+<body>
 
     {% include header.html %}
 

@@ -1,0 +1,30 @@
+{%- comment -%}
+Build-time listing of engagements for a role, rendered from the `projects`
+collection (staged from the sanitized cases pipeline). This replaces the former
+client-side fetch of the retired /api/projects endpoint — the page now serves its
+own content in the initial HTML.
+
+Matching: a case belongs to this role when any comma- or slash-separated token of
+its free-text `role` frontmatter equals include.role (case-insensitive). The role
+field is authored free-form (e.g. "Enterprise Architect / Business Analyst"), so
+whole-token equality is used rather than a loose substring match.
+{%- endcomment -%}
+{%- assign target = include.role | downcase | strip -%}
+<div class="projects-list">
+{%- for proj in site.projects -%}
+  {%- assign matched = false -%}
+  {%- if proj.role -%}
+    {%- assign tokens = proj.role | replace: '/', ',' | split: ',' -%}
+    {%- for t in tokens -%}
+      {%- assign tt = t | downcase | strip -%}
+      {%- if tt == target -%}{%- assign matched = true -%}{%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+  {%- if matched -%}
+    <article class="project-card">
+      <h3><a href="{{ proj.url | relative_url }}">{{ proj.title | escape }}</a></h3>
+      {%- if proj.period %}<p class="project-meta">{{ proj.period | escape }}</p>{%- endif -%}
+    </article>
+  {%- endif -%}
+{%- endfor -%}
+</div>
