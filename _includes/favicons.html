@@ -1,0 +1,11 @@
+{%- comment -%}
+Browser-tab mark — the single source for every page's <head>.
+SVG primary (colour-scheme aware) with a PNG raster fallback set. Included by
+_layouts/default.html, which every content layout inherits from, so no page
+renders without the full set. /favicon.ico is served at the site root for the
+browser's implicit request and is intentionally not linked here.
+{%- endcomment -%}
+<link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
