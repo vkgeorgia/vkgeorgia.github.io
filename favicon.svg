@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Korobeinikov">
+  <style>
+    .glyph { fill: #004d67 }
+    @media (prefers-color-scheme: dark) { .glyph { fill: #8ecae6 } }
+  </style>
+  <path class="glyph" d="M42.49 53.78 31.83 66.39V90.00H16.70V10.00H31.83V49.43H32.41L43.75 34.41L63.58 10.00H81.00L53.15 43.35L83.30 90.00H65.30Z"/>
+</svg>
