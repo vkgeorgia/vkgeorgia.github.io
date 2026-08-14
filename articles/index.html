@@ -250,7 +250,7 @@ No academic theory—just observations from the trenches of Enterprise Architect
     </main>
 
     <footer class="site-footer h-card">
-    <data class="u-url" href="/%20/"></data>
+    <data class="u-url" href="/"></data>
 
     <div class="wrapper">
         <div class="footer-col-wrapper" style="text-align: center;">
@@ -288,7 +288,7 @@ No academic theory—just observations from the trenches of Enterprise Architect
             }
             var channel = sessionStorage.getItem(KEY) || 'vkgeorgia_io';
             document.addEventListener('DOMContentLoaded', function () {
-                var links = document.querySelectorAll('a[href^="/book/"], a[href="/book"]');
+                var links = document.querySelectorAll('a[href^="/book/"]');
                 Array.prototype.forEach.call(links, function (a) {
                     var u = new URL(a.getAttribute('href'), window.location.origin);
                     if (!u.searchParams.get('utm_source')) {
