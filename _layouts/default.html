@@ -66,7 +66,7 @@
             }
             var channel = sessionStorage.getItem(KEY) || 'vkgeorgia_io';
             document.addEventListener('DOMContentLoaded', function () {
-                var links = document.querySelectorAll('a[href^="/book/"], a[href="/book"]');
+                var links = document.querySelectorAll('a[href^="/book/"]');
                 Array.prototype.forEach.call(links, function (a) {
                     var u = new URL(a.getAttribute('href'), window.location.origin);
                     if (!u.searchParams.get('utm_source')) {
