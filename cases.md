@@ -71,6 +71,34 @@ A condensed view of the broader track record — one line each, most recent firs
   </ul>
 </details>
 
+---
+
+## Browse by role and industry
+
+The same engagements, cross-cut two other ways — by the role I held, and by the industry they ran in.
+
+{% assign role_pages = site.pages | where_exp: "p", "p.url contains '/roles/'" | where_exp: "p", "p.redirect_to == nil" | sort: "title" %}
+{% assign industry_pages = site.pages | where_exp: "p", "p.url contains '/projects/'" | where_exp: "p", "p.redirect_to == nil" | sort: "title" %}
+
+<div class="browse-facets">
+  <div class="browse-facet">
+    <h3>By role</h3>
+    <ul class="browse-list">
+      {% for p in role_pages %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.role_name | default: p.title | escape }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="browse-facet">
+    <h3>By industry</h3>
+    <ul class="browse-list">
+      {% for p in industry_pages %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
 <p class="cases-note" markdown="1">
 Engagements are described with neutral, industry-level descriptors except where the client is named openly. Where you need specifics for a relevant decision, [ask my assistant](javascript:void(0)) or [book a call]({{ site.cta_url }}).
 </p>
@@ -143,4 +171,29 @@ Engagements are described with neutral, industry-level descriptors except where 
     .eng-period { grid-row: auto; }
     .eng-outcome { grid-column: 1; }
   }
+
+  /* Browse by role / industry */
+  .browse-facets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin: 20px 0;
+  }
+  .browse-facet {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background: #f8f9fa;
+    padding: 16px 20px;
+  }
+  .browse-facet h3 {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #6c757d;
+  }
+  .browse-list { list-style: none; margin: 0; padding: 0; }
+  .browse-list li { padding: 5px 0; }
+  .browse-list a { font-weight: 600; color: #007bff; text-decoration: none; }
+  .browse-list a:hover { text-decoration: underline; }
 </style>
