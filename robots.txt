@@ -4,12 +4,6 @@ Allow: /
 # Sitemap location
 Sitemap: https://korobeinikov.consulting/sitemap.xml
 
-# Disallow backend and private areas
-Disallow: /digital-avatar/backend/
+# Disallow private areas (never served by Pages; blocked defensively)
 Disallow: /.git/
 Disallow: /_site/
-
-# Allow all other content
-Allow: /about/
-Allow: /services/
-Allow: /downloads/
