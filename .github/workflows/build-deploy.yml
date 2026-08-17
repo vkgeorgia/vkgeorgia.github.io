@@ -53,6 +53,9 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Verify links, sitemap, and robots.txt are consistent
+        run: bundle exec ruby script/verify-crawlability.rb
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
