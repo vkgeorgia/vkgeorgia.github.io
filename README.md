@@ -48,3 +48,14 @@ bundle exec jekyll build
 ```
 
 Without staging, the site still builds — the `/cases/` page is simply empty. Public-only work needs no access to the intermediate repo.
+
+## Link, sitemap, and robots.txt verification
+
+`script/verify-crawlability.rb` checks the *built* site for the class of regression where a page moves and a link, a sitemap entry, or a `robots.txt` rule is left pointing at the old location: internal 404s, internal links that 301 (usually a missing trailing slash) or land on a redirect stub, invalid or non-indexable sitemap entries, reachable pages missing from the sitemap, and `robots.txt` paths that don't correspond to anything in the build. It reads only the local build output — no network access.
+
+```bash
+bundle exec jekyll build
+bundle exec ruby script/verify-crawlability.rb
+```
+
+Runs automatically in `build-deploy.yml` right after the build, before deploy.
