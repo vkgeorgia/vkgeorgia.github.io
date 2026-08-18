@@ -22,7 +22,7 @@ In practice, most engagements sit on the boundary between the two.
 ---
 
 {% comment %} Featured anchor cases, by endeavour_id, in display order. {% endcomment %}
-{% assign featured_ids = "22.27,24.05,24.08" | split: "," %}
+{% assign featured_ids = "22.02,24.05,24.08" | split: "," %}
 
 ## Featured engagements
 
