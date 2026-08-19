@@ -8,7 +8,7 @@ image: /assets/og/how-i-see-a-leaders-work-in-the-future.png
 
 Have you ever played with a cat? They're amazing animals, flexible and agile. For every joke you make, every move you make, they have a response: at a minimum, a look, alert claws, nimble paws, and sharp teeth will greet you, no matter from which direction "danger" appears. Toss them, and they'll flip over and land on all fours. That's why they're still alive and around us. The inflexible ones are extinct.
 
-![A cat, claws out and ready, flipping to land on all fours](/assets/articles/cat-flip-and-land.png)
+![A kitten on its back across a lap, legs, tail and toes splayed open in every direction](/assets/articles/ready-from-any-side.png)
 
 We have a lot to learn from cats. My idea is simple: a business must be flexible.
 
@@ -16,7 +16,7 @@ A business must accurately and promptly know where danger is threatening and res
 
 I was once consulting for a large company. Their strategy stated: "We want to become a technology leader among companies in our industry." Excellent intention. Then I read their rules governing IT tenders and procurement: "Only companies with at least five confirmed implementations of such a system may participate in tenders for the procurement of IT systems." How? How are you going to become a technology leader? You'll always be sixth at best. The company was running, everyone was getting paid, but no one noticed that the strategy said one thing, while in reality, something completely different was happening. No red lights went off anywhere.
 
-So. The manager. They need to know what's happening—both around and within the company. Of course, their first question is, "What's changed?" They open the dashboard on their huge monitor and sees the answers—news analysis. The drivers that impact the business have already been identified from the news.
+So. The manager. They need to know what's happening—both around and within the company. Of course, their first question is, "What's changed?" They open the dashboard on their huge monitor and see the answers—news analysis. The drivers that impact the business have already been identified from the news.
 
 The next question is, "How will this affect us?" The manager opens the company's goal tree: they are organized by level—from strategic goals to divisional goals and then deeper, down to specific teams. Our boss sees the goal tree on the screen and pays attention to the indicators. Drivers are linked to goals: a positive connection is a green indicator, a negative connection is a red indicator. They see which company goals are at risk and know what to do.
 
