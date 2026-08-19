@@ -212,9 +212,19 @@ if featured_ids_match
     YAML.safe_load(front_matter.to_s)&.[]('endeavour_id')
   end
 
-  featured_ids_match[1].split(',').map(&:strip).each do |id|
-    unless known_endeavour_ids.include?(id)
-      failures << "unresolved featured id: cases.md's featured_ids names '#{id}', which matches no _projects/*.md endeavour_id"
+  if known_endeavour_ids.empty?
+    # _projects/ is gitignored and staged from the private cases pipeline before
+    # the real build. A clean worktree/clone has none, and Dir.glob above then
+    # returns nothing — which would otherwise read every featured id as
+    # unresolved. That's a spurious failure, not a real one, so skip instead of
+    # failing; but skip loudly, since a silent skip is the same defect class
+    # this guard exists to catch.
+    puts 'featured id check skipped: no _projects/*.md staged (cases pipeline not run in this worktree/clone).'
+  else
+    featured_ids_match[1].split(',').map(&:strip).each do |id|
+      unless known_endeavour_ids.include?(id)
+        failures << "unresolved featured id: cases.md's featured_ids names '#{id}', which matches no _projects/*.md endeavour_id"
+      end
     end
   end
 else
