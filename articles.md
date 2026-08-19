@@ -53,8 +53,4 @@ No academic theory—just observations from the trenches of Enterprise Architect
 
 Whether you're planning a reorganization, facing operational inefficiencies, or exploring IT-enabled growth, I help companies like yours find clear, practical solutions.
 
-<p align="center" style="font-size: 14px;">
-  📧 <a href="mailto:valerii@korobeinikov.consulting">valerii@korobeinikov.consulting</a> | 
-  💼 <a href="https://www.linkedin.com/in/valeriikorobeinikov/" target="_blank">LinkedIn</a> | 
-  📅 <a href="{{ site.cta_url }}" target="_blank">Book a conversation</a>
-</p>
+**[→ Book a 30-min architecture conversation]({{ site.cta_url }})**
