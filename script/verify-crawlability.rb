@@ -2,17 +2,20 @@
 # frozen_string_literal: true
 
 # Verifies the BUILT site is internally consistent: every internal link resolves
-# without a redirect, sitemap.xml entries are valid and indexable, and robots.txt
-# paths correspond to something real. Catches the class of regression where a
-# page moves/renames and a link, a sitemap entry, or a robots.txt rule is left
-# pointing at the old location.
+# without a redirect, sitemap.xml entries are valid and indexable, robots.txt
+# paths correspond to something real, and cases.md's featured_ids all name a
+# real case. Catches the class of regression where a page moves/renames (and a
+# link, a sitemap entry, or a robots.txt rule is left pointing at the old
+# location) or a featured id is mistyped (and the featured section quietly
+# renders short instead of failing).
 #
 # Usage:
 #   bundle exec jekyll build
 #   bundle exec ruby script/verify-crawlability.rb [path-to-built-site]
 #
 # Default built-site path: ./_site. Exits non-zero (and lists every failure) if
-# any check fails. Only reads the local build output — no network access.
+# any check fails. Reads the local build output plus cases.md/_projects source
+# for the featured-id check — no network access.
 
 require 'nokogiri'
 require 'yaml'
@@ -190,6 +193,42 @@ if File.file?(robots_file)
   end
 else
   failures << 'unresolved robots.txt path: _site/robots.txt does not exist'
+end
+
+# ---- cases.md featured_ids ----------------------------------------------------
+
+# cases.md resolves its featured_ids list against the projects collection
+# through a guarded Liquid loop (`{% if case %}`) that silently drops any id
+# matching no case: the section renders short and the build stays green.
+# Checked against source front matter, not the built site's URLs — the
+# `:name` permalink slugifies endeavour_id (dots become hyphens), so a
+# built-path check would need to duplicate that rule instead of asking the
+# same question the Liquid loop asks: does any case carry this endeavour_id.
+cases_source = File.read(File.join(ROOT, 'cases.md'), encoding: 'UTF-8')
+featured_ids_match = cases_source.match(/featured_ids\s*=\s*"([^"]*)"/)
+if featured_ids_match
+  known_endeavour_ids = Dir.glob(File.join(ROOT, '_projects', '*.md')).filter_map do |file|
+    _, front_matter, = File.read(file, encoding: 'UTF-8').split(/^---\s*$/, 3)
+    YAML.safe_load(front_matter.to_s)&.[]('endeavour_id')
+  end
+
+  if known_endeavour_ids.empty?
+    # _projects/ is gitignored and staged from the private cases pipeline before
+    # the real build. A clean worktree/clone has none, and Dir.glob above then
+    # returns nothing — which would otherwise read every featured id as
+    # unresolved. That's a spurious failure, not a real one, so skip instead of
+    # failing; but skip loudly, since a silent skip is the same defect class
+    # this guard exists to catch.
+    puts 'featured id check skipped: no _projects/*.md staged (cases pipeline not run in this worktree/clone).'
+  else
+    featured_ids_match[1].split(',').map(&:strip).each do |id|
+      unless known_endeavour_ids.include?(id)
+        failures << "unresolved featured id: cases.md's featured_ids names '#{id}', which matches no _projects/*.md endeavour_id"
+      end
+    end
+  end
+else
+  failures << "unresolved featured id: could not find featured_ids in cases.md — guard needs updating to match"
 end
 
 # ---- report -------------------------------------------------------------------
