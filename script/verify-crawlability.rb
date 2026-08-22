@@ -2,12 +2,13 @@
 # frozen_string_literal: true
 
 # Verifies the BUILT site is internally consistent: every internal link resolves
-# without a redirect, sitemap.xml entries are valid and indexable, robots.txt
-# paths correspond to something real, and cases.md's featured_ids all name a
-# real case. Catches the class of regression where a page moves/renames (and a
-# link, a sitemap entry, or a robots.txt rule is left pointing at the old
-# location) or a featured id is mistyped (and the featured section quietly
-# renders short instead of failing).
+# without a redirect, sitemap.xml entries are valid and indexable, every sitemap
+# URL is reachable from / via internal links, robots.txt paths correspond to
+# something real, and cases.md's featured_ids all name a real case. Catches the
+# class of regression where a page moves/renames (and a link, a sitemap entry, or
+# a robots.txt rule is left pointing at the old location), a page is orphaned
+# (in the sitemap but not linked from anywhere crawlable), or a featured id is
+# mistyped (and the featured section quietly renders short instead of failing).
 #
 # Usage:
 #   bundle exec jekyll build
@@ -168,6 +169,13 @@ reachable.each do |path|
   next if sitemap_locs.include?(path)
 
   failures << "indexability/sitemap mismatch: #{path} is reachable and indexable but missing from sitemap.xml"
+end
+
+sitemap_locs.each do |path|
+  next if SITEMAP_EXEMPT_PATHS.include?(path)
+  next if reachable.include?(path)
+
+  failures << "unreachable from home: sitemap lists #{path}, but no internal link path exists from /"
 end
 
 # ---- robots.txt --------------------------------------------------------------
