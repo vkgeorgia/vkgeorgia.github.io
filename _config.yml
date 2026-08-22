@@ -96,6 +96,9 @@ exclude:
   - STRATEGIC_BRIEF.md
   # Local build scripts (gitignored; carry internal labels) — never copy into _site
   - tools
+  # Bastion agent run logs (gitignored locally; excluded defensively so a local
+  # build never publishes or sitemaps them even if the folder is present)
+  - logs
   # Build-time checkout of the private sanitized-cases repo — staged into _projects/,
   # never served directly
   - .cases-public-ready
