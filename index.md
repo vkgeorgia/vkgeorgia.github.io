@@ -72,7 +72,16 @@ I am most useful when an organization is about to change direction. Less useful 
 
 {% include highlights.html %}
 
-*(See the [Cases](/cases/) section for the full project list.)*
+---
+
+## Explore the site
+
+The navigation covers the main sections; these are the usual starting points:
+
+- **[Cases](/cases/)** — selected engagements and the full track record, browsable by role and industry
+- **[Articles](/articles/)** — field notes on enterprise architecture and transformation
+- **[Services](/services/)** — engagement formats and how an architecture advisory works in practice
+- **[Business challenges](/business-challenges/)** — common situations leaders bring to an architect
 
 ---
 
