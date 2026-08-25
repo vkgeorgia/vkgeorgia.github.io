@@ -45,6 +45,14 @@ plugins:
   # because the build runs `jekyll build` (not the github-pages command).
   - jekyll-redirect-from
 
+# The github-pages gem auto-loads jekyll-optional-front-matter, which turns any
+# front-matter-less markdown file into an *additional* themed, indexable HTML
+# page on top of its static copy. The site serves such files as static copies,
+# and every front-matter-less .md file already matches the plugin's own
+# blacklist, so nothing relies on the plugin; disable it explicitly.
+optional_front_matter:
+  enabled: false
+
 # Include digital-avatar frontend files
 include:
   - digital-avatar/frontend
