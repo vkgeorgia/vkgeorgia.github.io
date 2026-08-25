@@ -1,0 +1,71 @@
+name: public-metadata
+
+# Enforces the public-metadata boundary (root AGENTS.md, "Public surface"): a PR
+# title states only the delivered outcome; the body states only the resulting
+# behaviour and how it was verified; commit messages and public comments follow
+# the same boundary. The fixture self-test runs first so a rule regression fails
+# the gate instead of silently relaxing it. See script/public-metadata-rules.sh
+# for the mechanically-decidable subset and its documented limits.
+#
+# Runs on PR open/edit/re-sync (so a title/body edit re-runs the blocking check)
+# and on push to main (a direct commit or squash merge faces the same commit
+# message rules). A missing input or a step that could not run is a failure, not
+# a pass.
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      pull_number:
+        description: Pull request number to check
+        required: true
+        type: number
+
+permissions:
+  pull-requests: read
+  issues: read
+  contents: read
+
+concurrency:
+  group: public-metadata-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  enforce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Self-test the metadata rules
+        run: bash script/public-metadata-fixtures.sh
+
+      - name: Check PR metadata, commits, comments, and diff
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: bash script/public-metadata-gate.sh
+
+      - name: Check pushed commit messages and diff
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          BASE_SHA: ${{ github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: bash script/public-metadata-gate.sh
+
+      - name: Check a manual dispatch
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ inputs.pull_number }}
+        run: bash script/public-metadata-gate.sh
