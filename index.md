@@ -31,16 +31,6 @@ Starting from business priorities, I align IT strategy, project portfolio, and s
 
 ---
 
-## What an Enterprise Architect actually does — in my practice
-
-Say "Enterprise Architect" to most leaders and two images come up: TOGAF diagrams, or a Solution Architect with a bigger title.
-
-My role is different. I sit at the business–technology interface: helping leadership see the organization as a system, connect strategic intent to structural choices, and decide where to invest, consolidate, or change direction.
-
-I use enterprise architecture as a **decision discipline**, not as documentation.
-
----
-
 ## When leaders typically bring me in
 
 ### BUILD — launching new capabilities
@@ -59,18 +49,20 @@ I am most useful when an organization is about to change direction. Less useful 
 
 ---
 
+## Selected outcomes
+
+{% include highlights.html %}
+
+---
+
 ## How I work
+
+I sit at the business–technology interface, using enterprise architecture as a decision discipline rather than documentation — helping leadership see the organization as a system and connect strategic intent to structural choices.
 
 1. **Frame the decision.** Most initiatives stall because the real decision is never clearly stated. My first contribution is usually to name it — which takes a grounded read of how the enterprise actually works.
 2. **Surface the trade-offs.** Cost, risk, speed, reversibility, strategic fit — made explicit so leadership can choose deliberately rather than default.
 3. **Design the target state.** A structured view of where the organization is going, and the minimum changes that get it there.
 4. **Stay close to execution.** I work directly with data, teams, and prototypes to make sure the decision holds up in reality.
-
----
-
-## Selected outcomes
-
-{% include highlights.html %}
 
 ---
 
@@ -85,23 +77,9 @@ The navigation covers the main sections; these are the usual starting points:
 
 ---
 
-## How we can work together
-
-For a bounded decision, we work in a fixed-scope project of roughly 6 to 16 weeks — an assessment, a target operating model, a portfolio rationalization, an architecture audit, or a specific transformation call.
-
-When the decisions keep coming, a fractional or embedded arrangement makes more sense: a regular rhythm with the chief information, technology, or digital officer over a series of related choices, typically a few days per week or per month.
-
-And when a board, investor, or PE firm needs an independent read on a portfolio company or a single technology decision, I take on expert due diligence or a second opinion — a matter of days to weeks.
-
----
-
 ## Architecture-as-code — an open methodology I build
 
-My practice treats enterprise architecture as a decision discipline, not documentation. **Transitrix** is where I take that conviction further, in the open: an architecture-as-code methodology that describes an enterprise as text — its goals, capabilities, processes, and roles. Because the model is text, it can be versioned in Git, reviewed like code, and read by both people and machines. It builds on open standards (ArchiMate, BPMN) and is MIT-licensed.
-
-Alongside the methodology I build **Transitrix Studio**, an editor extension and CLI that authors and previews these models directly in VS Code and other IDEs. It is a research initiative, not a product I am selling here — but it reflects how I think architecture should work: legible, current, and owned by the organisation rather than locked in a tool.
-
-More at [transitrix.com](https://transitrix.com).
+The same conviction — enterprise architecture as a decision discipline, not documentation — I take further in the open with **Transitrix**: an architecture-as-code methodology, MIT-licensed, and an editor extension and CLI to author it. More at [transitrix.com](https://transitrix.com).
 
 ---
 
