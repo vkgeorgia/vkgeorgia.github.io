@@ -1,10 +1,13 @@
 name: public-surface-hygiene
 
-# Two steps on every PR:
-#   1. autofix  — rewrite hub pointers out of the PR TITLE/BODY. Non-blocking.
-#   2. verify   — BLOCKING. Re-read the PR (post-autofix) + scan commit messages
-#                 and the diff; fail if any pointer remains. Catches what autofix
-#                 cannot touch: commit messages and committed file content.
+# Jobs:
+#   1. autofix       — rewrite hub pointers out of the PR TITLE/BODY. Non-blocking.
+#   2. tree          — BLOCKING. Scan every tracked file for hub pointers + work-item refs.
+#   3. no-agent-docs — BLOCKING. Fail if a plain CLAUDE.md / AGENTS.md is committed
+#                      (the former agent-doc guard, merged here as its own job).
+#   4. verify        — BLOCKING (PRs). Re-read the PR (post-autofix) + scan commit messages
+#                      and the diff; fail if any pointer remains. Catches what autofix
+#                      cannot touch: commit messages and committed file content.
 # The private hub slug is held in the HYGIENE_HUB_SLUG repo secret, never in this
 # file — so this public workflow does not itself name the hub, and its own diff
 # does not trip the scan. Matched text is never printed. See CLAUDE.md §"Metadata hygiene".
@@ -141,6 +144,32 @@ jobs:
             exit 1
           fi
           echo "public-surface-hygiene: no work-item references in tracked files."
+
+  no-agent-docs:
+    runs-on: ubuntu-latest
+    name: No agent operating docs
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # On a pull_request_target run this must be the PR head, not the base;
+          # on push and manual runs the default checkout is what we want.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: No plain CLAUDE.md / AGENTS.md (blocking)
+        run: |
+          set -euo pipefail
+          # Internal, maintainer-local operating docs (gitignored) must never land
+          # in this public repo. gitignore is the first net; this check is the
+          # backstop that fires regardless of gitignore state (a force-add, a
+          # stale ignore, an agent slip). Template-suffixed names are exempt.
+          hits="$(git ls-files | grep -iE '(^|/)(CLAUDE|AGENTS)\.md$' | grep -viE 'template' || true)"
+          if [ -n "$hits" ]; then
+            echo "::error::a plain CLAUDE.md/AGENTS.md is committed — internal operating docs must stay local/gitignored, not in this public repo"
+            printf '%s\n' "$hits" | while IFS= read -r f; do echo "::error file=$f::not allowed here"; done
+            exit 1
+          fi
+          echo "OK - no plain agent operating docs committed."
 
   verify:
     needs: autofix

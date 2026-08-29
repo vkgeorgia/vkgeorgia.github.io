@@ -40,14 +40,7 @@ Case studies are **not stored in this repo**. They are produced by a separate pu
 
 **Deployment.** `.github/workflows/build-deploy.yml` fetches the case content (via a read-only deploy key in Actions secrets), runs `bundle exec jekyll build`, and publishes `_site/` to the `gh-pages` branch. GitHub Pages is configured to serve from `gh-pages` (not the default branch auto-build, which can't use the deploy key).
 
-**Local build with cases.** Clone the intermediate repo alongside this one, stage its content, then build:
-
-```bash
-script/stage-cases.sh ../cases-public-ready   # copies cases + PDFs in (gitignored)
-bundle exec jekyll build
-```
-
-Without staging, the site still builds — the `/cases/` page is simply empty. Public-only work needs no access to the intermediate repo.
+**Local build with cases.** The site builds without case content — the `/cases/` page is simply empty. Maintainers who need the full site locally stage the sanitized case files and PDFs into `_projects/` and `downloads/` from the private cases home (the copy steps are in `.github/workflows/build-deploy.yml`), then build as above.
 
 ## Link, sitemap, and robots.txt verification
 
