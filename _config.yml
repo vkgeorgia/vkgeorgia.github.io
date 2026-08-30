@@ -53,15 +53,6 @@ plugins:
 optional_front_matter:
   enabled: false
 
-# Include digital-avatar frontend files
-include:
-  - digital-avatar/frontend
-
-# Публичный URL backend (Cloud Run / Jeeves). Используется в Liquid в
-# assets/projects-dynamic.js и digital-avatar/frontend/widget.js при сборке Jekyll.
-# Для локальной подмены без коммита: _config.local.yml + --config _config.yml,_config.local.yml
-backend_url: "https://ai-avatar-103512681014.us-central1.run.app"
-
 # On-site "book a call" CTA target. Every book-a-call link in layouts, includes
 # and page content points here — an internal interstitial — NOT straight at the
 # calendar, so Cloudflare Web Analytics logs a channel-stamped /book/ pageview
@@ -93,11 +84,6 @@ exclude:
   - _site/
   - sources/
   - knowledge-base/*/sources/
-  - digital-avatar/backend
-  - digital-avatar/docs
-  - digital-avatar/.env
-  - digital-avatar/google_credentials.json
-  - digital-avatar/README.md
   # Local-only docs / private brief in root (see .gitignore) — never build as pages
   - CLAUDE.md
   - vkgeorgia.icloud.com
@@ -123,8 +109,8 @@ exclude:
 collections:
   # Case content is NOT committed here. At build time the deploy workflow copies
   # the sanitized projection from the private `cases-public-ready` repo (Layer 2)
-  # into `_projects/`. Locally, run `script/stage-cases.sh` first. Committed
-  # source carries no case bodies — single source of truth is the canon pipeline.
+  # into `_projects/`. Committed source carries no case bodies — single source of
+  # truth is the canon pipeline.
   # Each case renders at /cases/<endeavour_id>/ (the file name, e.g. /cases/24.05/) —
   # a structural numeric identifier, never a real name or internal code.
   projects:
@@ -144,15 +130,11 @@ defaults:
       type: posts
     values:
       layout: article
-  # Binary downloads and the digital-avatar demo stay served and linked, but
-  # leave the sitemap — nothing meant for indexing points at a PDF or the demo.
+  # Binary downloads stay served and linked, but leave the sitemap — nothing
+  # meant for indexing points at a PDF.
   # jekyll-sitemap honours `sitemap: false` supplied through defaults for static
   # files.
   - scope:
       path: "downloads"
-    values:
-      sitemap: false
-  - scope:
-      path: "digital-avatar"
     values:
       sitemap: false
