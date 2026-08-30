@@ -9,13 +9,7 @@ lang: en
 
 This repository hosts the source of **[korobeinikov.consulting](https://korobeinikov.consulting/)** — the practitioner site of **Valerii Korobeinikov**, Enterprise Architect. The repository name is the historical GitHub Pages host, which now serves a permanent redirect to the custom domain.
 
-The site is the public surface of the practice: positioning, engagement formats, selected outcomes, and an AI assistant. It is not a technical documentation site.
-
-## AI assistant
-
-The site features an **AI assistant** that can answer questions about Valerii's professional experience, engagement formats, and help schedule a meeting. Open the chat from the icon at the bottom-right corner of any page.
-
-The assistant backend lives in a separate, private repository; this repository contains the site frontend (Jekyll source, layouts, and the chat widget assets) only.
+The site is the public surface of the practice: positioning, engagement formats, selected outcomes. It is not a technical documentation site.
 
 ## Local build
 

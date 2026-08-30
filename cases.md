@@ -100,7 +100,7 @@ The same engagements, cross-cut two other ways — by the role I held, and by th
 </div>
 
 <p class="cases-note" markdown="1">
-Engagements are described with neutral, industry-level descriptors except where the client is named openly. Where you need specifics for a relevant decision, [ask my assistant](javascript:void(0)) or [book a call]({{ site.cta_url }}).
+Engagements are described with neutral, industry-level descriptors except where the client is named openly. Where you need specifics for a relevant decision, [book a call]({{ site.cta_url }}) — specifics are discussed in conversation.
 </p>
 
 <style>
