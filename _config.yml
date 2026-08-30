@@ -45,6 +45,14 @@ plugins:
   # because the build runs `jekyll build` (not the github-pages command).
   - jekyll-redirect-from
 
+# The github-pages gem auto-loads jekyll-optional-front-matter, which turns any
+# front-matter-less markdown file into an *additional* themed, indexable HTML
+# page on top of its static copy. The site serves such files as static copies,
+# and every front-matter-less .md file already matches the plugin's own
+# blacklist, so nothing relies on the plugin; disable it explicitly.
+optional_front_matter:
+  enabled: false
+
 # On-site "book a call" CTA target. Every book-a-call link in layouts, includes
 # and page content points here — an internal interstitial — NOT straight at the
 # calendar, so Cloudflare Web Analytics logs a channel-stamped /book/ pageview
@@ -101,8 +109,8 @@ exclude:
 collections:
   # Case content is NOT committed here. At build time the deploy workflow copies
   # the sanitized projection from the private `cases-public-ready` repo (Layer 2)
-  # into `_projects/`. Locally, run `script/stage-cases.sh` first. Committed
-  # source carries no case bodies — single source of truth is the canon pipeline.
+  # into `_projects/`. Committed source carries no case bodies — single source of
+  # truth is the canon pipeline.
   # Each case renders at /cases/<endeavour_id>/ (the file name, e.g. /cases/24.05/) —
   # a structural numeric identifier, never a real name or internal code.
   projects:
