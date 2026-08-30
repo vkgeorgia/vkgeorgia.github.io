@@ -123,8 +123,8 @@ exclude:
 collections:
   # Case content is NOT committed here. At build time the deploy workflow copies
   # the sanitized projection from the private `cases-public-ready` repo (Layer 2)
-  # into `_projects/`. Locally, run `script/stage-cases.sh` first. Committed
-  # source carries no case bodies — single source of truth is the canon pipeline.
+  # into `_projects/`. Committed source carries no case bodies — single source of
+  # truth is the canon pipeline.
   # Each case renders at /cases/<endeavour_id>/ (the file name, e.g. /cases/24.05/) —
   # a structural numeric identifier, never a real name or internal code.
   projects:
