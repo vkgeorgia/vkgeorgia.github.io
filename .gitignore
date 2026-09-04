@@ -91,8 +91,9 @@ vendor/
 ehthumbs.db
 Thumbs.db
 
-# Case content is fetched from the private cases-public-ready repo at build time
-# (see .github/workflows/build-deploy.yml). Never committed here.
+# Case markdown and PDFs are staged at publish time on the build host from a
+# private clone. Never committed here.
 /_projects/*.md
 /downloads/*.pdf
 /.cases-public-ready/
+/.personal-hq/

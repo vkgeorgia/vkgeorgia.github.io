@@ -1,46 +1,28 @@
-name: Build and deploy
+name: Build
 
-# Builds the site with case content fetched from the private cases-public-ready
-# repo (Layer 2 of the publication pipeline) and deploys to the gh-pages branch.
-# This replaces the default GitHub Pages auto-build, which cannot use the private
-# deploy key. After this lands, set Pages to "Deploy from branch: gh-pages".
+# Jekyll build and crawlability check. Does not publish.
+# Case files are not in this repository; production publish runs on the
+# 24/7 host from a local private clone (no Actions deploy key).
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
-  # Let the sanitized-cases repo trigger a rebuild when it publishes new content
-  # (configure a repository_dispatch sender there if/when desired).
-  repository_dispatch:
-    types: [cases-updated]
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: pages-deploy
+  group: pages-build
   cancel-in-progress: true
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout site
         uses: actions/checkout@v4
-
-      - name: Checkout sanitized cases (private, read-only deploy key)
-        uses: actions/checkout@v4
-        with:
-          repository: vkgeorgia/cases-public-ready
-          ssh-key: ${{ secrets.CASES_PUBLIC_READY_READ_KEY }}
-          path: .cases-public-ready
-
-      - name: Stage case content into the working tree
-        run: |
-          mkdir -p _projects downloads
-          cp .cases-public-ready/_projects/*.md _projects/
-          cp .cases-public-ready/downloads/*.pdf downloads/
-          echo "Staged $(ls _projects/*.md | wc -l) case files and $(ls downloads/*.pdf | wc -l) PDFs."
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -55,10 +37,3 @@ jobs:
 
       - name: Verify links, sitemap, and robots.txt are consistent
         run: bundle exec ruby script/verify-crawlability.rb
-
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: gh-pages
