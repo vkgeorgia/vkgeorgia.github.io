@@ -90,14 +90,11 @@ exclude:
   - STRATEGIC_BRIEF.md
   # Local build scripts (gitignored; carry internal labels) — never copy into _site
   - tools
-  # Bastion agent run logs (gitignored locally; excluded defensively so a local
-  # build never publishes or sitemaps them even if the folder is present)
   - logs
-  # Build-time staging of private case files — never served from this path
   - .cases-public-ready
   - .personal-hq
   - script
-  # Repo-internal notes for the SEO landing-page directories — not built
+  # Directory notes — not built
   - domains/README.md
   - industries/README.md
   - projects/README.md
@@ -107,17 +104,12 @@ exclude:
 
 # Collections
 collections:
-  # Case content is NOT committed here. At publish time the build host copies
-  # the private case records into `_projects/`. Committed source carries no
-  # case bodies — single source of truth is the private headquarters clone.
-  # Each case renders at /cases/<endeavour_id>/ (the file name, e.g. /cases/24.05/) —
-  # a structural numeric identifier, never a real name or internal code.
+  # Each case page is /cases/<id>/ from the filename (a numeric id, not a person or organisation).
   projects:
     output: true
     permalink: /cases/:name/
 
-# Apply the case layout to every staged case document (Layer-2 files carry no
-# layout: of their own).
+# Case documents in `_projects/` use the case layout even if the file itself has none.
 defaults:
   - scope:
       path: ""
