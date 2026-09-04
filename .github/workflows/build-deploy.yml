@@ -1,8 +1,6 @@
 name: Build
 
-# Jekyll build and crawlability check. Does not publish.
-# Case files are not in this repository; production publish runs on the
-# 24/7 host from a local private clone (no Actions deploy key).
+# Jekyll build and crawlability check. Does not deploy Pages.
 
 on:
   push:
