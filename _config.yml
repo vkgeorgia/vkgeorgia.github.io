@@ -93,9 +93,9 @@ exclude:
   # Bastion agent run logs (gitignored locally; excluded defensively so a local
   # build never publishes or sitemaps them even if the folder is present)
   - logs
-  # Build-time checkout of the private sanitized-cases repo — staged into _projects/,
-  # never served directly
+  # Build-time staging of private case files — never served from this path
   - .cases-public-ready
+  - .personal-hq
   - script
   # Repo-internal notes for the SEO landing-page directories — not built
   - domains/README.md
@@ -107,10 +107,9 @@ exclude:
 
 # Collections
 collections:
-  # Case content is NOT committed here. At build time the deploy workflow copies
-  # the sanitized projection from the private `cases-public-ready` repo (Layer 2)
-  # into `_projects/`. Committed source carries no case bodies — single source of
-  # truth is the canon pipeline.
+  # Case content is NOT committed here. At publish time the build host copies
+  # the private case records into `_projects/`. Committed source carries no
+  # case bodies — single source of truth is the private headquarters clone.
   # Each case renders at /cases/<endeavour_id>/ (the file name, e.g. /cases/24.05/) —
   # a structural numeric identifier, never a real name or internal code.
   projects:

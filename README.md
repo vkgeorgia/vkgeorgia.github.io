@@ -27,14 +27,16 @@ A `.ruby-version` file is included (for rbenv / chruby / asdf). Gems install int
 
 ## Case content & deployment
 
-Case studies are **not stored in this repo**. They are produced by a separate publication pipeline and copied in **at build time**:
+Case studies are **not stored in this repo**. They are copied in **at publish time** on the 24/7 build host from a private clone:
 
-- The `projects` collection (`_projects/*.md`) and the case PDFs (`downloads/*.pdf`) are fetched from a private intermediate repo during the build. They are gitignored here and never committed.
+- The `projects` collection (`_projects/*.md`) and the PDFs (`downloads/*.pdf`, including the résumé) are gitignored here and never committed.
 - Each case renders at `/cases/<id>/`; the `/cases/` index curates three featured studies plus a condensed list of the rest.
 
-**Deployment.** `.github/workflows/build-deploy.yml` fetches the case content (via a read-only deploy key in Actions secrets), runs `bundle exec jekyll build`, and publishes `_site/` to the `gh-pages` branch. GitHub Pages is configured to serve from `gh-pages` (not the default branch auto-build, which can't use the deploy key).
+**Deployment.** The host stages those files, runs `bundle exec jekyll build`, and pushes `_site/` to the `gh-pages` branch. GitHub Pages serves `gh-pages`. GitHub Actions does **not** fetch private case content and does **not** publish.
 
-**Local build with cases.** The site builds without case content — the `/cases/` page is simply empty. Maintainers who need the full site locally stage the sanitized case files and PDFs into `_projects/` and `downloads/` from the private cases home (the copy steps are in `.github/workflows/build-deploy.yml`), then build as above.
+**CI.** `.github/workflows/build-deploy.yml` builds the public tree (cases empty) and runs crawlability checks on pull requests and `main`.
+
+**Local build with cases.** The site builds without case content — the `/cases/` page is simply empty. Maintainers who need the full site locally copy the case markdown and PDFs into `_projects/` and `downloads/` from the private clone, then build as above.
 
 ## Link, sitemap, and robots.txt verification
 
@@ -45,4 +47,4 @@ bundle exec jekyll build
 bundle exec ruby script/verify-crawlability.rb
 ```
 
-Runs automatically in `build-deploy.yml` right after the build, before deploy.
+Runs in CI after the public-tree build, and on the build host after a full publish build.
