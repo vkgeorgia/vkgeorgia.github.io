@@ -77,7 +77,7 @@ It is a structured way to decide where technology should take the business, and 
 
 ## Related case
 
-**Global IT services firm, approximately 68,000 employees.** 80% of HR inquiries across 12 processes resolved without human intervention, with 99% answer accuracy, and response times from days to minutes — by architecting the HR assistant and its knowledge and integration layer as a strategic capability rather than a point-solution experiment.
+**Global IT services firm, approximately 63,650 employees as of 30 September 2026 ([company headcount source](https://investors.epam.com/news/news-details/2026/EPAM-Reports-Results-for-Third-Quarter-2026/default.aspx); not the number of assistant users).** 80% of HR inquiries across 12 processes resolved without human intervention, with 99% answer accuracy, and response times from days to minutes — by architecting the HR assistant and its knowledge and integration layer as a strategic capability rather than a point-solution experiment.
 
 Full list in the [Cases](/cases/) section.
 
