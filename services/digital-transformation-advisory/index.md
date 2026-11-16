@@ -75,7 +75,7 @@ It is a way to make transformation coherent enough to finish.
 
 ## Related case
 
-**Global IT services firm, approximately 68,000 employees.** A transformation of HR operations around an AI assistant: 80% of inquiries across 12 processes resolved without human intervention, 99% answer accuracy, and response times reduced from days to minutes. The shift came not from the AI itself, but from redesigning the knowledge, integration, and governance layer around it.
+**Global IT services firm, approximately 63,650 employees as of 30 September 2026 ([company headcount source](https://investors.epam.com/news/news-details/2026/EPAM-Reports-Results-for-Third-Quarter-2026/default.aspx); not the number of assistant users).** A transformation of HR operations around an AI assistant: 80% of inquiries across 12 processes resolved without human intervention, 99% answer accuracy, and response times reduced from days to minutes. The shift came not from the AI itself, but from redesigning the knowledge, integration, and governance layer around it.
 
 Full list in the [Cases](/cases/) section.
 

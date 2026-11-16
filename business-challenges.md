@@ -67,7 +67,7 @@ Growth amplifies whatever is already there. A fragile foundation under a growing
 
 A platform that can absorb growth without constant firefighting, an investment logic that holds up in front of a CFO, and a delivery cadence the business can plan around.
 
-**Representative case** — Global IT services firm, approximately 68,000 employees. 80% of HR inquiries across 12 processes resolved without human intervention, with 99% answer accuracy and response times down from days to minutes, by architecting the HR assistant and its knowledge and integration layer.
+**Representative case** — Global IT services firm, approximately 63,650 employees as of 30 September 2026 ([company headcount source](https://investors.epam.com/news/news-details/2026/EPAM-Reports-Results-for-Third-Quarter-2026/default.aspx); not the number of assistant users). 80% of HR inquiries across 12 processes resolved without human intervention, with 99% answer accuracy and response times down from days to minutes, by architecting the HR assistant and its knowledge and integration layer.
 
 **Relevant services**
 

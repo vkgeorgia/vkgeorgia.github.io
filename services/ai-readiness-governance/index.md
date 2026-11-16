@@ -71,7 +71,7 @@ It is decision support for leaders making AI adoption defensible at enterprise s
 
 ## Related case
 
-**Global IT services firm, approximately 68,000 employees.** An HR assistant handling 80% of inquiries across 12 processes, with 99% answer accuracy and response times from days to minutes. The performance came from the knowledge, integration, and governance layer around the AI — not from the model itself.
+**Global IT services firm, approximately 63,650 employees as of 30 September 2026 ([company headcount source](https://investors.epam.com/news/news-details/2026/EPAM-Reports-Results-for-Third-Quarter-2026/default.aspx); not the number of assistant users).** An HR assistant handling 80% of inquiries across 12 processes, with 99% answer accuracy and response times from days to minutes. The performance came from the knowledge, integration, and governance layer around the AI — not from the model itself.
 
 Full list in the [Cases](/cases/) section.
 
